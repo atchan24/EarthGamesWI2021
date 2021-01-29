@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/Pedestrian.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Space.tscn" type="PackedScene" id=3]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 50, 50 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.0705882, 0.537255, 0.152941, 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 5, 0, 5 )
+
+[node name="Main" type="Spatial"]
+
+[node name="GUI" type="MarginContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 40.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rolls Counter" type="HBoxContainer" parent="GUI"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 1004.0
+margin_bottom = 34.0
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/Rolls Counter"]
+margin_right = 28.0
+margin_bottom = 14.0
+
+[node name="Rolls" type="Label" parent="GUI/Rolls Counter/MarginContainer"]
+margin_right = 28.0
+margin_bottom = 14.0
+text = "Roll:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="GUI/Rolls Counter/MarginContainer"]
+margin_right = 28.0
+margin_bottom = 14.0
+text = "10"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ground" type="StaticBody" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="Ground"]
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Ground"]
+shape = SubResource( 3 )
+
+[node name="Sun" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.910785, 0.412882, 0, -0.412882, 0.910785, 0, 4.46738, 6.84907 )
+
+[node name="Pedestrian" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.22499, 0.738038, 8.52205 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.53078, 1.5083, 6.3253 )
+
+[node name="TestCamera" type="Camera" parent="Player"]
+transform = Transform( 1, 0, 0, 0, 0.838414, 0.545034, 0, -0.545034, 0.838414, 1.53078, 11.3347, 15.4447 )
+
+[node name="Spaces" type="Node" parent="."]
+
+[node name="Space" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.8043 )
+
+[node name="Space2" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7636, 0, 11.6632 )
+
+[node name="Space3" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8781, 0, 0 )
+
+[node name="Space4" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.51282, 0, -14.1443 )
+
+[node name="Space5" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5087, 0, -6.87506 )
+
+[node name="Space6" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2771, 0, 7.84027 )
