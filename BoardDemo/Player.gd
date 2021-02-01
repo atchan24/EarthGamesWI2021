@@ -8,12 +8,15 @@ var moving = false
 var roll = 0
 var rng = RandomNumberGenerator.new()
 
+var roll_counter = null
+
 export var active = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
 	spaces = get_node("/root/Main/Spaces").get_children()
+	roll_counter = get_node("/root/Main/GUI/Rolls Counter/MarginContainer/Value")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) :
@@ -21,6 +24,7 @@ func _process(delta) :
 		moving = true
 		roll = rng.randi_range(1, 10)
 		# update roll on UI
+		roll_counter.text = str(roll)
 	if moving:
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
