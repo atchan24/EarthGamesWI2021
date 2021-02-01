@@ -8,6 +8,8 @@ var moving = false
 var roll = 0
 var rng = RandomNumberGenerator.new()
 
+export var active = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
@@ -15,7 +17,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) :
-	if Input.is_action_pressed("ui_roll") && !moving :
+	if Input.is_action_pressed("ui_roll") && !moving && active:
 		moving = true
 		roll = rng.randi_range(1, 10)
 		# update roll on UI
@@ -29,3 +31,4 @@ func _process(delta) :
 			if current >= spaces.size():
 				current = 0
 			moving = roll > 0
+			if !moving: active = false
