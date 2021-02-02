@@ -1,11 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Characters/Pedestrian.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Space.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Terrain/Tree.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Terrain/House.tscn" type="PackedScene" id=5]
-[ext_resource path="res://TurnQueue.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/TurnQueue.gd" type="Script" id=6]
+[ext_resource path="res://Main.gd" type="Script" id=7]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 50, 50 )
@@ -17,6 +18,7 @@ albedo_color = Color( 0.0705882, 0.537255, 0.152941, 1 )
 extents = Vector3( 5, 0, 5 )
 
 [node name="Main" type="Spatial"]
+script = ExtResource( 7 )
 
 [node name="GUI" type="MarginContainer" parent="."]
 margin_right = 1024.0
@@ -96,21 +98,27 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.44729, 1.36376, 0 )
 
 [node name="Space" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.8043 )
+category = "Education"
 
 [node name="Space2" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7636, 0, 11.6632 )
+category = "Education"
 
 [node name="Space3" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8781, 0, 0 )
+category = "Education"
 
 [node name="Space4" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.51282, 0, -14.1443 )
+category = "Education"
 
 [node name="Space5" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5087, 0, -6.87506 )
+category = "Education"
 
 [node name="Space6" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2771, 0, 7.84027 )
+category = "Education"
 
 [node name="Tree" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.51643, 0 )
