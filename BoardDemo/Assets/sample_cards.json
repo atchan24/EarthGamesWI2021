@@ -1,0 +1,998 @@
+{
+  "Education": {
+    "Protect": [
+      {
+        "name": "Mollit pariatur ipsum esse culpa enim minim aliquip commodo Lorem.",
+        "choice-a": {
+          "choice": "Aliqua Lorem velit proident laborum sint occaecat do anim non. Id esse anim labore tempor dolore commodo laborum culpa pariatur tempor esse sit. Sunt et id pariatur ea minim irure minim quis Lorem.",
+          "self": -2,
+          "society": -4,
+          "sustainability": -5
+        },
+        "choice-b": {
+          "choice": "Adipisicing mollit sunt magna esse. Qui ad sit minim nulla do in consequat. Adipisicing non mollit occaecat adipisicing excepteur minim cupidatat reprehenderit fugiat tempor excepteur exercitation reprehenderit.",
+          "self": -1,
+          "society": 0,
+          "sustainability": -5
+        },
+        "choice-c": {
+          "choice": "Ullamco dolore culpa ex occaecat deserunt proident esse officia ut adipisicing qui consequat minim consectetur. Ut sit magna aute aute pariatur cillum irure voluptate velit. Reprehenderit anim dolore do laborum adipisicing veniam pariatur aliqua cillum ad esse.",
+          "self": 4,
+          "society": 4,
+          "sustainability": 4
+        }
+      },
+      {
+        "name": "Amet est labore Lorem esse excepteur velit Lorem consectetur ipsum excepteur.",
+        "choice-a": {
+          "choice": "Ad pariatur adipisicing qui ut voluptate occaecat nulla. Cillum aliquip duis non commodo. Eiusmod eu cupidatat Lorem culpa nulla commodo velit ex nostrud.",
+          "self": 2,
+          "society": -3,
+          "sustainability": -4
+        },
+        "choice-b": {
+          "choice": "Labore cillum incididunt sit qui qui ea Lorem ex est est reprehenderit veniam exercitation exercitation. Ex fugiat mollit esse aliqua. Et consequat nulla sint sunt magna.",
+          "self": -5,
+          "society": 5,
+          "sustainability": 0
+        },
+        "choice-c": {
+          "choice": "Ad eiusmod laboris commodo ipsum occaecat cupidatat exercitation. Commodo consequat commodo esse enim et irure ex eiusmod esse. Culpa magna reprehenderit eu ea quis occaecat velit sit sunt do sunt commodo sit.",
+          "self": -3,
+          "society": 0,
+          "sustainability": -5
+        }
+      },
+      {
+        "name": "Culpa aliquip sunt reprehenderit et in cupidatat amet tempor consectetur esse laborum.",
+        "choice-a": {
+          "choice": "Laboris qui esse aliquip qui fugiat labore ipsum veniam non nulla ad tempor. Ut dolore non qui ullamco minim mollit id quis velit culpa. Sit irure velit esse pariatur eu do eiusmod cupidatat aute consectetur sunt.",
+          "self": -2,
+          "society": 5,
+          "sustainability": 0
+        },
+        "choice-b": {
+          "choice": "Occaecat sit est reprehenderit esse pariatur enim consectetur. Ad occaecat id amet commodo cillum anim dolore ea nostrud officia. Mollit eu eiusmod esse dolore aliquip.",
+          "self": 1,
+          "society": 3,
+          "sustainability": 2
+        },
+        "choice-c": {
+          "choice": "Fugiat eu sint est in dolor esse ut cillum aliqua et. Aliqua excepteur occaecat commodo reprehenderit nisi. Commodo quis aliqua irure non voluptate dolor.",
+          "self": -3,
+          "society": 3,
+          "sustainability": -2
+        }
+      }
+    ],
+    "Invest": [
+      {
+        "name": "Est anim dolor enim ullamco.",
+        "choice-a": {
+          "choice": "Deserunt sunt incididunt enim nisi sit adipisicing labore pariatur pariatur non. Occaecat occaecat cillum quis sint excepteur laborum velit officia reprehenderit esse. Velit incididunt non deserunt sint velit eiusmod ea occaecat labore velit ut do incididunt velit.",
+          "self": -5,
+          "society": -3,
+          "sustainability": 1
+        },
+        "choice-b": {
+          "choice": "Est veniam ea quis nostrud in labore id mollit consequat minim dolore duis. Proident nisi anim aliqua veniam aliqua elit minim in veniam veniam sit mollit. Aute veniam quis sint velit consectetur exercitation excepteur Lorem pariatur incididunt esse.",
+          "self": -5,
+          "society": -4,
+          "sustainability": -1
+        },
+        "choice-c": {
+          "choice": "Consequat id in consequat dolore officia incididunt consequat aliqua et ea. Tempor officia excepteur qui non tempor ex aliquip. Deserunt sunt aliquip officia nostrud sit non et amet sint est voluptate sit.",
+          "self": 2,
+          "society": 4,
+          "sustainability": -1
+        }
+      },
+      {
+        "name": "Laborum in proident cillum occaecat fugiat sint culpa duis pariatur in in aliqua labore exercitation.",
+        "choice-a": {
+          "choice": "In reprehenderit non in incididunt adipisicing cillum fugiat do quis nulla est enim. Adipisicing ullamco sunt voluptate duis veniam nostrud ad sunt. Id nisi pariatur fugiat cupidatat laboris.",
+          "self": -5,
+          "society": 3,
+          "sustainability": 5
+        },
+        "choice-b": {
+          "choice": "Excepteur voluptate consectetur amet sit dolore commodo et eu deserunt adipisicing ex est eiusmod non. Consequat laboris reprehenderit laborum eu minim quis labore consequat eiusmod. Cupidatat ullamco eiusmod ex anim ipsum.",
+          "self": 5,
+          "society": 2,
+          "sustainability": 1
+        },
+        "choice-c": {
+          "choice": "Quis magna excepteur consequat eu labore officia excepteur nulla aliquip enim nostrud laboris labore minim. Occaecat nostrud id amet eiusmod. Cupidatat ad aute pariatur ipsum enim ad reprehenderit adipisicing officia pariatur ipsum.",
+          "self": 2,
+          "society": 4,
+          "sustainability": -3
+        }
+      },
+      {
+        "name": "Culpa culpa eu aliqua non incididunt tempor sint veniam do commodo reprehenderit est ea.",
+        "choice-a": {
+          "choice": "Cupidatat quis eiusmod cupidatat id aliqua consectetur excepteur fugiat occaecat ad et excepteur sunt commodo. Dolor nulla duis sit cupidatat fugiat est esse ut labore sunt amet reprehenderit deserunt eiusmod. Excepteur irure labore sit excepteur ex culpa proident nisi ut non id elit aliquip.",
+          "self": -4,
+          "society": -3,
+          "sustainability": 5
+        },
+        "choice-b": {
+          "choice": "Reprehenderit laborum adipisicing enim dolor ea ullamco fugiat adipisicing fugiat. Dolor id magna proident Lorem sit est adipisicing voluptate anim exercitation irure magna deserunt. Veniam minim excepteur culpa occaecat cillum sunt in tempor officia ut.",
+          "self": 1,
+          "society": -1,
+          "sustainability": -5
+        },
+        "choice-c": {
+          "choice": "Enim sunt officia amet mollit officia anim cupidatat in veniam nulla fugiat sit eiusmod aute. Fugiat laborum nulla dolore eu ea nulla duis aliqua minim. Sit laborum Lorem enim proident amet enim laboris veniam incididunt commodo do cillum officia.",
+          "self": -3,
+          "society": -5,
+          "sustainability": -5
+        }
+      }
+    ],
+    "Transform": [
+      {
+        "name": "Aliquip eiusmod adipisicing incididunt incididunt elit minim dolor aliquip dolor.",
+        "choice-a": {
+          "choice": "Deserunt consequat duis qui ad voluptate dolor deserunt dolore consequat aliqua laborum occaecat sit. Nulla occaecat sunt elit commodo eiusmod aute eu. Laborum proident dolor sint nisi est laboris veniam deserunt exercitation sint ad nulla exercitation.",
+          "self": 3,
+          "society": -2,
+          "sustainability": 0
+        },
+        "choice-b": {
+          "choice": "Est velit eiusmod ipsum sint et aliqua commodo adipisicing. Exercitation ullamco esse anim commodo aliquip ipsum nisi qui exercitation sint. Velit ad reprehenderit laboris et esse.",
+          "self": 1,
+          "society": -1,
+          "sustainability": 3
+        },
+        "choice-c": {
+          "choice": "Aliqua magna tempor irure labore et. Sunt incididunt aliqua ex aute sunt occaecat id mollit veniam fugiat. Adipisicing elit ex ad aliqua eiusmod esse esse nostrud.",
+          "self": -5,
+          "society": -4,
+          "sustainability": 0
+        }
+      },
+      {
+        "name": "Non magna laboris eiusmod duis magna deserunt ullamco labore in.",
+        "choice-a": {
+          "choice": "Officia occaecat reprehenderit irure in dolor enim exercitation quis exercitation ea ex Lorem sunt nisi. Incididunt irure amet fugiat consectetur laboris ex dolore Lorem. Excepteur eiusmod officia sit consequat eiusmod velit pariatur nisi velit adipisicing deserunt esse cupidatat.",
+          "self": 2,
+          "society": 3,
+          "sustainability": -3
+        },
+        "choice-b": {
+          "choice": "Cupidatat ea culpa ex nostrud pariatur id cillum consequat nostrud duis est ea commodo nulla. Est sunt nostrud sunt reprehenderit qui elit ipsum aliquip. Quis velit consectetur non ex mollit consequat irure deserunt Lorem cillum Lorem occaecat.",
+          "self": 0,
+          "society": -5,
+          "sustainability": 4
+        },
+        "choice-c": {
+          "choice": "Lorem dolor et culpa ad sit cupidatat aliqua nulla est incididunt et nulla aute nulla. Mollit commodo incididunt irure veniam laboris velit amet nisi ex nostrud. Aliquip dolor veniam nulla excepteur anim velit deserunt veniam labore magna sit.",
+          "self": 3,
+          "society": 0,
+          "sustainability": 3
+        }
+      },
+      {
+        "name": "Minim aliquip fugiat anim enim deserunt et nostrud nostrud commodo reprehenderit velit.",
+        "choice-a": {
+          "choice": "Est ad elit Lorem consequat amet sunt. Velit est ea excepteur labore deserunt enim nisi nulla ex. Ex consequat voluptate ut deserunt ea cupidatat sunt occaecat.",
+          "self": -4,
+          "society": -4,
+          "sustainability": -1
+        },
+        "choice-b": {
+          "choice": "Eu et esse in ea eu ad aliqua fugiat in quis exercitation. Anim ipsum nisi aute aliquip mollit cupidatat laboris anim voluptate consectetur. Lorem irure magna excepteur nostrud eu Lorem aliqua consequat excepteur.",
+          "self": 2,
+          "society": 0,
+          "sustainability": 4
+        },
+        "choice-c": {
+          "choice": "Consectetur qui aliquip et consectetur dolore do. Est commodo consectetur adipisicing aute non id. Aute anim irure eu laboris.",
+          "self": -5,
+          "society": -1,
+          "sustainability": 5
+        }
+      }
+    ],
+    "Repair": [
+      {
+        "name": "Minim mollit duis deserunt cupidatat nostrud ad aute veniam quis sunt esse duis eu.",
+        "choice-a": {
+          "choice": "Ipsum sit dolore id mollit mollit occaecat eiusmod. Sunt amet excepteur non laborum sit tempor id velit magna ad cupidatat. Tempor culpa cupidatat eiusmod magna.",
+          "self": -5,
+          "society": 1,
+          "sustainability": -5
+        },
+        "choice-b": {
+          "choice": "Culpa enim fugiat est irure et dolore culpa mollit cupidatat et sint quis occaecat. Anim nostrud ullamco ad ipsum do veniam ex commodo cupidatat occaecat laboris culpa ut. Amet nulla non excepteur veniam eiusmod voluptate voluptate aliquip sunt in fugiat culpa ut.",
+          "self": 3,
+          "society": 5,
+          "sustainability": -2
+        },
+        "choice-c": {
+          "choice": "Qui est ullamco dolore enim ipsum ipsum cillum occaecat enim excepteur. Sint elit in ut qui labore ullamco consectetur fugiat magna in eu duis. Aute incididunt aliquip reprehenderit fugiat laboris consectetur laboris cupidatat.",
+          "self": -3,
+          "society": 0,
+          "sustainability": 4
+        }
+      },
+      {
+        "name": "Occaecat deserunt eu consectetur nulla cupidatat est ea deserunt eu ea in mollit aute magna.",
+        "choice-a": {
+          "choice": "Veniam consectetur nulla culpa consequat ex sit cupidatat sit. Reprehenderit incididunt in ut nostrud officia occaecat incididunt deserunt. Lorem sit consequat nisi elit.",
+          "self": -2,
+          "society": -2,
+          "sustainability": 3
+        },
+        "choice-b": {
+          "choice": "Ad consequat ullamco incididunt excepteur laborum adipisicing. Consequat nostrud in amet in culpa qui. Reprehenderit sunt reprehenderit eiusmod minim.",
+          "self": 1,
+          "society": 2,
+          "sustainability": 2
+        },
+        "choice-c": {
+          "choice": "Proident laboris officia occaecat anim aute. Adipisicing ut consectetur magna minim ut aute commodo tempor esse. Ea ea incididunt eiusmod elit commodo.",
+          "self": -1,
+          "society": 1,
+          "sustainability": 2
+        }
+      },
+      {
+        "name": "Lorem voluptate minim in pariatur proident amet voluptate.",
+        "choice-a": {
+          "choice": "Duis voluptate sit eiusmod eu magna veniam veniam. Enim eu qui quis do consequat voluptate reprehenderit elit. Velit occaecat veniam adipisicing laborum exercitation commodo.",
+          "self": -4,
+          "society": -5,
+          "sustainability": -4
+        },
+        "choice-b": {
+          "choice": "Elit amet do deserunt consequat voluptate voluptate mollit eu duis esse eiusmod veniam officia. Aute sit cupidatat eu duis anim amet enim culpa eu Lorem. Tempor magna sint duis amet ad non exercitation.",
+          "self": -2,
+          "society": -3,
+          "sustainability": -3
+        },
+        "choice-c": {
+          "choice": "Lorem quis veniam ipsum ullamco officia occaecat non proident amet et. Sint nulla quis excepteur amet commodo labore dolor nulla. Enim consequat pariatur deserunt occaecat aliquip proident dolore anim quis cupidatat laborum sit est adipisicing.",
+          "self": -4,
+          "society": 3,
+          "sustainability": 2
+        }
+      },
+      {
+        "name": "Lorem et adipisicing sit adipisicing exercitation.",
+        "choice-a": {
+          "choice": "Culpa anim esse eu culpa ex nulla ad mollit. Velit tempor esse elit enim voluptate quis eiusmod ea id ipsum culpa. Excepteur adipisicing commodo duis sunt duis mollit ex esse excepteur aliqua cupidatat sint ipsum ut.",
+          "self": -4,
+          "society": -1,
+          "sustainability": -1
+        },
+        "choice-b": {
+          "choice": "Reprehenderit nostrud excepteur labore quis nostrud voluptate id excepteur. Lorem amet dolor aliquip dolore esse laborum Lorem culpa eiusmod sunt minim. Ex nisi consectetur irure velit tempor duis voluptate ea mollit eiusmod quis anim.",
+          "self": 3,
+          "society": -2,
+          "sustainability": -5
+        },
+        "choice-c": {
+          "choice": "Fugiat aliquip consectetur commodo pariatur magna exercitation laborum nisi pariatur occaecat aliqua voluptate labore. Laboris ullamco ut elit esse ullamco mollit. Voluptate est proident voluptate Lorem laborum magna aliqua amet magna dolore minim.",
+          "self": -1,
+          "society": 1,
+          "sustainability": 3
+        }
+      }
+    ]
+  },
+  "Energy": {
+    "Protect": [
+      {
+        "name": "Minim et eiusmod non elit veniam officia enim aliquip id ut laboris sint.",
+        "choice-a": {
+          "choice": "Proident consequat commodo labore voluptate sint cillum aliqua esse ut quis laborum. Adipisicing officia incididunt eiusmod culpa et ex magna veniam irure consectetur. Velit magna sint est exercitation culpa id do ullamco.",
+          "self": 0,
+          "society": -1,
+          "sustainability": -1
+        },
+        "choice-b": {
+          "choice": "Id amet fugiat Lorem quis est commodo reprehenderit. Esse aliquip nostrud non sunt magna minim do ex commodo dolor sit ipsum occaecat. Officia sit velit anim voluptate laborum culpa qui sunt dolore laborum.",
+          "self": -2,
+          "society": 1,
+          "sustainability": -5
+        },
+        "choice-c": {
+          "choice": "Irure magna voluptate pariatur officia exercitation do elit veniam mollit enim amet officia. Anim duis velit consectetur laborum incididunt. Duis elit incididunt nostrud aliqua cupidatat.",
+          "self": 3,
+          "society": 2,
+          "sustainability": 3
+        }
+      },
+      {
+        "name": "Nulla non qui et laborum cupidatat eu do dolor exercitation reprehenderit reprehenderit.",
+        "choice-a": {
+          "choice": "Voluptate duis aute nisi eiusmod dolore Lorem cillum duis. Ut tempor enim adipisicing magna dolore minim. Mollit culpa eiusmod qui minim ea ex velit esse nostrud culpa eu sit sit.",
+          "self": 1,
+          "society": -2,
+          "sustainability": -3
+        },
+        "choice-b": {
+          "choice": "Veniam aliquip et proident cupidatat nisi proident veniam culpa cillum tempor ex anim minim. Consequat consectetur labore fugiat ea voluptate fugiat excepteur qui sunt voluptate sunt. Magna reprehenderit ullamco proident velit commodo officia fugiat tempor fugiat labore cillum.",
+          "self": 4,
+          "society": -5,
+          "sustainability": 2
+        },
+        "choice-c": {
+          "choice": "Commodo velit eiusmod sunt non incididunt voluptate. Eiusmod esse sunt aliquip esse adipisicing nulla dolore aute ad labore fugiat laboris excepteur exercitation. Ut id proident enim sint sint tempor non.",
+          "self": 2,
+          "society": -4,
+          "sustainability": 5
+        }
+      },
+      {
+        "name": "Magna deserunt voluptate exercitation nisi nisi exercitation fugiat tempor nisi est sit ex.",
+        "choice-a": {
+          "choice": "Laboris culpa nostrud ipsum magna magna nostrud. Sunt ipsum laborum ex Lorem do cupidatat reprehenderit mollit voluptate Lorem tempor commodo aute. Est fugiat sit anim fugiat ea quis.",
+          "self": 3,
+          "society": 4,
+          "sustainability": -5
+        },
+        "choice-b": {
+          "choice": "Quis esse elit culpa proident. Minim officia adipisicing ullamco adipisicing occaecat nostrud occaecat. Labore ullamco et dolore esse laborum id laborum non qui ipsum quis.",
+          "self": 2,
+          "society": 3,
+          "sustainability": 1
+        },
+        "choice-c": {
+          "choice": "Fugiat ad ullamco consectetur enim duis minim nulla velit excepteur nostrud non. Adipisicing Lorem aliquip eu in quis ullamco sint culpa eu ea. Officia commodo est enim est esse non in dolore voluptate ipsum non elit.",
+          "self": -2,
+          "society": -4,
+          "sustainability": 1
+        }
+      }
+    ],
+    "Invest": [
+      {
+        "name": "Voluptate aute consectetur exercitation aute veniam dolore.",
+        "choice-a": {
+          "choice": "Nisi aute Lorem quis ullamco dolor velit aliquip nulla. Anim duis laboris incididunt consectetur cupidatat nostrud sunt laboris do nostrud magna. Nisi ex nostrud nulla veniam in ea amet aute.",
+          "self": 1,
+          "society": 0,
+          "sustainability": -5
+        },
+        "choice-b": {
+          "choice": "Esse aute elit occaecat ut. Cupidatat consequat enim labore quis qui. Dolor dolor sit proident nisi reprehenderit esse ullamco non.",
+          "self": 3,
+          "society": 4,
+          "sustainability": 0
+        },
+        "choice-c": {
+          "choice": "Exercitation pariatur ullamco nisi duis. Labore qui non commodo non mollit. Laboris id Lorem officia sunt sit id aliqua minim.",
+          "self": -3,
+          "society": -2,
+          "sustainability": -5
+        }
+      },
+      {
+        "name": "Laborum velit sit Lorem ipsum incididunt ipsum officia aute laboris pariatur in qui.",
+        "choice-a": {
+          "choice": "Veniam commodo ad enim irure dolor commodo eu ex magna. Ex labore labore tempor do excepteur reprehenderit minim sit consequat deserunt nisi enim. Esse esse mollit ea commodo laboris officia est consequat officia.",
+          "self": -1,
+          "society": -4,
+          "sustainability": -4
+        },
+        "choice-b": {
+          "choice": "Eiusmod esse pariatur veniam sit veniam deserunt minim dolore eiusmod reprehenderit. Et tempor ut anim velit exercitation. Velit eiusmod ullamco incididunt cupidatat officia aute culpa mollit commodo minim proident nulla enim.",
+          "self": 2,
+          "society": 4,
+          "sustainability": -5
+        },
+        "choice-c": {
+          "choice": "In cillum dolor ipsum irure ex tempor excepteur culpa do consequat. Culpa est ea sint laboris veniam reprehenderit eu adipisicing dolore irure ipsum nostrud. Consequat aute tempor dolor mollit minim nisi deserunt amet elit et cupidatat.",
+          "self": 2,
+          "society": 4,
+          "sustainability": -1
+        }
+      },
+      {
+        "name": "Ad enim qui aute eu exercitation et non eu enim.",
+        "choice-a": {
+          "choice": "Ipsum veniam cupidatat reprehenderit elit laborum non cillum id. Dolor do occaecat reprehenderit enim Lorem culpa adipisicing. Reprehenderit et ipsum veniam elit do minim fugiat exercitation amet officia eu.",
+          "self": -3,
+          "society": 0,
+          "sustainability": -5
+        },
+        "choice-b": {
+          "choice": "Ex consectetur ut eu cupidatat elit fugiat consectetur in. Cupidatat Lorem occaecat in elit dolore consequat sunt do eiusmod enim magna consequat. In veniam est ullamco dolor quis officia sunt occaecat magna occaecat mollit anim veniam.",
+          "self": -5,
+          "society": -4,
+          "sustainability": 3
+        },
+        "choice-c": {
+          "choice": "Esse duis consectetur eiusmod Lorem esse minim labore. Et anim ex pariatur consectetur id ut mollit aliquip velit aliquip ea excepteur incididunt. Officia Lorem elit exercitation est eu aliqua dolore anim anim ad voluptate sit.",
+          "self": 5,
+          "society": 2,
+          "sustainability": 5
+        }
+      },
+      {
+        "name": "Ea ex sint qui enim id reprehenderit amet.",
+        "choice-a": {
+          "choice": "Culpa est irure minim ullamco deserunt dolore quis qui fugiat reprehenderit culpa reprehenderit. Ut id quis exercitation dolore culpa commodo non. Mollit cillum et in in in Lorem incididunt quis.",
+          "self": 4,
+          "society": -5,
+          "sustainability": -2
+        },
+        "choice-b": {
+          "choice": "Ad dolor magna eu veniam ullamco veniam. Aliquip quis veniam amet exercitation exercitation et tempor eu eu non anim. Est deserunt exercitation proident officia in quis culpa minim adipisicing.",
+          "self": -2,
+          "society": 4,
+          "sustainability": -3
+        },
+        "choice-c": {
+          "choice": "Eu id nostrud aute Lorem labore nostrud proident ut et sunt voluptate. Excepteur fugiat cupidatat excepteur non. Dolore ut cillum occaecat enim reprehenderit aute nostrud amet aute enim consequat.",
+          "self": -5,
+          "society": -2,
+          "sustainability": -5
+        }
+      }
+    ],
+    "Transform": [
+      {
+        "name": "Laboris magna reprehenderit esse aliquip cillum anim dolore do nostrud culpa officia.",
+        "choice-a": {
+          "choice": "Commodo dolore sit eu sunt. Adipisicing minim id sunt anim nulla est do anim aliquip elit sit sit excepteur. Pariatur cillum irure aliqua mollit labore aute nulla enim magna irure culpa.",
+          "self": -5,
+          "society": -2,
+          "sustainability": 4
+        },
+        "choice-b": {
+          "choice": "Adipisicing sint pariatur voluptate sit eiusmod ullamco tempor aliqua ut. Exercitation irure duis eu pariatur proident proident. Officia et anim ullamco amet ex ullamco veniam laboris in ad dolor.",
+          "self": -2,
+          "society": -3,
+          "sustainability": 2
+        },
+        "choice-c": {
+          "choice": "Irure dolore ipsum incididunt et sit eu laborum laboris enim excepteur ullamco amet. Nisi irure minim aliquip in consequat occaecat Lorem ex mollit in velit officia eiusmod sit. Labore nisi anim consectetur officia.",
+          "self": 4,
+          "society": 1,
+          "sustainability": 2
+        }
+      },
+      {
+        "name": "Lorem consequat officia elit fugiat fugiat.",
+        "choice-a": {
+          "choice": "Laborum exercitation tempor nisi minim tempor veniam ipsum nostrud est eiusmod voluptate. Quis tempor consequat labore irure elit veniam cupidatat quis ad. Incididunt cupidatat labore esse ex cupidatat minim.",
+          "self": 1,
+          "society": -3,
+          "sustainability": 3
+        },
+        "choice-b": {
+          "choice": "Mollit dolor minim qui enim cupidatat aliqua non incididunt. Cupidatat labore nulla cillum irure et et quis non qui dolor pariatur. Excepteur reprehenderit reprehenderit ad in veniam nisi quis.",
+          "self": -5,
+          "society": -4,
+          "sustainability": -3
+        },
+        "choice-c": {
+          "choice": "Aliquip voluptate eu culpa sunt do voluptate. Enim reprehenderit eiusmod proident consequat ipsum deserunt eiusmod eiusmod dolor reprehenderit quis. Velit ipsum proident cillum mollit excepteur officia cupidatat fugiat qui et id.",
+          "self": -4,
+          "society": -1,
+          "sustainability": 5
+        }
+      },
+      {
+        "name": "Fugiat adipisicing adipisicing aliquip anim consequat quis officia esse eu laboris magna.",
+        "choice-a": {
+          "choice": "Occaecat quis esse officia irure consequat velit incididunt occaecat excepteur qui laborum eu. Labore minim reprehenderit voluptate ullamco occaecat incididunt aute voluptate et ut minim proident. Consequat magna commodo deserunt ea ex fugiat sit laboris.",
+          "self": 3,
+          "society": 3,
+          "sustainability": 3
+        },
+        "choice-b": {
+          "choice": "Excepteur incididunt occaecat eiusmod in. Ut laborum laboris culpa pariatur. Eu consectetur nostrud ipsum anim.",
+          "self": 2,
+          "society": -3,
+          "sustainability": 3
+        },
+        "choice-c": {
+          "choice": "Veniam culpa pariatur enim aliqua eiusmod eu ullamco Lorem irure eiusmod mollit. Laborum elit laborum ea Lorem ea ipsum ex magna nostrud ullamco ad. Proident officia nisi excepteur consectetur.",
+          "self": 1,
+          "society": -1,
+          "sustainability": -1
+        }
+      },
+      {
+        "name": "Excepteur ut eiusmod fugiat commodo in officia.",
+        "choice-a": {
+          "choice": "Eiusmod reprehenderit proident ex in. Irure duis sint ipsum fugiat. Deserunt magna aliqua culpa eiusmod.",
+          "self": -1,
+          "society": 3,
+          "sustainability": -2
+        },
+        "choice-b": {
+          "choice": "Nulla dolore eu adipisicing consectetur adipisicing sint incididunt do. Anim reprehenderit commodo in et magna ullamco elit eiusmod labore deserunt incididunt. Dolore voluptate ad veniam consequat anim ex quis velit ut anim quis aliqua.",
+          "self": 4,
+          "society": -3,
+          "sustainability": -1
+        },
+        "choice-c": {
+          "choice": "Nulla velit id fugiat officia fugiat proident laboris exercitation nulla dolore velit dolore est. Veniam aliqua do aliquip id. Sunt duis quis cillum proident anim aliquip duis sit aliqua.",
+          "self": -3,
+          "society": -5,
+          "sustainability": 4
+        }
+      },
+      {
+        "name": "Nisi laborum qui esse velit sit ex qui voluptate nulla nulla proident amet et nulla.",
+        "choice-a": {
+          "choice": "Et id reprehenderit sit magna pariatur ut ut labore anim. Amet consectetur reprehenderit esse excepteur consectetur in ea eu labore mollit Lorem quis ut consectetur. Incididunt cupidatat id est reprehenderit duis non.",
+          "self": -4,
+          "society": -3,
+          "sustainability": -2
+        },
+        "choice-b": {
+          "choice": "Consectetur eu sunt cillum sunt quis minim veniam elit dolore ea esse. Reprehenderit eiusmod laborum officia nostrud. Amet esse consequat quis anim officia laboris Lorem aute irure.",
+          "self": 4,
+          "society": 3,
+          "sustainability": 1
+        },
+        "choice-c": {
+          "choice": "Ut cillum officia consequat ut commodo et do. Ad occaecat exercitation eu anim duis exercitation occaecat minim nostrud eu amet fugiat consequat. Veniam velit voluptate elit elit et reprehenderit non incididunt laborum esse ut ad fugiat.",
+          "self": -3,
+          "society": 3,
+          "sustainability": 0
+        }
+      }
+    ],
+    "Repair": [
+      {
+        "name": "Mollit tempor aliqua cillum amet ipsum ad dolore veniam.",
+        "choice-a": {
+          "choice": "Incididunt consequat fugiat qui aliquip incididunt. Et sit cupidatat sint mollit nostrud. Do fugiat incididunt esse officia aute laborum ad enim labore est.",
+          "self": 5,
+          "society": -5,
+          "sustainability": -3
+        },
+        "choice-b": {
+          "choice": "Elit ipsum enim enim minim mollit. Exercitation quis et eiusmod non aliqua laboris minim Lorem exercitation consectetur nisi aute consequat. Ex culpa eu nulla quis.",
+          "self": 4,
+          "society": -2,
+          "sustainability": 5
+        },
+        "choice-c": {
+          "choice": "Est enim consequat eiusmod anim duis tempor duis in cillum mollit velit ipsum. Aliqua mollit ea eu non qui deserunt exercitation eu magna dolore. Pariatur aute irure laboris esse nulla culpa nisi dolore labore sunt eu deserunt.",
+          "self": 3,
+          "society": -3,
+          "sustainability": -5
+        }
+      },
+      {
+        "name": "Aliquip officia labore minim nulla tempor ut adipisicing minim id nostrud culpa magna.",
+        "choice-a": {
+          "choice": "Proident cupidatat in deserunt anim ullamco mollit ullamco id commodo ea proident adipisicing adipisicing. Officia minim laborum qui quis cillum sint id pariatur quis ut fugiat. Fugiat nulla non ipsum tempor nisi eu fugiat.",
+          "self": -1,
+          "society": -4,
+          "sustainability": -1
+        },
+        "choice-b": {
+          "choice": "Laborum veniam sunt Lorem culpa excepteur aliqua occaecat aute in cillum deserunt sit. Tempor Lorem eu cupidatat aliquip proident sunt velit. Fugiat ad reprehenderit eu incididunt voluptate nisi minim.",
+          "self": 1,
+          "society": -1,
+          "sustainability": 1
+        },
+        "choice-c": {
+          "choice": "Sit esse sunt dolore tempor. Voluptate incididunt eu fugiat laborum anim minim cupidatat enim nostrud ex. Eiusmod eu in eiusmod sit velit id occaecat adipisicing.",
+          "self": -1,
+          "society": -4,
+          "sustainability": -1
+        }
+      },
+      {
+        "name": "Tempor esse in do adipisicing irure ex sunt.",
+        "choice-a": {
+          "choice": "Amet qui in est tempor nisi amet elit deserunt ut. Quis officia ipsum aute nulla dolore. Tempor eiusmod in non nostrud id culpa sit consequat veniam.",
+          "self": -2,
+          "society": 5,
+          "sustainability": -3
+        },
+        "choice-b": {
+          "choice": "Occaecat labore aliqua mollit nostrud aliqua sit quis ad aliqua occaecat laboris culpa tempor adipisicing. Lorem laborum nulla sit cillum enim id nisi excepteur quis labore tempor. Est proident non mollit aliqua anim.",
+          "self": 2,
+          "society": 1,
+          "sustainability": 2
+        },
+        "choice-c": {
+          "choice": "Ad do est eu in labore culpa cillum. Qui nisi nisi velit in reprehenderit officia exercitation laborum pariatur ad qui. Quis adipisicing mollit culpa labore quis.",
+          "self": -3,
+          "society": 1,
+          "sustainability": 0
+        }
+      },
+      {
+        "name": "Ad dolor magna nulla excepteur eu incididunt.",
+        "choice-a": {
+          "choice": "Ad proident ut culpa labore consequat aliqua consectetur ad sit ex amet. Nostrud labore Lorem nostrud nisi ea do quis exercitation laborum duis officia. Excepteur et nostrud deserunt reprehenderit labore amet laborum amet occaecat nisi voluptate duis.",
+          "self": 0,
+          "society": -5,
+          "sustainability": -5
+        },
+        "choice-b": {
+          "choice": "Pariatur ad do occaecat ipsum amet do adipisicing. Laborum consectetur deserunt et in cupidatat est laboris esse. Adipisicing et sit officia Lorem excepteur laborum ullamco sit ex in.",
+          "self": 3,
+          "society": -5,
+          "sustainability": 2
+        },
+        "choice-c": {
+          "choice": "Deserunt est mollit excepteur consectetur duis do ipsum id. Eu sunt magna eu ex magna et pariatur aliqua dolore adipisicing. Anim do sit amet tempor labore amet esse.",
+          "self": 0,
+          "society": 0,
+          "sustainability": -1
+        }
+      }
+    ]
+  },
+  "Art": {
+    "Protect": [
+      {
+        "name": "Cupidatat laborum culpa est minim.",
+        "choice-a": {
+          "choice": "Pariatur in magna nisi excepteur dolor magna ex eiusmod. Elit proident deserunt aliqua voluptate enim commodo esse id non sint aliquip dolore exercitation. Occaecat duis laboris magna dolore pariatur irure do nulla reprehenderit commodo dolor eu est ut.",
+          "self": -3,
+          "society": -4,
+          "sustainability": 5
+        },
+        "choice-b": {
+          "choice": "Quis eiusmod Lorem reprehenderit veniam occaecat mollit non velit. Dolor incididunt nulla voluptate anim adipisicing. Laborum sint et est aliquip labore incididunt aliqua voluptate in esse.",
+          "self": -1,
+          "society": -1,
+          "sustainability": 1
+        },
+        "choice-c": {
+          "choice": "Irure cupidatat sit nisi magna Lorem. Et elit commodo aute officia dolore dolor sunt nulla id sint laborum eu ex minim. Proident commodo do aliqua deserunt ex elit adipisicing deserunt quis qui nisi proident in dolore.",
+          "self": 4,
+          "society": -4,
+          "sustainability": 4
+        }
+      },
+      {
+        "name": "Cillum consectetur ad voluptate adipisicing.",
+        "choice-a": {
+          "choice": "Aliqua est est tempor proident amet labore dolore nisi incididunt ea pariatur et id id. Labore culpa labore exercitation occaecat qui culpa proident consequat est cupidatat veniam. Adipisicing pariatur aliquip id fugiat fugiat non enim reprehenderit magna sint duis fugiat incididunt.",
+          "self": -4,
+          "society": 5,
+          "sustainability": 5
+        },
+        "choice-b": {
+          "choice": "Ut et qui aliqua nisi enim consectetur occaecat occaecat sit excepteur. Lorem aute occaecat pariatur consectetur laboris elit culpa elit elit nostrud dolore eiusmod ipsum consequat. Deserunt dolor culpa magna ut deserunt.",
+          "self": 0,
+          "society": 4,
+          "sustainability": -5
+        },
+        "choice-c": {
+          "choice": "Cillum ut eiusmod occaecat ullamco sit veniam sit adipisicing tempor. Ex nisi velit ullamco enim minim velit ea consequat. Labore do in quis exercitation non voluptate labore amet esse amet occaecat.",
+          "self": -1,
+          "society": 5,
+          "sustainability": 0
+        }
+      },
+      {
+        "name": "Anim irure voluptate mollit Lorem adipisicing exercitation.",
+        "choice-a": {
+          "choice": "Aliquip sunt eu exercitation tempor officia ipsum aliqua ea. Aute magna officia ex sit tempor nisi incididunt non qui consequat aliquip sit fugiat. Eu do pariatur voluptate minim enim aute minim elit fugiat dolore.",
+          "self": -1,
+          "society": 2,
+          "sustainability": 0
+        },
+        "choice-b": {
+          "choice": "Aliquip anim exercitation aliquip in tempor dolore dolor eu amet amet adipisicing sunt Lorem aute. Officia cillum ea consectetur est laboris laboris id. Velit tempor officia aliqua nostrud in nisi Lorem mollit consequat.",
+          "self": 4,
+          "society": -2,
+          "sustainability": -1
+        },
+        "choice-c": {
+          "choice": "Deserunt aute consequat aute non occaecat anim laboris. Aliqua adipisicing laboris magna incididunt sunt amet consectetur velit. Incididunt fugiat dolor quis sint.",
+          "self": 2,
+          "society": 5,
+          "sustainability": -3
+        }
+      },
+      {
+        "name": "Pariatur irure dolore reprehenderit sit cupidatat.",
+        "choice-a": {
+          "choice": "Qui proident ad id aute laborum excepteur. Laboris anim ipsum ea duis ex nostrud irure excepteur incididunt ut veniam enim. In eiusmod adipisicing exercitation sunt.",
+          "self": 4,
+          "society": -4,
+          "sustainability": 1
+        },
+        "choice-b": {
+          "choice": "Adipisicing do veniam cupidatat in. Pariatur pariatur culpa est culpa eiusmod qui quis do ut ad irure ipsum. Nisi pariatur dolore minim ipsum consectetur amet consequat ex culpa eu cupidatat.",
+          "self": 0,
+          "society": 1,
+          "sustainability": 3
+        },
+        "choice-c": {
+          "choice": "Ad eiusmod aliqua ad duis consectetur. Officia laboris tempor tempor aliquip sit enim consectetur incididunt irure. Eu mollit consectetur velit est sunt ullamco sunt aliquip cupidatat deserunt.",
+          "self": 5,
+          "society": -5,
+          "sustainability": -2
+        }
+      },
+      {
+        "name": "Sit sint occaecat aliqua eiusmod proident eiusmod sint eiusmod.",
+        "choice-a": {
+          "choice": "Duis aute aute deserunt do ullamco proident culpa incididunt pariatur eiusmod ex pariatur. Dolore velit nulla aliquip consectetur dolore nisi Lorem ullamco ad dolore. Dolore nisi mollit excepteur eu.",
+          "self": -5,
+          "society": -4,
+          "sustainability": 4
+        },
+        "choice-b": {
+          "choice": "Et proident veniam velit reprehenderit ullamco velit et irure mollit dolore eiusmod fugiat velit. Irure deserunt sit esse nostrud. Id tempor officia aute dolor nulla enim nulla adipisicing exercitation.",
+          "self": 5,
+          "society": -1,
+          "sustainability": -5
+        },
+        "choice-c": {
+          "choice": "Lorem aliquip et aliquip eiusmod veniam eu ex magna veniam. Nisi ullamco dolor non amet eiusmod minim in aliquip veniam nulla. Aute ipsum cillum aute occaecat officia aute minim laborum.",
+          "self": -3,
+          "society": -3,
+          "sustainability": 4
+        }
+      }
+    ],
+    "Invest": [
+      {
+        "name": "Exercitation laborum aute amet labore sit aute dolore.",
+        "choice-a": {
+          "choice": "Proident sit laboris eu irure deserunt. Minim ipsum et cupidatat voluptate aliqua dolor labore consectetur cillum qui ullamco incididunt minim labore. Nisi cupidatat et pariatur commodo eu Lorem sit amet.",
+          "self": 4,
+          "society": 3,
+          "sustainability": 2
+        },
+        "choice-b": {
+          "choice": "Eiusmod tempor laboris adipisicing quis. Tempor quis et aute consequat labore et cillum dolor occaecat aute mollit laboris deserunt nisi. Ullamco fugiat laboris nostrud minim occaecat incididunt aute velit.",
+          "self": -1,
+          "society": 0,
+          "sustainability": 0
+        },
+        "choice-c": {
+          "choice": "Ullamco id ipsum do dolore reprehenderit quis culpa id incididunt laboris esse deserunt consequat. Do laborum ipsum duis veniam magna ullamco ipsum ea enim incididunt amet aute. Non amet veniam ullamco quis consequat nisi nostrud esse.",
+          "self": -2,
+          "society": -3,
+          "sustainability": 5
+        }
+      },
+      {
+        "name": "Deserunt officia eiusmod duis proident fugiat ipsum mollit incididunt et pariatur.",
+        "choice-a": {
+          "choice": "Enim dolore quis dolore aliqua quis pariatur amet laboris aliqua commodo. Ea aliqua anim fugiat et adipisicing tempor nostrud sint culpa proident. Aliquip proident est sit dolor irure ea excepteur Lorem in laboris aliquip sunt esse aute.",
+          "self": -2,
+          "society": -5,
+          "sustainability": 0
+        },
+        "choice-b": {
+          "choice": "Nostrud non aliqua commodo nostrud qui Lorem aute elit incididunt deserunt exercitation. Adipisicing occaecat duis amet ad consectetur ad minim amet. Eu ex officia incididunt proident.",
+          "self": 0,
+          "society": 3,
+          "sustainability": -3
+        },
+        "choice-c": {
+          "choice": "Ea proident magna consequat magna elit aliquip voluptate ea in anim est. Qui nisi non irure consectetur ex deserunt esse sunt enim aliquip. Occaecat dolor sint occaecat adipisicing labore quis ad id dolor minim.",
+          "self": 5,
+          "society": 2,
+          "sustainability": -4
+        }
+      },
+      {
+        "name": "Consectetur magna amet consequat adipisicing commodo esse non qui do do eiusmod.",
+        "choice-a": {
+          "choice": "Lorem cillum ullamco aute commodo commodo ut. Laborum in aliquip ipsum labore dolor sint exercitation laboris ipsum. Aute non aliqua duis excepteur irure dolor irure ullamco reprehenderit consequat nulla nostrud laboris labore.",
+          "self": -3,
+          "society": -4,
+          "sustainability": -5
+        },
+        "choice-b": {
+          "choice": "Aliqua nulla nisi deserunt commodo deserunt eiusmod. Proident ullamco in duis ullamco pariatur consequat nisi ullamco dolor exercitation aute qui. Cupidatat ipsum ipsum veniam est.",
+          "self": -2,
+          "society": 1,
+          "sustainability": -3
+        },
+        "choice-c": {
+          "choice": "Laboris tempor officia cupidatat nisi culpa reprehenderit reprehenderit. Non tempor sint voluptate consequat. Do tempor cupidatat magna nostrud.",
+          "self": -4,
+          "society": -4,
+          "sustainability": 5
+        }
+      },
+      {
+        "name": "Nostrud ullamco et culpa voluptate sint velit reprehenderit exercitation minim.",
+        "choice-a": {
+          "choice": "In ad laboris adipisicing aliqua qui ullamco anim magna. Dolor culpa veniam et pariatur id in labore eiusmod. Sit id id cupidatat sint aute deserunt id minim eu enim amet Lorem qui qui.",
+          "self": 1,
+          "society": 2,
+          "sustainability": -2
+        },
+        "choice-b": {
+          "choice": "Nostrud velit ex est laborum enim proident culpa. Commodo exercitation non dolore dolore irure consectetur voluptate sit minim dolor culpa anim ea aute. Ad adipisicing commodo sit nisi excepteur.",
+          "self": 5,
+          "society": -4,
+          "sustainability": 0
+        },
+        "choice-c": {
+          "choice": "Voluptate exercitation id adipisicing dolore in id quis dolore sit consectetur est. Ullamco duis do sint nisi. Est proident aute adipisicing amet.",
+          "self": 2,
+          "society": -5,
+          "sustainability": -2
+        }
+      }
+    ],
+    "Transform": [
+      {
+        "name": "Anim cupidatat eu aliqua cillum deserunt.",
+        "choice-a": {
+          "choice": "Non adipisicing eu consequat incididunt adipisicing. Elit et pariatur nisi incididunt pariatur. Duis occaecat do ea velit ullamco cillum proident laborum.",
+          "self": 2,
+          "society": 4,
+          "sustainability": 1
+        },
+        "choice-b": {
+          "choice": "Enim nulla deserunt aute sint eu anim reprehenderit cupidatat laboris veniam excepteur duis in nisi. Cillum anim minim aliquip ullamco amet dolor anim ullamco nisi voluptate nostrud. Officia velit do pariatur laboris nulla ipsum excepteur nulla fugiat labore aute qui aute.",
+          "self": 4,
+          "society": -1,
+          "sustainability": -3
+        },
+        "choice-c": {
+          "choice": "Officia quis cillum qui veniam velit exercitation sunt esse occaecat ut. Et fugiat reprehenderit labore id cupidatat occaecat sunt sunt est dolore ea excepteur qui ut. Cupidatat ipsum sunt ex laboris aliqua ullamco tempor ullamco duis eiusmod commodo pariatur irure.",
+          "self": 0,
+          "society": -2,
+          "sustainability": -4
+        }
+      },
+      {
+        "name": "Id excepteur culpa sint officia anim qui incididunt commodo eu culpa Lorem esse.",
+        "choice-a": {
+          "choice": "Nisi ut id esse amet occaecat officia culpa ad quis proident elit irure non. Et et ullamco eiusmod exercitation non incididunt laborum. Magna aute voluptate culpa occaecat elit.",
+          "self": 4,
+          "society": 0,
+          "sustainability": 1
+        },
+        "choice-b": {
+          "choice": "Ut cupidatat excepteur consectetur Lorem culpa mollit ea deserunt proident aliqua et. Esse eiusmod cupidatat amet exercitation nulla. Officia sit consectetur elit duis.",
+          "self": -4,
+          "society": -4,
+          "sustainability": 4
+        },
+        "choice-c": {
+          "choice": "Proident non consequat magna magna sit eiusmod dolore mollit incididunt duis nostrud labore. Dolore anim Lorem cillum aute sint ex culpa officia do eiusmod Lorem. Voluptate sit id duis ad reprehenderit aute occaecat excepteur eiusmod nisi magna.",
+          "self": -1,
+          "society": 2,
+          "sustainability": -3
+        }
+      },
+      {
+        "name": "Ad esse non anim eu aute nulla et.",
+        "choice-a": {
+          "choice": "Mollit elit incididunt elit eu quis adipisicing voluptate eu ex ex excepteur labore. Magna incididunt officia nisi officia veniam reprehenderit. Commodo ut non reprehenderit ipsum.",
+          "self": -4,
+          "society": -5,
+          "sustainability": -2
+        },
+        "choice-b": {
+          "choice": "Pariatur consequat sunt minim in ipsum adipisicing esse nostrud. Nisi ut esse magna officia dolore nostrud exercitation. Sunt eu esse dolor velit quis.",
+          "self": 5,
+          "society": 0,
+          "sustainability": -3
+        },
+        "choice-c": {
+          "choice": "Aliqua id non id dolore. Commodo commodo mollit laborum reprehenderit magna. Ea sit culpa minim proident eu.",
+          "self": -5,
+          "society": -2,
+          "sustainability": 2
+        }
+      },
+      {
+        "name": "Voluptate dolore labore est anim occaecat in ut consequat incididunt et Lorem incididunt laborum.",
+        "choice-a": {
+          "choice": "Laborum consequat do cupidatat eiusmod. Id dolor ipsum cillum ullamco do veniam tempor quis quis eiusmod minim. Aliquip commodo dolore sit incididunt ea aliquip laboris deserunt nulla.",
+          "self": -1,
+          "society": 0,
+          "sustainability": 1
+        },
+        "choice-b": {
+          "choice": "Excepteur dolor eiusmod nostrud consequat commodo duis esse. Mollit et deserunt deserunt pariatur proident proident proident irure pariatur veniam quis laboris reprehenderit quis. Laboris tempor adipisicing excepteur exercitation minim reprehenderit et aliquip ipsum quis veniam fugiat commodo.",
+          "self": -2,
+          "society": 5,
+          "sustainability": -3
+        },
+        "choice-c": {
+          "choice": "Irure pariatur cillum consequat deserunt duis veniam cupidatat excepteur in velit consectetur. Eu irure excepteur eu dolor non labore est. Sunt quis Lorem pariatur voluptate minim.",
+          "self": -3,
+          "society": -1,
+          "sustainability": 2
+        }
+      },
+      {
+        "name": "Cillum occaecat ullamco minim anim mollit ipsum.",
+        "choice-a": {
+          "choice": "Incididunt id aliquip magna anim. Mollit mollit aliquip nisi cupidatat pariatur elit. Amet mollit deserunt sunt laborum nostrud sit consectetur duis quis ut deserunt reprehenderit aliqua.",
+          "self": -5,
+          "society": -4,
+          "sustainability": -2
+        },
+        "choice-b": {
+          "choice": "Eiusmod ex sunt ipsum esse qui dolor Lorem sunt excepteur. Tempor tempor nisi cupidatat amet proident exercitation id fugiat. Excepteur fugiat ex magna cillum enim.",
+          "self": 0,
+          "society": 2,
+          "sustainability": 4
+        },
+        "choice-c": {
+          "choice": "Qui sunt qui quis velit adipisicing. Nulla sint eiusmod ipsum velit consectetur. Nulla qui cillum sunt pariatur proident anim ex.",
+          "self": 5,
+          "society": 3,
+          "sustainability": -3
+        }
+      }
+    ],
+    "Repair": [
+      {
+        "name": "Nisi exercitation labore officia labore aliqua.",
+        "choice-a": {
+          "choice": "Quis dolore nisi consequat consequat commodo duis duis sit. Ullamco non quis ipsum do esse nostrud voluptate dolor aute culpa amet do Lorem. Aute aliquip cupidatat culpa consequat eu officia dolore eiusmod.",
+          "self": -5,
+          "society": -4,
+          "sustainability": 3
+        },
+        "choice-b": {
+          "choice": "Tempor voluptate pariatur dolore duis nisi occaecat exercitation esse consequat. Lorem magna consequat Lorem labore do pariatur sint veniam minim minim aliquip. Do sunt labore irure mollit eu.",
+          "self": -4,
+          "society": 3,
+          "sustainability": 5
+        },
+        "choice-c": {
+          "choice": "Elit in tempor adipisicing irure cillum commodo Lorem minim in nulla incididunt officia veniam velit. Fugiat exercitation aute culpa fugiat aute id aliquip in duis qui elit pariatur magna. Laboris labore nisi sint in ex officia aliquip duis Lorem.",
+          "self": 4,
+          "society": -3,
+          "sustainability": -4
+        }
+      },
+      {
+        "name": "Consectetur aliqua aute pariatur exercitation nostrud.",
+        "choice-a": {
+          "choice": "Duis id tempor duis enim proident labore. Ut sunt pariatur eiusmod cupidatat sit eu aliquip aliqua do est voluptate. Laboris veniam ipsum excepteur labore magna magna elit cillum.",
+          "self": -2,
+          "society": -4,
+          "sustainability": -5
+        },
+        "choice-b": {
+          "choice": "Dolore excepteur cupidatat nostrud consectetur adipisicing deserunt minim mollit fugiat anim Lorem sit irure. Voluptate sunt consequat qui tempor anim ex ut in velit incididunt Lorem. Voluptate magna tempor reprehenderit in proident ad mollit dolor nisi nulla esse voluptate.",
+          "self": 0,
+          "society": 1,
+          "sustainability": 5
+        },
+        "choice-c": {
+          "choice": "Fugiat consectetur nisi ipsum ad sunt dolor adipisicing. Ad tempor veniam nostrud minim culpa sunt pariatur veniam reprehenderit laboris dolor. Officia commodo dolor quis culpa ullamco cillum velit eiusmod in.",
+          "self": -4,
+          "society": -4,
+          "sustainability": 4
+        }
+      },
+      {
+        "name": "Aliqua consequat esse minim officia sit anim adipisicing proident laborum ad.",
+        "choice-a": {
+          "choice": "Lorem est mollit ullamco qui labore amet reprehenderit minim. Dolore velit labore irure sint labore dolor amet incididunt ad mollit consectetur ipsum. Proident irure proident anim dolore sunt esse nulla.",
+          "self": -1,
+          "society": 0,
+          "sustainability": 1
+        },
+        "choice-b": {
+          "choice": "Eu magna qui laborum ullamco dolor aute laboris. Cupidatat consectetur qui occaecat do mollit proident deserunt ut. Sit pariatur laboris incididunt nulla tempor velit enim ullamco ad exercitation velit.",
+          "self": 1,
+          "society": 5,
+          "sustainability": 4
+        },
+        "choice-c": {
+          "choice": "Deserunt ea do anim et elit tempor sunt ullamco veniam. Laborum cupidatat irure consectetur esse dolore minim tempor anim ea eu ipsum culpa. Enim consectetur minim nostrud fugiat in.",
+          "self": -5,
+          "society": -3,
+          "sustainability": -4
+        }
+      }
+    ]
+  }
+}

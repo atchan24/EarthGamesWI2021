@@ -33,8 +33,9 @@ func _process(delta) :
 		pos = Vector3(pos.x, 0, pos.z)
 		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity)
 		if pos.length() < 1 :
+			if spaces[current].category != "Travel":
+				roll -= 1
 			current += 1
-			roll -= 1
 			if current >= spaces.size():
 				current = 0
 			moving = roll > 0

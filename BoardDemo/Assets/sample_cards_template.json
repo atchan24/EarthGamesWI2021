@@ -1,0 +1,296 @@
+{
+  "Education" : {
+    "Protect": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ],
+    "Invest": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ],
+    "Transform": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ],
+    "Repair": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ]
+  },
+  "Energy" : {
+    "Protect": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ],
+    "Invest": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ],
+    "Transform": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ],
+    "Repair": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ]
+  },
+  "Art" : {
+    "Protect": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ],
+    "Invest": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ],
+    "Transform": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ],
+    "Repair": [
+      '{{repeat(3, 5)}}',
+      {
+        "name" : '{{lorem(1, "sentences")}}',
+        "choice-a": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-b": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        },
+        "choice-c": {
+          "choice" : '{{lorem(3, "sentences")}}',
+          "self" : '{{integer(-5, 5)}}',
+          "society" : '{{integer(-5, 5)}}',
+          "sustainability" : '{{integer(-5, 5)}}'
+        }
+      }
+    ]
+  }
+}
