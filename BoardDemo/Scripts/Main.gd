@@ -9,7 +9,7 @@ export var card_data = {}
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var file = File.new()
-	file.open("res://Assets/cards.json", file.READ)
+	file.open("res://Assets/sample_cards.json", file.READ)
 	var text = file.get_as_text()
 	var res = JSON.parse(text)
 	if res.error == OK:

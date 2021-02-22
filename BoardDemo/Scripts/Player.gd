@@ -11,15 +11,15 @@ var spaces = null
 var roll_counter = null
 
 export var active = false
-# export var health = 100
-# export var happiness = 100
-# export var money = 0
+var self_score = 100
+var society_score = 100
+var sustainability_score = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
 	spaces = get_node("/root/Main/Spaces").get_children()
-	roll_counter = get_node("/root/Main/GUI/Rolls Counter/MarginContainer/Value")
+	roll_counter = get_node("/root/Main/GUI/Top Bar/Rolls Counter/MarginContainer/Value")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) :
@@ -41,7 +41,11 @@ func _process(delta) :
 			moving = roll > 0
 			if !moving: 
 				# call tile script
-				# var values = spaces[current].start_card_event()
-				# values.resume()
-				# assign values
+				spaces[current].start_card_event(self)
+				# yield(self, "signal name here")
 				active = false
+
+func update_values(s1, s2, s3):
+	self_score -= s1
+	society_score -= s2
+	sustainability_score -= s3

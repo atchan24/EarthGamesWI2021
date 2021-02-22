@@ -1,13 +1,16 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Characters/Pedestrian.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Space.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Terrain/Space.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Terrain/Tree.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Terrain/House.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/TurnQueue.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=7]
-[ext_resource path="res://SkyFog.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Floor3.png" type="Texture" id=8]
+[ext_resource path="res://UI/ChoiceButton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Terrain/Grass.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Terrain/SkyFog.tscn" type="PackedScene" id=12]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 1000, 1000 )
@@ -15,15 +18,24 @@ size = Vector2( 1000, 1000 )
 [sub_resource type="SpatialMaterial" id=2]
 albedo_color = Color( 0.0705882, 0.537255, 0.152941, 1 )
 
+[sub_resource type="SpatialMaterial" id=4]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="PlaneMesh" id=5]
+material = SubResource( 4 )
+size = Vector2( 300, 300 )
+
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 500, 0, 500 )
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 7 )
 
-[node name="GUI" type="MarginContainer" parent="."]
+[node name="GUI" type="Node" parent="."]
+
+[node name="Top Bar" type="MarginContainer" parent="GUI"]
 margin_right = 1024.0
-margin_bottom = 40.0
+margin_bottom = 54.0
 custom_constants/margin_right = 20
 custom_constants/margin_top = 20
 custom_constants/margin_left = 20
@@ -32,17 +44,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Rolls Counter" type="HBoxContainer" parent="GUI"]
+[node name="Rolls Counter" type="HBoxContainer" parent="GUI/Top Bar"]
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 1004.0
 margin_bottom = 34.0
 
-[node name="MarginContainer" type="MarginContainer" parent="GUI/Rolls Counter"]
+[node name="MarginContainer" type="MarginContainer" parent="GUI/Top Bar/Rolls Counter"]
 margin_right = 16.0
 margin_bottom = 14.0
 
-[node name="Rolls" type="Label" parent="GUI/Rolls Counter/MarginContainer"]
+[node name="Rolls" type="Label" parent="GUI/Top Bar/Rolls Counter/MarginContainer"]
 visible = false
 margin_right = 28.0
 margin_bottom = 14.0
@@ -52,9 +64,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Value" type="Label" parent="GUI/Rolls Counter/MarginContainer"]
+[node name="Value" type="Label" parent="GUI/Top Bar/Rolls Counter/MarginContainer"]
 margin_right = 16.0
 margin_bottom = 14.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "10"
 align = 2
 valign = 1
@@ -62,14 +75,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ground" type="StaticBody" parent="."]
+[node name="Choice Buttons" type="Node" parent="GUI"]
 
-[node name="MeshInstance" type="MeshInstance" parent="Ground"]
-mesh = SubResource( 1 )
-material/0 = SubResource( 2 )
+[node name="ChoiceA" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
+text = "A"
 
-[node name="CollisionShape" type="CollisionShape" parent="Ground"]
-shape = SubResource( 3 )
+[node name="ChoiceB" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
+margin_left = 486.274
+margin_top = 500.921
+margin_right = 561.274
+margin_bottom = 535.921
+text = "B"
+
+[node name="ChoiceC" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
+margin_left = 763.359
+margin_top = 496.164
+margin_right = 838.359
+margin_bottom = 531.164
+text = "C"
 
 [node name="Sun" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.910785, 0.412882, 0, -0.412882, 0.910785, 0, 4.46738, 6.84907 )
@@ -88,7 +111,7 @@ transform = Transform( 1, 0, 0, 0, 0.829038, 0.559193, 0, -0.559193, 0.829038, 1
 fov = 61.8
 far = 217.6
 
-[node name="WorldEnvironment" parent="Players/Player/PlayerCamera" instance=ExtResource( 8 )]
+[node name="WorldEnvironment" parent="Players/Player/PlayerCamera" instance=ExtResource( 12 )]
 
 [node name="Player2" parent="Players" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.238, 1.5, 14.846 )
@@ -98,6 +121,113 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.416, 1.5, 20.038 )
 
 [node name="Player4" parent="Players" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9044, 1.5, 17.6801 )
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Ground" type="StaticBody" parent="Environment"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Environment/Ground"]
+visible = false
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Environment/Ground"]
+mesh = SubResource( 5 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Environment/Ground"]
+shape = SubResource( 3 )
+
+[node name="Trees" type="Node" parent="Environment"]
+
+[node name="Tree" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.51643, 0 )
+
+[node name="Tree2" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.93359, 4.32194, 5.64841 )
+
+[node name="Tree3" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4809, 3.76681, -15.4097 )
+
+[node name="Tree4" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1224, 3.76681, -8.07542 )
+
+[node name="Tree5" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6398, 3.76681, -7.91022 )
+
+[node name="Tree6" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2424, 3.76681, 4.28288 )
+
+[node name="Tree7" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3467, 3.76681, 12.0224 )
+
+[node name="Tree8" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.66222, 3.76681, 21.2066 )
+
+[node name="Tree9" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.536, 3.76681, 20.7432 )
+
+[node name="Grass" type="Node" parent="Environment"]
+
+[node name="Grass" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1425, 0, 5.41542 )
+
+[node name="Grass2" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0747, 0, -4.71496 )
+
+[node name="Grass3" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3374, 0, 4.95431 )
+
+[node name="Grass4" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2702, 0, 5.41542 )
+
+[node name="Grass5" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6614, 0, 1.68661 )
+
+[node name="Grass6" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.44908, 0, -2.2242 )
+
+[node name="Grass7" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4842, 0, 6.78212 )
+
+[node name="Grass8" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.3315, 0, -2.77288 )
+
+[node name="Grass9" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8742, 0, -3.13725 )
+
+[node name="Grass10" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8683, 0, -5.44071 )
+
+[node name="Grass11" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13303, 0, 5.41542 )
+
+[node name="Grass12" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7332, 0, 9.45265 )
+
+[node name="Grass13" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8338, 0, 8.35649 )
+
+[node name="Grass14" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.86195, 0, 8.35649 )
+
+[node name="Grass15" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.86195, 0, 12.4719 )
+
+[node name="Grass16" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94336, 0, 16.8875 )
+
+[node name="Grass17" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1577, 0, 8.56867 )
+
+[node name="House" parent="Environment" instance=ExtResource( 5 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 6.74733, -20.83 )
+
+[node name="House2" parent="Environment" instance=ExtResource( 5 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.1536, 6.74733, 23.7472 )
+
+[node name="House3" parent="Environment" instance=ExtResource( 5 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 37.7839, 6.74733, -11.2988 )
 
 [node name="Spaces" type="Node" parent="."]
 
@@ -286,15 +416,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.5724, 0, -87.3304 )
 
 [node name="Space60" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.8023, 0, -81.2154 )
-
-[node name="Tree" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.51643, 0 )
-
-[node name="Tree2" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.93359, 4.32194, 5.64841 )
-
-[node name="Tree3" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4809, 3.76681, -15.4097 )
-
-[node name="House" parent="." instance=ExtResource( 5 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 6.74733, -20.83 )

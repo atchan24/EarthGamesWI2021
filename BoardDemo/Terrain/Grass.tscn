@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Wave 1/Grass.png" type="Texture" id=1]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Grass" type="StaticBody"]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2804, 0 )
+pixel_size = 0.003
+billboard = 1
+texture = ExtResource( 1 )

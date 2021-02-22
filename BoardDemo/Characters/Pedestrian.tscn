@@ -21,7 +21,7 @@ animations = [ {
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0 )
 billboard = 1
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
