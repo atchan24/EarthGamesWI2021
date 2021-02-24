@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Characters/Pedestrian.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Terrain/Space.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Terrain/Tree.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Terrain/House.tscn" type="PackedScene" id=5]
@@ -10,7 +9,7 @@
 [ext_resource path="res://Assets/Floor3.png" type="Texture" id=8]
 [ext_resource path="res://UI/ChoiceButton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Terrain/Grass.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Pause.tscn" type="PackedScene" id=11]
+[ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Terrain/SkyFog.tscn" type="PackedScene" id=12]
 
 [sub_resource type="PlaneMesh" id=1]
@@ -99,9 +98,6 @@ text = "C"
 
 [node name="Sun" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.910785, 0.412882, 0, -0.412882, 0.910785, 0, 4.46738, 6.84907 )
-
-[node name="Pedestrian" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.22499, 0.738038, 8.52205 )
 
 [node name="Players" type="Node" parent="."]
 script = ExtResource( 6 )
@@ -227,7 +223,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1577, 0, 8.56867 )
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 6.74733, -20.83 )
 
 [node name="House2" parent="Environment" instance=ExtResource( 5 )]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 18.1536, 6.74733, 23.7472 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -14.3482, 6.74733, 4.00312 )
 
 [node name="House3" parent="Environment" instance=ExtResource( 5 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 37.7839, 6.74733, -11.2988 )

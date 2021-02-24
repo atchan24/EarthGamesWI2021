@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Assets/Button.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Pause/Pause.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Themes/hovered_button.tres" type="StyleBox" id=4]
-[ext_resource path="res://Themes/non_hovered_button.tres" type="StyleBox" id=5]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 layer = 128
@@ -29,7 +26,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="resumeButton" type="Button" parent="Pause/Overlay" instance=ExtResource( 3 )]
+[node name="resumeButton" parent="Pause/Overlay" instance=ExtResource( 3 )]
 anchor_top = -0.00278086
 anchor_bottom = -0.00278086
 margin_left = 108.0
@@ -39,19 +36,11 @@ margin_bottom = 194.941
 rect_pivot_offset = Vector2( 173.762, 10.6972 )
 focus_neighbour_top = NodePath("../exitButton")
 focus_neighbour_bottom = NodePath("../menuButton")
-custom_styles/hover = ExtResource( 4 )
-custom_styles/pressed = ExtResource( 4 )
-custom_styles/focus = ExtResource( 4 )
-custom_styles/normal = ExtResource( 5 )
 text = "Resume"
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 reference_path = "resume"
 start_focused = true
 
-[node name="menuButton" type="Button" parent="Pause/Overlay" instance=ExtResource( 3 )]
+[node name="menuButton" parent="Pause/Overlay" instance=ExtResource( 3 )]
 anchor_top = -0.00278086
 anchor_bottom = -0.00278086
 margin_left = 108.0
@@ -61,18 +50,10 @@ margin_bottom = 258.508
 rect_pivot_offset = Vector2( 173.762, 10.6972 )
 focus_neighbour_top = NodePath("../resumeButton")
 focus_neighbour_bottom = NodePath("../exitButton")
-custom_styles/hover = ExtResource( 4 )
-custom_styles/pressed = ExtResource( 4 )
-custom_styles/focus = ExtResource( 4 )
-custom_styles/normal = ExtResource( 5 )
 text = "Return to Menu"
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-reference_path = "res://Scenes/MainMenu.tscn"
+reference_path = "res://UI/MainMenu.tscn"
 
-[node name="exitButton" type="Button" parent="Pause/Overlay" instance=ExtResource( 3 )]
+[node name="exitButton" parent="Pause/Overlay" instance=ExtResource( 3 )]
 anchor_top = -0.00278086
 anchor_bottom = -0.00278086
 margin_left = 108.0
@@ -82,14 +63,6 @@ margin_bottom = 321.017
 rect_pivot_offset = Vector2( 173.762, 10.6972 )
 focus_neighbour_top = NodePath("../menuButton")
 focus_neighbour_bottom = NodePath("../resumeButton")
-custom_styles/hover = ExtResource( 4 )
-custom_styles/pressed = ExtResource( 4 )
-custom_styles/focus = ExtResource( 4 )
-custom_styles/normal = ExtResource( 5 )
 text = "Quit Game"
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 [connection signal="pressed" from="Pause/Overlay/resumeButton" to="Pause" method="_on_resumeButton_pressed"]
 [connection signal="pressed" from="Pause/Overlay/menuButton" to="Pause" method="_on_menuButton_pressed"]

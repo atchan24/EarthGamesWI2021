@@ -21,10 +21,11 @@ func _process(delta):
 	pass
 
 func start_card_event(obj):
-	if category == null || category == "": # if the category doesn't exist
-		return
 	if main == null :
 		main = get_node("/root/Main").card_data
+	if !(category in main): # if the category doesn't exist
+		print("category <", category, "> not found")
+		return
 	var pillar = pillars[rng.randi_range(0, 3)]
 	var cards = main[category][pillar]
 	# pick random card
