@@ -1,0 +1,122 @@
+[gd_scene format=2]
+
+[node name="ChoiceGUI" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="Control" parent="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ChoiceA" type="Button" parent="Control/Buttons"]
+margin_left = 144.0
+margin_top = 478.0
+margin_right = 285.0
+margin_bottom = 536.0
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoiceB" type="Button" parent="Control/Buttons"]
+margin_left = 425.904
+margin_top = 477.818
+margin_right = 558.904
+margin_bottom = 531.818
+text = "B"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoiceC" type="Button" parent="Control/Buttons"]
+margin_left = 713.019
+margin_top = 477.818
+margin_right = 846.019
+margin_bottom = 531.818
+text = "C"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Problem" type="RichTextLabel" parent="Control"]
+margin_left = 144.087
+margin_top = 54.0326
+margin_right = 840.087
+margin_bottom = 247.033
+text = "This is just some place holder text for now, here's your problem"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control/Problem"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.654902, 0.411765, 0.411765, 0.188235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoiceAText" type="RichTextLabel" parent="Control"]
+margin_left = 142.122
+margin_top = 303.0
+margin_right = 286.122
+margin_bottom = 478.0
+text = "Placeholder text for choice A
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control/ChoiceAText"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.101961, 0.364706, 0.313726, 0.333333 )
+
+[node name="ChoiceBText" type="RichTextLabel" parent="Control"]
+margin_left = 424.0
+margin_top = 303.0
+margin_right = 561.0
+margin_bottom = 478.0
+text = "Placeholder text for choice B"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control/ChoiceBText"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -65.2651
+margin_top = -90.8674
+margin_right = 78.7349
+margin_bottom = 84.1326
+color = Color( 0.101961, 0.364706, 0.313726, 0.333333 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChoiceCText" type="RichTextLabel" parent="Control"]
+margin_left = 713.0
+margin_top = 300.0
+margin_right = 846.0
+margin_bottom = 476.0
+text = "Placeholder text for choice C"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control/ChoiceCText"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -8.0
+color = Color( 0.101961, 0.364706, 0.313726, 0.282353 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
