@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
 [ext_resource path="res://Terrain/Space.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Terrain/Tree.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Terrain/House.tscn" type="PackedScene" id=5]
@@ -103,7 +104,7 @@ transform = Transform( 1, 0, 0, 0, 0.910785, 0.412882, 0, -0.412882, 0.910785, 0
 script = ExtResource( 6 )
 
 [node name="Player" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.36768, 1.5, 18.6953 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.32049, 1.5, 17.8441 )
 
 [node name="PlayerCamera" type="Camera" parent="Players/Player"]
 transform = Transform( 1, 0, 0, 0, 0.829038, 0.559193, 0, -0.559193, 0.829038, 1.531, 11, 16 )
@@ -126,7 +127,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9044, 1.5, 17.6801 )
 [node name="Ground" type="StaticBody" parent="Environment"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Environment/Ground"]
-visible = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
@@ -229,6 +230,7 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -14.3482, 6.74733, 4.00312 )
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 37.7839, 6.74733, -11.2988 )
 
 [node name="Spaces" type="Node" parent="."]
+script = ExtResource( 2 )
 
 [node name="Space" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.1431 )
@@ -415,3 +417,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.5724, 0, -87.3304 )
 
 [node name="Space60" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.8023, 0, -81.2154 )
+[connection signal="pressed" from="GUI/Choice Buttons/ChoiceA" to="Spaces" method="_on_ChoiceA_pressed"]
+[connection signal="pressed" from="GUI/Choice Buttons/ChoiceB" to="Spaces" method="_on_ChoiceB_pressed"]
+[connection signal="pressed" from="GUI/Choice Buttons/ChoiceC" to="Spaces" method="_on_ChoiceC_pressed"]
