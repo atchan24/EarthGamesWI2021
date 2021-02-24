@@ -45,7 +45,6 @@ func _process(delta) :
 			if !moving: 
 				# call tile script
 				spaces[current].call_manager(self)
-				active = false
 
 func update_values(s1, s2, s3):
 	self_score += s1

@@ -9,40 +9,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Buttons" type="Control" parent="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
-
-[node name="ChoiceA" type="Button" parent="Control/Buttons"]
-margin_left = 144.0
-margin_top = 478.0
-margin_right = 285.0
-margin_bottom = 536.0
-text = "A"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ChoiceB" type="Button" parent="Control/Buttons"]
-margin_left = 425.904
-margin_top = 477.818
-margin_right = 558.904
-margin_bottom = 531.818
-text = "B"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ChoiceC" type="Button" parent="Control/Buttons"]
-margin_left = 713.019
-margin_top = 477.818
-margin_right = 846.019
-margin_bottom = 531.818
-text = "C"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Problem" type="RichTextLabel" parent="Control"]
 margin_left = 144.087
 margin_top = 54.0326
