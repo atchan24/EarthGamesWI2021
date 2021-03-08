@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
@@ -7,27 +7,44 @@
 [ext_resource path="res://Terrain/House.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/TurnQueue.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=7]
-[ext_resource path="res://Assets/Floor3.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Wave 2/FloorHQ_Nugget1.png" type="Texture" id=8]
 [ext_resource path="res://UI/ChoiceButton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Terrain/Grass.tscn" type="PackedScene" id=10]
 [ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Terrain/SkyFog.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/ChoiceGUI.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Wave 1/Bush.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Wave 1/Fire.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Wave 1/Tent.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Wave 1/Water.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Wave 1/Mountain.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Ashley_Art/City.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Ashley_Art/Bike.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Wave 1/Sun.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Wave 1/Squirrel.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Characters/Surp.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Ashley_Art/Tree.PNG" type="Texture" id=24]
+[ext_resource path="res://Assets/Wave 1/Rock.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Ashley_Art/Bird.PNG" type="Texture" id=26]
+[ext_resource path="res://Assets/Characters/Animations/SupIdle.tres" type="SpriteFrames" id=27]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 1000, 1000 )
 
 [sub_resource type="SpatialMaterial" id=2]
-albedo_color = Color( 0.0705882, 0.537255, 0.152941, 1 )
+albedo_color = Color( 0.0705882, 0.537255, 0.109804, 1 )
 
 [sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.101961, 0.196078, 0.709804, 1 )
+
+[sub_resource type="SpatialMaterial" id=4]
 albedo_texture = ExtResource( 8 )
 
-[sub_resource type="PlaneMesh" id=4]
-material = SubResource( 3 )
+[sub_resource type="PlaneMesh" id=5]
+material = SubResource( 4 )
 size = Vector2( 300, 300 )
 
-[sub_resource type="BoxShape" id=5]
+[sub_resource type="BoxShape" id=6]
 extents = Vector3( 500, 0, 500 )
 
 [node name="Main" type="Spatial"]
@@ -101,45 +118,57 @@ text = "C"
 [node name="PauseMenu" parent="." instance=ExtResource( 11 )]
 
 [node name="Sun" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.910785, 0.412882, 0, -0.412882, 0.910785, 0, 4.46738, 6.84907 )
+transform = Transform( 1, 0, 0, 0, 0.910785, 0.412882, 0, -0.412882, 0.910785, 204.159, 38.4672, -8.56393 )
 
 [node name="Players" type="Node" parent="."]
 script = ExtResource( 6 )
 
 [node name="Player" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.32049, 1.5, 17.8441 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.32049, 2.07182, 17.8441 )
 
 [node name="PlayerCamera" type="Camera" parent="Players/Player"]
 transform = Transform( 1, 0, 0, 0, 0.829038, 0.559193, 0, -0.559193, 0.829038, 1.531, 11, 16 )
+current = true
 fov = 61.8
 far = 217.6
 
 [node name="WorldEnvironment" parent="Players/Player/PlayerCamera" instance=ExtResource( 12 )]
 
 [node name="Player2" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.238, 1.5, 14.846 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.238, 2.07182, 14.846 )
 
 [node name="Player3" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.416, 1.5, 20.038 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.416, 2.07182, 20.038 )
 
 [node name="Player4" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9044, 1.5, 17.6801 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9044, 2.07182, 17.6801 )
 
 [node name="Environment" type="Node" parent="."]
 
 [node name="Ground" type="StaticBody" parent="Environment"]
 
 [node name="MeshInstance" type="MeshInstance" parent="Environment/Ground"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0293274, -0.1, -0.0141449 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
+[node name="MeshInstance3" type="MeshInstance" parent="Environment/Ground"]
+transform = Transform( 0.5, 0, 0, 0, 0.1, 0, 0, 0, 1, 447.621, 0.001, 103.597 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="Environment/Ground"]
+transform = Transform( 0.498327, -0.00817472, 0, 0.0408736, 0.0996653, 0, 0, 0, 1, 499.221, 0.001, 103.597 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
 [node name="MeshInstance2" type="MeshInstance" parent="Environment/Ground"]
-mesh = SubResource( 4 )
+transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, -0.000106812, 0, -3.8147e-05 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Environment/Ground"]
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Trees" type="Node" parent="Environment"]
 
@@ -150,16 +179,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.51643, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.93359, 4.32194, 5.64841 )
 
 [node name="Tree3" parent="Environment/Trees" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4809, 3.76681, -15.4097 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0393, -4.02096, -10.1594 )
 
 [node name="Tree4" parent="Environment/Trees" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1224, 3.76681, -8.07542 )
+transform = Transform( 1, 0, 0, 0, 1.19872, 0, 0, 0, 1, 106.186, 5.31797, -8.07542 )
 
 [node name="Tree5" parent="Environment/Trees" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.6398, 3.76681, -7.91022 )
+transform = Transform( 1, 0, 0, 0, 1.47829, 0, 0, 0, 1, 87.608, 6.56661, -17.4981 )
 
 [node name="Tree6" parent="Environment/Trees" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.2424, 3.76681, 4.28288 )
+transform = Transform( 1, 0, 0, 0, 1.46492, 0, 0, 0, 1, 76.4202, 6.4259, -6.69534 )
 
 [node name="Tree7" parent="Environment/Trees" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3467, 3.76681, 12.0224 )
@@ -173,19 +202,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.536, 3.76681, 20.7432 )
 [node name="Grass" type="Node" parent="Environment"]
 
 [node name="Grass" parent="Environment/Grass" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1425, 0, 5.41542 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.9948, 0, -11.1744 )
 
 [node name="Grass2" parent="Environment/Grass" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0747, 0, -4.71496 )
 
 [node name="Grass3" parent="Environment/Grass" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3374, 0, 4.95431 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.9958, 0, -21.4623 )
 
 [node name="Grass4" parent="Environment/Grass" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2702, 0, 5.41542 )
 
 [node name="Grass5" parent="Environment/Grass" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6614, 0, 1.68661 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.8095, 0, -3.60131 )
 
 [node name="Grass6" parent="Environment/Grass" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.44908, 0, -2.2242 )
@@ -194,13 +223,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.44908, 0, -2.2242 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4842, 0, 6.78212 )
 
 [node name="Grass8" parent="Environment/Grass" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.3315, 0, -2.77288 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 88.0024, 0, -13.4806 )
 
 [node name="Grass9" parent="Environment/Grass" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8742, 0, -3.13725 )
 
 [node name="Grass10" parent="Environment/Grass" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.8683, 0, -5.44071 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90.2059, 0, -5.44071 )
 
 [node name="Grass11" parent="Environment/Grass" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13303, 0, 5.41542 )
@@ -232,199 +261,541 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -14.3482, 6.74733, 4.00312 )
 [node name="House3" parent="Environment" instance=ExtResource( 5 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 37.7839, 6.74733, -11.2988 )
 
+[node name="Misc" type="Node" parent="Environment"]
+
+[node name="Surp" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 1, 72.7493, 2.77125, -6.23008 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 23 )
+
+[node name="Bush" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.567078, 0, 0, 0, 0.343112, 0, 0, 0, 1, 91.2577, 1.03657, 0 )
+billboard = 2
+texture = ExtResource( 14 )
+
+[node name="Bush2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.567078, 0, 0, 0, 0.343112, 0, 0, 0, 1, 71.142, 1.03657, -10.611 )
+billboard = 2
+texture = ExtResource( 14 )
+
+[node name="Rock" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 89.9236, 0.499657, -10.611 )
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 97.171, 0.499657, -5.58938 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock3" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 72.8624, 0.499657, -8.82759 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock4" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 97.1071, -0.18661, -17.4539 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock5" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 96.0612, -0.18661, -17.4539 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock6" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 97.761, -0.18661, -17.3683 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock7" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 95.7977, -0.18661, -18.0107 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Tent" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 103.77, 3.01182, -20.3109 )
+billboard = 2
+texture = ExtResource( 16 )
+
+[node name="Fire" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 96.8788, 0.976644, -17.8844 )
+billboard = 2
+texture = ExtResource( 15 )
+
+[node name="Bike" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100.338, 2.28105, -10.8104 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 20 )
+
+[node name="TreeAlt" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2695, 6.0239, -21.5079 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 24 )
+
+[node name="TreeAlt2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.501, 6.0239, -23.9329 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 24 )
+
+[node name="TreeAlt3" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111.732, 6.0239, -1.62677 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 24 )
+
+[node name="Squirrel" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 76.9658, 0.787371, -4.28392 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 22 )
+
+[node name="Bird" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 1, 92.3919, 2.91642, 0.184485 )
+billboard = 2
+texture = ExtResource( 26 )
+
+[node name="Background" type="Node" parent="Environment/Misc"]
+
+[node name="Mountain" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, 117.229, 63.6407, -260.94 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain2" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, 190.52, 67.1092, -260.94 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain3" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 1, 224.532, 50.4, -215.008 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain4" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, -12.3151, 63.6407, -260.94 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain10" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, -151.754, 63.6407, -287.869 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain11" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, -78.4626, 67.1092, -287.869 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain12" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 1, -44.4512, 50.4, -241.938 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain13" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, -157.407, 63.6407, -188.433 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain5" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, 60.9762, 67.1092, -260.94 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain6" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 1, 94.9876, 50.4, -215.008 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain7" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, 273.691, 63.6407, -246.533 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain8" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, 346.982, 67.1092, -246.533 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Mountain9" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 1, 282.755, 18.7245, -207.465 )
+billboard = 2
+texture = ExtResource( 18 )
+
+[node name="Water" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 282.755, 2.4935, -39.9913 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water2" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 274.824, 2.95957, -26.5657 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water3" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 263.568, 2.4935, -50.8928 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water4" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.637, 2.95957, -37.4672 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water5" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 286.579, 2.4935, -64.1745 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water6" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 278.648, 2.95957, -50.7489 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water7" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 259.647, 2.4935, -40.4656 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water8" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 251.716, 2.95957, -27.04 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water9" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 240.46, 2.4935, -51.3671 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water10" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 232.53, 2.95957, -37.9415 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water11" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 263.471, 2.4935, -64.6488 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water12" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 255.54, 2.95957, -51.2232 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water13" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 279.535, 2.4935, 5.35669 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water14" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 271.604, 2.95957, 18.7823 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water15" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 260.348, 2.4935, -5.54482 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water16" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 252.417, 2.95957, 7.88079 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water17" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 283.358, 2.4935, -18.8265 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water18" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 275.428, 2.95957, -5.40091 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water19" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 245.526, 2.4935, -84.8974 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water20" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 237.596, 2.95957, -71.4718 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water21" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 226.34, 2.4935, -95.7989 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water22" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 218.409, 2.95957, -82.3733 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water23" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 249.35, 2.4935, -109.081 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water24" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 241.419, 2.95957, -95.655 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="City" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, 62.4253, 13.4881, -113.228 )
+billboard = 2
+texture = ExtResource( 19 )
+
+[node name="City2" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, 89.2798, 13.4881, -104.431 )
+billboard = 2
+texture = ExtResource( 19 )
+
+[node name="Sun" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, 388.233, 92.798, -172.129 )
+billboard = 2
+texture = ExtResource( 21 )
+
+[node name="Camera" type="Camera" parent="Environment/Misc"]
+transform = Transform( 0.937925, 0.0439387, -0.344043, 0, 0.991943, 0.126684, 0.346837, -0.11882, 0.930369, 81.2938, 6.28681, 5.88307 )
+far = 646.3
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Environment/Misc"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 82.0763, 2.13902, -6.35268 )
+billboard = 2
+frames = ExtResource( 27 )
+animation = "SupWalk"
+frame = 37
+playing = true
+
 [node name="Spaces" type="Node" parent="."]
 script = ExtResource( 2 )
 
 [node name="Space" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.1431 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.77, 0, 14.7785 )
 category = "Travel"
 
 [node name="Space2" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7636, 0, 11.6632 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 88.8878, 0, 11.2986 )
 category = "Education"
 
 [node name="Space3" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8206, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 83.395, 0, -2.84528 )
 category = "Education"
 
 [node name="Space4" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.0016, 0, -14.1443 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81.1396, 0, -14.5089 )
 category = "Education"
 
 [node name="Space5" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.6013, 0, -29.6862 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.3713, 0, -30.0508 )
 category = "Education"
 
 [node name="Space6" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.4038, 0, -44.0634 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.2531, 0, -44.428 )
 category = "Education"
 
 [node name="Space7" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5656, 0, -60.7883 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.0743, 0, -61.1529 )
 category = "Education"
 
 [node name="Space8" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.7813, 0, -78.4301 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 89.5513, 0, -78.7947 )
 category = "Education"
 
 [node name="Space9" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.235, 0, -93.273 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 76.3806, 0, -84.7913 )
 category = "Education"
 
 [node name="Space10" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.0563, 0, -106.897 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.6864, 0, -86.4533 )
 category = "Education"
 
 [node name="Space11" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.58403, 0, -115.008 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.2141, 0, -92.266 )
 category = "Education"
 
 [node name="Space12" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.78702, 0, -122.795 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.8431, 0, -100.294 )
 
 [node name="Space13" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.762, 0, -125.491 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34.1644, 0, -109.304 )
 
 [node name="Space14" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0366, 0, -120.998 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.439, 0, -104.811 )
 
 [node name="Space15" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.1131, 0, -114.11 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.5155, 0, -97.9226 )
 
 [node name="Space16" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.7936, 0, -105.424 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -75.196, 0, -89.2366 )
 
 [node name="Space17" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74.8751, 0, -97.0381 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -86.2775, 0, -80.8507 )
 
 [node name="Space18" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -84.7586, 0, -88.0531 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -96.161, 0, -71.8657 )
 
 [node name="Space19" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -89.8501, 0, -76.3726 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -101.252, 0, -60.1852 )
 
 [node name="Space20" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2461, 0, -64.6921 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -103.648, 0, -48.5047 )
 
 [node name="Space21" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -91.0481, 0, -52.4126 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -102.45, 0, -36.2252 )
 
 [node name="Space22" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -87.1546, 0, -38.336 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -98.557, 0, -22.1486 )
 
 [node name="Space23" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80.8651, 0, -27.8535 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.2675, 0, -11.6661 )
 
 [node name="Space24" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -71.8801, 0, -19.767 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -83.2825, 0, -3.57961 )
 
 [node name="Space25" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.7986, 0, -13.178 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -72.201, 0, 3.00939 )
 
 [node name="Space26" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -48.8186, 0, -7.78701 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.221, 0, 8.40038 )
 
 [node name="Space27" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.4375, 0, -4.79201 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -48.8399, 0, 11.3954 )
 
 [node name="Space28" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.559, 0, -2.99501 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.9614, 0, 13.1924 )
 
 [node name="Space29" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0859, 0, -2.99501 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.4883, 0, 13.1924 )
 
 [node name="Space30" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.13117, 0, -5.08229 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5336, 0, 11.1051 )
 
 [node name="Space31" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.37855, 0, -7.81182 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.02383, 0, 8.37557 )
 
 [node name="Space32" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.246, 0, -15.3582 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.156387, 0, 0.829189 )
 
 [node name="Space33" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0262, 0, -25.9552 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62381, 0, -9.76781 )
 
 [node name="Space34" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.003, 0, -38.3825 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.60062, 0, -22.1951 )
 
 [node name="Space35" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9349, 0, -54.3286 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5325, 0, -38.1412 )
 
 [node name="Space36" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4058, 0, -68.0904 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0034, 0, -51.903 )
 
 [node name="Space37" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2554, 0, -82.2891 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.85302, 0, -66.1017 )
 
 [node name="Space38" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1391, 0, -94.0849 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.736717, 0, -77.8975 )
 
 [node name="Space39" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0936069, 0, -102.386 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.496, 0, -86.1986 )
 
 [node name="Space40" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.2584, 0, -107.204 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6608, 0, -91.0166 )
 
 [node name="Space41" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6931, 0, -107.204 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.0955, 0, -91.0166 )
 
 [node name="Space42" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.4517, 0, -102.618 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.8541, 0, -86.4306 )
 
 [node name="Space43" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55.8981, 0, -94.9741 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.3005, 0, -78.7867 )
 
 [node name="Space44" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -66.0897, 0, -87.5852 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.4921, 0, -71.3978 )
 
 [node name="Space45" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -73.2238, 0, -76.6292 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -84.6262, 0, -60.4418 )
 
 [node name="Space46" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -77.81, 0, -65.4185 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -89.2124, 0, -49.2311 )
 
 [node name="Space47" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -76.5361, 0, -53.4434 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -87.9385, 0, -37.256 )
 
 [node name="Space48" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -72.4594, 0, -40.4491 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -83.8618, 0, -24.2617 )
 
 [node name="Space49" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.5035, 0, -30.5123 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -72.9059, 0, -14.3249 )
 
 [node name="Space50" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -45.4518, 0, -25.9261 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -56.8542, 0, -9.73871 )
 
 [node name="Space51" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30.4192, 0, -20.0659 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.8216, 0, -3.87851 )
 
 [node name="Space52" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9153, 0, -21.5947 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3177, 0, -5.40731 )
 
 [node name="Space53" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.88273, 0, -26.4356 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2851, 0, -10.2482 )
 
 [node name="Space54" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.76101, 0, -39.6847 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.64138, 0, -23.4973 )
 
 [node name="Space55" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.79928, 0, -54.9721 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6031, 0, -38.7847 )
 
 [node name="Space56" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.97746, 0, -70.0047 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.42493, 0, -53.8173 )
 
 [node name="Space57" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.46893, 0, -83.7633 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8713, 0, -67.5759 )
 
 [node name="Space58" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.559, 0, -90.6426 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.9614, 0, -74.4552 )
 
 [node name="Space59" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.5724, 0, -87.3304 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -49.9748, 0, -71.143 )
 
 [node name="Space60" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.8023, 0, -81.2154 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -62.2047, 0, -65.028 )
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceA" to="Spaces" method="_on_ChoiceA_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceB" to="Spaces" method="_on_ChoiceB_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceC" to="Spaces" method="_on_ChoiceC_pressed"]
