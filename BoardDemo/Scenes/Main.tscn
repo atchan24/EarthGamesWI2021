@@ -600,7 +600,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 82.0763, 2.13902, -6.35268
 billboard = 2
 frames = ExtResource( 27 )
 animation = "SupIdle"
-frame = 58
+frame = 50
 playing = true
 
 [node name="Spaces" type="Node" parent="."]
