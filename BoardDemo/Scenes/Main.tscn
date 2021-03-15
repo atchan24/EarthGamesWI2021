@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
@@ -22,11 +22,9 @@
 [ext_resource path="res://Assets/Ashley_Art/Bike.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Wave 1/Sun.png" type="Texture" id=21]
 [ext_resource path="res://Assets/Wave 1/Squirrel.png" type="Texture" id=22]
-[ext_resource path="res://Assets/Characters/Surp.png" type="Texture" id=23]
 [ext_resource path="res://Assets/Ashley_Art/Tree.PNG" type="Texture" id=24]
 [ext_resource path="res://Assets/Wave 1/Rock.png" type="Texture" id=25]
 [ext_resource path="res://Assets/Ashley_Art/Bird.PNG" type="Texture" id=26]
-[ext_resource path="res://Assets/Characters/Animations/SupIdle.tres" type="SpriteFrames" id=27]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 1000, 1000 )
@@ -124,7 +122,7 @@ transform = Transform( 1, 0, 0, 0, 0.910785, 0.412882, 0, -0.412882, 0.910785, 2
 script = ExtResource( 6 )
 
 [node name="Player" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.32049, 2.07182, 17.8441 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 95.1504, 2.07182, 30.5891 )
 
 [node name="PlayerCamera" type="Camera" parent="Players/Player"]
 transform = Transform( 1, 0, 0, 0, 0.829038, 0.559193, 0, -0.559193, 0.829038, 1.531, 11, 16 )
@@ -135,13 +133,13 @@ far = 217.6
 [node name="WorldEnvironment" parent="Players/Player/PlayerCamera" instance=ExtResource( 12 )]
 
 [node name="Player2" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.238, 2.07182, 14.846 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.2329, 2.07182, 27.591 )
 
 [node name="Player3" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.416, 2.07182, 20.038 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 92.0549, 2.07182, 32.783 )
 
 [node name="Player4" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9044, 2.07182, 17.6801 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.5665, 2.07182, 30.4251 )
 
 [node name="Environment" type="Node" parent="."]
 
@@ -262,35 +260,6 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -14.3482, 6.74733, 4.00312 )
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 37.7839, 6.74733, -11.2988 )
 
 [node name="Misc" type="Node" parent="Environment"]
-
-[node name="60FSprite" type="AnimatedSprite3D" parent="Environment/Misc"]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 82.0763, 2.13902, -6.35268 )
-billboard = 2
-frames = ExtResource( 27 )
-animation = "SupWalk"
-frame = 28
-playing = true
-
-[node name="30FSprite" type="AnimatedSprite3D" parent="Environment/Misc"]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 84.9585, 2.13902, -3.58901 )
-billboard = 2
-frames = ExtResource( 27 )
-animation = "30FWalk"
-frame = 17
-playing = true
-
-[node name="6FSprite" type="AnimatedSprite3D" parent="Environment/Misc"]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 87.9108, 2.13902, -0.828504 )
-billboard = 2
-frames = ExtResource( 27 )
-animation = "6FWalk"
-playing = true
-
-[node name="Surp" type="Sprite3D" parent="Environment/Misc"]
-transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 1, 72.7493, 2.77125, -6.23008 )
-flip_h = true
-billboard = 2
-texture = ExtResource( 23 )
 
 [node name="Bush" type="Sprite3D" parent="Environment/Misc"]
 transform = Transform( 0.567078, 0, 0, 0, 0.343112, 0, 0, 0, 1, 91.2577, 1.03657, 0 )
@@ -622,7 +591,7 @@ far = 646.3
 script = ExtResource( 2 )
 
 [node name="Space" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.77, 0, 14.7785 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93.4675, 0, 22.0138 )
 category = "Travel"
 
 [node name="Space2" parent="Spaces" instance=ExtResource( 3 )]
