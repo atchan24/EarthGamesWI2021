@@ -263,6 +263,29 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 37.7839, 6.74733, -11.2988 )
 
 [node name="Misc" type="Node" parent="Environment"]
 
+[node name="60FSprite" type="AnimatedSprite3D" parent="Environment/Misc"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 82.0763, 2.13902, -6.35268 )
+billboard = 2
+frames = ExtResource( 27 )
+animation = "SupWalk"
+frame = 28
+playing = true
+
+[node name="30FSprite" type="AnimatedSprite3D" parent="Environment/Misc"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 84.9585, 2.13902, -3.58901 )
+billboard = 2
+frames = ExtResource( 27 )
+animation = "30FWalk"
+frame = 17
+playing = true
+
+[node name="6FSprite" type="AnimatedSprite3D" parent="Environment/Misc"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 87.9108, 2.13902, -0.828504 )
+billboard = 2
+frames = ExtResource( 27 )
+animation = "6FWalk"
+playing = true
+
 [node name="Surp" type="Sprite3D" parent="Environment/Misc"]
 transform = Transform( 0.4, 0, 0, 0, 0.4, 0, 0, 0, 1, 72.7493, 2.77125, -6.23008 )
 flip_h = true
@@ -594,14 +617,6 @@ texture = ExtResource( 21 )
 [node name="Camera" type="Camera" parent="Environment/Misc"]
 transform = Transform( 0.937925, 0.0439387, -0.344043, 0, 0.991943, 0.126684, 0.346837, -0.11882, 0.930369, 81.2938, 6.28681, 5.88307 )
 far = 646.3
-
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Environment/Misc"]
-transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 82.0763, 2.13902, -6.35268 )
-billboard = 2
-frames = ExtResource( 27 )
-animation = "SupIdle"
-frame = 50
-playing = true
 
 [node name="Spaces" type="Node" parent="."]
 script = ExtResource( 2 )

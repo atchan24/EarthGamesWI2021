@@ -21,7 +21,8 @@ func _ready():
 	rng.randomize()
 	spaces = get_node("/root/Main/Spaces").get_children()
 	roll_counter = get_node("/root/Main/GUI/Top Bar/Rolls Counter/MarginContainer/Value")
-	sprite = get_node("Sprite3D")
+	sprite = get_node("AnimatedSprite3D")
+	sprite.set_animation("SupIdle")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) :
@@ -45,6 +46,9 @@ func _process(delta) :
 			if !moving: 
 				# call tile script
 				spaces[current].call_manager(self)
+		sprite.set_animation("SupWalk")
+	else:
+		sprite.set_animation("SupIdle")
 
 func update_values(s1, s2, s3):
 	self_score += s1
