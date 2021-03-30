@@ -4,9 +4,13 @@ var pillars = ["Protect", "Invest", "Transform", "Repair"]
 var rng = RandomNumberGenerator.new()
 var main = null
 var cur_player = null
+var cur_bonus = 0
 var card = null
 var choice_gui = null
 var buttons = null
+
+var society = 0;
+var sustainability = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,10 +18,11 @@ func _ready():
 	choice_gui = get_node("/root/Main/GUI/ChoiceGUI")
 	buttons = get_node("/root/Main/GUI/Choice Buttons")
 	choice_gui.get_node("Control").visible = false
+	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	for b in buttons.get_children():
 		b.visible = false
 
-func start_card_event(category, player):
+func start_card_event(category, player, bonus):
 	# var new_pause_state = not get_tree().paused
 	# get_tree().paused = new_pause_state
 	if main == null :
@@ -29,6 +34,7 @@ func start_card_event(category, player):
 		# get_tree().paused = new_pause_state
 		return
 	cur_player = player
+	cur_bonus = bonus
 	var pillar = pillars[rng.randi_range(0, 3)]
 	var cards = main[category][pillar]
 	card = cards[rng.randi_range(0, cards.size() - 1)] # picks a random card
@@ -39,6 +45,7 @@ func start_card_event(category, player):
 	choice_gui.get_node("Control/ChoiceBText").text = card["choice-b"]["choice"]
 	choice_gui.get_node("Control/ChoiceCText").text = card["choice-c"]["choice"]
 	choice_gui.get_node("Control").visible = true
+	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = true
 	for b in buttons.get_children():
 		b.visible = true
 
@@ -54,10 +61,15 @@ func _on_ChoiceC_pressed():
 # interprets the card values and hides the choice UI
 func handle_events(c):
 	var choice = card[c]
-	cur_player.update_values(choice["self"], choice["society"], choice["sustainability"])
+	cur_player.update_values(choice["self"] + cur_bonus)
+	society += choice["society"]
+	sustainability += choice["sustainability"]
+	# add logic to increase bonus of a future space defined by offset
+	# need to retrive current space to determine offset by relative position
 	cur_player.active = false
 	# call something to hide UI
 	choice_gui.get_node("Control").visible = false
+	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	for b in buttons.get_children():
 		b.visible = false
 	# var new_pause_state = not get_tree().paused

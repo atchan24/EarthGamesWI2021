@@ -10,11 +10,10 @@ var rng = RandomNumberGenerator.new()
 var sprite = null
 var spaces = null
 var roll_counter = null
+var spinner = null
 
 export var active = false
 var self_score = 100
-var society_score = 100
-var sustainability_score = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,14 +21,17 @@ func _ready():
 	spaces = get_node("/root/Main/Spaces").get_children()
 	roll_counter = get_node("/root/Main/GUI/Top Bar/Rolls Counter/MarginContainer/Value")
 	sprite = get_node("Sprite3D")
+	spinner = get_node("/root/Main/GUI/Spinner")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) :
 	if Input.is_action_pressed("ui_roll") && !moving && active:
-		moving = true
 		roll = rng.randi_range(1, 10)
-		# update roll on UI
+		# update roll on UI and play spinner anim
 		roll_counter.text = str(roll)
+		spinner.play(roll)
+		yield(spinner, "spinner_done")
+		moving = true
 	if moving:
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
@@ -46,10 +48,6 @@ func _process(delta) :
 				# call tile script
 				spaces[current].call_manager(self)
 
-func update_values(s1, s2, s3):
-	self_score += s1
-	society_score += s2
-	sustainability_score += s3
+func update_values(s):
+	self_score += s
 	print(self_score)
-	print(society_score)
-	print(sustainability_score)

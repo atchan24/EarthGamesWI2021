@@ -1,13 +1,11 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Scripts/ChoiceButton.gd" type="Script" id=1]
+[gd_scene format=2]
 
 [node name="Button" type="Button"]
-margin_left = 139.025
-margin_top = 503.299
-margin_right = 214.025
-margin_bottom = 538.299
-script = ExtResource( 1 )
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 139.0
+margin_top = 250.0
+margin_right = 440.0
+margin_bottom = 538.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

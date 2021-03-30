@@ -1,0 +1,113 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://Assets/Art/spinner/spinner_0020_32.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Art/spinner/spinner_0021_31.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Art/spinner/spinner_0022_30.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Art/spinner/spinner_0023_29.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Art/spinner/spinner_0024_28.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Art/spinner/spinner_0025_27.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Art/spinner/spinner_0026_26.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Art/spinner/spinner_0031_21.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Art/spinner/spinner_0032_20.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Art/spinner/spinner_0030_22.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Art/spinner/spinner_0027_25.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Art/spinner/spinner_0028_24.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Art/spinner/spinner_0029_23.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Art/spinner/spinner_0039_13.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Art/spinner/spinner_0019_33-pink.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Art/spinner/spinner_0051_1.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Art/spinner/spinner_0036_16.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Art/spinner/spinner_0018_34-pink2.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Art/spinner/spinner_0033_19.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Art/spinner/spinner_0037_15.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Art/spinner/spinner_0038_14.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Art/spinner/spinner_0050_2.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Art/spinner/spinner_0035_17.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Art/spinner/spinner_0034_18.png" type="Texture" id=24]
+[ext_resource path="res://Scripts/Spinner.gd" type="Script" id=25]
+[ext_resource path="res://Assets/Art/spinner/spinner_0002_50-purple2.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Art/spinner/spinner_0000_52-cyan2.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Art/spinner/spinner_0004_48-blue2.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Art/spinner/spinner_0003_49-purple.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Art/spinner/spinner_0001_51-cyan.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Art/spinner/spinner_0012_40-red2.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Art/spinner/spinner_0008_44-yellow2.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Art/spinner/spinner_0007_45-green.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Art/spinner/spinner_0005_47-blue.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Art/spinner/spinner_0017_35-brown.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Art/spinner/spinner_0010_42-orange2.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Art/spinner/spinner_0016_36-brown2.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Art/spinner/spinner_0011_41-orange.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Art/spinner/spinner_0009_43-yellow.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Art/spinner/spinner_0006_46-green2.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Art/spinner/spinner_0014_38-black2.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Art/spinner/spinner_0015_37-black.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Art/spinner/spinner_0013_39-red.png" type="Texture" id=43]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 32 ) ],
+"loop": false,
+"name": "6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 36 ) ],
+"loop": false,
+"name": "5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 41 ) ],
+"loop": false,
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 26 ) ],
+"loop": false,
+"name": "9",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 34 ), ExtResource( 28 ) ],
+"loop": false,
+"name": "8",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 37 ) ],
+"loop": false,
+"name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 31 ) ],
+"loop": false,
+"name": "4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 27 ) ],
+"loop": false,
+"name": "10",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 40 ) ],
+"loop": false,
+"name": "7",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 22 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 19 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": false,
+"name": "Spinner Base",
+"speed": 5.0
+} ]
+
+[node name="Spinner" type="Node2D"]
+script = ExtResource( 25 )
+
+[node name="SpinnerAnim" type="AnimatedSprite" parent="."]
+position = Vector2( 500, 300 )
+scale = Vector2( 0.08, 0.08 )
+frames = SubResource( 1 )
+animation = "10"
+[connection signal="animation_finished" from="SpinnerAnim" to="." method="_on_SpinnerAnim_animation_finished"]
