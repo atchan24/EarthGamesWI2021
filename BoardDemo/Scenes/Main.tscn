@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=2]
+[gd_scene load_steps=96 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
@@ -37,6 +37,7 @@
 [ext_resource path="res://Scripts/Player3.gd" type="Script" id=35]
 [ext_resource path="res://Assets/Characters/Animations/BeatIdle.png" type="Texture" id=36]
 [ext_resource path="res://Assets/Characters/Animations/BeatWalk.png" type="Texture" id=37]
+[ext_resource path="res://Assets/BoxOfFruit.png" type="Texture" id=38]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 1.5
@@ -76,33 +77,33 @@ region = Rect2( 2370, 1467, 1185, 1467 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 0, 1285, 1694 )
+atlas = ExtResource( 32 )
+region = Rect2( 0, 0, 846, 1201 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 0, 1285, 1694 )
+atlas = ExtResource( 32 )
+region = Rect2( 846, 0, 846, 1201 )
 
 [sub_resource type="AtlasTexture" id=11]
 flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 0, 1285, 1694 )
+atlas = ExtResource( 32 )
+region = Rect2( 1692, 0, 846, 1201 )
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 1694, 1285, 1694 )
+atlas = ExtResource( 32 )
+region = Rect2( 0, 1201, 846, 1201 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 1694, 1285, 1694 )
+atlas = ExtResource( 32 )
+region = Rect2( 846, 1201, 846, 1201 )
 
 [sub_resource type="AtlasTexture" id=14]
 flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 1694, 1285, 1694 )
+atlas = ExtResource( 32 )
+region = Rect2( 1692, 1201, 846, 1201 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 23
@@ -166,33 +167,33 @@ region = Rect2( 2068, 1404, 1034, 1404 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 0, 0, 846, 1201 )
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=28]
 flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 846, 0, 846, 1201 )
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 0, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=29]
 flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 1692, 0, 846, 1201 )
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 0, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=30]
 flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 0, 1201, 846, 1201 )
+atlas = ExtResource( 30 )
+region = Rect2( 0, 1694, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=31]
 flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 846, 1201, 846, 1201 )
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 1694, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=32]
 flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 1692, 1201, 846, 1201 )
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 1694, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=33]
 flags = 23
@@ -293,8 +294,8 @@ animations = [ {
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
 "loop": true,
-"name": "BuffWalk",
-"speed": 6.0
+"name": "JogIdle",
+"speed": 8.0
 }, {
 "frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
 "loop": true,
@@ -308,8 +309,8 @@ animations = [ {
 }, {
 "frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
 "loop": true,
-"name": "JogIdle",
-"speed": 8.0
+"name": "BuffWalk",
+"speed": 6.0
 }, {
 "frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
 "loop": true,
@@ -459,7 +460,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 51 )
 animation = "BuffIdle"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Player3" type="KinematicBody" parent="Players"]
@@ -517,7 +518,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = SubResource( 51 )
 animation = "BeatIdle"
-frame = 4
+frame = 2
 playing = true
 
 [node name="Environment" type="Node" parent="."]
@@ -595,6 +596,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.8095, 0, -3.60131 )
 
 [node name="Grass6" parent="Environment/Grass" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.44908, 0, -2.2242 )
+
+[node name="Grass18" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5235, 0, -2.2242 )
 
 [node name="Grass7" parent="Environment/Grass" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4842, 0, 6.78212 )
@@ -696,6 +700,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 103.77, 3.01182, -20.3109 )
 billboard = 2
 texture = ExtResource( 16 )
 
+[node name="Tent3" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.6843, 3.01182, -20.3109 )
+billboard = 2
+texture = ExtResource( 38 )
+
+[node name="Tent2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 108.117, 3.01182, -27.2851 )
+billboard = 2
+texture = ExtResource( 38 )
+
 [node name="Fire" type="Sprite3D" parent="Environment/Misc"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 96.8788, 0.976644, -17.8844 )
 billboard = 2
@@ -718,6 +732,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.501, 6.0239, -23.9329 )
 flip_h = true
 billboard = 2
 texture = ExtResource( 24 )
+
+[node name="TreeAlt4" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.501, 6.0239, -41.5711 )
+billboard = 2
+texture = ExtResource( 38 )
 
 [node name="TreeAlt3" type="Sprite3D" parent="Environment/Misc"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111.732, 6.0239, -1.62677 )
