@@ -16,6 +16,7 @@ func next_player():
 			players[active_player].active = true
 			# current method of changing cams is a little jank/jerky
 			players[active_player].add_child(cam)
+			break
 		else:
 			active_player = (active_player + 1) % players.size()
 	if init == active_player:
