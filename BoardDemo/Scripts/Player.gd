@@ -6,6 +6,7 @@ var current = 0
 var moving = false
 var roll = 0
 var rng = RandomNumberGenerator.new()
+var done = false
 
 var sprite = null
 var spaces = null
@@ -13,7 +14,7 @@ var roll_counter = null
 var spinner = null
 
 export var active = false
-var self_score = 100
+var self_score = 30
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,10 +25,11 @@ func _ready():
 	spinner = get_node("/root/Main/GUI/Spinner")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta) :
-	if Input.is_action_pressed("ui_roll") && !moving && active:
+func _process(delta):
+	if done:
+		return
+	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing():
 		roll = rng.randi_range(1, 10)
-		# update roll on UI and play spinner anim
 		roll_counter.text = str(roll)
 		spinner.play(roll)
 		yield(spinner, "spinner_done")
@@ -42,12 +44,19 @@ func _process(delta) :
 				roll -= 1
 			current += 1
 			if current >= spaces.size():
-				current = 0
+				roll = 0 # stop moving once you hit the end
+				done = true
 			moving = roll > 0
 			if !moving: 
 				# call tile script
 				spaces[current].call_manager(self)
 
+func is_done():
+	return done
+
 func update_values(s):
 	self_score += s
-	print(self_score)
+	print(self.name + ": " + str(self_score))
+	
+func get_score():
+	return self_score

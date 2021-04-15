@@ -1,0 +1,44 @@
+{
+    "self": [
+        {
+            "ending": "good",
+            "text": "blah"
+        },
+        {
+            "ending": "med",
+            "text": "blah"
+        },
+        {
+            "ending": "bad",
+            "text": "blah"
+        }
+    ],
+    "society": [
+        {
+            "ending": "good",
+            "text": "blah"
+        },
+        {
+            "ending": "med",
+            "text": "blah"
+        },
+        {
+            "ending": "bad",
+            "text": "blah"
+        }
+    ],
+    "sustainability": [
+        {
+            "ending": "good",
+            "text": "blah"
+        },
+        {
+            "ending": "med",
+            "text": "blah"
+        },
+        {
+            "ending": "bad",
+            "text": "blah"
+        }
+    ]
+}

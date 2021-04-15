@@ -1,7 +1,7 @@
 extends Node2D
 
 var anim 
-var n
+var n = "0"
 var cur = 0
 
 signal spinner_done
@@ -15,6 +15,9 @@ func play(num):
 	self.visible = true
 	anim.play("Spinner Base")
 	n = str(num)
+	
+func playing():
+	return anim.playing
 
 func _on_SpinnerAnim_animation_finished():
 	if anim.animation != n:
@@ -28,4 +31,5 @@ func _on_SpinnerAnim_animation_finished():
 		cur = 0
 		yield(get_tree().create_timer(1.5), "timeout")
 		emit_signal("spinner_done")
+		anim.playing = false
 		self.visible = false
