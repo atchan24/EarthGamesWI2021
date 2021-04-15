@@ -2,7 +2,8 @@ extends Node
 
 var pillars = ["Protect", "Invest", "Transform", "Repair"]
 var rng = RandomNumberGenerator.new()
-var main = null
+var manager = null
+var card_data = null
 var cur_player = null
 var cur_bonus = 0
 var card = null
@@ -10,12 +11,10 @@ var choice_gui = null
 var buttons = null
 var assets = null
 
-var society = 0;
-var sustainability = 0
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
+	manager = get_node("/root/Main")
 	choice_gui = get_node("/root/Main/GUI/ChoiceGUI")
 	buttons = get_node("/root/Main/GUI/Choice Buttons")
 	choice_gui.get_node("Control").visible = false
@@ -27,9 +26,9 @@ func _ready():
 func start_card_event(category, player, bonus):
 	# var new_pause_state = not get_tree().paused
 	# get_tree().paused = new_pause_state
-	if main == null :
-		main = get_node("/root/Main").card_data
-	if !(category in main): # if the category doesn't exist
+	if card_data == null :
+		card_data = manager.card_data
+	if !(category in card_data): # if the category doesn't exist
 		print("category <", category, "> not found")
 		player.active = false
 		# new_pause_state = not get_tree().paused
@@ -41,7 +40,7 @@ func start_card_event(category, player, bonus):
 	cur_player = player
 	cur_bonus = bonus
 	var pillar = pillars[rng.randi_range(0, 3)]
-	var cards = main[category][pillar]
+	var cards = card_data[category][pillar]
 	card = cards[rng.randi_range(0, cards.size() - 1)] # picks a random card
 	# assign fields to UI and display it
 	# maybe add img path later?
@@ -55,20 +54,40 @@ func start_card_event(category, player, bonus):
 		b.visible = true
 
 func _on_ChoiceA_pressed():
-	handle_events("choice-a")
+	handle_events_demo("choice-a")
 
 func _on_ChoiceB_pressed():
-	handle_events("choice-b")
+	handle_events_demo("choice-b")
 
 func _on_ChoiceC_pressed():
-	handle_events("choice-c")
-	
+	handle_events_demo("choice-c")
+
+# use this version of handle_events for Earth Week demo
+func handle_events_demo(c):
+	var s1 = 0
+	var s2 = 0
+	var s3 = 0
+	if c == "choice-a":
+		s1 = 5
+	elif c == "choice-b":
+		s1 = -5
+		s2 = 5
+	elif c == "choice-c":
+		s1 = -5
+		s3 = 5
+	cur_player.update_values(s1 + cur_bonus)
+	manager.update_score(s2, s3)
+	cur_player.active = false
+	choice_gui.get_node("Control").visible = false
+	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
+	for b in buttons.get_children():
+		b.visible = false
+
 # interprets the card values and hides the choice UI
 func handle_events(c):
 	var choice = card[c]
 	cur_player.update_values(choice["self"] + cur_bonus)
-	society += choice["society"]
-	sustainability += choice["sustainability"]
+	manager.update_score(choice["society"], choice["sustainability"])
 	# add logic to increase bonus of a future space defined by offset
 	# need to retrive current space to determine offset by relative position
 	# call something to hide UI

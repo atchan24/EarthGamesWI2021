@@ -9,10 +9,17 @@ var active_player : int
 var cam = null;
 
 func next_player():
+	var init = active_player
 	active_player = (active_player + 1) % players.size()
-	players[active_player].active = true
-	# current method of changing cams is a little jank/jerky
-	players[active_player].add_child(cam)
+	while init != active_player:
+		if !players[active_player].is_done():
+			players[active_player].active = true
+			# current method of changing cams is a little jank/jerky
+			players[active_player].add_child(cam)
+		else:
+			active_player = (active_player + 1) % players.size()
+	if init == active_player:
+		get_node("/root/Main").end_game()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,7 +27,6 @@ func _ready():
 	players = self.get_children()
 	active_player = 0
 	players[active_player].active = true
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
