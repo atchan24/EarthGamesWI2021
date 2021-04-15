@@ -8,6 +8,7 @@ var cur_bonus = 0
 var card = null
 var choice_gui = null
 var buttons = null
+var assets = null
 
 var society = 0;
 var sustainability = 0
@@ -19,6 +20,7 @@ func _ready():
 	buttons = get_node("/root/Main/GUI/Choice Buttons")
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
+	assets = get_node("/root/Main/Environment/Category Assets")
 	for b in buttons.get_children():
 		b.visible = false
 
@@ -33,6 +35,9 @@ func start_card_event(category, player, bonus):
 		# new_pause_state = not get_tree().paused
 		# get_tree().paused = new_pause_state
 		return
+	for c in assets.get_children():
+		if (c.name == category):
+			assets = c
 	cur_player = player
 	cur_bonus = bonus
 	var pillar = pillars[rng.randi_range(0, 3)]
@@ -66,11 +71,15 @@ func handle_events(c):
 	sustainability += choice["sustainability"]
 	# add logic to increase bonus of a future space defined by offset
 	# need to retrive current space to determine offset by relative position
-	cur_player.active = false
 	# call something to hide UI
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	for b in buttons.get_children():
 		b.visible = false
+	for a in assets.get_children():
+		if !(a.visible):
+			a.visible = true
+			break
+	cur_player.active = false
 	# var new_pause_state = not get_tree().paused
 	# get_tree().paused = new_pause_state

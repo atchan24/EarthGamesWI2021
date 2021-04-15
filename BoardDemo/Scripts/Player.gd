@@ -26,7 +26,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta) :
 	if Input.is_action_pressed("ui_roll") && !moving && active:
-		roll = rng.randi_range(1, 10)
+		# roll = rng.randi_range(1, 10)
+		roll = 4
 		# update roll on UI and play spinner anim
 		roll_counter.text = str(roll)
 		spinner.play(roll)

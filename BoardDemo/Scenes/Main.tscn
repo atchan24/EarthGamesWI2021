@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://Terrain/SkyFog.tscn" type="PackedScene" id=12]
 [ext_resource path="res://UI/ChoiceGUI.tscn" type="PackedScene" id=13]
 [ext_resource path="res://UI/Spinner.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/Reactive Assets/TreeReactiveAsset.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scripts/ReactiveAsset.gd" type="Script" id=16]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 1000, 1000 )
@@ -239,6 +241,15 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, -14.3482, 6.74733, 4.00312 )
 [node name="House3" parent="Environment" instance=ExtResource( 5 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 37.7839, 6.74733, -11.2988 )
 
+[node name="Category Assets" type="Node" parent="Environment"]
+
+[node name="Education" type="Node" parent="Environment/Category Assets"]
+
+[node name="Tree" parent="Environment/Category Assets/Education" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.908, 24, -39.243 )
+visible = false
+script = ExtResource( 16 )
+
 [node name="Spaces" type="Node" parent="."]
 script = ExtResource( 2 )
 
@@ -353,7 +364,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.246, 0, -15.3582 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.0262, 0, -25.9552 )
 
 [node name="Space34" parent="Spaces" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.003, 0, -38.3825 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.003, 0, -38.3443 )
 
 [node name="Space35" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.9349, 0, -54.3286 )
