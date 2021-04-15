@@ -9,6 +9,7 @@ var rng = RandomNumberGenerator.new()
 
 var sprite = null
 var spaces = null
+var player_audio = null
 var roll_counter = null
 
 export var active = false
@@ -22,6 +23,7 @@ func _ready():
 	spaces = get_node("/root/Main/Spaces").get_children()
 	roll_counter = get_node("/root/Main/GUI/Top Bar/Rolls Counter/MarginContainer/Value")
 	sprite = get_node("AnimatedSprite3D")
+	player_audio = get_node("AudioStreamPlayer3D")
 	sprite.set_animation("JogIdle")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -47,8 +49,12 @@ func _process(delta) :
 				# call tile script
 				spaces[current].call_manager(self)
 		sprite.set_animation("JogWalk")
+		if (player_audio.playing == false):
+			player_audio.play(0.0)
 	else:
 		sprite.set_animation("JogIdle")
+		if (player_audio.playing):
+			player_audio.stop()
 
 func update_values(s1, s2, s3):
 	self_score += s1
