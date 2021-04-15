@@ -20,7 +20,6 @@ var self_score = 30
 func _ready():
 	rng.randomize()
 	spaces = get_node("/root/Main/Spaces").get_children()
-	roll_counter = get_node("/root/Main/GUI/Top Bar/Rolls Counter/MarginContainer/Value")
 	sprite = get_node("Sprite3D")
 	spinner = get_node("/root/Main/GUI/Spinner")
 
@@ -30,7 +29,6 @@ func _process(delta):
 		return
 	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing():
 		roll = rng.randi_range(1, 10)
-		roll_counter.text = str(roll)
 		spinner.play(roll)
 		yield(spinner, "spinner_done")
 		moving = true
