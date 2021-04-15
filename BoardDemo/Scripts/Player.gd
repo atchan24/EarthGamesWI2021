@@ -20,8 +20,9 @@ var self_score = 30
 func _ready():
 	rng.randomize()
 	spaces = get_node("/root/Main/Spaces").get_children()
-	sprite = get_node("Sprite3D")
 	spinner = get_node("/root/Main/GUI/Spinner")
+	sprite = get_node("AnimatedSprite3D")
+	sprite.set_animation("SurpIdle")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -48,6 +49,9 @@ func _process(delta):
 			if !moving: 
 				# call tile script
 				spaces[current].call_manager(self)
+		sprite.set_animation("SurpWalk")
+	else:
+		sprite.set_animation("SurpIdle")
 
 func is_done():
 	return done
