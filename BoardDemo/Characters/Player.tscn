@@ -105,97 +105,97 @@ flags = 23
 atlas = ExtResource( 4 )
 region = Rect2( 2068, 1404, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=21]
 flags = 23
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=29]
+[sub_resource type="AtlasTexture" id=22]
 flags = 23
 atlas = ExtResource( 8 )
 region = Rect2( 846, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=30]
+[sub_resource type="AtlasTexture" id=23]
 flags = 23
 atlas = ExtResource( 8 )
 region = Rect2( 1692, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=31]
+[sub_resource type="AtlasTexture" id=24]
 flags = 23
 atlas = ExtResource( 8 )
 region = Rect2( 0, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=32]
+[sub_resource type="AtlasTexture" id=25]
 flags = 23
 atlas = ExtResource( 8 )
 region = Rect2( 846, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=33]
+[sub_resource type="AtlasTexture" id=26]
 flags = 23
 atlas = ExtResource( 8 )
 region = Rect2( 1692, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=40]
-flags = 23
-atlas = ExtResource( 7 )
-region = Rect2( 0, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=41]
-flags = 23
-atlas = ExtResource( 7 )
-region = Rect2( 1037, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=42]
-flags = 23
-atlas = ExtResource( 7 )
-region = Rect2( 2074, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=43]
-flags = 23
-atlas = ExtResource( 7 )
-region = Rect2( 0, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=44]
-flags = 23
-atlas = ExtResource( 7 )
-region = Rect2( 1037, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=45]
-flags = 23
-atlas = ExtResource( 7 )
-region = Rect2( 2074, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=27]
 flags = 23
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=28]
 flags = 23
 atlas = ExtResource( 6 )
 region = Rect2( 1169, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=29]
 flags = 23
 atlas = ExtResource( 6 )
 region = Rect2( 2338, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=30]
 flags = 23
 atlas = ExtResource( 6 )
 region = Rect2( 0, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=31]
 flags = 23
 atlas = ExtResource( 6 )
 region = Rect2( 1169, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=32]
 flags = 23
 atlas = ExtResource( 6 )
 region = Rect2( 2338, 1669, 1169, 1669 )
 
-[sub_resource type="SpriteFrames" id=21]
+[sub_resource type="AtlasTexture" id=33]
+flags = 23
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 23
+atlas = ExtResource( 7 )
+region = Rect2( 1037, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 23
+atlas = ExtResource( 7 )
+region = Rect2( 2074, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 23
+atlas = ExtResource( 7 )
+region = Rect2( 0, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 23
+atlas = ExtResource( 7 )
+region = Rect2( 1037, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 23
+atlas = ExtResource( 7 )
+region = Rect2( 2074, 1224, 1037, 1224 )
+
+[sub_resource type="SpriteFrames" id=39]
 animations = [ {
 "frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
@@ -212,20 +212,20 @@ animations = [ {
 "name": "SurpIdle",
 "speed": 6.0
 }, {
-"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
 "loop": true,
 "name": "JogIdle",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
-"loop": true,
-"name": "JogWalk",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
 "loop": true,
 "name": "BuffIdle",
 "speed": 6.0
+}, {
+"frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
+"loop": true,
+"name": "JogWalk",
+"speed": 8.0
 } ]
 
 [node name="Player" type="KinematicBody"]
@@ -251,7 +251,7 @@ texture = ExtResource( 2 )
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
-frames = SubResource( 21 )
+frames = SubResource( 39 )
 animation = "SurpIdle"
-frame = 5
+frame = 4
 playing = true
