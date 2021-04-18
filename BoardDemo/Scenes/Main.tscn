@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=2]
+[gd_scene load_steps=129 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
@@ -22,7 +22,7 @@
 [ext_resource path="res://Assets/Ashley_Art/Bike.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Wave 1/Sun.png" type="Texture" id=21]
 [ext_resource path="res://Assets/Wave 1/Squirrel.png" type="Texture" id=22]
-[ext_resource path="res://Scripts/Player4.gd" type="Script" id=23]
+[ext_resource path="res://UI/EndingUI.tscn" type="PackedScene" id=23]
 [ext_resource path="res://Assets/Ashley_Art/Tree.PNG" type="Texture" id=24]
 [ext_resource path="res://Assets/Wave 1/Rock.png" type="Texture" id=25]
 [ext_resource path="res://Assets/Ashley_Art/Bird.PNG" type="Texture" id=26]
@@ -33,8 +33,6 @@
 [ext_resource path="res://Assets/Characters/Animations/AnimBuffIdle.png" type="Texture" id=31]
 [ext_resource path="res://Assets/Characters/Animations/JogIdle.png" type="Texture" id=32]
 [ext_resource path="res://Assets/Characters/Animations/JogWalk.png" type="Texture" id=33]
-[ext_resource path="res://Scripts/Player2.gd" type="Script" id=34]
-[ext_resource path="res://Scripts/Player3.gd" type="Script" id=35]
 [ext_resource path="res://Assets/Characters/Animations/BeatIdle.png" type="Texture" id=36]
 [ext_resource path="res://Assets/Characters/Animations/BeatWalk.png" type="Texture" id=37]
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=38]
@@ -71,312 +69,513 @@
 [ext_resource path="res://Assets/Art/IMG_0738.PNG" type="Texture" id=69]
 [ext_resource path="res://Assets/Art/IMG_0704.PNG" type="Texture" id=70]
 
-[sub_resource type="CapsuleShape" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends KinematicBody
+
+const velocity = 10
+
+var current = 0
+var moving = false
+var roll = 0
+var rng = RandomNumberGenerator.new()
+var done = false
+
+var sprite = null
+var spaces = null
+var roll_counter = null
+var spinner = null
+
+export var active = false
+var self_score = 30
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	rng.randomize()
+	spaces = get_node(\"/root/Main/Spaces\").get_children()
+	spinner = get_node(\"/root/Main/GUI/Spinner\")
+	sprite = get_node(\"AnimatedSprite3D\")
+	sprite.set_animation(\"BuffIdle\")
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if done:
+		return
+	if Input.is_action_pressed(\"ui_roll\") && !moving && active && !spinner.playing():
+		roll = rng.randi_range(1, 10)
+		spinner.play(roll)
+		yield(spinner, \"spinner_done\")
+		moving = true
+	if moving:
+		var pos = spaces[current].translation - global_transform.origin
+		pos = Vector3(pos.x, 0, pos.z)
+		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity)
+		sprite.set_flip_h(pos.x > 0)
+		if pos.length() < 1 :
+			if spaces[current].category != \"Travel\":
+				roll -= 1
+			current += 1
+			if current >= spaces.size():
+				roll = 0 # stop moving once you hit the end
+				done = true
+			moving = roll > 0
+			if !moving: 
+				# call tile script
+				spaces[current].call_manager(self)
+		sprite.set_animation(\"BuffWalk\")
+	else:
+		sprite.set_animation(\"BuffIdle\")
+
+func is_done():
+	return done
+
+func update_values(s):
+	self_score += s
+	print(self.name + \": \" + str(self_score))
+	
+func get_score():
+	return self_score
+"
+
+[sub_resource type="CapsuleShape" id=2]
 height = 1.5
 
-[sub_resource type="CapsuleMesh" id=2]
+[sub_resource type="CapsuleMesh" id=3]
 mid_height = 1.5
 
-[sub_resource type="AtlasTexture" id=3]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 0, 0, 1185, 1467 )
-
 [sub_resource type="AtlasTexture" id=4]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 1185, 0, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=5]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 2370, 0, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 0, 1467, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 1185, 1467, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 2370, 1467, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=13]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=14]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=15]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 0, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=16]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 1034, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=17]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 2068, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=18]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 0, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=19]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 1034, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=20]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 2068, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 0, 0, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=22]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 846, 0, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=23]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 1692, 0, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=24]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 0, 1201, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=25]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 846, 1201, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=26]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 1692, 1201, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=27]
-flags = 23
-atlas = ExtResource( 31 )
-region = Rect2( 0, 0, 1169, 1669 )
-
-[sub_resource type="AtlasTexture" id=28]
-flags = 23
-atlas = ExtResource( 31 )
-region = Rect2( 1169, 0, 1169, 1669 )
-
-[sub_resource type="AtlasTexture" id=29]
-flags = 23
-atlas = ExtResource( 31 )
-region = Rect2( 2338, 0, 1169, 1669 )
-
-[sub_resource type="AtlasTexture" id=30]
-flags = 23
-atlas = ExtResource( 31 )
-region = Rect2( 0, 1669, 1169, 1669 )
-
-[sub_resource type="AtlasTexture" id=31]
-flags = 23
-atlas = ExtResource( 31 )
-region = Rect2( 1169, 1669, 1169, 1669 )
-
-[sub_resource type="AtlasTexture" id=32]
-flags = 23
-atlas = ExtResource( 31 )
-region = Rect2( 2338, 1669, 1169, 1669 )
-
-[sub_resource type="AtlasTexture" id=33]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 0, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=34]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 1037, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=35]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 2074, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=36]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 0, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=37]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 1037, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=38]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 2074, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=39]
 flags = 23
 atlas = ExtResource( 36 )
 region = Rect2( 0, 0, 921, 1378 )
 
-[sub_resource type="AtlasTexture" id=40]
+[sub_resource type="AtlasTexture" id=5]
 flags = 23
 atlas = ExtResource( 36 )
 region = Rect2( 921, 0, 921, 1378 )
 
-[sub_resource type="AtlasTexture" id=41]
+[sub_resource type="AtlasTexture" id=6]
 flags = 23
 atlas = ExtResource( 36 )
 region = Rect2( 1842, 0, 921, 1378 )
 
-[sub_resource type="AtlasTexture" id=42]
+[sub_resource type="AtlasTexture" id=7]
 flags = 23
 atlas = ExtResource( 36 )
 region = Rect2( 0, 1378, 921, 1378 )
 
-[sub_resource type="AtlasTexture" id=43]
+[sub_resource type="AtlasTexture" id=8]
 flags = 23
 atlas = ExtResource( 36 )
 region = Rect2( 921, 1378, 921, 1378 )
 
-[sub_resource type="AtlasTexture" id=44]
+[sub_resource type="AtlasTexture" id=9]
 flags = 23
 atlas = ExtResource( 36 )
 region = Rect2( 1842, 1378, 921, 1378 )
 
-[sub_resource type="AtlasTexture" id=45]
+[sub_resource type="AtlasTexture" id=10]
 flags = 23
 atlas = ExtResource( 37 )
 region = Rect2( 0, 0, 1001, 1376 )
 
-[sub_resource type="AtlasTexture" id=46]
+[sub_resource type="AtlasTexture" id=11]
 flags = 23
 atlas = ExtResource( 37 )
 region = Rect2( 1001, 0, 1001, 1376 )
 
-[sub_resource type="AtlasTexture" id=47]
+[sub_resource type="AtlasTexture" id=12]
 flags = 23
 atlas = ExtResource( 37 )
 region = Rect2( 2002, 0, 1001, 1376 )
 
-[sub_resource type="AtlasTexture" id=48]
+[sub_resource type="AtlasTexture" id=13]
 flags = 23
 atlas = ExtResource( 37 )
 region = Rect2( 0, 1376, 1001, 1376 )
 
-[sub_resource type="AtlasTexture" id=49]
+[sub_resource type="AtlasTexture" id=14]
 flags = 23
 atlas = ExtResource( 37 )
 region = Rect2( 1001, 1376, 1001, 1376 )
 
-[sub_resource type="AtlasTexture" id=50]
+[sub_resource type="AtlasTexture" id=15]
 flags = 23
 atlas = ExtResource( 37 )
 region = Rect2( 2002, 1376, 1001, 1376 )
 
-[sub_resource type="SpriteFrames" id=51]
+[sub_resource type="AtlasTexture" id=16]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 0, 0, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 1185, 0, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 2370, 0, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 0, 1467, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 1185, 1467, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 2370, 1467, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 0, 0, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 846, 0, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 1692, 0, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 0, 1201, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 846, 1201, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 1692, 1201, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 23
+atlas = ExtResource( 31 )
+region = Rect2( 0, 0, 1169, 1669 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 23
+atlas = ExtResource( 31 )
+region = Rect2( 1169, 0, 1169, 1669 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 23
+atlas = ExtResource( 31 )
+region = Rect2( 2338, 0, 1169, 1669 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 23
+atlas = ExtResource( 31 )
+region = Rect2( 0, 1669, 1169, 1669 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 23
+atlas = ExtResource( 31 )
+region = Rect2( 1169, 1669, 1169, 1669 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 23
+atlas = ExtResource( 31 )
+region = Rect2( 2338, 1669, 1169, 1669 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 0, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 1037, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 2074, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 0, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 1037, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 2074, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 0, 1694, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 1694, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=45]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 1694, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=46]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 0, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=47]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 1034, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=48]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 2068, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=49]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 0, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=50]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 1034, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=51]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 2068, 1404, 1034, 1404 )
+
+[sub_resource type="SpriteFrames" id=52]
 animations = [ {
-"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "SurpWalk",
-"speed": 6.0
-}, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
-"loop": true,
-"name": "BuffWalk",
-"speed": 6.0
-}, {
-"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
-"loop": true,
-"name": "SurpIdle",
-"speed": 6.0
-}, {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
-"loop": true,
-"name": "JogIdle",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
-"loop": true,
-"name": "BuffIdle",
-"speed": 6.0
-}, {
-"frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
-"loop": true,
-"name": "JogWalk",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "BeatIdle",
 "speed": 6.0
 }, {
-"frames": [ SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
 "loop": true,
 "name": "BeatWalk",
 "speed": 6.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "SurpWalk",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"loop": true,
+"name": "JogIdle",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"loop": true,
+"name": "BuffIdle",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+"loop": true,
+"name": "JogWalk",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
+"loop": true,
+"name": "BuffWalk",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 46 ), SubResource( 47 ), SubResource( 48 ), SubResource( 49 ), SubResource( 50 ), SubResource( 51 ) ],
+"loop": true,
+"name": "SurpIdle",
+"speed": 6.0
 } ]
 
-[sub_resource type="PlaneMesh" id=52]
+[sub_resource type="GDScript" id=53]
+script/source = "extends KinematicBody
+
+const velocity = 10
+
+var current = 0
+var moving = false
+var roll = 0
+var rng = RandomNumberGenerator.new()
+var done = false
+
+var sprite = null
+var spaces = null
+var roll_counter = null
+var spinner = null
+
+export var active = false
+var self_score = 30
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	rng.randomize()
+	spaces = get_node(\"/root/Main/Spaces\").get_children()
+	spinner = get_node(\"/root/Main/GUI/Spinner\")
+	sprite = get_node(\"AnimatedSprite3D\")
+	sprite.set_animation(\"JogIdle\")
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if done:
+		return
+	if Input.is_action_pressed(\"ui_roll\") && !moving && active && !spinner.playing():
+		roll = rng.randi_range(1, 10)
+		spinner.play(roll)
+		yield(spinner, \"spinner_done\")
+		moving = true
+	if moving:
+		var pos = spaces[current].translation - global_transform.origin
+		pos = Vector3(pos.x, 0, pos.z)
+		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity)
+		sprite.set_flip_h(pos.x > 0)
+		if pos.length() < 1 :
+			if spaces[current].category != \"Travel\":
+				roll -= 1
+			current += 1
+			if current >= spaces.size():
+				roll = 0 # stop moving once you hit the end
+				done = true
+			moving = roll > 0
+			if !moving: 
+				# call tile script
+				spaces[current].call_manager(self)
+		sprite.set_animation(\"JogWalk\")
+	else:
+		sprite.set_animation(\"JogIdle\")
+
+func is_done():
+	return done
+
+func update_values(s):
+	self_score += s
+	print(self.name + \": \" + str(self_score))
+	
+func get_score():
+	return self_score
+"
+
+[sub_resource type="GDScript" id=54]
+script/source = "extends KinematicBody
+
+const velocity = 10
+
+var current = 0
+var moving = false
+var roll = 0
+var rng = RandomNumberGenerator.new()
+var done = false
+
+var sprite = null
+var spaces = null
+var roll_counter = null
+var spinner = null
+
+export var active = false
+var self_score = 30
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	rng.randomize()
+	spaces = get_node(\"/root/Main/Spaces\").get_children()
+	spinner = get_node(\"/root/Main/GUI/Spinner\")
+	sprite = get_node(\"AnimatedSprite3D\")
+	sprite.set_animation(\"BeatIdle\")
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if done:
+		return
+	if Input.is_action_pressed(\"ui_roll\") && !moving && active && !spinner.playing():
+		roll = rng.randi_range(1, 10)
+		spinner.play(roll)
+		yield(spinner, \"spinner_done\")
+		moving = true
+	if moving:
+		var pos = spaces[current].translation - global_transform.origin
+		pos = Vector3(pos.x, 0, pos.z)
+		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity)
+		sprite.set_flip_h(pos.x > 0)
+		if pos.length() < 1 :
+			if spaces[current].category != \"Travel\":
+				roll -= 1
+			current += 1
+			if current >= spaces.size():
+				roll = 0 # stop moving once you hit the end
+				done = true
+			moving = roll > 0
+			if !moving: 
+				# call tile script
+				spaces[current].call_manager(self)
+		sprite.set_animation(\"BeatWalk\")
+	else:
+		sprite.set_animation(\"BeatIdle\")
+
+func is_done():
+	return done
+
+func update_values(s):
+	self_score += s
+	print(self.name + \": \" + str(self_score))
+	
+func get_score():
+	return self_score
+"
+
+[sub_resource type="PlaneMesh" id=55]
 size = Vector2( 1000, 1000 )
 
-[sub_resource type="SpatialMaterial" id=53]
+[sub_resource type="SpatialMaterial" id=56]
 albedo_color = Color( 0.0705882, 0.537255, 0.109804, 1 )
 
-[sub_resource type="SpatialMaterial" id=54]
+[sub_resource type="SpatialMaterial" id=57]
 albedo_color = Color( 0.101961, 0.196078, 0.709804, 1 )
 
-[sub_resource type="SpatialMaterial" id=55]
+[sub_resource type="SpatialMaterial" id=58]
 albedo_texture = ExtResource( 8 )
 
-[sub_resource type="PlaneMesh" id=56]
-material = SubResource( 55 )
+[sub_resource type="PlaneMesh" id=59]
+material = SubResource( 58 )
 size = Vector2( 300, 300 )
 
-[sub_resource type="BoxShape" id=57]
+[sub_resource type="BoxShape" id=60]
 extents = Vector3( 500, 0, 500 )
 
 [node name="Main" type="Spatial"]
@@ -433,21 +632,28 @@ __meta__ = {
 [node name="Choice Buttons" type="Node" parent="GUI"]
 
 [node name="ChoiceA" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
+margin_left = 152.0
+margin_top = 235.0
+margin_right = 376.0
+margin_bottom = 516.0
 text = "A"
 
 [node name="ChoiceB" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
-margin_left = 460.457
-margin_top = 498.676
-margin_right = 535.457
-margin_bottom = 533.676
+margin_left = 410.0
+margin_top = 236.0
+margin_right = 636.0
+margin_bottom = 516.0
 text = "B"
 
 [node name="ChoiceC" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
-margin_left = 748.767
-margin_top = 493.919
-margin_right = 823.767
-margin_bottom = 528.919
+margin_left = 668.0
+margin_top = 236.0
+margin_right = 895.0
+margin_bottom = 520.0
 text = "C"
+
+[node name="EndingUI" parent="GUI" instance=ExtResource( 23 )]
+visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource( 11 )]
 
@@ -471,17 +677,17 @@ far = 451.5
 
 [node name="Player2" type="KinematicBody" parent="Players"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.4563, 2.07182, -19.2213 )
-script = ExtResource( 34 )
+script = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Players/Player2"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 disabled = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Players/Player2"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
 visible = false
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = null
 
 [node name="Sprite3D" type="Sprite3D" parent="Players/Player2"]
@@ -493,24 +699,24 @@ texture = ExtResource( 27 )
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Players/Player2"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
-frames = SubResource( 51 )
+frames = SubResource( 52 )
 animation = "BuffIdle"
 frame = 5
 playing = true
 
 [node name="Player3" type="KinematicBody" parent="Players"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.084, 1.31781, -9.86353 )
-script = ExtResource( 35 )
+script = SubResource( 53 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Players/Player3"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 disabled = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Players/Player3"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
 visible = false
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = null
 
 [node name="Sprite3D" type="Sprite3D" parent="Players/Player3"]
@@ -522,24 +728,24 @@ texture = ExtResource( 27 )
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Players/Player3"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
-frames = SubResource( 51 )
+frames = SubResource( 52 )
 animation = "JogIdle"
-frame = 5
+frame = 3
 playing = true
 
 [node name="Player4" type="KinematicBody" parent="Players"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.4914, 1.45217, -14.6549 )
-script = ExtResource( 23 )
+script = SubResource( 54 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Players/Player4"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 disabled = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Players/Player4"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
 visible = false
-mesh = SubResource( 2 )
+mesh = SubResource( 3 )
 material/0 = null
 
 [node name="Sprite3D" type="Sprite3D" parent="Players/Player4"]
@@ -551,7 +757,7 @@ texture = ExtResource( 27 )
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Players/Player4"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
-frames = SubResource( 51 )
+frames = SubResource( 52 )
 animation = "BeatIdle"
 playing = true
 
@@ -713,26 +919,26 @@ texture = ExtResource( 67 )
 
 [node name="MeshInstance" type="MeshInstance" parent="Environment/Ground"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48146, -3.66754, -0.112953 )
-mesh = SubResource( 52 )
-material/0 = SubResource( 53 )
+mesh = SubResource( 55 )
+material/0 = SubResource( 56 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="Environment/Ground"]
 transform = Transform( 0.0575987, 0, 0, 0, 0.0115197, 0, 0, 0, 0.115197, -146.453, 0.001, 74.5385 )
-mesh = SubResource( 52 )
-material/0 = SubResource( 54 )
+mesh = SubResource( 55 )
+material/0 = SubResource( 57 )
 
 [node name="MeshInstance4" type="MeshInstance" parent="Environment/Ground"]
 transform = Transform( 0.498327, -0.00817472, 0, 0.0408736, 0.0996653, 0, 0, 0, 1, 499.221, 0.001, 103.597 )
-mesh = SubResource( 52 )
-material/0 = SubResource( 54 )
+mesh = SubResource( 55 )
+material/0 = SubResource( 57 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="Environment/Ground"]
 transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, -0.000106812, 0, -3.8147e-05 )
-mesh = SubResource( 56 )
+mesh = SubResource( 59 )
 material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Environment/Ground"]
-shape = SubResource( 57 )
+shape = SubResource( 60 )
 
 [node name="Trees" type="Node" parent="Environment"]
 
@@ -1448,13 +1654,8 @@ far = 646.3
 script = ExtResource( 2 )
 
 [node name="Space" parent="Spaces" instance=ExtResource( 3 )]
-<<<<<<< HEAD
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.1431 )
-category = "Education"
-=======
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.1491, -3.8147e-06, 4.82499 )
 category = "Travel"
->>>>>>> Art&Sound
 
 [node name="Space2" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81.0252, 0, -21.2346 )

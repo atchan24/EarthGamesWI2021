@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Art/button_big_blue.png" type="Texture" id=1]
+[ext_resource path="res://UI/EndingUI.gd" type="Script" id=2]
+
+[node name="EndingUI" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player1" type="RichTextLabel" parent="."]
+margin_left = 101.0
+margin_top = 103.0
+margin_right = 299.0
+margin_bottom = 454.0
+rect_pivot_offset = Vector2( 307.176, 64.3193 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player2" type="RichTextLabel" parent="."]
+margin_left = 309.714
+margin_top = 101.941
+margin_right = 507.714
+margin_bottom = 452.941
+rect_pivot_offset = Vector2( 307.176, 64.3193 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player3" type="RichTextLabel" parent="."]
+margin_left = 535.38
+margin_top = 105.119
+margin_right = 733.38
+margin_bottom = 456.119
+rect_pivot_offset = Vector2( 307.176, 64.3193 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player4" type="RichTextLabel" parent="."]
+margin_left = 761.046
+margin_top = 111.476
+margin_right = 959.046
+margin_bottom = 462.476
+rect_pivot_offset = Vector2( 307.176, 64.3193 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Society" type="RichTextLabel" parent="."]
+margin_left = 103.0
+margin_top = 87.0
+margin_right = 433.0
+margin_bottom = 469.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sustainability" type="RichTextLabel" parent="."]
+margin_left = 574.461
+margin_top = 84.8811
+margin_right = 904.461
+margin_bottom = 466.881
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 773.162
+margin_top = 467.135
+margin_right = 882.162
+margin_bottom = 519.135
+text = "Next"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_big_blue" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 525.409, 306.252 )
+scale = Vector2( 0.288663, 0.552582 )
+texture = ExtResource( 1 )
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

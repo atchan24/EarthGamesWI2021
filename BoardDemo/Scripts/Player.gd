@@ -13,11 +13,12 @@ var sprite = null
 var spaces = null
 var roll_counter = null
 var spinner = null
-var player_audio = null
+#var player_audio = null
 
 export var active = false
 export var idle = ""
 export var walk = ""
+export var texture = ""
 var self_score = 30
 
 # Called when the node enters the scene tree for the first time.
@@ -26,8 +27,9 @@ func _ready():
 	spaces = get_node("/root/Main/Spaces").get_children()
 	spinner = get_node("/root/Main/GUI/Spinner")
 	sprite = get_node("AnimatedSprite3D")
-	player_audio = get_node("AudioStreamPlayer3D")
-	sprite.set_animation(idle)
+	#player_audio = get_node("AudioStreamPlayer3D")
+	#sprite.texture = load(texture)
+	#sprite.set_animation(idle)
 	sprite.set_animation("SurpIdle")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -56,14 +58,14 @@ func _process(delta):
 			if !moving: 
 				# call tile script
 				spaces[current].call_manager(self)
-		sprite.set_animation(walk)
-		if !player_audio.playing:
-			player_audio.play(0.0)
+		sprite.set_animation("SurpWalk")
+		#if !player_audio.playing:
+		#	player_audio.play(0.0)
 	else:
 		has_rolled = false
-		sprite.set_animation(idle)
-		if player_audio.playing:
-			player_audio.stop()
+		sprite.set_animation("SurpIdle")
+		#if player_audio.playing:
+		#	player_audio.stop()
 
 func is_done():
 	return done
