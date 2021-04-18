@@ -244,7 +244,7 @@ script = ExtResource( 2 )
 
 [node name="Space" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.1431 )
-category = "Travel"
+category = "Education"
 
 [node name="Space2" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.7636, 0, 11.6632 )

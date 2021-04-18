@@ -7,13 +7,17 @@ var moving = false
 var roll = 0
 var rng = RandomNumberGenerator.new()
 var done = false
+var has_rolled = false
 
 var sprite = null
 var spaces = null
 var roll_counter = null
 var spinner = null
+var player_audio = null
 
 export var active = false
+export var idle = ""
+export var walk = ""
 var self_score = 30
 
 # Called when the node enters the scene tree for the first time.
@@ -22,16 +26,19 @@ func _ready():
 	spaces = get_node("/root/Main/Spaces").get_children()
 	sprite = get_node("Sprite3D")
 	spinner = get_node("/root/Main/GUI/Spinner")
+	player_audio = get_node("AudioStreamPlayer3D")
+	sprite.set_animation(idle)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if done:
 		return
-	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing():
+	if Input.is_action_pressed("ui_roll") && !moving && active && !has_rolled:
 		roll = rng.randi_range(1, 10)
 		spinner.play(roll)
 		yield(spinner, "spinner_done")
 		moving = true
+		has_rolled = true
 	if moving:
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
@@ -48,6 +55,14 @@ func _process(delta):
 			if !moving: 
 				# call tile script
 				spaces[current].call_manager(self)
+		sprite.set_animation(walk)
+		if !player_audio.playing:
+			player_audio.play(0.0)
+	else:
+		has_rolled = false
+		sprite.set_animation(idle)
+		if player_audio.playing:
+			player_audio.stop()
 
 func is_done():
 	return done
