@@ -1,0 +1,31 @@
+[gd_scene format=2]
+
+[node name="TopBar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Self" type="RichTextLabel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Society" type="RichTextLabel" parent="."]
+margin_left = 62.5084
+margin_top = -2.11893
+margin_right = 102.508
+margin_bottom = 37.8811
+
+[node name="Sustainability" type="RichTextLabel" parent="."]
+margin_left = 107.006
+margin_right = 147.006
+margin_bottom = 40.0
+
+[node name="RollsCounter" type="RichTextLabel" parent="."]
+margin_left = 153.622
+margin_right = 193.622
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
