@@ -24,10 +24,11 @@ var self_score = 30
 func _ready():
 	rng.randomize()
 	spaces = get_node("/root/Main/Spaces").get_children()
-	sprite = get_node("Sprite3D")
 	spinner = get_node("/root/Main/GUI/Spinner")
+	sprite = get_node("AnimatedSprite3D")
 	player_audio = get_node("AudioStreamPlayer3D")
 	sprite.set_animation(idle)
+	sprite.set_animation("SurpIdle")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
