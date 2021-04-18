@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=2]
+[gd_scene load_steps=130 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
@@ -70,6 +70,8 @@
 [ext_resource path="res://Assets/Demo Art/Flag_Money.png" type="Texture" id=68]
 [ext_resource path="res://Assets/Art/IMG_0738.PNG" type="Texture" id=69]
 [ext_resource path="res://Assets/Art/IMG_0704.PNG" type="Texture" id=70]
+[ext_resource path="res://Assets/Art/IMG_0747.PNG" type="Texture" id=71]
+[ext_resource path="res://Assets/Demo Art/Grave_Stone.png" type="Texture" id=72]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 1.5
@@ -109,153 +111,153 @@ region = Rect2( 2370, 1467, 1185, 1467 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=13]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=14]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=15]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 0, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=16]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 1034, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=17]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 2068, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=18]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 0, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=19]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 1034, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=20]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 2068, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 0, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=10]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 846, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=11]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 1692, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=12]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 0, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=13]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 846, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=14]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 1692, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=15]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 0, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=16]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 1169, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=29]
+[sub_resource type="AtlasTexture" id=17]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 2338, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=30]
+[sub_resource type="AtlasTexture" id=18]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 0, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=31]
+[sub_resource type="AtlasTexture" id=19]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 1169, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=32]
+[sub_resource type="AtlasTexture" id=20]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 2338, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=33]
+[sub_resource type="AtlasTexture" id=21]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 0, 0, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=34]
+[sub_resource type="AtlasTexture" id=22]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 1037, 0, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=23]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 2074, 0, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=24]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 0, 1224, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=37]
+[sub_resource type="AtlasTexture" id=25]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 1037, 1224, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=38]
+[sub_resource type="AtlasTexture" id=26]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 2074, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 0, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 1034, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 2068, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 0, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 1034, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 2068, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 0, 1694, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 1694, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 1694, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=39]
 flags = 23
@@ -326,28 +328,28 @@ animations = [ {
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
 "loop": true,
-"name": "BuffWalk",
-"speed": 6.0
-}, {
-"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
-"loop": true,
-"name": "SurpIdle",
-"speed": 6.0
-}, {
-"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
-"loop": true,
 "name": "JogIdle",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
 "loop": true,
 "name": "BuffIdle",
 "speed": 6.0
 }, {
-"frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
+"frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
 "loop": true,
 "name": "JogWalk",
 "speed": 8.0
+}, {
+"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
+"loop": true,
+"name": "SurpIdle",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
+"loop": true,
+"name": "BuffWalk",
+"speed": 6.0
 }, {
 "frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
 "loop": true,
@@ -495,7 +497,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 51 )
 animation = "BuffIdle"
-frame = 5
+frame = 4
 playing = true
 
 [node name="Player3" type="KinematicBody" parent="Players"]
@@ -524,7 +526,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 51 )
 animation = "JogIdle"
-frame = 5
+frame = 4
 playing = true
 
 [node name="Player4" type="KinematicBody" parent="Players"]
@@ -553,6 +555,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = SubResource( 51 )
 animation = "BeatIdle"
+frame = 5
 playing = true
 
 [node name="Environment" type="Node" parent="."]
@@ -582,10 +585,10 @@ texture = ExtResource( 68 )
 
 [node name="Equity" type="Node" parent="Environment/Category Assets"]
 
-[node name="Bank" type="Sprite3D" parent="Environment/Category Assets/Equity"]
-transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, -44.5002, 12.0877, -99.7072 )
+[node name="Flag_Rainbow" type="Sprite3D" parent="Environment/Category Assets/Equity"]
+transform = Transform( 0.598439, 0, 0, 0, 0.598439, 0, 0, 0, 0.119688, -1.3143, 4.98503, -95.7801 )
 billboard = 2
-texture = ExtResource( 44 )
+texture = ExtResource( 71 )
 
 [node name="Nature" type="Node" parent="Environment/Category Assets"]
 
@@ -708,6 +711,11 @@ billboard = 2
 texture = ExtResource( 67 )
 
 [node name="Death" type="Node" parent="Environment/Category Assets"]
+
+[node name="Gravestone" type="Sprite3D" parent="Environment/Category Assets/Death"]
+transform = Transform( 0.83736, 0, 0, 0, 0.506647, 0, 0, 0, 1.47662, 32.5117, 3.00866, 69.9225 )
+billboard = 2
+texture = ExtResource( 72 )
 
 [node name="Ground" type="StaticBody" parent="Environment"]
 
@@ -934,6 +942,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 88.0024, 0, -13.4806 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90.2059, 0, -5.44071 )
 
 [node name="Misc" type="Node" parent="Environment"]
+
+[node name="Bank" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, -44.5002, 12.0877, -99.7072 )
+billboard = 2
+texture = ExtResource( 44 )
 
 [node name="TelephonePole" type="Sprite3D" parent="Environment/Misc"]
 transform = Transform( 1.73973, 0, 0, 0, 1.73973, 0, 0, 0, 0.347947, -57.5877, 7.96942, -90.2484 )
