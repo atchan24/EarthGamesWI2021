@@ -77,11 +77,18 @@ func handle_events_demo(c):
 		s3 = 5
 	cur_player.update_values(s1 + cur_bonus)
 	manager.update_score(s2, s3)
-	cur_player.active = false
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	for b in buttons.get_children():
 		b.visible = false
+	for a in assets.get_children():
+		if !(a.visible):
+			a.visible = true
+			yield(a, "finished_moving")
+			break
+	cur_player.active = false
+	
+	
 
 # interprets the card values and hides the choice UI
 func handle_events(c):
