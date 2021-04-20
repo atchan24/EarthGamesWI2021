@@ -10,7 +10,7 @@ signal spinner_done
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	anim = get_node("SpinnerAnim")
-	roll_counter = get_node("/root/Main/GUI/Top Bar/Rolls Counter/MarginContainer/Value")
+	roll_counter = get_node("/root/Main/GUI/TopBar").get_counter()
 	self.visible = false
 
 func play(num):

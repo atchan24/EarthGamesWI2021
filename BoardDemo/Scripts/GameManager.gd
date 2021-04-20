@@ -3,6 +3,7 @@ extends Spatial
 export var card_data = {}
 var end_data = {}
 var endui = null
+onready var bar = get_node("/root/Main/GUI/TopBar")
 
 var society = 0
 var sustainability = 0
@@ -11,7 +12,7 @@ var sustainability = 0
 func _ready():
 	var file = File.new()
 	var file2 = File.new()
-	file.open("res://Assets/sample_cards.json", file.READ)
+	file.open("res://Assets/cards.json", file.READ)
 	file2.open("res://Assets/endings.json", file.READ)
 	var res = JSON.parse(file.get_as_text())
 	var res2 = JSON.parse(file2.get_as_text())
@@ -35,21 +36,23 @@ func _ready():
 func update_score(soc, sus):
 	society += soc
 	sustainability += sus
+	bar.update_score(bar.get_society(), society)
+	bar.update_score(bar.get_sustain(), sustainability)
 	print("Society: " + str(society))
 	print("Sustainability: " + str(sustainability))
 	
 func end_game():
 	var soc_ending
 	var sus_ending
-	if society >= 100:
+	if society >= 40:
 		soc_ending = end_data.society.good
-	elif society >= 50:
+	elif society >= 25:
 		soc_ending = end_data.society.med
 	else:
 		soc_ending = end_data.society.bad
-	if sustainability >= 100:
+	if sustainability >= 40:
 		sus_ending = end_data.sustainability.good
-	elif sustainability >= 50:
+	elif sustainability >= 20:
 		sus_ending = end_data.sustainability.med
 	else:
 		sus_ending = end_data.sustainability.bad
@@ -58,15 +61,16 @@ func end_game():
 	for player in players:
 		var score = player.get_score()
 		var endings = end_data["self"]
-		if score >= 100:
+		if score >= 40:
 			self_ending.append(endings.good)
-		elif score >= 50:
+		elif score >= 20:
 			self_ending.append(endings.med)
 		else:
 			self_ending.append(endings.bad)
 	# do some UI stuff here and stop user input
 	for i in range(0, self_ending.size()):
 		endui.get_node("Player" + str(i + 1)).text = self_ending[i]
+	bar.visible = false
 	endui.get_node("Society").text = soc_ending
 	endui.get_node("Sustainability").text = sus_ending
 	endui.show()

@@ -11,7 +11,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Problem" type="RichTextLabel" parent="Control"]
+[node name="Prompt" type="RichTextLabel" parent="Control"]
 margin_left = 352.0
 margin_top = 105.0
 margin_right = 658.0

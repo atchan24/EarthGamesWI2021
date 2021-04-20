@@ -1,6 +1,5 @@
 extends Node
 
-var pillars = ["Protect", "Invest", "Transform", "Repair"]
 var rng = RandomNumberGenerator.new()
 var manager = null
 var card_data = null
@@ -27,22 +26,24 @@ func start_card_event(category, player, bonus):
 	if card_data == null :
 		card_data = manager.card_data
 	if !(category in card_data): # if the category doesn't exist
-		print("category <", category, "> not found")
-		player.active = false
-		# new_pause_state = not get_tree().paused
-		# get_tree().paused = new_pause_state
+		#print("category <", category, "> not found")
+		#player.active = false
+		var choices = ["choice-a", "choice-b", "choice-c"]
+		cur_player = player
+		cur_bonus = bonus
+		handle_events_demo(choices[rng.randi_range(0, 2)])
 		return
 	cur_player = player
 	cur_bonus = bonus
-	var pillar = pillars[rng.randi_range(0, 3)]
-	var cards = card_data[category][pillar]
+	var cards = card_data[category]
+	print(cards)
 	card = cards[rng.randi_range(0, cards.size() - 1)] # picks a random card
 	# assign fields to UI and display it
 	# maybe add img path later?
-	choice_gui.get_node("Control/Problem").text = card.name
-	choice_gui.get_node("Control/ChoiceAText").text = card["choice-a"]["choice"]
-	choice_gui.get_node("Control/ChoiceBText").text = card["choice-b"]["choice"]
-	choice_gui.get_node("Control/ChoiceCText").text = card["choice-c"]["choice"]
+	choice_gui.get_node("Control/Prompt").text = category + " " + card.pillar
+	choice_gui.get_node("Control/ChoiceAText").text = card["self"]["choice"]
+	choice_gui.get_node("Control/ChoiceBText").text = card["society"]["choice"]
+	choice_gui.get_node("Control/ChoiceCText").text = card["sustainability"]["choice"]
 	choice_gui.get_node("Control").visible = true
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = true
 	for b in buttons.get_children():
