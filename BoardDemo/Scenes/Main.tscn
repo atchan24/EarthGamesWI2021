@@ -150,183 +150,183 @@ mid_height = 1.5
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 0, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=5]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 1037, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 2074, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 0, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 1037, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 2074, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 23
 atlas = ExtResource( 28 )
 region = Rect2( 0, 0, 1185, 1467 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=5]
 flags = 23
 atlas = ExtResource( 28 )
 region = Rect2( 1185, 0, 1185, 1467 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=6]
 flags = 23
 atlas = ExtResource( 28 )
 region = Rect2( 2370, 0, 1185, 1467 )
 
-[sub_resource type="AtlasTexture" id=13]
+[sub_resource type="AtlasTexture" id=7]
 flags = 23
 atlas = ExtResource( 28 )
 region = Rect2( 0, 1467, 1185, 1467 )
 
-[sub_resource type="AtlasTexture" id=14]
+[sub_resource type="AtlasTexture" id=8]
 flags = 23
 atlas = ExtResource( 28 )
 region = Rect2( 1185, 1467, 1185, 1467 )
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=9]
 flags = 23
 atlas = ExtResource( 28 )
 region = Rect2( 2370, 1467, 1185, 1467 )
 
+[sub_resource type="AtlasTexture" id=10]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 0, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 1037, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 2074, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 0, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 1037, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 2074, 1224, 1037, 1224 )
+
 [sub_resource type="AtlasTexture" id=16]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=17]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=18]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=19]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=20]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=22]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 0, 0, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=17]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 1034, 0, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=18]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 2068, 0, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=19]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 0, 1404, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=20]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 1034, 1404, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=21]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 2068, 1404, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=28]
+[sub_resource type="AtlasTexture" id=22]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 0, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=29]
+[sub_resource type="AtlasTexture" id=23]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 846, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=30]
+[sub_resource type="AtlasTexture" id=24]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 1692, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=31]
+[sub_resource type="AtlasTexture" id=25]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 0, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=32]
+[sub_resource type="AtlasTexture" id=26]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 846, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=33]
+[sub_resource type="AtlasTexture" id=27]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 1692, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=34]
+[sub_resource type="AtlasTexture" id=28]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 0, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=29]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 1169, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=30]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 2338, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=37]
+[sub_resource type="AtlasTexture" id=31]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 0, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=38]
+[sub_resource type="AtlasTexture" id=32]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 1169, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=39]
+[sub_resource type="AtlasTexture" id=33]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 2338, 1669, 1169, 1669 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 0, 1694, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 1694, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 1694, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=40]
 flags = 23
@@ -392,32 +392,32 @@ region = Rect2( 1842, 1378, 921, 1378 )
 animations = [ {
 "frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
-"name": "JogWalk",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
-"loop": true,
 "name": "SurpWalk",
 "speed": 6.0
 }, {
-"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
 "loop": true,
-"name": "BuffWalk",
-"speed": 6.0
+"name": "JogWalk",
+"speed": 8.0
 }, {
-"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": true,
 "name": "SurpIdle",
 "speed": 6.0
 }, {
-"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
 "loop": true,
 "name": "JogIdle",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
 "loop": true,
 "name": "BuffIdle",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+"loop": true,
+"name": "BuffWalk",
 "speed": 6.0
 }, {
 "frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
@@ -723,7 +723,6 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 52 )
 animation = "BuffIdle"
-frame = 4
 playing = true
 
 [node name="Player3" type="KinematicBody" parent="Players"]
@@ -781,7 +780,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = SubResource( 52 )
 animation = "BeatIdle"
-frame = 5
+frame = 1
 playing = true
 
 [node name="Environment" type="Node" parent="."]
@@ -1678,15 +1677,15 @@ script = ExtResource( 2 )
 
 [node name="Space" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.1491, -3.8147e-06, 4.82499 )
-category = "Travel"
+category = "Justice"
 
 [node name="Space2" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81.0252, 0, -21.2346 )
-category = "Education"
+category = "Equity"
 
 [node name="Space3" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 92.4301, 0, -47.5987 )
-category = "Education"
+category = "Health"
 
 [node name="Space4" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 89.5807, 0, -78.3195 )
@@ -1694,61 +1693,71 @@ category = "Education"
 
 [node name="Space5" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54.6555, 3.8147e-06, -88.1127 )
-category = "Education"
+category = "Housing"
 
 [node name="Space6" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1697, -1.90735e-06, -100.456 )
-category = "Education"
+category = "Food"
 
 [node name="Space7" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.43973, 0, -86.3052 )
-category = "Education"
+category = "Community"
 
 [node name="Space8" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.0501, -3.8147e-06, -80.2685 )
-category = "Education"
+category = "Work"
 
 [node name="Space9" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.2001, 0, -40.6301 )
-category = "Education"
+category = "Energy"
 
 [node name="Space10" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -83.4815, 0, -24.1128 )
-category = "Education"
+category = "Mutual Aid"
 
 [node name="Space11" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.4598, 0, 0.912515 )
-category = "Education"
+category = "Just Migration"
 
 [node name="Space12" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.7971, -1.14441e-05, 37.8342 )
+category = "Nature"
 
 [node name="Space13" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -101.437, -3.8147e-06, 82.6815 )
+category = "Recreation"
 
 [node name="Space14" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -85.8301, 7.62939e-06, 96.5527 )
+category = "Environment"
 
 [node name="Space15" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0832, -3.8147e-06, 100.753 )
+category = "Decolonization"
 
 [node name="Space16" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6622, 0, 94.3812 )
+category = "Storytelling"
 
 [node name="Space17" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.2787, 0, 98.7954 )
+category = "Transport"
 
 [node name="Space18" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.1632, 0, 94.6457 )
+category = "Arts"
 
 [node name="Space19" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.2579, -1.90735e-06, 71.9362 )
+category = "Resources"
 
 [node name="Space20" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 88.1826, -3.8147e-06, 56.3667 )
+category = "Truth"
 
 [node name="Space21" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.9817, 0, 32.7323 )
+category = "Death"
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceA" to="Spaces" method="_on_ChoiceA_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceB" to="Spaces" method="_on_ChoiceB_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceC" to="Spaces" method="_on_ChoiceC_pressed"]

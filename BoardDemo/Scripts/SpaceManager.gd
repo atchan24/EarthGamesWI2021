@@ -28,6 +28,7 @@ func start_card_event(category, player, bonus):
 	if !(category in card_data): # if the category doesn't exist
 		#print("category <", category, "> not found")
 		#player.active = false
+		print("no category assigned, randomizing values")
 		var choices = ["choice-a", "choice-b", "choice-c"]
 		cur_player = player
 		cur_bonus = bonus
@@ -36,7 +37,6 @@ func start_card_event(category, player, bonus):
 	cur_player = player
 	cur_bonus = bonus
 	var cards = card_data[category]
-	print(cards)
 	card = cards[rng.randi_range(0, cards.size() - 1)] # picks a random card
 	# assign fields to UI and display it
 	# maybe add img path later?

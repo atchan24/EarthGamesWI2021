@@ -2,7 +2,8 @@
 
 [ext_resource path="res://Assets/Bars/Green.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Bars/Base.png" type="Texture" id=2]
-[ext_resource path="res://UI/Bar.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Bar.gd" type="Script" id=3]
+
 
 [node name="TopBar" type="Control"]
 anchor_right = 1.0
