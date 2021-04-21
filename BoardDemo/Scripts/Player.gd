@@ -7,45 +7,32 @@ var moving = false
 var roll = 0
 var rng = RandomNumberGenerator.new()
 var done = false
-var has_rolled = false
 
 var sprite = null
 var spaces = null
 var roll_counter = null
 var spinner = null
-var bar = null
-#var player_audio = null
 
 export var active = false
-export var idle = ""
-export var walk = ""
-export var texture = ""
-var self_score = 20
+var self_score = 30
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
 	spaces = get_node("/root/Main/Spaces").get_children()
+	sprite = get_node("Sprite3D")
 	spinner = get_node("/root/Main/GUI/Spinner")
-	sprite = get_node("AnimatedSprite3D")
-	bar = get_node("/root/Main/GUI/TopBar")
-	bar.update_score(bar.get_self(), self_score)
-	#player_audio = get_node("AudioStreamPlayer3D")
-	#sprite.texture = load(texture)
-	#sprite.set_animation(idle)
-	sprite.set_animation("SurpIdle")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if done:
 		return
-	bar.update_score(bar.get_self(), self_score)
-	if Input.is_action_pressed("ui_roll") && !moving && active && !has_rolled:
-		roll = rng.randi_range(1, 10)
+	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing():
+		#roll = rng.randi_range(1, 10)
+		roll = 4
 		spinner.play(roll)
 		yield(spinner, "spinner_done")
 		moving = true
-		has_rolled = true
 	if moving:
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
@@ -55,28 +42,19 @@ func _process(delta):
 			if spaces[current].category != "Travel":
 				roll -= 1
 			current += 1
-			if current >= spaces.size() - 1:
+			if current >= spaces.size():
 				roll = 0 # stop moving once you hit the end
 				done = true
 			moving = roll > 0
 			if !moving: 
 				# call tile script
 				spaces[current].call_manager(self)
-		sprite.set_animation("SurpWalk")
-		#if !player_audio.playing:
-		#	player_audio.play(0.0)
-	else:
-		has_rolled = false
-		sprite.set_animation("SurpIdle")
-		#if player_audio.playing:
-		#	player_audio.stop()
 
 func is_done():
 	return done
 
 func update_values(s):
 	self_score += s
-	bar.update_score(bar.get_self(), self_score)
 	print(self.name + ": " + str(self_score))
 	
 func get_score():
