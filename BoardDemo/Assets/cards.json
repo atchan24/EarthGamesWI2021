@@ -21,8 +21,12 @@
             "self": {
                 "choice" : "Make sure you can vote freely to make your voice heard."
             },
-            "society": "Support movements to pass bills to protect voting rights by calling your representatives or protesting.",
-            "sustainability": "Make sure impacted communities can control their own lives and environment through treaties, representation, and equal legal protections rooted in historic understanding."
+            "society": {
+		"choice" : "Support movements to pass bills to protect voting rights by calling your representatives or protesting."
+		},
+            "sustainability": {
+		"choice" : "Make sure impacted communities can control their own lives and environment through treaties, representation, and equal legal protections rooted in historic understanding."
+		}
         }
     ],
     "Health": [

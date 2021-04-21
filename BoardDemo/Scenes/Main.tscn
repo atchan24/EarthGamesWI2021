@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=2]
+[gd_scene load_steps=134 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
@@ -72,6 +72,7 @@
 [ext_resource path="res://Assets/Art/IMG_0704.PNG" type="Texture" id=70]
 [ext_resource path="res://Assets/Art/IMG_0747.PNG" type="Texture" id=71]
 [ext_resource path="res://Scripts/MoveableTerrain.gd" type="Script" id=72]
+[ext_resource path="res://Scripts/ReactiveAsset.gd" type="Script" id=73]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends KinematicBody
@@ -213,123 +214,123 @@ region = Rect2( 2570, 1694, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 0, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=17]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 1034, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=18]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 2068, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=19]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 0, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=20]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 1034, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 2068, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=22]
-flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 0, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=17]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 846, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=18]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 1692, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=19]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 0, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=20]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 846, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=21]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 1692, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=28]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 0, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=29]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 1037, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=30]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 2074, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=31]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 0, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=32]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 1037, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=33]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 2074, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=34]
+[sub_resource type="AtlasTexture" id=22]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 0, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=23]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 1169, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=24]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 2338, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=37]
+[sub_resource type="AtlasTexture" id=25]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 0, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=38]
+[sub_resource type="AtlasTexture" id=26]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 1169, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=39]
+[sub_resource type="AtlasTexture" id=27]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 2338, 1669, 1169, 1669 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 0, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 1034, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 2068, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 0, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 1034, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 2068, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 0, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 1037, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 2074, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 0, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 1037, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 2074, 1224, 1037, 1224 )
 
 [sub_resource type="AtlasTexture" id=40]
 flags = 23
@@ -405,23 +406,23 @@ animations = [ {
 }, {
 "frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": true,
-"name": "SurpIdle",
-"speed": 6.0
-}, {
-"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
-"loop": true,
 "name": "JogIdle",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
-"loop": true,
-"name": "JogWalk",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
 "loop": true,
 "name": "BuffIdle",
 "speed": 6.0
+}, {
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
+"loop": true,
+"name": "SurpIdle",
+"speed": 6.0
+}, {
+"frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
+"loop": true,
+"name": "JogWalk",
+"speed": 8.0
 }, {
 "frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
 "loop": true,
@@ -796,7 +797,6 @@ playing = true
 [node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Justice"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.78433, 17.6996, -104.879 )
 visible = false
-script = ExtResource( 72 )
 
 [node name="CityHall" type="Sprite3D" parent="Environment/Category Assets/Justice/KinematicBody"]
 transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, 1.65897, 6.11716, 2.82624 )
@@ -808,7 +808,6 @@ texture = ExtResource( 39 )
 [node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Health"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.2438, 11.8929, -8.32219 )
 visible = false
-script = ExtResource( 72 )
 
 [node name="MedicalTent" type="Sprite3D" parent="Environment/Category Assets/Health/KinematicBody"]
 transform = Transform( 1.00483, 0, 0, 0, 1.00483, 0, 0, 0, 0.200966, -0.537315, 3.10904, 5.69764 )
@@ -820,7 +819,6 @@ texture = ExtResource( 43 )
 [node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Mutual Aid"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.7599, 14.3175, -92.1716 )
 visible = false
-script = ExtResource( 72 )
 
 [node name="Flag_Money" type="Sprite3D" parent="Environment/Category Assets/Mutual Aid/KinematicBody"]
 transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, 1.9486, 6.63495, 0.122208 )
@@ -919,8 +917,8 @@ texture = ExtResource( 52 )
 [node name="Community" type="Node" parent="Environment/Category Assets"]
 
 [node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Community"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95485, -0.0846353, -83.3568 )
-script = ExtResource( 72 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95485, 3.14963, -83.3568 )
+script = ExtResource( 73 )
 
 [node name="Meeting_People" type="Sprite3D" parent="Environment/Category Assets/Community/KinematicBody"]
 transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, 0.886128, 2.3607, 0.993378 )
