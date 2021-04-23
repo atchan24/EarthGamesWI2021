@@ -39,7 +39,7 @@
 [ext_resource path="res://Assets/Characters/Animations/BeatWalk.png" type="Texture" id=37]
 [ext_resource path="res://Ausio Assets/274175__mafon2__park-ambience-mostly-birds-Good.ogg" type="AudioStream" id=38]
 [ext_resource path="res://Ausio Assets/Step-1-Louder-Louder.ogg" type="AudioStream" id=39]
-[ext_resource path="res://Ausio Assets/452839__dood__some-clicks-[AudioTrimmer.com]-[AudioTrimmer.com]-[AudioTrimmer.com].wav" type="AudioStream" id=40]
+[ext_resource path="res://Ausio Assets/Button_Clicks.wav" type="AudioStream" id=40]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 1.5
@@ -49,33 +49,33 @@ mid_height = 1.5
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 0, 0, 1185, 1467 )
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 1185, 0, 1185, 1467 )
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 0, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 2370, 0, 1185, 1467 )
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 0, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 0, 1467, 1185, 1467 )
+atlas = ExtResource( 30 )
+region = Rect2( 0, 1694, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 1185, 1467, 1185, 1467 )
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 1694, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=8]
 flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 2370, 1467, 1185, 1467 )
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 1694, 1285, 1694 )
 
 [sub_resource type="AtlasTexture" id=9]
 flags = 23
@@ -109,123 +109,123 @@ region = Rect2( 2338, 1669, 1169, 1669 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=16]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=17]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=18]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=19]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=20]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 0, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=22]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 1037, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=23]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 2074, 0, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=24]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 0, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=25]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 1037, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=26]
-flags = 23
-atlas = ExtResource( 33 )
-region = Rect2( 2074, 1224, 1037, 1224 )
-
-[sub_resource type="AtlasTexture" id=27]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 0, 0, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=28]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 846, 0, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=29]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 1692, 0, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=30]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 0, 1201, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=31]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 846, 1201, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=32]
-flags = 23
-atlas = ExtResource( 32 )
-region = Rect2( 1692, 1201, 846, 1201 )
-
-[sub_resource type="AtlasTexture" id=33]
-flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 0, 0, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=34]
+[sub_resource type="AtlasTexture" id=16]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 1034, 0, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=17]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 2068, 0, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=18]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 0, 1404, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=37]
+[sub_resource type="AtlasTexture" id=19]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 1034, 1404, 1034, 1404 )
 
-[sub_resource type="AtlasTexture" id=38]
+[sub_resource type="AtlasTexture" id=20]
 flags = 23
 atlas = ExtResource( 29 )
 region = Rect2( 2068, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 0, 0, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 846, 0, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 1692, 0, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 0, 1201, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 846, 1201, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 23
+atlas = ExtResource( 32 )
+region = Rect2( 1692, 1201, 846, 1201 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 0, 0, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 1185, 0, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 2370, 0, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 0, 1467, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 1185, 1467, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 2370, 1467, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 0, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 1037, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 2074, 0, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 0, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 1037, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 23
+atlas = ExtResource( 33 )
+region = Rect2( 2074, 1224, 1037, 1224 )
 
 [sub_resource type="AtlasTexture" id=39]
 flags = 23
@@ -291,7 +291,7 @@ region = Rect2( 1842, 1378, 921, 1378 )
 animations = [ {
 "frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
-"name": "SurpWalk",
+"name": "BuffWalk",
 "speed": 6.0
 }, {
 "frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
@@ -301,23 +301,23 @@ animations = [ {
 }, {
 "frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ) ],
 "loop": true,
-"name": "BuffWalk",
+"name": "SurpIdle",
 "speed": 6.0
 }, {
 "frames": [ SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
 "loop": true,
-"name": "JogWalk",
+"name": "JogIdle",
 "speed": 8.0
 }, {
 "frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
 "loop": true,
-"name": "JogIdle",
-"speed": 8.0
+"name": "SurpWalk",
+"speed": 6.0
 }, {
 "frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
 "loop": true,
-"name": "SurpIdle",
-"speed": 6.0
+"name": "JogWalk",
+"speed": 8.0
 }, {
 "frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ) ],
 "loop": true,
@@ -462,7 +462,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 51 )
 animation = "BuffIdle"
-frame = 5
+frame = 1
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
@@ -499,7 +499,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 51 )
 animation = "JogIdle"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player3"]
@@ -535,6 +535,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = SubResource( 51 )
 animation = "BeatIdle"
+frame = 2
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]

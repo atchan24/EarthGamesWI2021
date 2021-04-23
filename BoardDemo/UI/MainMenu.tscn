@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ausio Assets/Button_Clicks.wav" type="AudioStream" id=2]
 
 [node name="Node2D" type="Node2D"]
 
@@ -47,3 +48,6 @@ __meta__ = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -2.943
+pitch_scale = 2.21
