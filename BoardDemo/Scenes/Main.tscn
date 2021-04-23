@@ -1,4 +1,4 @@
-[gd_scene load_steps=134 format=2]
+[gd_scene load_steps=133 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
@@ -71,7 +71,6 @@
 [ext_resource path="res://Assets/Art/IMG_0738.PNG" type="Texture" id=69]
 [ext_resource path="res://Assets/Art/IMG_0704.PNG" type="Texture" id=70]
 [ext_resource path="res://Assets/Art/IMG_0747.PNG" type="Texture" id=71]
-[ext_resource path="res://Scripts/MoveableTerrain.gd" type="Script" id=72]
 [ext_resource path="res://Scripts/ReactiveAsset.gd" type="Script" id=73]
 
 [sub_resource type="GDScript" id=1]
@@ -154,183 +153,183 @@ mid_height = 1.5
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 0, 0, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=5]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 1185, 0, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=6]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 2370, 0, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=7]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 0, 1467, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 1185, 1467, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 23
-atlas = ExtResource( 28 )
-region = Rect2( 2370, 1467, 1185, 1467 )
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=12]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 0, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=13]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 0, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=14]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 1285, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=15]
-flags = 23
-atlas = ExtResource( 30 )
-region = Rect2( 2570, 1694, 1285, 1694 )
-
-[sub_resource type="AtlasTexture" id=16]
-flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 0, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=5]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 846, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=6]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 1692, 0, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=7]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 0, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=8]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 846, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=9]
 flags = 23
 atlas = ExtResource( 32 )
 region = Rect2( 1692, 1201, 846, 1201 )
 
-[sub_resource type="AtlasTexture" id=22]
+[sub_resource type="AtlasTexture" id=10]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 0, 0, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 1185, 0, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 2370, 0, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 0, 1467, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 1185, 1467, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 23
+atlas = ExtResource( 28 )
+region = Rect2( 2370, 1467, 1185, 1467 )
+
+[sub_resource type="AtlasTexture" id=16]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 0, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=23]
+[sub_resource type="AtlasTexture" id=17]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 1169, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=24]
+[sub_resource type="AtlasTexture" id=18]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 2338, 0, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=25]
+[sub_resource type="AtlasTexture" id=19]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 0, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=26]
+[sub_resource type="AtlasTexture" id=20]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 1169, 1669, 1169, 1669 )
 
-[sub_resource type="AtlasTexture" id=27]
+[sub_resource type="AtlasTexture" id=21]
 flags = 23
 atlas = ExtResource( 31 )
 region = Rect2( 2338, 1669, 1169, 1669 )
 
+[sub_resource type="AtlasTexture" id=22]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 0, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 0, 1694, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 1285, 1694, 1285, 1694 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 23
+atlas = ExtResource( 30 )
+region = Rect2( 2570, 1694, 1285, 1694 )
+
 [sub_resource type="AtlasTexture" id=28]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 0, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=29]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 1034, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=30]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 2068, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=31]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 0, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=32]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 1034, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=33]
-flags = 23
-atlas = ExtResource( 29 )
-region = Rect2( 2068, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=34]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 0, 0, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=29]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 1037, 0, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=30]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 2074, 0, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=37]
+[sub_resource type="AtlasTexture" id=31]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 0, 1224, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=38]
+[sub_resource type="AtlasTexture" id=32]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 1037, 1224, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=39]
+[sub_resource type="AtlasTexture" id=33]
 flags = 23
 atlas = ExtResource( 33 )
 region = Rect2( 2074, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 0, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 1034, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 2068, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 0, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 1034, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 23
+atlas = ExtResource( 29 )
+region = Rect2( 2068, 1404, 1034, 1404 )
 
 [sub_resource type="AtlasTexture" id=40]
 flags = 23
@@ -396,33 +395,33 @@ region = Rect2( 1842, 1378, 921, 1378 )
 animations = [ {
 "frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
-"name": "SurpWalk",
-"speed": 6.0
+"name": "JogIdle",
+"speed": 8.0
 }, {
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
 "loop": true,
-"name": "BuffWalk",
+"name": "SurpWalk",
 "speed": 6.0
 }, {
 "frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": true,
-"name": "JogIdle",
-"speed": 8.0
+"name": "BuffIdle",
+"speed": 6.0
 }, {
 "frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
 "loop": true,
-"name": "BuffIdle",
+"name": "BuffWalk",
 "speed": 6.0
 }, {
 "frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ) ],
 "loop": true,
-"name": "SurpIdle",
-"speed": 6.0
+"name": "JogWalk",
+"speed": 8.0
 }, {
 "frames": [ SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ) ],
 "loop": true,
-"name": "JogWalk",
-"speed": 8.0
+"name": "SurpIdle",
+"speed": 6.0
 }, {
 "frames": [ SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ) ],
 "loop": true,
@@ -727,7 +726,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 52 )
 animation = "BuffIdle"
-frame = 2
+frame = 5
 playing = true
 
 [node name="Player3" type="KinematicBody" parent="Players"]
@@ -756,7 +755,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 52 )
 animation = "JogIdle"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Player4" type="KinematicBody" parent="Players"]
@@ -785,7 +784,6 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = SubResource( 52 )
 animation = "BeatIdle"
-frame = 3
 playing = true
 
 [node name="Environment" type="Node" parent="."]
@@ -795,19 +793,22 @@ playing = true
 [node name="Justice" type="Node" parent="Environment/Category Assets"]
 
 [node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Justice"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.78433, 17.6996, -104.879 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.903, -27.9842, -104.879 )
 visible = false
+script = ExtResource( 73 )
+height = 6
 
 [node name="CityHall" type="Sprite3D" parent="Environment/Category Assets/Justice/KinematicBody"]
-transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, 1.65897, 6.11716, 2.82624 )
+transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, 0.53997, 6.09235, 2.82624 )
 billboard = 2
 texture = ExtResource( 39 )
 
 [node name="Health" type="Node" parent="Environment/Category Assets"]
 
 [node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Health"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.2438, 11.8929, -8.32219 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.244, -9.99832, -8.322 )
 visible = false
+script = ExtResource( 73 )
 
 [node name="MedicalTent" type="Sprite3D" parent="Environment/Category Assets/Health/KinematicBody"]
 transform = Transform( 1.00483, 0, 0, 0, 1.00483, 0, 0, 0, 0.200966, -0.537315, 3.10904, 5.69764 )
@@ -817,151 +818,241 @@ texture = ExtResource( 43 )
 [node name="Mutual Aid" type="Node" parent="Environment/Category Assets"]
 
 [node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Mutual Aid"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.7599, 14.3175, -92.1716 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -36.76, -16.3462, -92.172 )
 visible = false
+script = ExtResource( 73 )
 
 [node name="Flag_Money" type="Sprite3D" parent="Environment/Category Assets/Mutual Aid/KinematicBody"]
-transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, 1.9486, 6.63495, 0.122208 )
+transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, 1.9486, 3.73381, 0.122208 )
 billboard = 2
 texture = ExtResource( 68 )
 
 [node name="Equity" type="Node" parent="Environment/Category Assets"]
 
-[node name="Flag_Rainbow" type="Sprite3D" parent="Environment/Category Assets/Equity"]
-transform = Transform( 0.681234, 0, 0, 0, 0.681234, 0, 0, 0, 0.136248, -2.55836, 5.55972, -98.376 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Equity"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76, -10.1786, -98.555 )
+visible = false
+script = ExtResource( 73 )
+height = 6
+
+[node name="Flag_Rainbow" type="Sprite3D" parent="Environment/Category Assets/Equity/KinematicBody"]
+transform = Transform( 0.681234, 0, 0, 0, 0.681234, 0, 0, 0, 0.136248, 2.20177, -0.71345, 0.178535 )
 billboard = 2
 texture = ExtResource( 71 )
 
 [node name="Nature" type="Node" parent="Environment/Category Assets"]
 
-[node name="Flower" type="Sprite3D" parent="Environment/Category Assets/Nature"]
-transform = Transform( 0.367082, 0, 0, 0, 0.367082, 0, 0, 0, 0.0734163, -94.7984, 3.09866, 4.84696 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Nature"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -94.798, -5.5816, 4.847 )
+visible = false
+script = ExtResource( 73 )
+height = 3
+
+[node name="Flower" type="Sprite3D" parent="Environment/Category Assets/Nature/KinematicBody"]
+transform = Transform( 0.367082, 0, 0, 0, 0.367082, 0, 0, 0, 0.0734163, 0, 0, 0 )
 billboard = 2
 texture = ExtResource( 40 )
 
 [node name="Environment" type="Node" parent="Environment/Category Assets"]
 
-[node name="Tree_Card" type="Sprite3D" parent="Environment/Category Assets/Environment"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.7734, 6.0239, 34.3909 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Environment"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.773, -14.2268, 34.391 )
+visible = false
+script = ExtResource( 73 )
+height = 6
+
+[node name="Tree_Card" type="Sprite3D" parent="Environment/Category Assets/Environment/KinematicBody"]
 modulate = Color( 0.806976, 1, 0.0117188, 1 )
 billboard = 2
 texture = ExtResource( 24 )
 
 [node name="Transport" type="Node" parent="Environment/Category Assets"]
 
-[node name="Bicycle" type="Sprite3D" parent="Environment/Category Assets/Transport"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100.338, 2.28105, -10.8104 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Transport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100.338, -3.69469, -10.81 )
+visible = false
+script = ExtResource( 73 )
+height = 2
+
+[node name="Bicycle" type="Sprite3D" parent="Environment/Category Assets/Transport/KinematicBody"]
 flip_h = true
 billboard = 2
 texture = ExtResource( 20 )
 
 [node name="Just Migration" type="Node" parent="Environment/Category Assets"]
 
-[node name="Parakeet_White" type="Sprite3D" parent="Environment/Category Assets/Just Migration"]
-transform = Transform( 0.287592, 0, 0, 0, 0.287592, 0, 0, 0, 0.287592, 32.9168, 7.71571, 82.1439 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Just Migration"]
+transform = Transform( 0.287592, 0, 0, 0, 0.287592, 0, 0, 0, 0.287592, 32.917, -7.64888, 82.144 )
+visible = false
+script = ExtResource( 73 )
+height = 8
+
+[node name="Parakeet_White" type="Sprite3D" parent="Environment/Category Assets/Just Migration/KinematicBody"]
 billboard = 2
 texture = ExtResource( 41 )
 
 [node name="Arts" type="Node" parent="Environment/Category Assets"]
 
-[node name="PaintPalette" type="Sprite3D" parent="Environment/Category Assets/Arts"]
-transform = Transform( 0.25174, 0.1286, 0, -0.109402, 0.295915, 0, 0, 0, 0.274485, -92.0487, 1.46061, 50.3373 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Arts"]
+transform = Transform( 0.274485, 0, 0, 0, 0.322651, 0, 0, 0, 0.274485, -92.049, -5.90623, 50.337 )
+visible = false
+script = ExtResource( 73 )
+height = 2
+
+[node name="PaintPalette" type="Sprite3D" parent="Environment/Category Assets/Arts/KinematicBody"]
+transform = Transform( 0.917137, 0.468514, 0, -0.339072, 0.917137, 0, 0, 0, 1, 0, 0, 0 )
 flip_h = true
 billboard = 2
 texture = ExtResource( 46 )
 
 [node name="Storytelling" type="Node" parent="Environment/Category Assets"]
 
-[node name="LittleLibrary" type="Sprite3D" parent="Environment/Category Assets/Storytelling"]
-transform = Transform( 0.539396, 0, 0, 0, 0.539396, 0, 0, 0, 0.539396, -55.6596, 2.47896, 36.8081 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Storytelling"]
+transform = Transform( 0.539396, 0, 0, 0, 0.539396, 0, 0, 0, 0.539396, -55.66, -4.44374, 36.808 )
+visible = false
+script = ExtResource( 73 )
+height = 3
+
+[node name="LittleLibrary" type="Sprite3D" parent="Environment/Category Assets/Storytelling/KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000747681, -0.96597, 0.000190735 )
 billboard = 2
 texture = ExtResource( 47 )
 
 [node name="Re-Creation" type="Node" parent="Environment/Category Assets"]
 
-[node name="MusicNote_Big" type="Sprite3D" parent="Environment/Category Assets/Re-Creation"]
-transform = Transform( 0.40097, 0, 0, 0, 0.40097, 0, 0, 0, 0.30773, 98.2552, 6.52852, -20.3109 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Re-Creation"]
+transform = Transform( 0.40097, 0, 0, 0, 0.40097, 0, 0, 0, 0.30773, 98.255, -5.09455, -20.311 )
+visible = false
+script = ExtResource( 73 )
+height = 6
+
+[node name="MusicNote_Big" type="Sprite3D" parent="Environment/Category Assets/Re-Creation/KinematicBody"]
 billboard = 1
 texture = ExtResource( 48 )
 
 [node name="Education" type="Node" parent="Environment/Category Assets"]
 
-[node name="School" type="Sprite3D" parent="Environment/Category Assets/Education"]
-transform = Transform( 1.00483, 0, 0, 0, 1.00483, 0, 0, 0, 0.200966, -86.1151, 9.28229, -35.0963 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Education"]
+transform = Transform( 1.00483, 0, 0, 0, 1.00483, 0, 0, 0, 0.200966, -86.115, -17.2098, -35.096 )
+visible = false
+script = ExtResource( 73 )
+height = 9
+
+[node name="School" type="Sprite3D" parent="Environment/Category Assets/Education/KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 billboard = 2
 texture = ExtResource( 49 )
 
 [node name="Housing" type="Node" parent="Environment/Category Assets"]
 
-[node name="House_Card" type="Sprite3D" parent="Environment/Category Assets/Housing"]
-transform = Transform( 1.00483, 0, 0, 0, 1.00483, 0, 0, 0, 0.200966, -101.916, 7.15118, -17.2844 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Housing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -101.439, -11.3809, -18.007 )
+visible = false
+script = ExtResource( 73 )
+height = 6
+
+[node name="House_Card" type="Sprite3D" parent="Environment/Category Assets/Housing/KinematicBody"]
+transform = Transform( 1.00483, 0, 0, 0, 1.00483, 0, 0, 0, 0.200966, -0.477364, -1.20276, 0.722839 )
 modulate = Color( 1, 0.666667, 0.517647, 1 )
 billboard = 2
 texture = ExtResource( 50 )
 
 [node name="Work" type="Node" parent="Environment/Category Assets"]
 
-[node name="Laptop" type="Sprite3D" parent="Environment/Category Assets/Work"]
-transform = Transform( 0.523221, 0, 0, 0, 0.523221, 0, 0, 0, 0.104644, -77.358, 1.68909, -5.77157 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Work"]
+transform = Transform( 0.523221, 0, 0, 0, 0.523221, 0, 0, 0, 0.104644, -77.358, -6.66138, -5.772 )
+visible = false
+script = ExtResource( 73 )
+
+[node name="Laptop" type="Sprite3D" parent="Environment/Category Assets/Work/KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.22825, 0.00410461 )
 flip_h = true
 billboard = 2
 texture = ExtResource( 51 )
 
 [node name="Truth" type="Node" parent="Environment/Category Assets"]
 
-[node name="LawBuilding" type="Sprite3D" parent="Environment/Category Assets/Truth"]
-transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, 63.8822, 12.0877, -98.8573 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Truth"]
+transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, 63.882, -20.8491, -98.857 )
+visible = false
+script = ExtResource( 73 )
+height = 12
+
+[node name="LawBuilding" type="Sprite3D" parent="Environment/Category Assets/Truth/KinematicBody"]
 billboard = 2
 texture = ExtResource( 52 )
 
 [node name="Community" type="Node" parent="Environment/Category Assets"]
 
 [node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Community"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95485, 3.14963, -83.3568 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.818, -9.81026, -102.98 )
+visible = false
 script = ExtResource( 73 )
+height = 2
 
 [node name="Meeting_People" type="Sprite3D" parent="Environment/Category Assets/Community/KinematicBody"]
-transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, 0.886128, 2.3607, 0.993378 )
-flip_h = true
+transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, 0.542801, -0.247964, 0.586792 )
 billboard = 2
 texture = ExtResource( 65 )
 
 [node name="Energy" type="Node" parent="Environment/Category Assets"]
 
-[node name="Turbine_Card" type="Sprite3D" parent="Environment/Category Assets/Energy"]
-transform = Transform( 1.78123, 0, 0, 0, 1.78123, 0, 0, 0, 0.356246, -35.8862, 12.854, 61.0171 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Energy"]
+transform = Transform( 1.78123, 0, 0, 0, 1.78123, 0, 0, 0, 0.356246, -35.886, -23.9865, 61.017 )
+visible = false
+script = ExtResource( 73 )
+height = 13
+
+[node name="Turbine_Card" type="Sprite3D" parent="Environment/Category Assets/Energy/KinematicBody"]
 modulate = Color( 0.478431, 1, 1, 1 )
 billboard = 2
 texture = ExtResource( 53 )
 
 [node name="Food" type="Node" parent="Environment/Category Assets"]
 
-[node name="FoodBox_Fruit" type="Sprite3D" parent="Environment/Category Assets/Food"]
-transform = Transform( 0.47354, 0, 0, 0, 0.47354, 0, 0, 0, 0.363425, 106.112, 1.63055, 0.237731 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Food"]
+transform = Transform( 0.47354, 0, 0, 0, 0.47354, 0, 0, 0, 0.363425, 106.112, -8.16462, 0.238 )
+visible = false
+script = ExtResource( 73 )
+
+[node name="FoodBox_Fruit" type="Sprite3D" parent="Environment/Category Assets/Food/KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.63642, -0.00074023 )
 billboard = 2
 texture = ExtResource( 54 )
 
 [node name="Resources" type="Node" parent="Environment/Category Assets"]
 
-[node name="SolarPanel_Double" type="Sprite3D" parent="Environment/Category Assets/Resources"]
-transform = Transform( 0.71767, 0, 0, 0, 0.71767, 0, 0, 0, 0.143534, -44.9505, 3.39552, -19.239 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Resources"]
+transform = Transform( 0.71767, 0, 0, 0, 0.71767, 0, 0, 0, 0.143534, -44.951, -6.56651, -19.239 )
+visible = false
+script = ExtResource( 73 )
+height = 4
+
+[node name="SolarPanel_Double" type="Sprite3D" parent="Environment/Category Assets/Resources/KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 flip_h = true
 billboard = 2
 texture = ExtResource( 55 )
 
 [node name="Decolonization" type="Node" parent="Environment/Category Assets"]
 
-[node name="Protest_Land" type="Sprite3D" parent="Environment/Category Assets/Decolonization"]
-transform = Transform( 0.47769, 0, 0, 0, 0.47769, 0, 0, 0, 0.0955384, 56.3621, 3.65536, -92.529 )
+[node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Decolonization"]
+transform = Transform( 0.47769, 0, 0, 0, 0.47769, 0, 0, 0, 0.0955384, 56.362, -6.70049, -92.529 )
+visible = false
+script = ExtResource( 73 )
+height = 4
+
+[node name="Protest_Land" type="Sprite3D" parent="Environment/Category Assets/Decolonization/KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 billboard = 2
 texture = ExtResource( 67 )
 
 [node name="Death" type="Node" parent="Environment/Category Assets"]
 
 [node name="KinematicBody" type="KinematicBody" parent="Environment/Category Assets/Death"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.1459, 20.1667, 68.5792 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.146, -18.8045, 68.579 )
 visible = false
-script = ExtResource( 72 )
+script = ExtResource( 73 )
 
 [node name="Gravestone" type="Sprite3D" parent="Environment/Category Assets/Death/KinematicBody"]
 transform = Transform( 0.571208, 0, 0, 0, 0.571208, 0, 0, 0, 0.571208, 0.770863, 3.97424, 1.92728 )
@@ -1794,6 +1885,7 @@ category = "Truth"
 [node name="Space21" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.9817, 0, 32.7323 )
 category = "Death"
+
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceA" to="Spaces" method="_on_ChoiceA_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceB" to="Spaces" method="_on_ChoiceB_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceC" to="Spaces" method="_on_ChoiceC_pressed"]

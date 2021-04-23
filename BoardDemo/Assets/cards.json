@@ -168,9 +168,11 @@
                 "choice": "Provide a Skill Share session as a “Public Amateur”"
             },
             "society": {
-                "choice": "Organize a weekend Skill Share event with fellow \"Public Amateurs\""
+                "choice": "Organize a weekend Skill Share event with fellow Public Amateurs"
             },
-            "sustainability": "Build and maintain a community garden"
+            "sustainability": {
+		"choice": "Build and maintain a community garden"
+		}
         }
     ],
     "Just Migration": [
