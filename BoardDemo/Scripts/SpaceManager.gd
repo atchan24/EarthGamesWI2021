@@ -7,12 +7,14 @@ var cur_player = null
 var card = null
 var choice_gui = null
 var buttons = null
+var click = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
 	choice_gui = get_node("/root/Main/GUI/ChoiceGUI")
 	buttons = get_node("/root/Main/GUI/Choice Buttons")
+	click = get_node("/root/Main/Environment/AudioStreamPlayer_Button")
 	choice_gui.get_node("Control").visible = false
 	for b in buttons.get_children():
 		b.visible = false
@@ -53,6 +55,7 @@ func _on_ChoiceC_pressed():
 	
 # interprets the card values and hides the choice UI
 func handle_events(c):
+	click.play()
 	var choice = card[c]
 	cur_player.update_values(choice["self"], choice["society"], choice["sustainability"])
 	cur_player.active = false

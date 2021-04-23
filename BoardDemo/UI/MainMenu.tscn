@@ -45,3 +45,5 @@ color = Color( 0.396078, 0.482353, 0.784314, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

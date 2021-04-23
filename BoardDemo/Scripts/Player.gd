@@ -32,7 +32,7 @@ func _process(delta) :
 #	if Input.is_action_pressed("ui_roll") && !moving && active:
 	if Input.is_action_pressed("ui_roll") && !moving && active && has_rolled == false:
 		moving = true
-		roll = rng.randi_range(1, 2)
+		roll = rng.randi_range(1, 10)
 		# update roll on UI
 		roll_counter.text = str(roll)
 	if moving:
