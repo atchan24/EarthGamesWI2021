@@ -17,7 +17,7 @@
     "Equity": [
         {
             "pillar": "Protect",
-            "prompt": "Black, Indigenous, and People of Color (BIPOC) communities are still fighting for their rights to control their own destiny and achieve equity.",
+            "prompt": "Black, Indigenous, and People of Color (BIPOC) and LGBTQ+ communities are still fighting for their rights to control their own destiny and achieve equity.",
             "self": {
                 "choice" : "Make sure you can vote freely to make your voice heard."
             },
