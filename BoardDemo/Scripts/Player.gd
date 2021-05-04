@@ -32,8 +32,7 @@ func _ready():
 	bar.update_score(bar.get_self(), self_score)
 	#player_audio = get_node("AudioStreamPlayer3D")
 	#sprite.texture = load(texture)
-	#sprite.set_animation(idle)
-	sprite.set_animation("SurpIdle")
+	sprite.set_animation(idle)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -62,12 +61,12 @@ func _process(delta):
 			if !moving: 
 				# call tile script
 				spaces[current].call_manager(self)
-		sprite.set_animation("SurpWalk")
+		sprite.set_animation(walk)
 		#if !player_audio.playing:
 		#	player_audio.play(0.0)
 	else:
 		has_rolled = false
-		sprite.set_animation("SurpIdle")
+		sprite.set_animation(idle)
 		#if player_audio.playing:
 		#	player_audio.stop()
 
