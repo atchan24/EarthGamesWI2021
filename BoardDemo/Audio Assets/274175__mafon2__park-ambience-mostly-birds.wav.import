@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/274175__mafon2__park-ambience-mostly-birds.wav-8c73156e1c2e0be3abf85684038695f3.sample"
+
+[deps]
+
+source_file="res://Audio Assets/274175__mafon2__park-ambience-mostly-birds.wav"
+dest_files=[ "res://.import/274175__mafon2__park-ambience-mostly-birds.wav-8c73156e1c2e0be3abf85684038695f3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

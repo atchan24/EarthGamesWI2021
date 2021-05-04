@@ -12,21 +12,27 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 32
+size = 40
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 32
+size = 40
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 32
+size = 40
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
 font_data = ExtResource( 5 )
 
 [node name="TopBar" type="Control"]
@@ -66,10 +72,10 @@ __meta__ = {
 }
 
 [node name="SelfScore" type="RichTextLabel" parent="SelfBar"]
-margin_left = 546.0
+margin_left = 556.0
 margin_top = 19.0
-margin_right = 632.0
-margin_bottom = 52.0
+margin_right = 678.0
+margin_bottom = 63.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Self"
@@ -93,8 +99,8 @@ __meta__ = {
 [node name="SocietyScore" type="RichTextLabel" parent="SocietyBar"]
 margin_left = 555.0
 margin_top = 19.0
-margin_right = 675.0
-margin_bottom = 59.0
+margin_right = 697.0
+margin_bottom = 65.0
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Society"
@@ -118,8 +124,8 @@ __meta__ = {
 [node name="SustainScore" type="RichTextLabel" parent="SustainBar"]
 margin_left = 554.0
 margin_top = 18.0
-margin_right = 768.0
-margin_bottom = 58.0
+margin_right = 816.0
+margin_bottom = 66.0
 rect_min_size = Vector2( 1, 1 )
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )

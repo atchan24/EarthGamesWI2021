@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/trumpet_soundtrack.wav-5197f426e3c2b48db2da4c0f45134fd5.sample"
+
+[deps]
+
+source_file="res://Audio Assets/trumpet_soundtrack.wav"
+dest_files=[ "res://.import/trumpet_soundtrack.wav-5197f426e3c2b48db2da4c0f45134fd5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

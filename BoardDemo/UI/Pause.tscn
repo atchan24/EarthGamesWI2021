@@ -1,9 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Ausio Assets/Button_Clicks.wav" type="AudioStream" id=1]
+[ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Pause/Pause.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=3]
-
 
 [node name="CanvasLayer" type="CanvasLayer"]
 layer = 128
@@ -67,7 +66,7 @@ focus_neighbour_top = NodePath("../menuButton")
 focus_neighbour_bottom = NodePath("../resumeButton")
 text = "Quit Game"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Pause/Overlay"]
+[node name="Click" type="AudioStreamPlayer" parent="Pause/Overlay"]
 stream = ExtResource( 1 )
 volume_db = -4.407
 pitch_scale = 2.35

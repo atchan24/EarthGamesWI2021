@@ -14,8 +14,9 @@ func _on_resumeButton_pressed():
 
 
 func _on_menuButton_pressed():
-	var new_pause_state = not get_tree().paused
-	get_tree().paused = new_pause_state
-	visible = new_pause_state
+	get_tree().change_scene("res://Scenes/MainMenu.tscn")
+	# var new_pause_state = not get_tree().paused
+	# get_tree().paused = new_pause_state
+	# visible = new_pause_state
 	
 

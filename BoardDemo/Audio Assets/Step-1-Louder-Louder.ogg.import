@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Step-1-Louder-Louder.ogg-b2584ed0a943e5f8cd90bcad6ab914cf.oggstr"
+
+[deps]
+
+source_file="res://Audio Assets/Step-1-Louder-Louder.ogg"
+dest_files=[ "res://.import/Step-1-Louder-Louder.ogg-b2584ed0a943e5f8cd90bcad6ab914cf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

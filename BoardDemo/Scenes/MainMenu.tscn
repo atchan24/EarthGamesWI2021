@@ -1,8 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/titlescreen.png" type="Texture" id=2]
-[ext_resource path="res://Ausio Assets/Button_Clicks.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio Assets/trumpet_soundtrack.wav" type="AudioStream" id=4]
 
 [node name="Node2D" type="Node2D"]
 
@@ -43,7 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.05945
 margin_right = 1.05945
-color = Color( 0.396078, 0.482353, 0.784314, 1 )
+color = Color( 0.772549, 0.960784, 0.960784, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -53,7 +54,12 @@ position = Vector2( 522.308, 204.243 )
 scale = Vector2( 0.349655, 0.375318 )
 texture = ExtResource( 2 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -2.943
 pitch_scale = 2.21
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -19.184
+autoplay = true
