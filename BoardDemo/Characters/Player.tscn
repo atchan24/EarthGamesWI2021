@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Life_Art_Ideas/Life Art Ideas/CutoutAvatar.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/Characters/Animations/AnimBuffIdle.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Characters/Animations/JogWalk.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Characters/Animations/JogIdle.png" type="Texture" id=8]
+[ext_resource path="res://Ausio Assets/Step-1-Louder-Louder.ogg" type="AudioStream" id=10]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 1.5
@@ -137,63 +138,63 @@ region = Rect2( 2338, 1669, 1169, 1669 )
 
 [sub_resource type="AtlasTexture" id=27]
 flags = 23
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=28]
-flags = 23
-atlas = ExtResource( 4 )
-region = Rect2( 1034, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=29]
-flags = 23
-atlas = ExtResource( 4 )
-region = Rect2( 2068, 0, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=30]
-flags = 23
-atlas = ExtResource( 4 )
-region = Rect2( 0, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=31]
-flags = 23
-atlas = ExtResource( 4 )
-region = Rect2( 1034, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=32]
-flags = 23
-atlas = ExtResource( 4 )
-region = Rect2( 2068, 1404, 1034, 1404 )
-
-[sub_resource type="AtlasTexture" id=33]
-flags = 23
 atlas = ExtResource( 7 )
 region = Rect2( 0, 0, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=34]
+[sub_resource type="AtlasTexture" id=28]
 flags = 23
 atlas = ExtResource( 7 )
 region = Rect2( 1037, 0, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=35]
+[sub_resource type="AtlasTexture" id=29]
 flags = 23
 atlas = ExtResource( 7 )
 region = Rect2( 2074, 0, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=36]
+[sub_resource type="AtlasTexture" id=30]
 flags = 23
 atlas = ExtResource( 7 )
 region = Rect2( 0, 1224, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=37]
+[sub_resource type="AtlasTexture" id=31]
 flags = 23
 atlas = ExtResource( 7 )
 region = Rect2( 1037, 1224, 1037, 1224 )
 
-[sub_resource type="AtlasTexture" id=38]
+[sub_resource type="AtlasTexture" id=32]
 flags = 23
 atlas = ExtResource( 7 )
 region = Rect2( 2074, 1224, 1037, 1224 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 23
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 23
+atlas = ExtResource( 4 )
+region = Rect2( 1034, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 23
+atlas = ExtResource( 4 )
+region = Rect2( 2068, 0, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 23
+atlas = ExtResource( 4 )
+region = Rect2( 0, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 23
+atlas = ExtResource( 4 )
+region = Rect2( 1034, 1404, 1034, 1404 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 23
+atlas = ExtResource( 4 )
+region = Rect2( 2068, 1404, 1034, 1404 )
 
 [sub_resource type="SpriteFrames" id=39]
 animations = [ {
@@ -219,13 +220,13 @@ animations = [ {
 }, {
 "frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ) ],
 "loop": true,
-"name": "SurpIdle",
-"speed": 6.0
+"name": "JogWalk",
+"speed": 8.0
 }, {
 "frames": [ SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ) ],
 "loop": true,
-"name": "JogWalk",
-"speed": 8.0
+"name": "SurpIdle",
+"speed": 6.0
 } ]
 
 [node name="Player" type="KinematicBody"]
@@ -253,5 +254,11 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 39 )
 animation = "SurpIdle"
-frame = 3
+frame = 5
 playing = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 10 )
+unit_db = 80.0
+max_db = -0.776
+max_distance = 100.0

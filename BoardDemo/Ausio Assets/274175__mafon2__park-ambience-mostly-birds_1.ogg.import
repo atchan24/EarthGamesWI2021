@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/274175__mafon2__park-ambience-mostly-birds_1.ogg-772450764f8ea03008d63b3fe1d08f01.oggstr"
+
+[deps]
+
+source_file="res://Ausio Assets/274175__mafon2__park-ambience-mostly-birds_1.ogg"
+dest_files=[ "res://.import/274175__mafon2__park-ambience-mostly-birds_1.ogg-772450764f8ea03008d63b3fe1d08f01.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

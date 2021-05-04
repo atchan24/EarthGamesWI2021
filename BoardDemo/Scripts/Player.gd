@@ -10,6 +10,7 @@ var done = false
 var has_rolled = false
 
 var sprite = null
+var player_audio = null
 var spaces = null
 var roll_counter = null
 var spinner = null
@@ -27,7 +28,7 @@ func _ready():
 	sprite = get_node("AnimatedSprite3D")
 	bar = get_node("/root/Main/GUI/TopBar")
 	bar.update_score(bar.get_self(), self_score)
-	#player_audio = get_node("AudioStreamPlayer3D")
+	player_audio = get_node("AudioStreamPlayer3D")
 	#sprite.texture = load(texture)
 	sprite.set_animation(idle)
 	spinner = get_node("/root/Main/GUI/Spinner")
@@ -59,13 +60,13 @@ func _process(delta):
 				# call tile script
 				spaces[current].call_manager(self)
 		sprite.set_animation(walk)
-		#if !player_audio.playing:
-		#	player_audio.play(0.0)
+		if !player_audio.playing:
+			player_audio.play(0.0)
 	else:
 		has_rolled = false
 		sprite.set_animation(idle)
-		#if player_audio.playing:
-		#	player_audio.stop()
+		if player_audio.playing:
+			player_audio.stop()
 
 func is_done():
 	return done

@@ -2,6 +2,7 @@
 
 [ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/titlescreen.png" type="Texture" id=2]
+[ext_resource path="res://Ausio Assets/Button_Clicks.wav" type="AudioStream" id=3]
 
 [node name="Node2D" type="Node2D"]
 
@@ -51,3 +52,8 @@ __meta__ = {
 position = Vector2( 522.308, 204.243 )
 scale = Vector2( 0.349655, 0.375318 )
 texture = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -2.943
+pitch_scale = 2.21
