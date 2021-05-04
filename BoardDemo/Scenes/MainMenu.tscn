@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/titlescreen.png" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D"]
 
@@ -45,3 +46,8 @@ color = Color( 0.396078, 0.482353, 0.784314, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 522.308, 204.243 )
+scale = Vector2( 0.349655, 0.375318 )
+texture = ExtResource( 2 )
