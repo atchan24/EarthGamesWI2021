@@ -8,6 +8,7 @@ var cur_bonus = 0
 var card = null
 var choice_gui = null
 var buttons = null
+var assets = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,6 +18,7 @@ func _ready():
 	buttons = get_node("/root/Main/GUI/Choice Buttons")
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
+	assets = get_node("/root/Main/Environment/Category Assets")
 	for b in buttons.get_children():
 		b.visible = false
 
@@ -34,6 +36,9 @@ func start_card_event(category, player, bonus):
 		cur_bonus = bonus
 		handle_events_demo(choices[rng.randi_range(0, 2)])
 		return
+	for c in assets.get_children():
+		if (c.name == category):
+			assets = c
 	cur_player = player
 	cur_bonus = bonus
 	var cards = card_data[category]
@@ -73,11 +78,18 @@ func handle_events_demo(c):
 		s3 = 5
 	cur_player.update_values(s1 + cur_bonus)
 	manager.update_score(s2, s3)
-	cur_player.active = false
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	for b in buttons.get_children():
 		b.visible = false
+	for a in assets.get_children():
+		if !(a.visible):
+			a.visible = true
+			yield(a, "finished_moving")
+			break
+	cur_player.active = false
+	
+	
 
 # interprets the card values and hides the choice UI
 func handle_events(c):
@@ -86,11 +98,15 @@ func handle_events(c):
 	manager.update_score(choice["society"], choice["sustainability"])
 	# add logic to increase bonus of a future space defined by offset
 	# need to retrive current space to determine offset by relative position
-	cur_player.active = false
 	# call something to hide UI
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	for b in buttons.get_children():
 		b.visible = false
+	for a in assets.get_children():
+		if !(a.visible):
+			a.visible = true
+			break
+	cur_player.active = false
 	# var new_pause_state = not get_tree().paused
 	# get_tree().paused = new_pause_state

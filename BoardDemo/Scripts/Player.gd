@@ -14,33 +14,31 @@ var spaces = null
 var roll_counter = null
 var spinner = null
 var bar = null
-#var player_audio = null
 
-export var active = false
 export var idle = ""
 export var walk = ""
-export var texture = ""
-var self_score = 20
+export var active = false
+var self_score = 30
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
 	spaces = get_node("/root/Main/Spaces").get_children()
-	spinner = get_node("/root/Main/GUI/Spinner")
 	sprite = get_node("AnimatedSprite3D")
 	bar = get_node("/root/Main/GUI/TopBar")
 	bar.update_score(bar.get_self(), self_score)
 	#player_audio = get_node("AudioStreamPlayer3D")
 	#sprite.texture = load(texture)
 	sprite.set_animation(idle)
+	spinner = get_node("/root/Main/GUI/Spinner")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if done:
 		return
-	bar.update_score(bar.get_self(), self_score)
-	if Input.is_action_pressed("ui_roll") && !moving && active && !has_rolled:
-		roll = rng.randi_range(1, 10)
+	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing() && !has_rolled:
+		#roll = rng.randi_range(1, 10)
+		roll = 6
 		spinner.play(roll)
 		yield(spinner, "spinner_done")
 		moving = true
@@ -54,7 +52,7 @@ func _process(delta):
 			if spaces[current].category != "Travel":
 				roll -= 1
 			current += 1
-			if current >= spaces.size() - 1:
+			if current >= spaces.size():
 				roll = 0 # stop moving once you hit the end
 				done = true
 			moving = roll > 0
@@ -75,7 +73,6 @@ func is_done():
 
 func update_values(s):
 	self_score += s
-	bar.update_score(bar.get_self(), self_score)
 	print(self.name + ": " + str(self_score))
 	
 func get_score():

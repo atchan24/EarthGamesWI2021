@@ -2,33 +2,37 @@
     "Justice": [
         {
             "pillar": "Repair",
-            "prompt": "For centuries, Black, Indigenous, and People Of Color (BIPOC) communities have suffered from white supremacist oppression (slavery, genocide, social, political and economic hurdles, etc). Now it’s time for the end of white supremacy - for BIPOC liberation, reparations, and collective evolution.",
+            "prompt": "It’s time for the end of white supremacy - for Black, Indigenous, and People Of Color (BIPOC)  liberation, reparations, and collective evolution.",
             "self": {
-                "choice": "If you are a BIPOC person, think about and share what reparations and/or land back would mean to you. If you’re not, think about how you can help."
+                "choice": "Make a post on social media to share your support."
             },
             "society": {
-                "choice": "Organize to achieve land back and reparations through social, cultural, economic and political movements"
+                "choice": "Organize to achieve land back and reparations through social, cultural, economic and political movements."
             },
             "sustainability": {
-                "choice": "Prioritize BIPOC / frontline (most affected) communities (at least 50% of funds) for services, healthcare, grants, training, and jobs when transitioning to a sustainable society as part of reparations (debts repaid that are owed)."
+                "choice": "Prioritize the most affected communities by sending a continuous donation to services with low funding."
             }
         }
     ],
     "Equity": [
         {
             "pillar": "Protect",
-            "prompt": "Black, Indigenous, and People of Color (BIPOC) communities are still fighting for their rights to control their own destiny in legal battles for rights, security, health, and justice (such as #FlintWaterCrisis, #StopAsianHate, #IStandWithParkCannon, and #StandingRockWaterProtectors). We must protect progress and achieve equity.",
+            "prompt": "Black, Indigenous, and People of Color (BIPOC) and LGBTQ+ communities are still fighting for their rights to control their own destiny and achieve equity.",
             "self": {
-                "choice" : "Make sure you can vote freely to make your voice heard or support frontline (targeted/affected) communities (#IStandWithParkCannon, #KeepKnocking) by listening, aligning, and acting."
+                "choice" : "Make sure you can vote freely to make your voice heard."
             },
-            "society": "Support movements to pass bills (like the John Lewis Voting Rights Act and For the People Act) to protect voting rights that were hard won by calling your representatives or protesting.",
-            "sustainability": "Make sure impacted communities (like the black and brown Georgians, Michigonians, Asian Americans and Pacific Islanders (AAPI) communities, Standing Rock water protectors,) can control their own lives and environment through treaties, representation, and equal legal protections rooted in historic understanding."
+            "society": {
+		"choice" : "Support movements to pass bills to protect voting rights by calling your representatives or protesting."
+		},
+            "sustainability": {
+		"choice" : "Make sure impacted communities can control their own lives and environment through treaties, representation, and equal legal protections rooted in historic understanding."
+		}
         }
     ],
     "Health": [
         {
             "pillar": "Invest",
-            "prompt": "Honor your breath, the breath of all people, and the air itself as a way to center in health -- physical, mental and emotional.  For yourself, for your community, and for the earth.",
+            "prompt": "Honor your breath, the breath of all people, and the air itself as a way to center in health.",
             "self": {
                 "choice": "Take 5 minutes to deeply breathe some fresh air (meditate)."
             },
@@ -56,9 +60,9 @@
     "Education": [
         {
             "pillar": "Repair",
-            "prompt": "The American education system has many great qualities or intentions (it is ideally free and equal for all, supportive, representative, useful, engaging, consciously mindful, well-funded, and helps us thrive), it also has a lot of room to grow (it can be white supremacist, patriarchal, nationalistic, underfunded, unsupportive, punitive, disengaging, inequitable, and inadequate). Education is a vehicle and key piece of reparations.",
+            "prompt": "The American education system has many great qualities or intentions; it also has a lot of room to grow as a vehicle and key piece of reparations.",
             "self": {
-                "choice": "Mentor a student from an underfunded public school district or Read the 1619 Project."
+                "choice": "Read The 1619 Project to educate yourself on the consequences of slavery and the contributions of Black Americans"
             },
             "society": {
                 "choice": "Organize a School Strike for Equity in funding and representation."
@@ -71,7 +75,7 @@
     "Housing": [
         {
             "pillar": "Repair",
-            "prompt": "We believe housing is a human right.  Everyone should have a home, and a sustainable world where everyone can live, breathe, eat, drink, and move - together - in harmony with the Earth, so that future generations and all Earthlings can enjoy this world. We can make housing universal and in harmony.",
+            "prompt": "We believe housing is a human right so everyone should have a home, and a sustainable world where everyone can live in harmony with the Earth.",
             "self": {
                 "choice": "Live in an affordable, comfortable home where you don’t worry about paying the bills - sanctuary."
             },
@@ -79,14 +83,14 @@
                 "choice": "Support universal green housing efforts with transit connected, walkable communities through localized advocacy in your community through the Green New Deal Network."
             },
             "sustainability": {
-                "choice": "Promote a Global Green New Deal - green public housing, localized farming and living, and rapid transit accessibility in city design at the national and global level."
+                "choice": "Promote a Global Green New Deal - green public housing at the national and global level."
             }
         }
     ],
     "Food": [
         {
             "pillar": "Repair",
-            "prompt": "Let’s repair our bodies, and our relationships to the Earth and each other by growing and sharing food while honoring the land and water in which it grows.",
+            "prompt": "Repair our bodies and our relationships to the Earth by growing and sharing food while honoring the land and water in which it grows.",
             "self": {
                 "choice": "Take care of your body, all people, and the Earth by eating more plant-based meals."
             },
@@ -94,16 +98,16 @@
                 "choice": "Advocate with your members of Congress for food stamps in the US and nutrition for all globally so everyone can get what they need to survive and thrive."
             },
             "sustainability": {
-                "choice": "Support small farmers to employ sustainable farming practices and localize food supplies, instead of landscaping and harmful practices of factory farming in large-scale agribusiness."
+                "choice": "Support small farmers to employ sustainable farming practices and localize food supplies,  in large-scale agribusiness."
             }
         }   
     ],
     "Community": [
         {
             "pillar": "Protect",
-            "prompt": "We can take responsibility for our own parts of the world by participating on a local level -- and get lots of  satisfaction from interacting with neighbors and being part of a community. Think global, and act local!",
+            "prompt": "We can take responsibility for our own parts of the world on a local level. Think global, and act local!",
             "self": {
-                "choice": "Create a traffic calming street mural in a dangerous intersection. Ask local artists to join. Or, get to know your neighborhood while getting exercise by walking/biking to work and errands"
+                "choice": "Get to know your neighborhood while getting exercise by walking/biking to work and errands"
             },
             "society": {
                 "choice": "Organize community meetings to listen to neighbors’ needs and concerns."
@@ -118,7 +122,7 @@
             "pillar": "Transform",
             "prompt": "Work can and should be a place for liberation, balance, and positive change.  It’s one way we contribute to society and a sustainable future.",
             "self": {
-                "choice": "Step Up: If you’re not usually in a leadership role, put your skills to use and/or refine them by accepting a position of leadership. Or: Step Back: If you feel like you are overly responsible, make space for and follow new leadership, and kick back after school/work to rest and totally let go of the day."
+                "choice": "If you feel like you are overly responsible, make space for and follow new leadership, and kick back to rest and totally let go of the day."
             },
             "society": {
                 "choice": "Accept a position of leadership in your democratic Labor Union."
@@ -133,7 +137,7 @@
             "pillar": "Invest",
             "prompt": "We have to invest time, energy and money into universal access to a clean, sustainable power grid.",
             "self": {
-                "choice": "Install solar panels on your roof. Or, put up a clothes line for the ultimate solar clothes dryer."
+                "choice": "Put up a clothes line for the ultimate solar clothes dryer."
             },
             "society": {
                 "choice": "Start a clean power utility in your community."
@@ -146,15 +150,15 @@
     "Mutual Aid": [
         {
             "pillar": "Repair",
-            "prompt": "Mutual aid (people coming together as communities to support each other directly with resources and services) is gaining ground as a concept and tactic for fulfilling needs and addressing systemic problems.",
+            "prompt": "People should come together as a community to support each other directly with resources and services to fulfill needs and address systemic problems.",
             "self": {
                 "choice": "Look up an online how-to video to repair a broken object or appliance"
             },
             "society": {
-                "choice": "Find or found a Fix-it Clinic in your area"
+                "choice": "Establish a Fix-it Clinic in your area"
             },
             "sustainability": {
-                "choice": "Implement a right-to-repair policy; make planned obsolescence obsolete."
+                "choice": "Implement a right-to-repair policy so we can make planned obsolescence obsolete."
             }
         },
         {
@@ -164,17 +168,19 @@
                 "choice": "Provide a Skill Share session as a “Public Amateur”"
             },
             "society": {
-                "choice": "Organize a weekend Skill Share event with fellow \"Public Amateurs\""
+                "choice": "Organize a weekend Skill Share event with fellow Public Amateurs"
             },
-            "sustainability": "Build and maintain a community garden"
+            "sustainability": {
+		"choice": "Build and maintain a community garden"
+		}
         }
     ],
     "Just Migration": [
         {
             "pillar": "Protect",
-            "prompt": "As the climate crisis continues to worsen amidst tremendous social inequities, more people will be forced to flee their homes and seek new places to live.  It is critical that wealthy consumer nations anticipate and welcome those who have been displaced.",
+            "prompt": "It is critical that wealthy consumer nations welcome those who have been displaced from their homes due to inequities.",
             "self": {
-                "choice": "Receive support, respect, and amnesty if you are an undocumented person and a path to status and citizenship if you choose. If you are not, read poetry/watch videos about migration struggles and solidarity."
+                "choice": "Read poetry or watch videos about migration struggles and solidarity."
             },
             "society": {
                 "choice": "Advocate for migrants rights and services, by lobbying, protesting, civil disobedience, or direct service."
@@ -195,7 +201,7 @@
                 "choice": "Lobby local officials with the power to grant or deny permits to loggers."
             },
             "sustainability": {
-                "choice": "Invest/transition the logger workers to tree farmers and eco-restoration workers."
+                "choice": "Invest and transition the logger workers to tree farmers and eco-restoration workers."
             }
         },
         {
@@ -215,9 +221,9 @@
     "Recreation": [
         {
             "pillar": "Invest",
-            "prompt": "All living things experience cycles of energy, materials, nutrients and information.  Humans need rest and play, just as nature relies on the seasons for rejuvenation.",
+            "prompt": "All living things experience cycles of energy.  Humans need rest and play, just as nature relies on the seasons for rejuvenation.",
             "self": {
-                "choice": "Spend time practicing painting, guitar, or gardening."
+                "choice": "Improve your musical skills by practicing on an instrument."
             },
             "society": {
                 "choice": "Advocate for budgeting for public arts programs where we can collectively create and celebrate."
@@ -245,7 +251,7 @@
     "Decolonization": [
         {
             "pillar": "Invest",
-            "prompt": "Systems created in colonized lands are based on the privilege and worldview of the oppressor.  The hierarchy they established is the basis of inequity, and is not sustainable for humans or for the planet.",
+            "prompt": "Systems created in colonized lands are based on the privilege and worldview of the oppressor.  The hierarchy they established is the basis of inequity.",
             "self": {
                 "choice": "Pay a Land Tax to local Indigenous people"
             },
@@ -253,7 +259,7 @@
                 "choice": "Help fund and promote a Land Trust for local Indigenous people"
             },
             "sustainability": {
-                "choice": "Promote adoption of TEK on all Public Lands"
+                "choice": "Promote adoption of traditional ecological knowledge (TEK) on all Public Lands"
             }
         }   
     ],
@@ -275,7 +281,7 @@
     "Transport": [
         {
             "pillar": "Transform",
-            "prompt": "Transportation generates the largest share of greenhouse gases.  Everyone is dependent on various forms for moving people and resources, so clean and equitable methods must be accessible to all.",
+            "prompt": "Transportation generates the largest share of greenhouse gases.  Everyone is dependent on it, so clean and equitable methods must be accessible to all.",
             "self": {
                 "choice": "Make sure you can easily move around by living close to public transportation in a safe, walkable, bikeable city."
             },
@@ -288,9 +294,9 @@
         },
         {
             "pillar": "Repair",
-            "prompt": "Transportation generates the largest share of greenhouse gases.  Everyone is dependent on various forms for moving people and resources, so clean and equitable methods must be accessible to all.",
+            "prompt": "Transportation generates the largest share of greenhouse gases.  Everyone is dependent on it, so clean and equitable methods must be accessible to all.",
             "self": {
-                "choice": "Fix up your old bike that’s been collecting dust in the garage. Look for a tool library nearby or connect with a skillshare."
+                "choice": "Fix up your old bike that’s been collecting dust in the garage."
             },
             "society": {
                 "choice": "Lobby your local city council to turn a 60s era urban freeway into a people-first boulevard."
@@ -303,22 +309,22 @@
     "Arts": [
         {
             "pillar": "Protect",
-            "prompt": "Human creativity and expression are a source of joy, recreation, appreciation of beauty, social commentary, and ingenuity.  The arts --visual, music, dance, theater, poetry, literature -- reach people’s hearts as well as minds.",
+            "prompt": "Human creativity and expression are a source of joy, recreation, appreciation of beauty, social commentary, and ingenuity.",
             "self": {
-                "choice": "Give yourself 1 hour a week to be creative. Or attend a music or animation class."
+                "choice": "Create an arts and crafts project using eco-friendly materials."
             },
             "society": {
-                "choice": "Lobby officials to maintain public arts budget for youth in low-income areas and schools."
+                "choice": "Contribute to a student made video game that communicates the Green New Deal and its benefits to society."
             },
             "sustainability": {
-                "choice": "Make sure frontline communities are paid for their murals, songs, or games to communicate the GND and its benefits to society."
+                "choice": "Lobby officials to maintain public arts budget for youth in low-income areas and schools."
             }
         }   
     ],
     "Resources": [
         {
             "pillar": "Repair",
-            "prompt": "Natural resources are the basis of all we consume for survival . . .  and for our 22nd century lifestyle!  To reach sustainability it’s critical to close the loop connecting resource use & extraction, to energy use, to  zero waste",
+            "prompt": "Fixing and reusing may take time, but it saves on energy and resources that come with dismantling and remanufacturing.",
             "self": {
                 "choice": "Mend the small hole in your favorite socks — a stitch in time saves 9!"
             },
