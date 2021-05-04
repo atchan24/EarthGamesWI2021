@@ -386,48 +386,6 @@ script = ExtResource( 38 )
 
 [node name="Spinner" parent="GUI" instance=ExtResource( 7 )]
 
-[node name="Top Bar" type="MarginContainer" parent="GUI"]
-margin_right = 1024.0
-margin_bottom = 54.0
-custom_constants/margin_right = 20
-custom_constants/margin_top = 20
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Rolls Counter" type="HBoxContainer" parent="GUI/Top Bar"]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 1004.0
-margin_bottom = 34.0
-
-[node name="MarginContainer" type="MarginContainer" parent="GUI/Top Bar/Rolls Counter"]
-margin_right = 16.0
-margin_bottom = 14.0
-
-[node name="Rolls" type="Label" parent="GUI/Top Bar/Rolls Counter/MarginContainer"]
-visible = false
-margin_right = 28.0
-margin_bottom = 14.0
-text = "Roll:"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Value" type="Label" parent="GUI/Top Bar/Rolls Counter/MarginContainer"]
-margin_right = 16.0
-margin_bottom = 14.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "10"
-align = 2
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="ChoiceGUI" parent="GUI" instance=ExtResource( 13 )]
 
 [node name="Choice Buttons" type="Node" parent="GUI"]
@@ -512,7 +470,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 52 )
 animation = "BuffIdle"
-frame = 4
+frame = 3
 playing = true
 
 [node name="Player3" type="KinematicBody" parent="Players"]
@@ -543,7 +501,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = SubResource( 52 )
 animation = "JogIdle"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Player4" type="KinematicBody" parent="Players"]
@@ -574,7 +532,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = SubResource( 52 )
 animation = "BeatIdle"
-frame = 5
+frame = 4
 playing = true
 
 [node name="Environment" type="Node" parent="."]

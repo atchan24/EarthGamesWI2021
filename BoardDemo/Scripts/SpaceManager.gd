@@ -44,15 +44,17 @@ func start_card_event(category, player, bonus):
 	var cards = card_data[category]
 	card = cards[rng.randi_range(0, cards.size() - 1)] # picks a random card
 	# assign fields to UI and display it
-	# maybe add img path later?
-	choice_gui.get_node("Control/Prompt").text = category + " " + card.pillar
+	choice_gui.get_node("Control/Prompt").text = card.prompt
 	choice_gui.get_node("Control/ChoiceAText").text = card["self"]["choice"]
 	choice_gui.get_node("Control/ChoiceBText").text = card["society"]["choice"]
 	choice_gui.get_node("Control/ChoiceCText").text = card["sustainability"]["choice"]
 	choice_gui.get_node("Control").visible = true
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = true
+	# img path
+	choice_gui.change_background("res://Assets/Cards/Card_" + category.replace(" ", "") + ".png")
 	for b in buttons.get_children():
 		b.visible = true
+	get_node("/root/Main/GUI/TopBar").visible = false
 
 func _on_ChoiceA_pressed():
 	handle_events_demo("choice-a")
@@ -87,10 +89,9 @@ func handle_events_demo(c):
 			a.visible = true
 			yield(a, "finished_moving")
 			break
+	get_node("/root/Main/GUI/TopBar").visible = true
 	cur_player.active = false
 	
-	
-
 # interprets the card values and hides the choice UI
 func handle_events(c):
 	var choice = card[c]

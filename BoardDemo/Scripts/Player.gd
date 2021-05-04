@@ -37,8 +37,7 @@ func _process(delta):
 	if done:
 		return
 	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing() && !has_rolled:
-		#roll = rng.randi_range(1, 10)
-		roll = 6
+		roll = rng.randi_range(1, 10)
 		spinner.play(roll)
 		yield(spinner, "spinner_done")
 		moving = true
