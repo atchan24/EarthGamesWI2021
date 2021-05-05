@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Gate.png-dc06a0fa53aed9ff314062138b16f065.s3tc.stex"
-path.etc2="res://.import/Gate.png-dc06a0fa53aed9ff314062138b16f065.etc2.stex"
+path="res://.import/Gate.png-dc06a0fa53aed9ff314062138b16f065.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Demo Art/Gate.png"
-dest_files=[ "res://.import/Gate.png-dc06a0fa53aed9ff314062138b16f065.s3tc.stex", "res://.import/Gate.png-dc06a0fa53aed9ff314062138b16f065.etc2.stex" ]
+dest_files=[ "res://.import/Gate.png-dc06a0fa53aed9ff314062138b16f065.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
