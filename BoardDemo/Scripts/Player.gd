@@ -52,7 +52,7 @@ func _process(delta):
 			if spaces[current].category != "Travel":
 				roll -= 1
 			current += 1
-			if current >= spaces.size():
+			if current >= spaces.size() - 1:
 				roll = 0 # stop moving once you hit the end
 				done = true
 			moving = roll > 0
