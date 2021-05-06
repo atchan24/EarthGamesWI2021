@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Protest_Land.png-f2ee421e2846c47c47d0c90fd62ead78.s3tc.stex"
-path.etc2="res://.import/Protest_Land.png-f2ee421e2846c47c47d0c90fd62ead78.etc2.stex"
+path="res://.import/Protest_Land.png-f2ee421e2846c47c47d0c90fd62ead78.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Demo Art/Protest_Land.png"
-dest_files=[ "res://.import/Protest_Land.png-f2ee421e2846c47c47d0c90fd62ead78.s3tc.stex", "res://.import/Protest_Land.png-f2ee421e2846c47c47d0c90fd62ead78.etc2.stex" ]
+dest_files=[ "res://.import/Protest_Land.png-f2ee421e2846c47c47d0c90fd62ead78.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

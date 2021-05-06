@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Grass.png-bca9f96e952388cd6d99e123cdd0bf48.s3tc.stex"
-path.etc2="res://.import/Grass.png-bca9f96e952388cd6d99e123cdd0bf48.etc2.stex"
+path="res://.import/Grass.png-bca9f96e952388cd6d99e123cdd0bf48.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Wave 1/Grass.png"
-dest_files=[ "res://.import/Grass.png-bca9f96e952388cd6d99e123cdd0bf48.s3tc.stex", "res://.import/Grass.png-bca9f96e952388cd6d99e123cdd0bf48.etc2.stex" ]
+dest_files=[ "res://.import/Grass.png-bca9f96e952388cd6d99e123cdd0bf48.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

@@ -18,7 +18,7 @@ func _ready():
 	manager = get_node("/root/Main")
 	choice_gui = get_node("/root/Main/GUI/ChoiceGUI")
 	buttons = get_node("/root/Main/GUI/Choice Buttons")
-	click = get_node("/root/Main/Environment/AudioStreamPlayer_Button")
+	click = get_node("/root/Main/AmbientAudio/Click")
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	assets = get_node("/root/Main/Environment/Category Assets")

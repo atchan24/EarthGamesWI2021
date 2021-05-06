@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Rock.png-61fd05721c664cf4cd6447dcd9980bae.s3tc.stex"
-path.etc2="res://.import/Rock.png-61fd05721c664cf4cd6447dcd9980bae.etc2.stex"
+path="res://.import/Rock.png-61fd05721c664cf4cd6447dcd9980bae.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Wave 1/Rock.png"
-dest_files=[ "res://.import/Rock.png-61fd05721c664cf4cd6447dcd9980bae.s3tc.stex", "res://.import/Rock.png-61fd05721c664cf4cd6447dcd9980bae.etc2.stex" ]
+dest_files=[ "res://.import/Rock.png-61fd05721c664cf4cd6447dcd9980bae.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

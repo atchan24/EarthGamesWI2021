@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/LawBuilding.png-8b5086d49a1de5490d47075005f4f1c2.s3tc.stex"
-path.etc2="res://.import/LawBuilding.png-8b5086d49a1de5490d47075005f4f1c2.etc2.stex"
+path="res://.import/LawBuilding.png-8b5086d49a1de5490d47075005f4f1c2.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Demo Art/LawBuilding.png"
-dest_files=[ "res://.import/LawBuilding.png-8b5086d49a1de5490d47075005f4f1c2.s3tc.stex", "res://.import/LawBuilding.png-8b5086d49a1de5490d47075005f4f1c2.etc2.stex" ]
+dest_files=[ "res://.import/LawBuilding.png-8b5086d49a1de5490d47075005f4f1c2.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
