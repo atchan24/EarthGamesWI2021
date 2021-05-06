@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Grave_Stone.png-b98fb17a1bb3e2a85a4b2f2bab9831cd.ste
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

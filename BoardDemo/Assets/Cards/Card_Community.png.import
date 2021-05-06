@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Card_Community.png-c5a377e11a2b83c50ad96fa578ad995b.
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Card_Health.png-cc1ecfdad73c2c6dea5faa3f8afba9e9.ste
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

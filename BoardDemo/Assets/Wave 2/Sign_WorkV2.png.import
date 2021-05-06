@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Sign_WorkV2.png-9cb5854a2b1a5bed5a94e8e6c74f4c72.ste
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

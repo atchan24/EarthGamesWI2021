@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Gears.png-db460311e0cfd7db2bf02937639f973d.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Telephone Line.png-5a6aed98e013400b0da928ad5ec4fcd4.s3tc.stex"
-path.etc2="res://.import/Telephone Line.png-5a6aed98e013400b0da928ad5ec4fcd4.etc2.stex"
+path="res://.import/Telephone Line.png-5a6aed98e013400b0da928ad5ec4fcd4.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Wave 1/Telephone Line.png"
-dest_files=[ "res://.import/Telephone Line.png-5a6aed98e013400b0da928ad5ec4fcd4.s3tc.stex", "res://.import/Telephone Line.png-5a6aed98e013400b0da928ad5ec4fcd4.etc2.stex" ]
+dest_files=[ "res://.import/Telephone Line.png-5a6aed98e013400b0da928ad5ec4fcd4.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

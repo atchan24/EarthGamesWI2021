@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Cloud.png-cd3d1250fe72dc00154eaf7930788ff3.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

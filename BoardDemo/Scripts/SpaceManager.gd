@@ -73,6 +73,7 @@ func _on_ChoiceC_pressed():
 
 # use this version of handle_events for Earth Week demo
 func handle_events_demo(c):
+	click.play()
 	var s1 = 0
 	var s2 = 0
 	var s3 = 0
@@ -97,6 +98,7 @@ func handle_events_demo(c):
 			break
 	get_node("/root/Main/GUI/TopBar").visible = true
 	cur_player.active = false
+
 	
 # interprets the card values and hides the choice UI
 func handle_events(c):

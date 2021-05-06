@@ -14,7 +14,7 @@ dest_files=[ "res://.import/FlowerYellow.png-151a823b2e4a7c86c714d7292ef97e12.st
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

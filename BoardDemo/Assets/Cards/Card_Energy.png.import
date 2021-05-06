@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Card_Energy.png-79b288050cc963c70d1466630cd9b4a4.ste
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

@@ -2,21 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/House.png-44239dd7b7947bbe54b51ac7e72fc7eb.s3tc.stex"
-path.etc2="res://.import/House.png-44239dd7b7947bbe54b51ac7e72fc7eb.etc2.stex"
+path="res://.import/House.png-44239dd7b7947bbe54b51ac7e72fc7eb.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/Ashley_Art/House.png"
-dest_files=[ "res://.import/House.png-44239dd7b7947bbe54b51ac7e72fc7eb.s3tc.stex", "res://.import/House.png-44239dd7b7947bbe54b51ac7e72fc7eb.etc2.stex" ]
+dest_files=[ "res://.import/House.png-44239dd7b7947bbe54b51ac7e72fc7eb.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

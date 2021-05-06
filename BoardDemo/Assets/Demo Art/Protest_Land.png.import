@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Protest_Land.png-f2ee421e2846c47c47d0c90fd62ead78.st
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

@@ -14,7 +14,7 @@ dest_files=[ "res://.import/spinner_0000_52-cyan2.png-8d35c0e2bf9fb1dc19246fa35f
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

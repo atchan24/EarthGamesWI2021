@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Rock.png-61fd05721c664cf4cd6447dcd9980bae.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

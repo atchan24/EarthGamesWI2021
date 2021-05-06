@@ -14,7 +14,7 @@ dest_files=[ "res://.import/GameLogo2.png-a9bd1c9bc01c6a3491a173cf22b8081c.stex"
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
