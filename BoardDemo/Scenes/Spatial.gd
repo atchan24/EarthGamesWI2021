@@ -1,6 +1,12 @@
 extends Spatial
 
-onready var main = preload("res://Scenes/Main.tscn")
+var loader
+var wait_frames
+var time_max=100
+var current_scene
+
+func_ready():
+	var root = get_tree().get_root()
 # not sure if main is the right thing to call here
 onready var progressBar = get_node ("../ProgressBar")
 var thread = Thread.new()
