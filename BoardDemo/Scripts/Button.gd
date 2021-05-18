@@ -23,5 +23,5 @@ func _on_Button_Pressed():
 	elif (reference_path == "resume"):
 		pass
 	else:
-		get_tree().change_scene(reference_path)
+		get_node("/root/Global").goto_scene(reference_path)
 		
