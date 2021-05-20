@@ -9,6 +9,7 @@ var card = null
 var choice_gui = null
 var buttons = null
 var assets = null
+var cur_assets = null
 var click = null
 var top_bar = null
 
@@ -42,7 +43,7 @@ func start_card_event(category, player, bonus):
 		return
 	for c in assets.get_children():
 		if (c.name == category):
-			assets = c
+			cur_assets = c
 	cur_player = player
 	cur_bonus = bonus
 	var cards = card_data[category]
@@ -91,7 +92,7 @@ func handle_events_demo(c):
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	for b in buttons.get_children():
 		b.visible = false
-	for a in assets.get_children():
+	for a in cur_assets.get_children():
 		if !(a.visible):
 			a.visible = true
 			yield(a, "finished_moving")

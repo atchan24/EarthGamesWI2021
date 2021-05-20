@@ -22,8 +22,9 @@ func move_body():
 	yield(get_tree().create_timer(1.0), "timeout")
 	#if (get_rotation_degrees().x <= 0):
 	if (self.global_transform.origin.y >= height):
-		emit_signal("finished_moving")
 		done = true
+		yield(get_tree().create_timer(1.0), "timeout")
+		emit_signal("finished_moving")
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
