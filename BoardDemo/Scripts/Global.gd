@@ -8,15 +8,18 @@ var current_scene = null
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
+	#get_node("/root/Loading").visible = false
 	
 func goto_scene(path):
 	loader = ResourceLoader.load_interactive(path)
 	if loader == null:
 		print("error in generating loader")
 		return
+	#get_node("/root/Loading").visible = true
 	set_process(true)
 	current_scene.queue_free()
 	# add some nice looking stuff here
+	
 	
 func _process(delta):
 	if loader == null:
@@ -29,6 +32,7 @@ func _process(delta):
 			var resource = loader.get_resource()
 			loader = null
 			set_new_scene(resource)
+			#get_node("/root/Loading").visible = false
 			break
 		elif err == OK:
 			# update_progress()
