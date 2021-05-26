@@ -5,18 +5,16 @@ func _input(event):
 		var new_pause_state = not get_tree().paused
 		get_tree().paused = new_pause_state
 		visible = new_pause_state
+		get_node("PauseMenu").visible = true
+		get_node("OptionMenu").visible = false
 
-
-func _on_resumeButton_pressed():
+func _on_resume_pressed():
 	var new_pause_state = not get_tree().paused
 	get_tree().paused = new_pause_state
 	visible = new_pause_state
 
 
-func _on_menuButton_pressed():
+func _on_menu_pressed():
+	var new_pause_state = not get_tree().paused
+	get_tree().paused = new_pause_state
 	get_tree().change_scene("res://Scenes/MainMenu.tscn")
-	# var new_pause_state = not get_tree().paused
-	# get_tree().paused = new_pause_state
-	# visible = new_pause_state
-	
-

@@ -1,23 +1,31 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Pause/Pause.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Art/button_big_blue.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Art/button_big_yellow.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Art/button_big_green.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Art/button_big_purple.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/PauseMenuButton.gd" type="Script" id=8]
+[ext_resource path="res://Assets/Winkle.tres" type="DynamicFont" id=9]
+[ext_resource path="res://UI/OptionMenu.gd" type="Script" id=10]
+[ext_resource path="res://UI/VolumeSlider.gd" type="Script" id=11]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+pause_mode = 2
 layer = 128
 
-[node name="Pause" type="Control" parent="."]
+[node name="Pause3" type="Control" parent="."]
 pause_mode = 2
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay" type="ColorRect" parent="Pause"]
+[node name="Overlay" type="ColorRect" parent="Pause3"]
 margin_left = 296.989
 margin_top = 99.8542
 margin_right = 705.989
@@ -27,48 +35,286 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="resumeButton" parent="Pause/Overlay" instance=ExtResource( 3 )]
+[node name="resumeButton" parent="Pause3/Overlay" instance=ExtResource( 3 )]
 anchor_top = -0.00278086
 anchor_bottom = -0.00278086
-margin_left = 108.0
-margin_top = 145.941
-margin_right = 299.0
-margin_bottom = 194.941
+margin_left = 106.665
+margin_top = 69.1877
+margin_right = 297.665
+margin_bottom = 118.188
 rect_pivot_offset = Vector2( 173.762, 10.6972 )
 focus_neighbour_top = NodePath("../exitButton")
 focus_neighbour_bottom = NodePath("../menuButton")
 text = "Resume"
-reference_path = "resume"
-start_focused = true
 
-[node name="menuButton" parent="Pause/Overlay" instance=ExtResource( 3 )]
+[node name="resumeButton2" parent="Pause3/Overlay" instance=ExtResource( 3 )]
 anchor_top = -0.00278086
 anchor_bottom = -0.00278086
-margin_left = 108.0
-margin_top = 209.508
-margin_right = 299.0
-margin_bottom = 258.508
+margin_left = 107.333
+margin_top = 145.274
+margin_right = 298.333
+margin_bottom = 194.274
+rect_pivot_offset = Vector2( 173.762, 10.6972 )
+focus_neighbour_top = NodePath("../exitButton")
+focus_neighbour_bottom = NodePath("../menuButton")
+text = "Options"
+script = null
+
+[node name="menuButton" parent="Pause3/Overlay" instance=ExtResource( 3 )]
+anchor_top = -0.00278086
+anchor_bottom = -0.00278086
+margin_left = 106.665
+margin_top = 219.519
+margin_right = 297.665
+margin_bottom = 268.519
 rect_pivot_offset = Vector2( 173.762, 10.6972 )
 focus_neighbour_top = NodePath("../resumeButton")
 focus_neighbour_bottom = NodePath("../exitButton")
 text = "Return to Menu"
-reference_path = "res://UI/MainMenu.tscn"
+script = null
 
-[node name="exitButton" parent="Pause/Overlay" instance=ExtResource( 3 )]
+[node name="exitButton" parent="Pause3/Overlay" instance=ExtResource( 3 )]
 anchor_top = -0.00278086
 anchor_bottom = -0.00278086
 margin_left = 108.0
-margin_top = 272.017
+margin_top = 295.377
 margin_right = 299.0
-margin_bottom = 321.017
+margin_bottom = 344.377
 rect_pivot_offset = Vector2( 173.762, 10.6972 )
 focus_neighbour_top = NodePath("../menuButton")
 focus_neighbour_bottom = NodePath("../resumeButton")
 text = "Quit Game"
+script = null
 
-[node name="Click" type="AudioStreamPlayer" parent="Pause/Overlay"]
+[node name="Pause" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PauseMenu" type="ColorRect" parent="Pause"]
+visible = false
+margin_left = 367.903
+margin_top = 122.083
+margin_right = 617.903
+margin_bottom = 472.083
+color = Color( 0.164706, 0.4, 0.466667, 0.745098 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MenuButtons" type="VBoxContainer" parent="Pause/PauseMenu"]
+margin_left = 0.181396
+margin_top = 17.9167
+margin_right = 250.181
+margin_bottom = 337.917
+custom_constants/separation = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Pause/PauseMenu/MenuButtons"]
+margin_right = 250.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 9 )
+text = "Menu"
+align = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Pause/PauseMenu/MenuButtons"]
+margin_top = 30.0
+margin_right = 250.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="resume" type="TextureButton" parent="Pause/PauseMenu/MenuButtons"]
+margin_left = 24.0
+margin_top = 70.0
+margin_right = 224.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 200, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 4 )
+expand = true
+script = ExtResource( 8 )
+reference_path = "resume"
+
+[node name="Label" type="Label" parent="Pause/PauseMenu/MenuButtons/resume"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.0
+margin_bottom = -1.0
+custom_fonts/font = ExtResource( 9 )
+text = "Resume"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options" type="TextureButton" parent="Pause/PauseMenu/MenuButtons"]
+margin_left = 24.0
+margin_top = 130.0
+margin_right = 224.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 200, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 6 )
+expand = true
+script = ExtResource( 8 )
+reference_path = "options"
+
+[node name="Label" type="Label" parent="Pause/PauseMenu/MenuButtons/options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+text = "Options"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="TextureButton" parent="Pause/PauseMenu/MenuButtons"]
+margin_left = 24.0
+margin_top = 190.0
+margin_right = 224.0
+margin_bottom = 240.0
+rect_min_size = Vector2( 200, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 5 )
+expand = true
+script = ExtResource( 8 )
+reference_path = "res://Scenes/MainMenu.tscn"
+
+[node name="Label" type="Label" parent="Pause/PauseMenu/MenuButtons/menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+text = "Return to Menu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quit" type="TextureButton" parent="Pause/PauseMenu/MenuButtons"]
+margin_left = 24.0
+margin_top = 250.0
+margin_right = 224.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 200, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 7 )
+expand = true
+script = ExtResource( 8 )
+
+[node name="Label" type="Label" parent="Pause/PauseMenu/MenuButtons/quit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.5
+margin_right = -1.5
+custom_fonts/font = ExtResource( 9 )
+text = "Quit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Click" type="AudioStreamPlayer" parent="Pause/PauseMenu/MenuButtons"]
 stream = ExtResource( 1 )
 volume_db = -4.407
 pitch_scale = 2.35
-[connection signal="pressed" from="Pause/Overlay/resumeButton" to="Pause" method="_on_resumeButton_pressed"]
-[connection signal="pressed" from="Pause/Overlay/menuButton" to="Pause" method="_on_menuButton_pressed"]
+
+[node name="OptionMenu" type="Control" parent="Pause"]
+margin_left = -0.89093
+margin_top = 0.629974
+margin_right = 1024.11
+margin_bottom = 602.63
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Pause/OptionMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -144.603
+margin_top = -143.51
+margin_right = 105.397
+margin_bottom = 156.49
+size_flags_horizontal = 0
+color = Color( 0.164706, 0.4, 0.466667, 0.745098 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/OptionMenu/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 20.0
+custom_constants/separation = 89
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
+margin_right = 250.0
+margin_bottom = 20.0
+custom_fonts/font = ExtResource( 9 )
+text = "Options"
+align = 1
+valign = 1
+
+[node name="VolumeSlider" type="HSlider" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
+margin_left = 24.0
+margin_top = 109.0
+margin_right = 224.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 4
+max_value = 1.0
+step = 0.05
+script = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="Pause/OptionMenu/ColorRect/VBoxContainer/VolumeSlider"]
+margin_left = 67.0853
+margin_top = -24.5509
+margin_right = 136.085
+margin_bottom = -4.5509
+custom_fonts/font = ExtResource( 9 )
+text = "Volume"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="return" type="TextureButton" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
+margin_left = 24.0
+margin_top = 214.0
+margin_right = 224.0
+margin_bottom = 264.0
+rect_min_size = Vector2( 200, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 7 )
+expand = true
+
+[node name="Label" type="Label" parent="Pause/OptionMenu/ColorRect/VBoxContainer/return"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 9 )
+text = "Return"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Pause/PauseMenu/MenuButtons/resume" to="Pause" method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause/PauseMenu/MenuButtons/menu" to="Pause" method="_on_menu_pressed"]
+[connection signal="value_changed" from="Pause/OptionMenu/ColorRect/VBoxContainer/VolumeSlider" to="Pause/OptionMenu/ColorRect/VBoxContainer/VolumeSlider" method="_on_VolumeSlider_value_changed"]
+[connection signal="pressed" from="Pause/OptionMenu/ColorRect/VBoxContainer/return" to="Pause/OptionMenu" method="_on_return_pressed"]
