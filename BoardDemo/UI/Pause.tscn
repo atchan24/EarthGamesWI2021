@@ -229,6 +229,7 @@ volume_db = -4.407
 pitch_scale = 2.35
 
 [node name="OptionMenu" type="Control" parent="Pause"]
+visible = false
 margin_left = -0.89093
 margin_top = 0.629974
 margin_right = 1024.11
@@ -264,7 +265,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
 margin_right = 250.0
-margin_bottom = 20.0
+margin_bottom = 26.0
 custom_fonts/font = ExtResource( 9 )
 text = "Options"
 align = 1
@@ -272,9 +273,9 @@ valign = 1
 
 [node name="VolumeSlider" type="HSlider" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
 margin_left = 25.0
-margin_top = 109.0
+margin_top = 115.0
 margin_right = 225.0
-margin_bottom = 125.0
+margin_bottom = 131.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_horizontal = 4
 max_value = 1.0
@@ -296,9 +297,9 @@ __meta__ = {
 
 [node name="return" type="TextureButton" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
 margin_left = 25.0
-margin_top = 214.0
+margin_top = 220.0
 margin_right = 225.0
-margin_bottom = 264.0
+margin_bottom = 270.0
 rect_min_size = Vector2( 200, 50 )
 size_flags_horizontal = 4
 texture_normal = ExtResource( 7 )

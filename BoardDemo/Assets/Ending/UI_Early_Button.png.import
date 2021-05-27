@@ -14,7 +14,7 @@ dest_files=[ "res://.import/UI_Early_Button.png-292f64bc53fc8af1911d3411f509a265
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
