@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/Art/button_big_green.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Art/button_big_purple.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/PauseMenuButton.gd" type="Script" id=8]
-[ext_resource path="res://Assets/Winkle.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Assets/Fonts/Winkle32.tres" type="DynamicFont" id=9]
 [ext_resource path="res://UI/OptionMenu.gd" type="Script" id=10]
 [ext_resource path="res://UI/VolumeSlider.gd" type="Script" id=11]
 
@@ -271,9 +271,9 @@ align = 1
 valign = 1
 
 [node name="VolumeSlider" type="HSlider" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
-margin_left = 24.0
+margin_left = 25.0
 margin_top = 109.0
-margin_right = 224.0
+margin_right = 225.0
 margin_bottom = 125.0
 rect_min_size = Vector2( 200, 0 )
 size_flags_horizontal = 4
@@ -295,9 +295,9 @@ __meta__ = {
 }
 
 [node name="return" type="TextureButton" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
-margin_left = 24.0
+margin_left = 25.0
 margin_top = 214.0
-margin_right = 224.0
+margin_right = 225.0
 margin_bottom = 264.0
 rect_min_size = Vector2( 200, 50 )
 size_flags_horizontal = 4
@@ -314,6 +314,7 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="Pause/PauseMenu/MenuButtons/resume" to="Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause/PauseMenu/MenuButtons/menu" to="Pause" method="_on_menu_pressed"]
 [connection signal="value_changed" from="Pause/OptionMenu/ColorRect/VBoxContainer/VolumeSlider" to="Pause/OptionMenu/ColorRect/VBoxContainer/VolumeSlider" method="_on_VolumeSlider_value_changed"]
