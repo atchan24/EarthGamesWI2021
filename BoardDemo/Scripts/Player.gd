@@ -59,7 +59,7 @@ func _process(delta):
 			moving = roll > 0
 			if !moving: 
 				# call tile script
-				spaces[current].call_manager(self)
+				spaces[current - 1].call_manager(self)
 		sprite.set_animation(walk)
 		if !player_audio.playing:
 			player_audio.play(0.0)
