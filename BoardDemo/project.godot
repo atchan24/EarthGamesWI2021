@@ -21,6 +21,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+Loading="*res://UI/Loading.tscn"
 
 [display]
 

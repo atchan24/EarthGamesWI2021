@@ -5,7 +5,7 @@
 [ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=3]
 [ext_resource path="res://Audio Assets/trumpet_soundtrack.wav" type="AudioStream" id=4]
 
-[node name="Node2D" type="Node2D"]
+[node name="MainMenu" type="Node2D"]
 
 [node name="menuNewGame" parent="." instance=ExtResource( 1 )]
 margin_left = 436.18
