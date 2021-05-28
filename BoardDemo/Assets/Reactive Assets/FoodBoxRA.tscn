@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Demo Art/BoxOfFruit.png" type="Texture" id=1]
+
+[node name="FoodBoxRA" type="KinematicBody"]
+transform = Transform( 0.47354, 0, 0, 0, 0.47354, 0, 0, 0, 0.363425, 106.112, 0, 0.238 )
+
+[node name="FoodBox_Fruit" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.29398, 0 )
+billboard = 2
+texture = ExtResource( 1 )

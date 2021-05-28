@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ReactiveAsset.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Wave 1/ParakeetWhite.png" type="Texture" id=2]
+
+[node name="ParakeetRA" type="KinematicBody"]
+transform = Transform( 0.287592, 0, 0, 0, 0.287592, 0, 0, 0, 0.287592, -101.809, 0, -6.381 )
+script = ExtResource( 1 )
+
+[node name="Parakeet_White" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010376, 26.8287, -0.000440598 )
+billboard = 2
+texture = ExtResource( 2 )

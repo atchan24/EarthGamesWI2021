@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ReactiveAsset.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Demo Art/Protest_Land.png" type="Texture" id=2]
+
+[node name="ProtestLandRA" type="KinematicBody"]
+transform = Transform( 0.47769, 0, 0, 0, 0.47769, 0, 0, 0, 0.0955384, -12.853, 0, 93.04 )
+script = ExtResource( 1 )
+
+[node name="Protest_Land" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00103569, 7.65216, -0.00378418 )
+billboard = 2
+texture = ExtResource( 2 )

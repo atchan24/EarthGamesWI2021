@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GameLogoRoped2.png-a5ba6f6daf6e26890d97fbaee43b2d80.stex"
+path="res://.import/button_big_purple_pressed.png-39dd17bfd36925a7855fe6d7910c6f79.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Title/GameLogoRoped2.png"
-dest_files=[ "res://.import/GameLogoRoped2.png-a5ba6f6daf6e26890d97fbaee43b2d80.stex" ]
+source_file="res://Assets/Art/button_big_purple_pressed.png"
+dest_files=[ "res://.import/button_big_purple_pressed.png-39dd17bfd36925a7855fe6d7910c6f79.stex" ]
 
 [params]
 

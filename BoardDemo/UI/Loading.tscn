@@ -9,6 +9,7 @@ position = Vector2( 943.722, 510.893 )
 scale = Vector2( 0.08, 0.08 )
 frames = ExtResource( 1 )
 animation = "SurpWalk"
+frame = 2
 playing = true
 flip_h = true
 

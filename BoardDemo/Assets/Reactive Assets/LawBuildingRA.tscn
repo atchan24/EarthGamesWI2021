@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ReactiveAsset.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Demo Art/LawBuilding.png" type="Texture" id=2]
+
+[node name="LawBuildingRA" type="KinematicBody"]
+transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, 13.724, 0, -103.077 )
+script = ExtResource( 1 )
+
+[node name="LawBuilding" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.53674e-05, 8.13609, -0.000915527 )
+billboard = 2
+texture = ExtResource( 2 )
