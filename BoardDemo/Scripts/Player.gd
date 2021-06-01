@@ -52,14 +52,15 @@ func _process(delta):
 		if pos.length() < 1 :
 			if spaces[current].category != "Travel":
 				roll -= 1
-			current += 1
-			if current >= spaces.size() - 1:
+			var temp = current + 1
+			if temp >= spaces.size():
 				roll = 0 # stop moving once you hit the end
 				done = true
 			moving = roll > 0
 			if !moving: 
 				# call tile script
-				spaces[current - 1].call_manager(self)
+				spaces[current].call_manager(self)
+			current += 1
 		sprite.set_animation(walk)
 		if !player_audio.playing:
 			player_audio.play(0.0)
