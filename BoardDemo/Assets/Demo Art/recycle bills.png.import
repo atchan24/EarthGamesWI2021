@@ -14,7 +14,7 @@ dest_files=[ "res://.import/recycle bills.png-712aee8c63c685d5336fd59770735a9b.s
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

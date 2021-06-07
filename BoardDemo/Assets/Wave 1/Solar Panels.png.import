@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Solar Panels.png-956a453291d92595649ddf4abf290b7a.st
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

@@ -14,7 +14,7 @@ dest_files=[ "res://.import/MedicalTent.png-74483a2e1df0be762fc66b85cbd5a3b7.ste
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

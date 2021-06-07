@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Palette.png-4082a4fe381116354d99d4058357c988.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

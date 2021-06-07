@@ -14,7 +14,7 @@ dest_files=[ "res://.import/button_big_green.png-95fd42d57a63a05ae15d4ab295b0969
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

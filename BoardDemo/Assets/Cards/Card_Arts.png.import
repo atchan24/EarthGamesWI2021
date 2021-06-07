@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Card_Arts.png-3bc645e252295c2482c69a8b638a7a36.stex"
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Card_Decolonization.png-343f2ae972e91f6daec815b998d7
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

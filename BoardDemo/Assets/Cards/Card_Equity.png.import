@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Card_Equity.png-e7b203971502ba08ead3198e3fbfca70.ste
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

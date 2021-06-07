@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Apple.png-2304606d48d43116cefd041b390660a2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

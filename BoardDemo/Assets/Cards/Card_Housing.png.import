@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Card_Housing.png-fb2997a1b5adae7312189e8f1c77845f.st
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
