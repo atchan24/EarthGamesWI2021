@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Card_MutualAid.png-01aef2f4f9c1f6eab9ffb6e60b0809f9.
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

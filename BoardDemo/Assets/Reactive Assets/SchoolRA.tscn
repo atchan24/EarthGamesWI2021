@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Demo Art/School.png" type="Texture" id=1]
+
+[node name="SchoolRA" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -86.1151, 9.28229, -35.0963 )
+
+[node name="School" type="Sprite3D" parent="."]
+transform = Transform( 1.00483, 0, 0, 0, 1.00483, 0, 0, 0, 0.200966, 0, 9.39027, 0 )
+billboard = 2
+texture = ExtResource( 1 )

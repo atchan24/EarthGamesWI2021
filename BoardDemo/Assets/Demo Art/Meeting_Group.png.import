@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Meeting_Group.png-d5dd7d2caaa283489dfafa5908ffccab.s
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

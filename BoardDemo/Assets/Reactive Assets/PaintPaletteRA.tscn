@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ReactiveAsset.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Demo Art/Palette.png" type="Texture" id=2]
+
+[node name="PaintPaletteRA" type="KinematicBody"]
+transform = Transform( 0.274485, 0, 0, 0, 0.322651, 0, 0, 0, 0.274485, 65.29, 0, 92.172 )
+script = ExtResource( 1 )
+
+[node name="PaintPalette" type="Sprite3D" parent="."]
+transform = Transform( 0.917137, 0.468514, 0, -0.339072, 0.917137, 0, 0, 0, 1, 0.000946045, 4.34783, -0.000457764 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 2 )

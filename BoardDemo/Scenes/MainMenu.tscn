@@ -1,17 +1,17 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/titlescreen.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Title/TitleScreenNoButtons3.png" type="Texture" id=2]
 [ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=3]
 [ext_resource path="res://Audio Assets/trumpet_soundtrack.wav" type="AudioStream" id=4]
 
 [node name="MainMenu" type="Node2D"]
 
 [node name="menuNewGame" parent="." instance=ExtResource( 1 )]
-margin_left = 455.057
-margin_top = 298.757
-margin_right = 576.057
-margin_bottom = 331.757
+margin_left = 436.18
+margin_top = 388.532
+margin_right = 557.18
+margin_bottom = 421.532
 focus_neighbour_top = NodePath("../menuExit")
 focus_neighbour_bottom = NodePath("../Button")
 text = "New Game"
@@ -19,19 +19,19 @@ reference_path = "res://Scenes/Main.tscn"
 start_focused = true
 
 [node name="Button" parent="." instance=ExtResource( 1 )]
-margin_left = 455.059
-margin_top = 350.997
-margin_right = 576.059
-margin_bottom = 383.997
+margin_left = 436.182
+margin_top = 440.773
+margin_right = 557.182
+margin_bottom = 473.773
 focus_neighbour_top = NodePath("../menuNewGame")
 focus_neighbour_bottom = NodePath("../menuExit")
-text = "Options"
+text = "Volume"
 
 [node name="menuExit" parent="." instance=ExtResource( 1 )]
-margin_left = 455.428
-margin_top = 399.407
-margin_right = 576.428
-margin_bottom = 432.407
+margin_left = 436.551
+margin_top = 489.182
+margin_right = 557.551
+margin_bottom = 522.182
 focus_neighbour_top = NodePath("../Button")
 focus_neighbour_bottom = NodePath("../menuNewGame")
 text = "Exit Game"
@@ -40,6 +40,7 @@ text = "Exit Game"
 layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1.05945
@@ -50,8 +51,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 522.308, 204.243 )
-scale = Vector2( 0.349655, 0.375318 )
+position = Vector2( 511.175, 299.75 )
+scale = Vector2( 0.533307, 0.554537 )
 texture = ExtResource( 2 )
 
 [node name="Click" type="AudioStreamPlayer" parent="."]

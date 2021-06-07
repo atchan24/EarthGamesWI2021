@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Gate.png-dc06a0fa53aed9ff314062138b16f065.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

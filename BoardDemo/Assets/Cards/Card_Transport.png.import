@@ -14,7 +14,7 @@ dest_files=[ "res://.import/Card_Transport.png-96ae18a8d42ed9dd418372c6c0289d00.
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

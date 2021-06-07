@@ -14,7 +14,7 @@ dest_files=[ "res://.import/RainbowBird.PNG-56959ad785e6afe50ceb50dfc0fb713f.ste
 
 [params]
 
-compress/mode=0
+compress/mode=1
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
