@@ -36,6 +36,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if done:
+		sprite.set_animation(idle)
+		if player_audio.playing:
+			player_audio.stop()
 		return
 	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing() && !has_rolled:
 		roll = rng.randi_range(1, 10)
@@ -46,13 +49,13 @@ func _process(delta):
 	if moving:
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
-		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity)
+		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity * roll)
 		sprite.set_flip_h(pos.x > 0)
 		if pos.length() < 1 :
 			if spaces[current].category != "Travel":
 				roll -= 1
 			var temp = current + 1
-			if temp >= spaces.size():
+			if temp >= 1:#spaces.size():
 				roll = 0 # stop moving once you hit the end
 				done = true
 			moving = roll > 0

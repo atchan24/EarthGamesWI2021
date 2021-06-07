@@ -25,3 +25,4 @@ func _on_ButtonEnd_pressed():
 		first_click = false
 	else:
 		get_tree().quit()
+		#get_tree().change_scene("res://Scenes/MainMenu.tscn")
