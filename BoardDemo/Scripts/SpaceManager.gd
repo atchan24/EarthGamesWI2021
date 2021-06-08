@@ -12,9 +12,11 @@ var assets = null
 var cur_assets = null
 var click = null
 var top_bar = null
+var cam = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	cam = get_node("/root/Main/Players/Player/PlayerCamera")
 	rng.randomize()
 	manager = get_node("/root/Main")
 	choice_gui = get_node("/root/Main/GUI/ChoiceGUI")
@@ -95,7 +97,12 @@ func handle_events_demo(c):
 	for a in cur_assets.get_children():
 		if !(a.visible):
 			a.visible = true
+			cur_player.remove_child(cam)
+			a.add_child(cam)
 			yield(a, "finished_moving")
+			#yield(get_tree().create_timer(1.0), "timeout")
+			a.remove_child(cam)
+			cur_player.add_child(cam)
 			break
 	get_node("/root/Main/GUI/TopBar").visible = true
 	cur_player.active = false
@@ -117,6 +124,7 @@ func handle_events(c):
 	for a in assets.get_children():
 		if !(a.visible):
 			a.visible = true
+			yield(get_tree().create_timer(1.0), "timeout")
 			break
 	cur_player.active = false
 	# var new_pause_state = not get_tree().paused

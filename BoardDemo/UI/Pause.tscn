@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Pause/Pause.gd" type="Script" id=2]
@@ -8,9 +8,8 @@
 [ext_resource path="res://Assets/Art/button_big_green.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Art/button_big_purple.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/PauseMenuButton.gd" type="Script" id=8]
-[ext_resource path="res://Assets/Fonts/Winkle32.tres" type="DynamicFont" id=9]
-[ext_resource path="res://UI/OptionMenu.gd" type="Script" id=10]
-[ext_resource path="res://UI/VolumeSlider.gd" type="Script" id=11]
+[ext_resource path="res://Assets/Winkle.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Assets/Pause/OptionMenu.tscn" type="PackedScene" id=10]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 pause_mode = 2
@@ -87,6 +86,7 @@ text = "Quit Game"
 script = null
 
 [node name="Pause" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 2 )
@@ -116,7 +116,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Pause/PauseMenu/MenuButtons"]
-margin_right = 250.0
+margin_right = 249.0
 margin_bottom = 20.0
 custom_fonts/font = ExtResource( 9 )
 text = "Menu"
@@ -124,7 +124,7 @@ align = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Pause/PauseMenu/MenuButtons"]
 margin_top = 30.0
-margin_right = 250.0
+margin_right = 249.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 0, 30 )
 
@@ -228,95 +228,6 @@ stream = ExtResource( 1 )
 volume_db = -4.407
 pitch_scale = 2.35
 
-[node name="OptionMenu" type="Control" parent="Pause"]
-visible = false
-margin_left = -0.89093
-margin_top = 0.629974
-margin_right = 1024.11
-margin_bottom = 602.63
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="Pause/OptionMenu"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -144.603
-margin_top = -143.51
-margin_right = 105.397
-margin_bottom = 156.49
-size_flags_horizontal = 0
-color = Color( 0.164706, 0.4, 0.466667, 0.745098 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Pause/OptionMenu/ColorRect"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 20.0
-custom_constants/separation = 89
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
-margin_right = 250.0
-margin_bottom = 26.0
-custom_fonts/font = ExtResource( 9 )
-text = "Options"
-align = 1
-valign = 1
-
-[node name="VolumeSlider" type="HSlider" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
-margin_left = 25.0
-margin_top = 115.0
-margin_right = 225.0
-margin_bottom = 131.0
-rect_min_size = Vector2( 200, 0 )
-size_flags_horizontal = 4
-max_value = 1.0
-step = 0.05
-script = ExtResource( 11 )
-
-[node name="Label" type="Label" parent="Pause/OptionMenu/ColorRect/VBoxContainer/VolumeSlider"]
-margin_left = 67.0853
-margin_top = -24.5509
-margin_right = 136.085
-margin_bottom = -4.5509
-custom_fonts/font = ExtResource( 9 )
-text = "Volume"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="return" type="TextureButton" parent="Pause/OptionMenu/ColorRect/VBoxContainer"]
-margin_left = 25.0
-margin_top = 220.0
-margin_right = 225.0
-margin_bottom = 270.0
-rect_min_size = Vector2( 200, 50 )
-size_flags_horizontal = 4
-texture_normal = ExtResource( 7 )
-expand = true
-
-[node name="Label" type="Label" parent="Pause/OptionMenu/ColorRect/VBoxContainer/return"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 9 )
-text = "Return"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
+[node name="OptionMenu" parent="Pause" instance=ExtResource( 10 )]
 [connection signal="pressed" from="Pause/PauseMenu/MenuButtons/resume" to="Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause/PauseMenu/MenuButtons/menu" to="Pause" method="_on_menu_pressed"]
-[connection signal="value_changed" from="Pause/OptionMenu/ColorRect/VBoxContainer/VolumeSlider" to="Pause/OptionMenu/ColorRect/VBoxContainer/VolumeSlider" method="_on_VolumeSlider_value_changed"]
-[connection signal="pressed" from="Pause/OptionMenu/ColorRect/VBoxContainer/return" to="Pause/OptionMenu" method="_on_return_pressed"]
