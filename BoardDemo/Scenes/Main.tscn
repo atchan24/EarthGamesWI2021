@@ -28,6 +28,7 @@
 [ext_resource path="res://Assets/Ashley_Art/Bird.PNG" type="Texture" id=26]
 [ext_resource path="res://Audio Assets/Step-1-Louder-Louder.ogg" type="AudioStream" id=27]
 [ext_resource path="res://Assets/Characters/Animations/CharacterAnims.tres" type="SpriteFrames" id=28]
+[ext_resource path="res://Audio Assets/bass_and_vibe_soundtrack.ogg" type="AudioStream" id=29]
 [ext_resource path="res://UI/TopBarUI.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=35]
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=38]
@@ -64,7 +65,6 @@
 [ext_resource path="res://Assets/Art/IMG_0738.PNG" type="Texture" id=69]
 [ext_resource path="res://Assets/Art/IMG_0704.PNG" type="Texture" id=70]
 [ext_resource path="res://Audio Assets/274175__mafon2__park-ambience-mostly-birds-Good.ogg" type="AudioStream" id=71]
-[ext_resource path="res://Audio Assets/bass_and_vibe_soundtrack.wav" type="AudioStream" id=72]
 [ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=73]
 [ext_resource path="res://Assets/Reactive Assets/SchoolRA.tscn" type="PackedScene" id=74]
 [ext_resource path="res://Assets/Reactive Assets/GravestoneRA.tscn" type="PackedScene" id=75]
@@ -106,8 +106,8 @@ volume_db = -5.049
 autoplay = true
 
 [node name="BGM" type="AudioStreamPlayer" parent="AmbientAudio"]
-stream = ExtResource( 72 )
-volume_db = -20.195
+stream = ExtResource( 29 )
+volume_db = -28.0
 autoplay = true
 
 [node name="Click" type="AudioStreamPlayer" parent="AmbientAudio"]
@@ -192,7 +192,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.424805, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BuffIdle"
-frame = 5
+frame = 2
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
@@ -217,7 +217,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "JogIdle"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player3"]
@@ -242,7 +242,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BeatIdle"
-frame = 2
+frame = 5
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]
