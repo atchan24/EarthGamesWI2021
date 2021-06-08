@@ -1,129 +1,17 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/titlescreen.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Title/TitleScreenNoButtons3.png" type="Texture" id=2]
 [ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=3]
 [ext_resource path="res://Audio Assets/trumpet_soundtrack.wav" type="AudioStream" id=4]
-[ext_resource path="res://Assets/Art/button_big_green.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Art/button_big_purple.png" type="Texture" id=6]
-[ext_resource path="res://Assets/Art/button_big_yellow.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Winkle.tres" type="DynamicFont" id=8]
-[ext_resource path="res://Scripts/MainMenuButton.gd" type="Script" id=9]
-[ext_resource path="res://Assets/Pause/OptionMenu.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Assets/Pause/OptionMainMenu.gd" type="Script" id=11]
 
-[node name="Node2D" type="Node2D"]
-
-[node name="Control" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = 1024.0
-margin_bottom = 600.0
-size_flags_horizontal = 2
-size_flags_vertical = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="OptionMenu" parent="Control" instance=ExtResource( 10 )]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 41.0
-margin_top = 0.0
-margin_right = 0.0
-margin_bottom = 0.0
-size_flags_horizontal = 4
-script = ExtResource( 11 )
-
-[node name="MainButtons" type="VBoxContainer" parent="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 305.0
-custom_constants/separation = 19
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="New Game" type="TextureButton" parent="Control/MainButtons"]
-margin_left = 412.0
-margin_right = 612.0
-margin_bottom = 75.0
-rect_min_size = Vector2( 200, 75 )
-size_flags_horizontal = 4
-texture_normal = ExtResource( 7 )
-expand = true
-script = ExtResource( 9 )
-reference_path = "res://Scenes/Main.tscn"
-start_focused = true
-
-[node name="Label" type="Label" parent="Control/MainButtons/New Game"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 8 )
-text = "New Game"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Options" type="TextureButton" parent="Control/MainButtons"]
-margin_left = 412.0
-margin_top = 94.0
-margin_right = 612.0
-margin_bottom = 169.0
-rect_min_size = Vector2( 200, 75 )
-size_flags_horizontal = 4
-texture_normal = ExtResource( 5 )
-expand = true
-script = ExtResource( 9 )
-reference_path = "options"
-
-[node name="Label" type="Label" parent="Control/MainButtons/Options"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 8 )
-text = "Options"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Exit" type="TextureButton" parent="Control/MainButtons"]
-margin_left = 412.0
-margin_top = 188.0
-margin_right = 612.0
-margin_bottom = 263.0
-rect_min_size = Vector2( 200, 75 )
-size_flags_horizontal = 4
-texture_normal = ExtResource( 6 )
-expand = true
-script = ExtResource( 9 )
-
-[node name="Label" type="Label" parent="Control/MainButtons/Exit"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 8 )
-text = "Exit"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Click" type="AudioStreamPlayer" parent="Control/MainButtons"]
-stream = ExtResource( 3 )
-volume_db = -2.943
-pitch_scale = 2.21
+[node name="MainMenu" type="Node2D"]
 
 [node name="menuNewGame" parent="." instance=ExtResource( 1 )]
-visible = false
-margin_left = 455.057
-margin_top = 298.757
-margin_right = 576.057
-margin_bottom = 331.757
+margin_left = 436.18
+margin_top = 388.532
+margin_right = 557.18
+margin_bottom = 421.532
 focus_neighbour_top = NodePath("../menuExit")
 focus_neighbour_bottom = NodePath("../Button")
 text = "New Game"
@@ -131,21 +19,19 @@ reference_path = "res://Scenes/Main.tscn"
 start_focused = true
 
 [node name="Button" parent="." instance=ExtResource( 1 )]
-visible = false
-margin_left = 455.059
-margin_top = 350.997
-margin_right = 576.059
-margin_bottom = 383.997
+margin_left = 436.182
+margin_top = 440.773
+margin_right = 557.182
+margin_bottom = 473.773
 focus_neighbour_top = NodePath("../menuNewGame")
 focus_neighbour_bottom = NodePath("../menuExit")
-text = "Options"
+text = "Volume"
 
 [node name="menuExit" parent="." instance=ExtResource( 1 )]
-visible = false
-margin_left = 455.428
-margin_top = 399.407
-margin_right = 576.428
-margin_bottom = 432.407
+margin_left = 436.551
+margin_top = 489.182
+margin_right = 557.551
+margin_bottom = 522.182
 focus_neighbour_top = NodePath("../Button")
 focus_neighbour_bottom = NodePath("../menuNewGame")
 text = "Exit Game"
@@ -154,19 +40,25 @@ text = "Exit Game"
 layer = -1
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1.18921
-margin_right = 1.18921
+margin_left = 1.05945
+margin_right = 1.05945
 color = Color( 0.772549, 0.960784, 0.960784, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="CanvasLayer/ColorRect"]
-position = Vector2( 519.182, 204.243 )
-scale = Vector2( 0.349655, 0.375318 )
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 511.175, 299.75 )
+scale = Vector2( 0.533307, 0.554537 )
 texture = ExtResource( 2 )
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -2.943
+pitch_scale = 2.21
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )

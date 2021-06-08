@@ -9,11 +9,11 @@ export var height = 0
 signal finished_moving
 var sprite = null
 var rot_speed = null
-var cam = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	cam = get_node("/root/Main/Players/Player/PlayerCamera")
+	#print("This asset is getting ready to appear")
+	#sprite = get_node("Sprite3D")
 	pass # Replace with function body.
 
 func move_body():
@@ -25,11 +25,9 @@ func move_body():
 		done = true
 		yield(get_tree().create_timer(1.0), "timeout")
 		emit_signal("finished_moving")
-		self.remove_child(cam)
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#rot_speed = rad2deg(30)  # 30 deg/sec
 	if (visible && !done):
-		self.add_child(cam)
 		move_body()
