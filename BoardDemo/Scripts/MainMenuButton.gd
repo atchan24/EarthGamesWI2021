@@ -22,6 +22,9 @@ func _on_Button_Pressed():
 		get_tree().quit()
 	elif (reference_path == "resume"):
 		pass
+	elif (reference_path == "options"):
+		get_parent().get_parent().get_node("OptionMenu").visible = true
+		get_parent().get_parent().get_node("MainButtons").visible = false
 	else:
 		get_node("/root/Global").goto_scene(reference_path)
 		
