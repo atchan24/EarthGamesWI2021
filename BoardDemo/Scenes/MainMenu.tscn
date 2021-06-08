@@ -20,7 +20,6 @@
 [node name="OptionMenu" parent="." instance=ExtResource( 13 )]
 margin_left = 17.0
 margin_top = 0.63
-margin_right = 1024.12
 script = ExtResource( 14 )
 
 [node name="menuNewGame" parent="." instance=ExtResource( 1 )]

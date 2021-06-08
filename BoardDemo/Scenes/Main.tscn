@@ -192,7 +192,6 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BuffIdle"
-frame = 2
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
@@ -217,7 +216,6 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "JogIdle"
-frame = 1
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player3"]
@@ -242,7 +240,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BeatIdle"
-frame = 3
+frame = 1
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]
@@ -297,7 +295,7 @@ script = ExtResource( 49 )
 [node name="Community" type="Node" parent="Environment/Category Assets"]
 
 [node name="MeetingPeopleRA" parent="Environment/Category Assets/Community" instance=ExtResource( 51 )]
-transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, 2.841, -9.07921, -82.363 )
+transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, 2.841, -13.2989, -82.363 )
 visible = false
 script = ExtResource( 49 )
 
@@ -342,7 +340,7 @@ visible = false
 [node name="Environment" type="Node" parent="Environment/Category Assets"]
 
 [node name="FruitTreeRA" parent="Environment/Category Assets/Environment" instance=ExtResource( 78 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.869, -19.1634, 87.684 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.869, -20.306, 87.684 )
 visible = false
 
 [node name="Decolonization" type="Node" parent="Environment/Category Assets"]
@@ -354,19 +352,19 @@ visible = false
 [node name="Storytelling" type="Node" parent="Environment/Category Assets"]
 
 [node name="LittleLibraryRA" parent="Environment/Category Assets/Storytelling" instance=ExtResource( 20 )]
-transform = Transform( 0.539396, 0, 0, 0, 0.539396, 0, 0, 0, 0.539396, 25.605, -13.4956, 88.593 )
+transform = Transform( 0.539396, 0, 0, 0, 0.539396, 0, 0, 0, 0.539396, 25.605, -14.1263, 88.593 )
 visible = false
 
 [node name="Transport" type="Node" parent="Environment/Category Assets"]
 
 [node name="BicycleRA" parent="Environment/Category Assets/Transport" instance=ExtResource( 47 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.045, -8.65078, 90.595 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.045, -14.3299, 90.595 )
 visible = false
 
 [node name="Arts" type="Node" parent="Environment/Category Assets"]
 
 [node name="PaintPaletteRA" parent="Environment/Category Assets/Arts" instance=ExtResource( 46 )]
-transform = Transform( 0.274485, 0, 0, 0, 0.322651, 0, 0, 0, 0.274485, 65.29, -12.5078, 92.172 )
+transform = Transform( 0.274485, 0, 0, 0, 0.322651, 0, 0, 0, 0.274485, 65.29, -13.0454, 92.172 )
 visible = false
 
 [node name="Resources" type="Node" parent="Environment/Category Assets"]
@@ -384,7 +382,7 @@ visible = false
 [node name="Death" type="Node" parent="Environment/Category Assets"]
 
 [node name="GravestoneRA" parent="Environment/Category Assets/Death" instance=ExtResource( 75 )]
-transform = Transform( 0.423596, 0, 0, 0, 0.423596, 0, 0, 0, 0.0847193, 106.79, -11.6786, 31.503 )
+transform = Transform( 0.423596, 0, 0, 0, 0.423596, 0, 0, 0, 0.0847193, 106.79, -11.962, 31.503 )
 visible = false
 
 [node name="Ground" type="StaticBody" parent="Environment"]
@@ -1213,6 +1211,7 @@ category = "Truth"
 [node name="Space21" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.9817, 0, 32.7323 )
 category = "Death"
+
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceA" to="Spaces" method="_on_ChoiceA_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceB" to="Spaces" method="_on_ChoiceB_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceC" to="Spaces" method="_on_ChoiceC_pressed"]
