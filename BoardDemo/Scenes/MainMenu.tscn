@@ -1,13 +1,21 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Button.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Title/TitleScreenNoButtons3.png" type="Texture" id=2]
 [ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=3]
 [ext_resource path="res://Audio Assets/trumpet_soundtrack.wav" type="AudioStream" id=4]
+[ext_resource path="res://Scripts/MainMenuButton.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Art/button_big_green.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Art/button_big_purple_pressed.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Art/button_big_purple.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Art/button_big_yellow.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Art/button_big_yellow_pressed.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Art/button_big_green_pressed.png" type="Texture" id=11]
 
 [node name="MainMenu" type="Node2D"]
 
 [node name="menuNewGame" parent="." instance=ExtResource( 1 )]
+visible = false
 margin_left = 436.18
 margin_top = 388.532
 margin_right = 557.18
@@ -19,6 +27,7 @@ reference_path = "res://Scenes/Main.tscn"
 start_focused = true
 
 [node name="Button" parent="." instance=ExtResource( 1 )]
+visible = false
 margin_left = 436.182
 margin_top = 440.773
 margin_right = 557.182
@@ -28,6 +37,7 @@ focus_neighbour_bottom = NodePath("../menuExit")
 text = "Volume"
 
 [node name="menuExit" parent="." instance=ExtResource( 1 )]
+visible = false
 margin_left = 436.551
 margin_top = 489.182
 margin_right = 557.551
@@ -64,3 +74,51 @@ pitch_scale = 2.21
 stream = ExtResource( 4 )
 volume_db = -19.184
 autoplay = true
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 371.0
+margin_right = 998.0
+margin_bottom = 599.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="newgame" type="TextureButton" parent="Buttons"]
+margin_left = 399.0
+margin_top = 20.0
+margin_right = 599.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 200, 60 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 11 )
+expand = true
+script = ExtResource( 5 )
+reference_path = "res://Scenes/Main.tscn"
+
+[node name="options" type="TextureButton" parent="Buttons"]
+margin_left = 399.0
+margin_top = 84.0
+margin_right = 599.0
+margin_bottom = 144.0
+rect_min_size = Vector2( 200, 60 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+expand = true
+script = ExtResource( 5 )
+
+[node name="exit" type="TextureButton" parent="Buttons"]
+margin_left = 399.0
+margin_top = 148.0
+margin_right = 599.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 200, 60 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+expand = true
+script = ExtResource( 5 )
