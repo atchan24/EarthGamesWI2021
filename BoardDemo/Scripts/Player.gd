@@ -23,7 +23,6 @@ var self_score = 30
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	rng.randomize()
 	spaces = get_node("/root/Main/Spaces").get_children()
 	sprite = get_node("AnimatedSprite3D")
 	bar = get_node("/root/Main/GUI/TopBar")
@@ -36,10 +35,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if done:
+		sprite.set_animation(idle)
+		if player_audio.playing:
+			player_audio.stop()
 		return
+	if active && !moving:
+		bar.update_score(bar.get_self(), self_score)
 	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing() && !has_rolled:
+		rng.randomize()
 		roll = rng.randi_range(1, 10)
-		#roll = 1
 		spinner.play(roll)
 		yield(spinner, "spinner_done")
 		moving = true
@@ -47,7 +51,7 @@ func _process(delta):
 	if moving:
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
-		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity)
+		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity * ceil(roll / 1.5))
 		sprite.set_flip_h(pos.x > 0)
 		if pos.length() < 1 :
 			if spaces[current].category != "Travel":
@@ -65,7 +69,6 @@ func _process(delta):
 		if !player_audio.playing:
 			player_audio.play(0.0)
 	else:
-		has_rolled = false
 		sprite.set_animation(idle)
 		if player_audio.playing:
 			player_audio.stop()
