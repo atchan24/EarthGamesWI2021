@@ -34,8 +34,10 @@ func _process(delta):
 		if player_audio.playing:
 			player_audio.stop()
 		return
+	# updates the score bar to reflect the current player's score
 	if active && !moving:
 		bar.update_score(bar.get_self(), self_score)
+	# if the player is focused on and hasn't spun yet
 	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing() && !has_rolled:
 		rng.randomize()
 		roll = rng.randi_range(1, 10)
