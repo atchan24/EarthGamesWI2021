@@ -1,6 +1,5 @@
 extends TextureButton
 
-
 export var reference_path = ""
 export var start_focused = false
 var clicked = null

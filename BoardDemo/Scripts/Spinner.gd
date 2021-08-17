@@ -1,18 +1,20 @@
+# This script is responsible for handling the spinner animations
+
 extends Node2D
 
-var anim 
+onready var anim = get_node("SpinnerAnim")
+onready var roll_counter = get_node("/root/Main/GUI/TopBar").get_counter()
+
 var n = "0"
 var cur = 0
-var roll_counter
 
 signal spinner_done
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	anim = get_node("SpinnerAnim")
-	roll_counter = get_node("/root/Main/GUI/TopBar").get_counter()
 	self.visible = false
 
+# num is the number of spaces to spin
 func play(num):
 	self.visible = true
 	anim.play("Spinner Base")

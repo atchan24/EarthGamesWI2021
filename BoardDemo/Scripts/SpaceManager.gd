@@ -1,37 +1,30 @@
 extends Node
 
+onready var assets = get_node("/root/Main/Environment/Category Assets")
+onready var manager = get_node("/root/Main")
+onready var choice_gui = get_node("/root/Main/GUI/ChoiceGUI")
+onready var buttons = get_node("/root/Main/GUI/Choice Buttons")
+onready var click = get_node("/root/Main/AmbientAudio/Click")
+onready var top_bar = get_node("/root/Main/GUI/TopBar")
+onready var card_data = get_node("/root/Global").get_card_data()
+
 var rng = RandomNumberGenerator.new()
-var manager = null
-var card_data = null
 var cur_player = null
 var cur_bonus = 0
 var card = null
-var choice_gui = null
-var buttons = null
-var assets = null
 var cur_assets = null
-var click = null
-var top_bar = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
-	manager = get_node("/root/Main")
-	choice_gui = get_node("/root/Main/GUI/ChoiceGUI")
-	buttons = get_node("/root/Main/GUI/Choice Buttons")
-	click = get_node("/root/Main/AmbientAudio/Click")
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
-	assets = get_node("/root/Main/Environment/Category Assets")
-	top_bar = get_node("/root/Main/GUI/TopBar")
 	for b in buttons.get_children():
 		b.visible = false
 
 func start_card_event(category, player, bonus):
 	# var new_pause_state = not get_tree().paused
 	# get_tree().paused = new_pause_state
-	if card_data == null :
-		card_data = manager.card_data
 	if !(category in card_data): # if the category doesn't exist
 		#print("category <", category, "> not found")
 		#player.active = false
@@ -79,6 +72,7 @@ func handle_events_demo(c):
 	var s1 = 0
 	var s2 = 0
 	var s3 = 0
+	# all point values are hard coded
 	if c == "choice-a":
 		s1 = 5
 	elif c == "choice-b":
@@ -98,8 +92,8 @@ func handle_events_demo(c):
 			a.visible = true
 			yield(a, "finished_moving")
 			break
-	cur_player.has_rolled = false
-	cur_player.active = false
+	cur_player.set_rolled(false)
+	cur_player.set_active(false)
 	
 # interprets the card values and hides the choice UI
 func handle_events(c):
@@ -118,6 +112,6 @@ func handle_events(c):
 		if !(a.visible):
 			a.visible = true
 			break
-	cur_player.active = false
+	cur_player.set_active(false)
 	# var new_pause_state = not get_tree().paused
 	# get_tree().paused = new_pause_state

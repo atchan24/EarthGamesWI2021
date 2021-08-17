@@ -8,29 +8,24 @@ var roll = 0
 var rng = RandomNumberGenerator.new()
 var done = false
 var has_rolled = false
+var active = false
+var self_score = 30
 
-var sprite = null
-var player_audio = null
+onready var sprite = get_node("/root/Main/Spaces").get_children()
+onready var player_audio = get_node("AudioStreamPlayer3D")
+onready var spinner = get_node("/root/Main/GUI/Spinner")
+onready var bar = get_node("/root/Main/GUI/TopBar")
+
 var spaces = null
 var roll_counter = null
-var spinner = null
-var bar = null
 
 export var idle = ""
 export var walk = ""
-export var active = false
-var self_score = 30
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	spaces = get_node("/root/Main/Spaces").get_children()
-	sprite = get_node("AnimatedSprite3D")
-	bar = get_node("/root/Main/GUI/TopBar")
+	get_node("AnimatedSprite3D").set_animation(idle)
 	bar.update_score(bar.get_self(), self_score)
-	player_audio = get_node("AudioStreamPlayer3D")
-	#sprite.texture = load(texture)
-	sprite.set_animation(idle)
-	spinner = get_node("/root/Main/GUI/Spinner")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -75,6 +70,15 @@ func _process(delta):
 
 func is_done():
 	return done
+	
+func is_active():
+	return active
+
+func set_active(state):
+	active = state
+	
+func set_rolled(state):
+	has_rolled = state
 
 func update_values(s):
 	self_score += s

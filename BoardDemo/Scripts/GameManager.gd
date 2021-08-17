@@ -1,8 +1,6 @@
 extends Spatial
 
-export var card_data = {}
-var end_data = {}
-var endui = null
+onready var endui = get_node("/root/Main/GUI/EndingUI")
 onready var bar = get_node("/root/Main/GUI/TopBar")
 
 var society = 0
@@ -10,28 +8,7 @@ var sustainability = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var file = File.new()
-	var file2 = File.new()
-	file.open("res://Assets/cards.json", file.READ)
-	file2.open("res://Assets/endings.json", file.READ)
-	var res = JSON.parse(file.get_as_text())
-	var res2 = JSON.parse(file2.get_as_text())
-	if res.error == OK:
-		card_data = res.result
-	else:
-		print("Error: ", res.error)
-		print("Error Line: ", res.error_line)
-		print("Error String: ", res.error_string)
-		get_tree().quit()
-	if res2.error == OK:
-		end_data = res2.result
-	else:
-		print("Error: ", res2.error)
-		print("Error Line: ", res2.error_line)
-		print("Error String: ", res2.error_string)
-		get_tree().quit()
-	file.close()
-	endui = get_node("/root/Main/GUI/EndingUI")
+	pass
 
 func update_score(soc, sus):
 	society += soc
@@ -41,7 +18,10 @@ func update_score(soc, sus):
 	print("Society: " + str(society))
 	print("Sustainability: " + str(sustainability))
 	
+# ends the game and determines the endings based on current scores
+# all values are subject to change
 func end_game():
+	var end_data = get_node("/root/Global").get_end_data()
 	var soc_ending
 	var sus_ending
 	if society >= 40:
@@ -80,5 +60,3 @@ func get_society():
 	
 func get_sustainability():
 	return sustainability
-	
-	
