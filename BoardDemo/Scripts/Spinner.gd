@@ -32,7 +32,7 @@ func _on_SpinnerAnim_animation_finished():
 			anim.play(str(n))
 	else:
 		cur = 0
-		yield(get_tree().create_timer(1.5), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		emit_signal("spinner_done")
 		anim.playing = false
 		self.visible = false

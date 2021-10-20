@@ -59,6 +59,7 @@ func start_card_event(category, player, bonus):
 	choice_gui.change_background("res://Assets/Cards/Card_" + category.replace(" ", "") + ".png")
 	for b in buttons.get_children():
 		b.visible = true
+# warning-ignore:unused_variable
 	var top_
 	top_bar.visible = false
 	top_bar.get_counter().text = ""

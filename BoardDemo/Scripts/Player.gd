@@ -43,7 +43,7 @@ func _process(delta):
 		bar.update_score(bar.get_self(), self_score)
 	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing() && !has_rolled:
 		rng.randomize()
-		roll = rng.randi_range(1, 10)
+		roll = rng.randi_range(1, 6)
 		spinner.play(roll)
 		yield(spinner, "spinner_done")
 		moving = true
@@ -51,7 +51,8 @@ func _process(delta):
 	if moving:
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
-		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity * ceil(roll / 1.5))
+		#move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity * ceil(roll / 1.5))
+		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity *2)#* ceil(roll / 1.5))
 		sprite.set_flip_h(pos.x > 0)
 		if pos.length() < 1 :
 			if spaces[current].category != "Travel":
