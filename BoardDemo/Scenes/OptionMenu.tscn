@@ -93,5 +93,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="value_changed" from="ColorRect/VBoxContainer/VolumeSlider" to="ColorRect/VBoxContainer/VolumeSlider" method="_on_VolumeSlider_value_changed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/return" to="." method="_on_return_pressed"]

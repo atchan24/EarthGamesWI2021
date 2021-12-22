@@ -25,6 +25,10 @@ func _on_Button_Pressed():
 	elif (reference_path == "options"):
 		get_parent().get_parent().get_node("OptionMenu").visible = true
 		get_parent().get_parent().get_node("MainButtons").visible = false
+	elif (reference_path == "credits"):
+		#get_parent().get_parent().get_node("CreditsMenu").visible = true
+		#get_parent().get_parent().get_node("MainButtons").visible = false
+		pass
 	else:
 		get_node("/root/Global").goto_scene(reference_path)
 		
