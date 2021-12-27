@@ -5,6 +5,7 @@ var end_data = {}
 var endui = null
 onready var bar = get_node("/root/Main/GUI/TopBar")
 
+
 var society = 0
 var sustainability = 0
 
@@ -40,7 +41,8 @@ func update_score(soc, sus):
 	bar.update_score(bar.get_sustain(), sustainability)
 	print("Society: " + str(society))
 	print("Sustainability: " + str(sustainability))
-	
+
+
 func end_game():
 	var soc_ending
 	var sus_ending

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TAOGNDLogo.png-5ad0d800a8d1203e64691dc063bf71bc.stex"
+path="res://.import/Screenshot 2021-12-23 100941.png-6a369efa93eaa4a6cef3e0f12de3faa0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/TAOGNDLogo.png"
-dest_files=[ "res://.import/TAOGNDLogo.png-5ad0d800a8d1203e64691dc063bf71bc.stex" ]
+source_file="res://Assets/Title/Screenshot 2021-12-23 100941.png"
+dest_files=[ "res://.import/Screenshot 2021-12-23 100941.png-6a369efa93eaa4a6cef3e0f12de3faa0.stex" ]
 
 [params]
 

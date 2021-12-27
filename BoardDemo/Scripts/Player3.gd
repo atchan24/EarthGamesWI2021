@@ -1,5 +1,11 @@
 extends KinematicBody
 
+### THIS IS FOR PLAYER 3: Jog
+
+signal player3lose
+signal player3add
+
+
 const velocity = 10
 
 var current = 0
@@ -19,14 +25,14 @@ var bar = null
 export var idle = ""
 export var walk = ""
 export var active = false
-var self_score = 30
+var self_score = 20
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	spaces = get_node("/root/Main/Spaces").get_children()
 	sprite = get_node("AnimatedSprite3D")
 	bar = get_node("/root/Main/GUI/TopBar")
-	bar.update_score(bar.get_self(), self_score)
+	bar.update_score(bar.get_self_jog(), self_score)
 	player_audio = get_node("AudioStreamPlayer3D")
 	#sprite.texture = load(texture)
 	sprite.set_animation(idle)
@@ -40,10 +46,10 @@ func _process(delta):
 			player_audio.stop()
 		return
 	if active && !moving:
-		bar.update_score(bar.get_self(), self_score)
+		bar.update_score(bar.get_self_jog(), self_score)
 	if Input.is_action_pressed("ui_roll") && !moving && active && !spinner.playing() && !has_rolled:
 		rng.randomize()
-		roll = rng.randi_range(1, 10)
+		roll = rng.randi_range(1, 6)
 		spinner.play(roll)
 		yield(spinner, "spinner_done")
 		moving = true
@@ -79,6 +85,10 @@ func is_done():
 func update_values(s):
 	self_score += s
 	print(self.name + ": " + str(self_score))
+	if s > 0:
+		emit_signal("player3add")
+	else:
+		emit_signal("player3lose")
 	
 func get_score():
 	return self_score

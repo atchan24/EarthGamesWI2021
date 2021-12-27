@@ -1,9 +1,19 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Assets/Bars/Green.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Bars/Base.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Bar.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Art/button_big_blue.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Winkle-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Demo Art/FlowerYellow.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Ashley_Art/Chara1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Ashley_Art/Chara2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Ashley_Art/Flower.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Ending/Surp_face.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Ending/Beat_face.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Ending/Jog_face.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Ending/Buff_face.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Demo Art/ParakeetWhite.png" type="Texture" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -12,11 +22,18 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 40
+size = 32
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_mipmaps = true
 use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 44
+outline_size = 3
+extra_spacing_top = 3
+extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -35,13 +52,305 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 5 )
 
+[sub_resource type="Animation" id=6]
+resource_name = "AddSociety"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/AddSociety:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.3, 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ), Vector2( 2.5, 2.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/AddSociety:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1, 0.6, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/AddSociety:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 1.4, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, false ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "AddSustainability"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimationPlayer/AddSustainability:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.6, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer/AddSustainability:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 1.4, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AnimationPlayer/AddSustainability:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.3, 1, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ), Vector2( 2.5, 2.5 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "AddBeat"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../VBoxContainer/SelfBar_Beat/AddBeat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../VBoxContainer/SelfBar_Beat/AddBeat:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "AddBuff"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../VBoxContainer/SelfBar_Buff/AddBuff:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../VBoxContainer/SelfBar_Buff/AddBuff:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "AddJog"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../VBoxContainer/SelfBar_Jog/AddJog:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../VBoxContainer/SelfBar_Jog/AddJog:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "AddSurp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../VBoxContainer/SelfBar_Surp/AddSurp:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../VBoxContainer/SelfBar_Surp/AddSurp:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "LoseBeat"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../VBoxContainer/SelfBar_Beat/LoseBeat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../VBoxContainer/SelfBar_Beat/LoseBeat:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "LoseBuff"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../VBoxContainer/SelfBar_Buff/LoseBuff:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../VBoxContainer/SelfBar_Buff/LoseBuff:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "LoseJog"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../VBoxContainer/SelfBar_Jog/LoseJog:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../VBoxContainer/SelfBar_Jog/LoseJog:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "LoseSurp"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../VBoxContainer/SelfBar_Surp/LoseSurp:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../VBoxContainer/SelfBar_Surp/LoseSurp:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.231373 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
 [node name="TopBar" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -1.49829
-margin_top = -0.749176
-margin_right = -1.49829
-margin_bottom = -0.749146
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -58,49 +367,288 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SelfBar" type="TextureProgress" parent="."]
-margin_left = 1.48653
-margin_top = 1.1892
-margin_right = 510.487
-margin_bottom = 85.1892
-rect_scale = Vector2( 0.4, 0.4 )
-max_value = 40.0
-texture_under = ExtResource( 2 )
-texture_progress = ExtResource( 1 )
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 717.0
+margin_right = 969.0
+margin_bottom = 211.0
+custom_constants/separation = 9
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SelfScore" type="RichTextLabel" parent="SelfBar"]
-margin_left = 556.0
-margin_top = 19.0
-margin_right = 678.0
-margin_bottom = 63.0
+[node name="SelfBar_Surp" type="TextureProgress" parent="VBoxContainer"]
+margin_right = 252.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 200, 40 )
+max_value = 40.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Surp"]
+margin_right = 150.0
+margin_bottom = 44.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = "Self"
+text = "Self:  Surp"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SocietyBar" type="TextureProgress" parent="."]
-margin_left = 1.22702
-margin_top = 48.9029
-margin_right = 510.227
-margin_bottom = 132.903
-rect_scale = Vector2( 0.4, 0.4 )
+[node name="Surp_face" type="TextureRect" parent="VBoxContainer/SelfBar_Surp"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_top = -2.0
+margin_right = 50.0
+margin_bottom = 48.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AddSurp" type="Label" parent="VBoxContainer/SelfBar_Surp"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -48.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 48, 0 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "+5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoseSurp" type="Label" parent="VBoxContainer/SelfBar_Surp"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -48.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 48, 0 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "-5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelfBar_Buff" type="TextureProgress" parent="VBoxContainer"]
+margin_top = 49.0
+margin_right = 252.0
+margin_bottom = 89.0
+rect_min_size = Vector2( 200, 40 )
 max_value = 40.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SocietyScore" type="RichTextLabel" parent="SocietyBar"]
-margin_left = 555.0
-margin_top = 19.0
-margin_right = 697.0
-margin_bottom = 65.0
+[node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Buff"]
+margin_right = 150.0
+margin_bottom = 44.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "Self:  Buff"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buff_face" type="TextureRect" parent="VBoxContainer/SelfBar_Buff"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_top = -3.0
+margin_right = 50.0
+margin_bottom = 47.0
+texture = ExtResource( 13 )
+expand = true
+
+[node name="AddBuff" type="Label" parent="VBoxContainer/SelfBar_Buff"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -48.0
+margin_top = -1.0
+margin_bottom = 39.0
+rect_pivot_offset = Vector2( 48, 0 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "+5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoseBuff" type="Label" parent="VBoxContainer/SelfBar_Buff"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -48.0
+margin_top = -1.0
+margin_bottom = 39.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 48, 0 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "-5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelfBar_Jog" type="TextureProgress" parent="VBoxContainer"]
+margin_top = 98.0
+margin_right = 252.0
+margin_bottom = 138.0
+rect_min_size = Vector2( 200, 40 )
+max_value = 40.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Jog"]
+margin_right = 150.0
+margin_bottom = 44.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "Self:  Jog"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jog_face" type="TextureRect" parent="VBoxContainer/SelfBar_Jog"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_top = -5.0
+margin_right = 50.0
+margin_bottom = 45.0
+texture = ExtResource( 12 )
+expand = true
+
+[node name="AddJog" type="Label" parent="VBoxContainer/SelfBar_Jog"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -48.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 48, 0 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "+5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoseJog" type="Label" parent="VBoxContainer/SelfBar_Jog"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -48.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 48, 0 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "-5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelfBar_Beat" type="TextureProgress" parent="VBoxContainer"]
+margin_top = 147.0
+margin_right = 252.0
+margin_bottom = 187.0
+rect_min_size = Vector2( 200, 40 )
+max_value = 40.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Beat"]
+margin_right = 150.0
+margin_bottom = 44.0
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "Self:  Beat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Beat_face" type="TextureRect" parent="VBoxContainer/SelfBar_Beat"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_top = -5.0
+margin_right = 50.0
+margin_bottom = 45.0
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AddBeat" type="Label" parent="VBoxContainer/SelfBar_Beat"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -48.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 48, 0 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "+5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoseBeat" type="Label" parent="VBoxContainer/SelfBar_Beat"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -48.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 48, 0 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "-5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_top = 437.0
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="button_big_blue" type="TextureRect" parent="Control"]
+margin_top = 14.0
+margin_right = 1024.0
+margin_bottom = 163.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SocietyBar" type="TextureProgress" parent="Control"]
+margin_left = 180.614
+margin_top = 72.2267
+margin_right = 492.614
+margin_bottom = 126.227
+max_value = 40.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SocietyScore" type="RichTextLabel" parent="Control/SocietyBar"]
+margin_left = 9.0
+margin_top = -36.0
+margin_right = 151.0
+margin_bottom = 10.0
 custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Society"
@@ -108,24 +656,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SustainBar" type="TextureProgress" parent="."]
-margin_left = 0.632446
-margin_top = 98.8274
-margin_right = 509.632
-margin_bottom = 182.827
-rect_scale = Vector2( 0.4, 0.4 )
+[node name="Chara2" type="Sprite" parent="Control/SocietyBar"]
+position = Vector2( -88.8806, 16.0444 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+
+[node name="Chara1" type="Sprite" parent="Control/SocietyBar"]
+position = Vector2( -32.236, 23.3223 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+
+[node name="SustainBar" type="TextureProgress" parent="Control"]
+margin_left = 539.207
+margin_top = 70.7801
+margin_right = 851.207
+margin_bottom = 124.78
 max_value = 40.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SustainScore" type="RichTextLabel" parent="SustainBar"]
-margin_left = 554.0
-margin_top = 18.0
-margin_right = 816.0
-margin_bottom = 66.0
+[node name="SustainScore" type="RichTextLabel" parent="Control/SustainBar"]
+margin_left = 9.0
+margin_top = -36.0
+margin_right = 271.0
+margin_bottom = 12.0
 rect_min_size = Vector2( 1, 1 )
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
@@ -133,3 +691,61 @@ text = "Sustainability"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Flower" type="Sprite" parent="Control/SustainBar"]
+position = Vector2( 351.768, 7.21533 )
+scale = Vector2( -0.2, 0.2 )
+texture = ExtResource( 9 )
+
+[node name="FlowerYellow" type="Sprite" parent="Control/SustainBar"]
+position = Vector2( 414.261, 58.4458 )
+rotation = -1.20775
+scale = Vector2( -0.1, 0.1 )
+texture = ExtResource( 6 )
+
+[node name="ParakeetWhite" type="Sprite" parent="Control/SustainBar"]
+position = Vector2( 417.477, 7.4917 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 14 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+anims/AddSociety = SubResource( 6 )
+anims/AddSustainability = SubResource( 7 )
+
+[node name="AddSociety" type="Label" parent="Control/AnimationPlayer"]
+visible = false
+margin_left = 315.0
+margin_top = 463.0
+margin_right = 384.0
+margin_bottom = 517.0
+rect_pivot_offset = Vector2( 0, 54 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "+5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AddSustainability" type="Label" parent="Control/AnimationPlayer"]
+visible = false
+margin_left = 779.366
+margin_top = 463.387
+margin_right = 848.366
+margin_bottom = 517.387
+rect_pivot_offset = Vector2( 0, 54 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "+5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelfAnimationPlayer" type="AnimationPlayer" parent="Control"]
+anims/AddBeat = SubResource( 11 )
+anims/AddBuff = SubResource( 9 )
+anims/AddJog = SubResource( 10 )
+anims/AddSurp = SubResource( 8 )
+anims/LoseBeat = SubResource( 15 )
+anims/LoseBuff = SubResource( 12 )
+anims/LoseJog = SubResource( 13 )
+anims/LoseSurp = SubResource( 14 )

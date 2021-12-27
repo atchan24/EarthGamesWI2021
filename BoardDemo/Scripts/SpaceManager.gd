@@ -7,6 +7,7 @@ var cur_player = null
 var cur_bonus = 0
 var card = null
 var choice_gui = null
+var popup_ACchoice
 var buttons = null
 var assets = null
 var cur_assets = null
@@ -18,6 +19,7 @@ func _ready():
 	rng.randomize()
 	manager = get_node("/root/Main")
 	choice_gui = get_node("/root/Main/GUI/ChoiceGUI")
+	popup_ACchoice = get_node("/root/Main/GUI/PopupActionCardChoice")
 	buttons = get_node("/root/Main/GUI/Choice Buttons")
 	click = get_node("/root/Main/AmbientAudio/Click")
 	choice_gui.get_node("Control").visible = false
@@ -47,7 +49,7 @@ func start_card_event(category, player, bonus):
 	cur_player = player
 	cur_bonus = bonus
 	var cards = card_data[category]
-	card = cards[rng.randi_range(0, cards.size() - 1)] # picks a random card
+	card = cards[rng.randi_range(0, cards.size() - 1)] # picks a random pillar from that card space
 	# assign fields to UI and display it
 	choice_gui.get_node("Control/Prompt").text = card.prompt
 	choice_gui.get_node("Control/ChoiceAText").text = card["self"]["choice"]
@@ -57,6 +59,9 @@ func start_card_event(category, player, bonus):
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = true
 	# img path
 	choice_gui.change_background("res://Assets/Cards/Card_" + category.replace(" ", "") + ".png")
+	
+	popup_ACchoice.reset_popup(category)
+	
 	for b in buttons.get_children():
 		b.visible = true
 	var top_
@@ -84,11 +89,19 @@ func handle_events_demo(c):
 	elif c == "choice-b":
 		s1 = -5
 		s2 = 5
+		top_bar.anim_add_society()          # anim to +5 society 
 	elif c == "choice-c":
 		s1 = -5
 		s3 = 5
+		top_bar.anim_add_sustainability()   # anim to +5 sustainability
+		
 	cur_player.update_values(s1 + cur_bonus)
+	# send signal from player scripts emitted with update_value()
+	# attach signals to top_bar.gd to play anims for player +/- 5.
 	manager.update_score(s2, s3)
+	
+	popup_ACchoice.popup()
+	
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	for b in buttons.get_children():
@@ -98,9 +111,13 @@ func handle_events_demo(c):
 			a.visible = true
 			yield(a, "finished_moving")
 			break
+	
+	yield(get_tree().create_timer(4.0), "timeout")
+	
 	cur_player.has_rolled = false
 	cur_player.active = false
-	
+
+
 # interprets the card values and hides the choice UI
 func handle_events(c):
 	click.play()

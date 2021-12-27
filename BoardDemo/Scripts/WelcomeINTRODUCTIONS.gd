@@ -1,16 +1,19 @@
 extends Node2D
 
+
 var _d
-var destination : String = "res://Scenes/WelcomeINTRODUCTIONS.tscn"
+var destination : String = "res://Scenes/Main.tscn"
 
 
 onready var richText = get_node("Control/TextBubble/RichTextLabel")
 onready var nextButton = get_node("Control/TextBubble/NextButton")
 onready var popup_anim = get_node("Control/TextBubble/AnimationPlayer")
 
-var dialog = ["WELCOME_01", "WELCOME_02", "WELCOME_03", "WELCOME_04",]
+var dialog = ["INTRO", "INTRO_SERP", "INTRO_BUFF", "INTRO_JOG", "INTRO_BEAT", "OUTRO"]
 var page = 0
+var next_pressed = 0
 
+var loading = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,12 +27,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if $Frgnd.position.x <= 0:
-		$Frgnd.position.x += 0.3
-		
 	if richText.get_visible_characters() >= richText.get_total_character_count():
 		nextButton.disabled = false
 	else:
+		nextButton.disabled = true
+	
+	if loading == true:
 		nextButton.disabled = true
 
 
@@ -46,15 +49,39 @@ func _on_Timer_timeout():
 
 
 func _on_NextButton_pressed():
+	
+	next_pressed += 1
+	
+	if next_pressed == 1:
+		richText.rect_position.x = 186
+		richText.rect_size.x = 750
+		$Frgnd/Surp.visible = true
+	elif next_pressed == 2:
+		$Frgnd/Surp.visible = false
+		$Frgnd/Buff.visible = true
+	elif next_pressed == 3:
+		$Frgnd/Buff.visible = false
+		$Frgnd/Jog.visible = true
+	elif next_pressed == 4:
+		$Frgnd/Jog.visible = false
+		$Frgnd/Beat.visible = true
+	else:
+		$Frgnd/Beat.visible = false
+		richText.rect_position.y = 140
+	
+	turn_page()
+
+
+func turn_page():
 	if page < dialog.size()-1:
 		print("next page")
 		page += 1
 		richText.set_bbcode(tr(dialog[page]))
 		richText.set_visible_characters(0)
 		$Timer.start()
-	else:
+	elif page == dialog.size()-1:
+		loading = true
 		popup_anim.play_backwards("PopupText")
 		yield(popup_anim, "animation_finished")
 		_d = get_node("/root/Global").goto_scene(destination)
-
 

@@ -75,12 +75,13 @@ texture_pressed = ExtResource( 11 )
 texture_hover = ExtResource( 11 )
 expand = true
 script = ExtResource( 5 )
-reference_path = "res://Scenes/Main.tscn"
+reference_path = "res://Scenes/WelcomeHOWTOPLAY.tscn"
 
 [node name="Label" type="Label" parent="MainButtons/newgame"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "New Game"
 align = 1
 valign = 1
@@ -104,6 +105,7 @@ script = ExtResource( 5 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Exit"
 align = 1
 valign = 1
@@ -128,6 +130,7 @@ reference_path = "options"
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Options"
 align = 1
 valign = 1
@@ -153,6 +156,7 @@ reference_path = "credits"
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Credits"
 align = 1
 valign = 1
@@ -167,7 +171,7 @@ margin_right = 1024.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 1024, 600 )
 mouse_filter = 2
-color = Color( 0.772549, 0.960784, 0.960784, 1 )
+color = Color( 0.772549, 0.960784, 0.960784, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

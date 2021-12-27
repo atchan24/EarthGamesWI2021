@@ -17,13 +17,14 @@ func next_player():
 		else:
 			active_player = (active_player + 1) % players.size()
 			cur += 1
+	print("cur: ", cur)
 	if cur == players.size():
 		end = true
 		get_node("/root/Main").end_game()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	cam = get_node("/root/Main/Players/Player/PlayerCamera")
+	cam = get_node("/root/Main/Players/Player1/PlayerCamera")
 	players = self.get_children()
 	active_player = 0
 	players[active_player].active = true

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EarthGamesLogo.png-803c80cebc4e6ce2dd0cf24f294053e0.stex"
+path="res://.import/TAOGNDLogo.png-17c69d4914e6366fb4deeced9de08953.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Art/EarthGamesLogo.png"
-dest_files=[ "res://.import/EarthGamesLogo.png-803c80cebc4e6ce2dd0cf24f294053e0.stex" ]
+source_file="res://Assets/Art/Logos/TAOGNDLogo.png"
+dest_files=[ "res://.import/TAOGNDLogo.png-17c69d4914e6366fb4deeced9de08953.stex" ]
 
 [params]
 
