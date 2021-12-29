@@ -34,7 +34,7 @@ Super Power:   Charisma, Leading",
 INTRO_JOG,"[center]Nice to meet you, I am [b]Jog[/b].  I like to study culture and to dance!  My goal is to preserve traditions and diversity.  The most important thing to me is understanding where we come from.[/center]
 Self points:   20 out of 40
 Super Power:   History, Storytelling",
-INTRO_BEAT,"[center]What's up, the name is [b]Beat[/b].I like to listen to and make music.  My goal is to connect people to their emotions.  The most important thing to me is using my voice for good.[/center]
+INTRO_BEAT,"[center]What's up, the name is [b]Beat[/b].  I like to listen to and make music.  My goal is to connect people to their emotions.  The most important thing to me is using my voice for good.[/center]
 Self points:   25 out of 40
 Super Power:   Music, Empathy",
 OUTRO,"[center]You are ready to play. Enjoy the game, and re-imagine your life for the better.[/center]",
@@ -45,28 +45,52 @@ CHOICE_SELF,"Your player has {var1} ‘Self’ points.  You made a choice to do 
 CHOICE_SUSTAINABILITY,"Your player has {var1} ‘Self’ points.  The Earth will benefit from your sustainable choices for generations to come. It was a little bit harder, but if everyone does a little bit of the work, no one has to suffer.",
 ,,
 ,,
-ACTION_CARD_01,,
-ACTION_CARD_02,The [b]Pride Flag[/b] represent the rights of all LGBTQIA+ people to be who they are.,
-ACTION_CARD_03,,
-ACTION_CARD_04,,
-ACTION_CARD_05,,
-ACTION_CARD_06,,
-ACTION_CARD_07,,
-ACTION_CARD_08,,
-ACTION_CARD_09,,
-ACTION_CARD_10,,
-ACTION_CARD_11,,
-ACTION_CARD_12,,
-ACTION_CARD_13,,
-ACTION_CARD_14,,
-ACTION_CARD_15,,
-ACTION_CARD_16,,
-ACTION_CARD_17,,
-ACTION_CARD_18,,
-ACTION_CARD_19,,
-ACTION_CARD_20,,
-ACTION_CARD_21,,
+ACTION_CARD_01,[center][b]City Hall[/b] is a place to voice public concerns and address them.[/center],"1. Justice:                City Hall
+"
+ACTION_CARD_02,[center]The [b]Pride Flag[/b] represent the rights of all LGBTQIA+ people to be who they are.[/center],"2. Equity:                 Rainbow Flag
+"
+ACTION_CARD_03,[center]We must have our [b]Health[/b] in order to be our best self. Get check-ups regularly.[/center],"3. Health:                 Health Tent
+"
+ACTION_CARD_04,[center]Those who do not know their history are doomed to repeat it. Get [b]Educated[/b].[/center],"4. Education:           School
+"
+ACTION_CARD_05,"[center]We all have a right to shelter and place to rest, [/center]","5. Housing:              House
+"
+ACTION_CARD_06,[center]We all have a right to sustainable farming practices and food rich in nutritional value.[/center],"6. Food:                   Box of Fruit
+"
+ACTION_CARD_07,[center][b]Community[/b] brings us together in times of need and in times of joy.[/center],"7. Community:         Meeting People sign
+"
+ACTION_CARD_08,[center]A productive day is however you define it.[/center],"8. Work:                   Laptop
+"
+ACTION_CARD_09,"[center]We all have a right to sustainable [b]Energy[/b]. Even for a future population of 10 billion, the decent living requirement could be met for everyone with under 5 TW of power.[/center]","9. Energy:                Wind Turbine
+"
+ACTION_CARD_10,"[center][b]Mutual Aid[/b] is compassion for one another, seeking to give others the chances you could afford.[/center]","10. Mutual Aid:         Flag Money
+"
+ACTION_CARD_11,[center]A healthy system is one that flows where ever it is needed. That motion should not be impaired.[/center],"11. Just Migration:   Parakeet
+"
+ACTION_CARD_12,"[center][b]Nature[/b] has given us everything. Without nature, we could not survive.[/center]","12. Nature:               Flower
+"
+ACTION_CARD_13,[center][b]Recreation[/b]: the work you do only for yourself.[/center],"13. Recreation:         Music note
+"
+ACTION_CARD_14,[center]The diversity of [b]Environments[/b] on this planet is awe inspiring and incredibly delicate.[/center],"14. Environment:      Fruit Tree
+"
+ACTION_CARD_15,"[center]Our histories are intertwined across the globe, and injustices can still be righted and repaired.[/center]","15. Decolonization:  Protest
+"
+ACTION_CARD_16,"[center]Reality or fiction, we are defined by the [b]stories[/b] we share with everyone everyday.[/center]","16. Storytelling:        Library
+"
+ACTION_CARD_17,"[center]Comercial or residential, the way we conduct [b]Transport[/b] is a big part of our lives.[/center]","17. Transport:           Bicycle
+"
+ACTION_CARD_18,"[center]There is an individual [b]Style[/b] in all of us, if you give it a chance to develope.[/center]","18. Arts:                    Paint Palette
+"
+ACTION_CARD_19,[center]We all have a right to build ourselves a sutainable future. Where are the [b]Resources[/b] going?[/center],"19. Resources:         Solar Panel
+"
+ACTION_CARD_20,[center]The [b]Truth[/b] cannot protect itself. It needs truth speakers to defend it.[/center],"20. Truth:                  Law Building
+"
+ACTION_CARD_21,"[center][b]Death[/b]: the end of one's journey, with no way to know what's next.[/center]",21. Death:                Gravestone
 ,,
 ,,
-GLOSSARY_01,,
-GLOSSARY_02,,
+GLOSSARY_01,Self,
+GLOSSARY_02,Society,
+GLOSSARY_03,Sustainability,
+GLOSSARY_04,Decent Living Requirements,
+GLOSSARY_05,Terawatt,
+GLOSSARY_06,BIPOC,

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Winkle-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Characters/Animations/CharacterAnims.tres" type="SpriteFrames" id=2]
@@ -8,22 +8,24 @@
 [ext_resource path="res://Assets/Title/Screenshot 2021-12-23 100941.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Art/button_big_purple.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/WelcomeINTRODUCTIONS.gd" type="Script" id=8]
+[ext_resource path="res://Audio Assets/274175__mafon2__park-ambience-mostly-birds-Good.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=10]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 40
 outline_size = 3
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 36
 outline_size = 1
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 size = 40
 outline_size = 3
 extra_spacing_top = 3
@@ -39,7 +41,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.6, 2.2 ),
+"times": PoolRealArray( 0, 1.6, 2.4 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
@@ -68,6 +70,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.6, 2, 2.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8, -26 ), Vector2( 8, -26 ), Vector2( 8, -50 ), Vector2( 8, -20 ) ]
+}
 
 [node name="WelcomeINTRODUCTIONS" type="Node2D"]
 script = ExtResource( 8 )
@@ -90,6 +104,7 @@ margin_left = 8.0
 margin_top = -26.0
 margin_right = 1020.0
 margin_bottom = 355.0
+rect_scale = Vector2( 1e-05, 1e-05 )
 rect_pivot_offset = Vector2( 490, 150 )
 texture = ExtResource( 4 )
 expand = true
@@ -99,12 +114,12 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/TextBubble"]
-margin_left = 59.0
-margin_top = 77.0
-margin_right = 945.0
+margin_left = 60.0
+margin_top = 135.0
+margin_right = 946.0
 margin_bottom = 279.0
-custom_fonts/bold_font = SubResource( 2 )
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/bold_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]Welcome to the game of [b]'Life Re-Imagined'[/b]. "
@@ -130,7 +145,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="Control/TextBubble/NextButton"]
 margin_right = 234.0
 margin_bottom = 69.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Next"
 align = 1
@@ -143,6 +158,7 @@ __meta__ = {
 anims/PopupText = SubResource( 4 )
 
 [node name="Frgnd" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 121.393, 404.493 )
 rotation = 3.14159
 scale = Vector2( 0.15, -0.15 )
@@ -154,7 +170,7 @@ __meta__ = {
 visible = false
 frames = ExtResource( 2 )
 animation = "BeatWalk"
-frame = 2
+frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -162,6 +178,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "BuffWalk"
+frame = 5
 speed_scale = 0.7
 playing = true
 
@@ -177,7 +194,6 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "SurpWalk"
-frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -185,13 +201,22 @@ playing = true
 margin_right = 1024.0
 margin_bottom = 600.0
 mouse_filter = 2
-color = Color( 0.772549, 0.960784, 0.960784, 0 )
+color = Color( 0.772549, 0.960784, 0.960784, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.05
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="Music" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 9 )
+autoplay = true
+
+[node name="ButtonPress" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 10 )
 
 [connection signal="pressed" from="Control/TextBubble/NextButton" to="." method="_on_NextButton_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

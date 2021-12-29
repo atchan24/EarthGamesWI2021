@@ -29,14 +29,14 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=3]
 size = 44
 outline_size = 3
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 40
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
@@ -44,7 +44,7 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 40
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
@@ -132,7 +132,7 @@ tracks/2/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ), Vector2( 2.5, 2.5 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=8]
 resource_name = "AddBeat"
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Beat/AddBeat:modulate")
@@ -213,8 +213,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "AddSurp"
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Surp/AddSurp:modulate")
 tracks/0/interp = 1
@@ -240,7 +239,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=12]
 resource_name = "LoseBeat"
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Beat/LoseBeat:modulate")
@@ -267,8 +266,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
 }
 
-[sub_resource type="Animation" id=12]
-resource_name = "LoseBuff"
+[sub_resource type="Animation" id=13]
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Buff/LoseBuff:modulate")
 tracks/0/interp = 1
@@ -294,8 +292,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
 }
 
-[sub_resource type="Animation" id=13]
-resource_name = "LoseJog"
+[sub_resource type="Animation" id=14]
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Jog/LoseJog:rect_scale")
 tracks/0/interp = 1
@@ -321,8 +318,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=14]
-resource_name = "LoseSurp"
+[sub_resource type="Animation" id=15]
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Surp/LoseSurp:rect_scale")
 tracks/0/interp = 1
@@ -368,18 +364,20 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 717.0
-margin_right = 969.0
-margin_bottom = 211.0
-custom_constants/separation = 9
+margin_left = 718.0
+margin_top = 2.0
+margin_right = 984.0
+margin_bottom = 214.0
+custom_constants/separation = 12
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SelfBar_Surp" type="TextureProgress" parent="VBoxContainer"]
-margin_right = 252.0
+margin_right = 266.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 200, 40 )
+rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
@@ -401,9 +399,8 @@ __meta__ = {
 [node name="Surp_face" type="TextureRect" parent="VBoxContainer/SelfBar_Surp"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_top = -2.0
-margin_right = 50.0
-margin_bottom = 48.0
+margin_right = 40.0
+margin_bottom = 40.0
 texture = ExtResource( 10 )
 expand = true
 __meta__ = {
@@ -416,7 +413,7 @@ margin_left = -48.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
@@ -429,7 +426,7 @@ margin_left = -48.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
@@ -437,10 +434,11 @@ __meta__ = {
 }
 
 [node name="SelfBar_Buff" type="TextureProgress" parent="VBoxContainer"]
-margin_top = 49.0
-margin_right = 252.0
-margin_bottom = 89.0
+margin_top = 52.0
+margin_right = 266.0
+margin_bottom = 92.0
 rect_min_size = Vector2( 200, 40 )
+rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
@@ -462,9 +460,8 @@ __meta__ = {
 [node name="Buff_face" type="TextureRect" parent="VBoxContainer/SelfBar_Buff"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_top = -3.0
-margin_right = 50.0
-margin_bottom = 47.0
+margin_right = 40.0
+margin_bottom = 40.0
 texture = ExtResource( 13 )
 expand = true
 
@@ -474,7 +471,7 @@ margin_left = -48.0
 margin_top = -1.0
 margin_bottom = 39.0
 rect_pivot_offset = Vector2( 48, 0 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
@@ -488,7 +485,7 @@ margin_top = -1.0
 margin_bottom = 39.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
@@ -496,10 +493,11 @@ __meta__ = {
 }
 
 [node name="SelfBar_Jog" type="TextureProgress" parent="VBoxContainer"]
-margin_top = 98.0
-margin_right = 252.0
-margin_bottom = 138.0
+margin_top = 104.0
+margin_right = 266.0
+margin_bottom = 144.0
 rect_min_size = Vector2( 200, 40 )
+rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
@@ -521,9 +519,8 @@ __meta__ = {
 [node name="Jog_face" type="TextureRect" parent="VBoxContainer/SelfBar_Jog"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_top = -5.0
-margin_right = 50.0
-margin_bottom = 45.0
+margin_right = 40.0
+margin_bottom = 40.0
 texture = ExtResource( 12 )
 expand = true
 
@@ -532,7 +529,7 @@ modulate = Color( 1, 1, 1, 0 )
 margin_left = -48.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 48, 0 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
@@ -545,7 +542,7 @@ margin_left = -48.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
@@ -553,10 +550,11 @@ __meta__ = {
 }
 
 [node name="SelfBar_Beat" type="TextureProgress" parent="VBoxContainer"]
-margin_top = 147.0
-margin_right = 252.0
-margin_bottom = 187.0
+margin_top = 156.0
+margin_right = 266.0
+margin_bottom = 196.0
 rect_min_size = Vector2( 200, 40 )
+rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
@@ -578,9 +576,8 @@ __meta__ = {
 [node name="Beat_face" type="TextureRect" parent="VBoxContainer/SelfBar_Beat"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_top = -5.0
-margin_right = 50.0
-margin_bottom = 45.0
+margin_right = 40.0
+margin_bottom = 40.0
 texture = ExtResource( 11 )
 expand = true
 __meta__ = {
@@ -592,7 +589,7 @@ modulate = Color( 1, 1, 1, 0 )
 margin_left = -48.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 48, 0 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
@@ -605,7 +602,7 @@ margin_left = -48.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
@@ -613,7 +610,7 @@ __meta__ = {
 }
 
 [node name="Control" type="Control" parent="."]
-margin_top = 437.0
+margin_top = 439.0
 margin_right = 1024.0
 margin_bottom = 600.0
 __meta__ = {
@@ -621,8 +618,9 @@ __meta__ = {
 }
 
 [node name="button_big_blue" type="TextureRect" parent="Control"]
-margin_top = 14.0
-margin_right = 1024.0
+margin_left = 6.0
+margin_top = 24.0
+margin_right = 1020.0
 margin_bottom = 163.0
 texture = ExtResource( 4 )
 expand = true
@@ -632,10 +630,10 @@ __meta__ = {
 }
 
 [node name="SocietyBar" type="TextureProgress" parent="Control"]
-margin_left = 180.614
-margin_top = 72.2267
-margin_right = 492.614
-margin_bottom = 126.227
+margin_left = 175.614
+margin_top = 73.2267
+margin_right = 487.614
+margin_bottom = 127.227
 max_value = 40.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
@@ -649,7 +647,7 @@ margin_left = 9.0
 margin_top = -36.0
 margin_right = 151.0
 margin_bottom = 10.0
-custom_fonts/normal_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Society"
 __meta__ = {
@@ -667,10 +665,10 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 7 )
 
 [node name="SustainBar" type="TextureProgress" parent="Control"]
-margin_left = 539.207
-margin_top = 70.7801
-margin_right = 851.207
-margin_bottom = 124.78
+margin_left = 522.207
+margin_top = 73.7801
+margin_right = 834.207
+margin_bottom = 127.78
 max_value = 40.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
@@ -685,7 +683,7 @@ margin_top = -36.0
 margin_right = 271.0
 margin_bottom = 12.0
 rect_min_size = Vector2( 1, 1 )
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Sustainability"
 __meta__ = {
@@ -693,18 +691,18 @@ __meta__ = {
 }
 
 [node name="Flower" type="Sprite" parent="Control/SustainBar"]
-position = Vector2( 351.768, 7.21533 )
+position = Vector2( 366.768, 9.21533 )
 scale = Vector2( -0.2, 0.2 )
 texture = ExtResource( 9 )
 
 [node name="FlowerYellow" type="Sprite" parent="Control/SustainBar"]
-position = Vector2( 414.261, 58.4458 )
+position = Vector2( 429.261, 60.4458 )
 rotation = -1.20775
 scale = Vector2( -0.1, 0.1 )
 texture = ExtResource( 6 )
 
 [node name="ParakeetWhite" type="Sprite" parent="Control/SustainBar"]
-position = Vector2( 417.477, 7.4917 )
+position = Vector2( 432.477, 9.4917 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 14 )
 
@@ -719,7 +717,7 @@ margin_top = 463.0
 margin_right = 384.0
 margin_bottom = 517.0
 rect_pivot_offset = Vector2( 0, 54 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
@@ -733,7 +731,7 @@ margin_top = 463.387
 margin_right = 848.366
 margin_bottom = 517.387
 rect_pivot_offset = Vector2( 0, 54 )
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
@@ -741,11 +739,11 @@ __meta__ = {
 }
 
 [node name="SelfAnimationPlayer" type="AnimationPlayer" parent="Control"]
-anims/AddBeat = SubResource( 11 )
+anims/AddBeat = SubResource( 8 )
 anims/AddBuff = SubResource( 9 )
 anims/AddJog = SubResource( 10 )
-anims/AddSurp = SubResource( 8 )
-anims/LoseBeat = SubResource( 15 )
-anims/LoseBuff = SubResource( 12 )
-anims/LoseJog = SubResource( 13 )
-anims/LoseSurp = SubResource( 14 )
+anims/AddSurp = SubResource( 11 )
+anims/LoseBeat = SubResource( 12 )
+anims/LoseBuff = SubResource( 13 )
+anims/LoseJog = SubResource( 14 )
+anims/LoseSurp = SubResource( 15 )

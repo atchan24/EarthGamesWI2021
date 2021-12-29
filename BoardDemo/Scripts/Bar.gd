@@ -2,12 +2,13 @@ extends Control
 
 onready var main = get_parent().get_parent()
 
-onready var player1 = main.get_node("Players/Player1")
-onready var player2 = main.get_node("Players/Player2")
-onready var player3 = main.get_node("Players/Player3")
-onready var player4 = main.get_node("Players/Player4")
+onready var players = main.get_node("Players")
+onready var player1 = players.get_node("Player1")
+onready var player2 = players.get_node("Player2")
+onready var player3 = players.get_node("Player3")
+onready var player4 = players.get_node("Player4")
 
-onready var self_bar_serp = get_node("VBoxContainer/SelfBar_Surp")
+onready var self_bar_surp = get_node("VBoxContainer/SelfBar_Surp")
 onready var self_bar_buff = get_node("VBoxContainer/SelfBar_Buff")
 onready var self_bar_jog = get_node("VBoxContainer/SelfBar_Jog")
 onready var self_bar_beat = get_node("VBoxContainer/SelfBar_Beat")
@@ -15,10 +16,16 @@ onready var society_bar = get_node("Control/SocietyBar")
 onready var sustain_bar = get_node("Control/SustainBar")
 
 func _ready():
+	players.connect("P1_active", self, "handle_P1_active")
+	players.connect("P2_active", self, "handle_P2_active")
+	players.connect("P3_active", self, "handle_P3_active")
+	players.connect("P4_active", self, "handle_P4_active")
+	
 	player1.connect("player1add", self, "anim_add_surp")
 	player2.connect("player2add", self, "anim_add_buff")
 	player3.connect("player3add", self, "anim_add_jog")
 	player4.connect("player4add", self, "anim_add_beat")
+	
 	player1.connect("player1lose", self, "anim_lose_surp")
 	player2.connect("player2lose", self, "anim_lose_buff")
 	player3.connect("player3lose", self, "anim_lose_jog")
@@ -31,8 +38,8 @@ func update_score(node, score):
 func get_counter():
 	return get_node("RollsCounter")	
 	
-func get_self_serp():
-	return self_bar_serp
+func get_self_surp():
+	return self_bar_surp
 
 func get_self_buff():
 	return self_bar_buff
@@ -49,6 +56,30 @@ func get_society():
 func get_sustain():
 	return sustain_bar
 
+# Highlight the player's UI whose turn it is.
+func handle_P1_active():
+	self_bar_surp.rect_scale = Vector2(1.2, 1.2)
+	self_bar_buff.rect_scale = Vector2(1.0, 1.0)
+	self_bar_jog.rect_scale = Vector2(1.0, 1.0)
+	self_bar_beat.rect_scale = Vector2(1.0, 1.0)
+func handle_P2_active():
+	self_bar_surp.rect_scale = Vector2(1.0, 1.0)
+	self_bar_buff.rect_scale = Vector2(1.2, 1.2)
+	self_bar_jog.rect_scale = Vector2(1.0, 1.0)
+	self_bar_beat.rect_scale = Vector2(1.0, 1.0)
+func handle_P3_active():
+	self_bar_surp.rect_scale = Vector2(1.0, 1.0)
+	self_bar_buff.rect_scale = Vector2(1.0, 1.0)
+	self_bar_jog.rect_scale = Vector2(1.2, 1.2)
+	self_bar_beat.rect_scale = Vector2(1.0, 1.0)
+func handle_P4_active():
+	self_bar_surp.rect_scale = Vector2(1.0, 1.0)
+	self_bar_buff.rect_scale = Vector2(1.0, 1.0)
+	self_bar_jog.rect_scale = Vector2(1.0, 1.0)
+	self_bar_beat.rect_scale = Vector2(1.2, 1.2)
+
+
+# ANIMATIONS
 func anim_add_society():
 	$Control/AnimationPlayer.play("AddSociety")
 

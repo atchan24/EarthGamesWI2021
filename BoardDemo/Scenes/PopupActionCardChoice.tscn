@@ -1,25 +1,25 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Art/button_big_yellow.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Demo Art/Bike.PNG" type="Texture" id=2]
+[ext_resource path="res://Assets/Demo Art/Laptop.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Winkle-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scripts/PopupActionCardChoice.gd" type="Script" id=4]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 40
 outline_size = 3
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 36
 outline_size = 1
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 3 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "popup_choiceObject"
 length = 6.0
 tracks/0/type = "value"
@@ -29,7 +29,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.7, 4.6, 5.6 ),
+"times": PoolRealArray( 0, 0.7, 5, 6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0, 0 ) ]
@@ -39,21 +39,23 @@ tracks/0/keys = {
 script = ExtResource( 4 )
 
 [node name="Control" type="Control" parent="."]
-anchor_right = 0.433
-anchor_bottom = 0.709
-margin_right = -403.392
-margin_bottom = -385.4
+anchor_right = 0.32
+anchor_bottom = 0.737
+margin_right = -287.68
+margin_bottom = -402.2
 mouse_filter = 1
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
-margin_left = 12.0
-margin_top = 12.0
-margin_right = 364.0
-margin_bottom = 492.0
+margin_left = -17.0
+margin_top = -340.0
+margin_right = 434.0
+margin_bottom = 1.0
+rect_rotation = 90.0
 rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 0, 344 )
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
@@ -61,18 +63,19 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Control/TextureRect"]
-position = Vector2( 71.1755, 18.4088 )
+position = Vector2( 100, 166 )
+rotation = -1.5708
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
-centered = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Control/TextureRect"]
-margin_left = 18.0
-margin_top = 222.0
-margin_right = 335.0
-margin_bottom = 428.0
-custom_fonts/bold_font = SubResource( 2 )
-custom_fonts/normal_font = SubResource( 3 )
+margin_left = 203.0
+margin_top = 300.0
+margin_right = 481.0
+margin_bottom = 541.0
+rect_rotation = -90.0
+custom_fonts/bold_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 bbcode_enabled = true
 bbcode_text = "[center]The [b]Pride Flag[/b] represent the rights of all LGBTQIA+ people to be who they are.[/center]"
@@ -82,4 +85,4 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
-anims/popup_choiceObject = SubResource( 4 )
+anims/popup_choiceObject = SubResource( 3 )

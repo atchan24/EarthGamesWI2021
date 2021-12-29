@@ -43,9 +43,9 @@ size_flags_vertical = 4
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = true
-bbcode_text = " [center]Placeholder text for choice A [/center]"
+bbcode_text = "[center]Placeholder text for choice A [/center]"
 tab_size = 2
-text = " Placeholder text for choice A "
+text = "Placeholder text for choice A "
 __meta__ = {
 "_edit_use_anchors_": false
 }

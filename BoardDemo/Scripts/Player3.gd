@@ -8,6 +8,7 @@ signal player3add
 
 const velocity = 10
 
+
 var current = 0
 var moving = false
 var roll = 0
@@ -54,6 +55,7 @@ func _process(delta):
 		yield(spinner, "spinner_done")
 		moving = true
 		has_rolled = true
+		get_parent().cur_turn += 1
 	if moving:
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
@@ -62,15 +64,19 @@ func _process(delta):
 		if pos.length() < 1 :
 			if spaces[current].category != "Travel":
 				roll -= 1
-			var temp = current + 1
-			if temp >= spaces.size():
-				roll = 0 # stop moving once you hit the end
-				done = true
+			
+#			var temp = current + 1
+#			if temp >= spaces.size():
+#				roll = 0 # stop moving once you hit the end
+#				done = true
+				
 			moving = roll > 0
 			if !moving: 
 				# call tile script
 				spaces[current].call_manager(self)
 			current += 1
+			if current == 21:
+				current = 0
 		sprite.set_animation(walk)
 		if !player_audio.playing:
 			player_audio.play(0.0)
@@ -78,6 +84,8 @@ func _process(delta):
 		sprite.set_animation(idle)
 		if player_audio.playing:
 			player_audio.stop()
+		if get_parent().cur_turn >= get_parent().final_turn:
+			done = true
 
 func is_done():
 	return done

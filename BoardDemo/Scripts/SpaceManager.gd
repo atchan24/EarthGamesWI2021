@@ -100,8 +100,6 @@ func handle_events_demo(c):
 	# attach signals to top_bar.gd to play anims for player +/- 5.
 	manager.update_score(s2, s3)
 	
-	popup_ACchoice.popup()
-	
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	for b in buttons.get_children():
@@ -112,7 +110,9 @@ func handle_events_demo(c):
 			yield(a, "finished_moving")
 			break
 	
-	yield(get_tree().create_timer(4.0), "timeout")
+	# Popup in top left corner
+	popup_ACchoice.popup()
+	yield(get_tree().create_timer(5.0), "timeout")
 	
 	cur_player.has_rolled = false
 	cur_player.active = false

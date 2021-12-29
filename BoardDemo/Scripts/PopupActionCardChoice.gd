@@ -67,10 +67,10 @@ func reset_popup(category):
 	elif "Energy" in category:
 		sprite.texture = sprite_Energy
 		text.bbcode_text = tr("ACTION_CARD_09")
-	elif "MutualAid" in category:
+	elif "Mutual" in category:
 		sprite.texture = sprite_MutualAid
 		text.bbcode_text = tr("ACTION_CARD_10")
-	elif "JustMigration" in category:
+	elif "Migration" in category:
 		sprite.texture = sprite_JustMigration
 		text.bbcode_text = tr("ACTION_CARD_11")
 	elif "Nature" in category:

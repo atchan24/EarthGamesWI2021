@@ -129,24 +129,24 @@ pause_mode = 2
 [node name="Choice Buttons" type="Node" parent="GUI"]
 
 [node name="ChoiceA" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
-margin_left = 152.0
-margin_top = 220.0
-margin_right = 364.0
-margin_bottom = 505.0
+margin_left = 81.0
+margin_top = 231.0
+margin_right = 341.0
+margin_bottom = 531.0
 text = "A"
 
 [node name="ChoiceB" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
-margin_left = 410.0
-margin_top = 226.0
-margin_right = 623.0
-margin_bottom = 510.0
+margin_left = 378.0
+margin_top = 237.0
+margin_right = 638.0
+margin_bottom = 537.0
 text = "B"
 
 [node name="ChoiceC" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
-margin_left = 668.0
-margin_top = 228.0
-margin_right = 882.0
-margin_bottom = 510.0
+margin_left = 674.0
+margin_top = 239.0
+margin_right = 934.0
+margin_bottom = 539.0
 text = "C"
 
 [node name="EndingUI" parent="GUI" instance=ExtResource( 23 )]
@@ -199,7 +199,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.424805, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BuffIdle"
-frame = 4
+frame = 3
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
@@ -224,7 +224,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "JogIdle"
-frame = 4
+frame = 2
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player3"]
@@ -249,7 +249,6 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BeatIdle"
-frame = 1
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]

@@ -51,10 +51,13 @@ func _on_Timer_timeout():
 func _on_NextButton_pressed():
 	
 	next_pressed += 1
+	$Audio/ButtonPress.play()
 	
 	if next_pressed == 1:
 		richText.rect_position.x = 186
+		richText.rect_position.y = 80
 		richText.rect_size.x = 750
+		richText.rect_size.y = 202
 		$Frgnd/Surp.visible = true
 	elif next_pressed == 2:
 		$Frgnd/Surp.visible = false
@@ -68,6 +71,7 @@ func _on_NextButton_pressed():
 	else:
 		$Frgnd/Beat.visible = false
 		richText.rect_position.y = 140
+		richText.rect_position.x = 100
 	
 	turn_page()
 
