@@ -103,3 +103,10 @@ func anim_lose_jog():
 	$Control/SelfAnimationPlayer.play("LoseJog")
 func anim_lose_beat():
 	$Control/SelfAnimationPlayer.play("LoseBeat")
+
+
+func _on_glossary_pressed():
+	pass # Replace with function body.
+
+
+
