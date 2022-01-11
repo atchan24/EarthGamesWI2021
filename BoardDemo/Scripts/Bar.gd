@@ -1,5 +1,8 @@
 extends Control
 
+
+signal turnOver
+
 onready var main = get_parent().get_parent()
 
 onready var players = main.get_node("Players")
@@ -14,6 +17,11 @@ onready var self_bar_jog = get_node("VBoxContainer/SelfBar_Jog")
 onready var self_bar_beat = get_node("VBoxContainer/SelfBar_Beat")
 onready var society_bar = get_node("Control/SocietyBar")
 onready var sustain_bar = get_node("Control/SustainBar")
+
+onready var postChoice_popup = get_node("PostChoicePopup")
+onready var postChoice_popup_anim = postChoice_popup.get_node("AnimationPlayer")
+onready var postChoice_popup_text = postChoice_popup.get_node("TextureRect/TextureButton/RichTextLabel")
+onready var postChoice_popup_sprite = postChoice_popup.get_node("Node2D")
 
 func _ready():
 	players.connect("P1_active", self, "handle_P1_active")
@@ -62,21 +70,37 @@ func handle_P1_active():
 	self_bar_buff.rect_scale = Vector2(1.0, 1.0)
 	self_bar_jog.rect_scale = Vector2(1.0, 1.0)
 	self_bar_beat.rect_scale = Vector2(1.0, 1.0)
+	postChoice_popup_sprite.get_node("Surp").visible = true
+	postChoice_popup_sprite.get_node("Buff").visible = false
+	postChoice_popup_sprite.get_node("Jog").visible = false
+	postChoice_popup_sprite.get_node("Beat").visible = false
 func handle_P2_active():
 	self_bar_surp.rect_scale = Vector2(1.0, 1.0)
 	self_bar_buff.rect_scale = Vector2(1.2, 1.2)
 	self_bar_jog.rect_scale = Vector2(1.0, 1.0)
 	self_bar_beat.rect_scale = Vector2(1.0, 1.0)
+	postChoice_popup_sprite.get_node("Surp").visible = false
+	postChoice_popup_sprite.get_node("Buff").visible = true
+	postChoice_popup_sprite.get_node("Jog").visible = false
+	postChoice_popup_sprite.get_node("Beat").visible = false
 func handle_P3_active():
 	self_bar_surp.rect_scale = Vector2(1.0, 1.0)
 	self_bar_buff.rect_scale = Vector2(1.0, 1.0)
 	self_bar_jog.rect_scale = Vector2(1.2, 1.2)
 	self_bar_beat.rect_scale = Vector2(1.0, 1.0)
+	postChoice_popup_sprite.get_node("Surp").visible = false
+	postChoice_popup_sprite.get_node("Buff").visible = false
+	postChoice_popup_sprite.get_node("Jog").visible = true
+	postChoice_popup_sprite.get_node("Beat").visible = false
 func handle_P4_active():
 	self_bar_surp.rect_scale = Vector2(1.0, 1.0)
 	self_bar_buff.rect_scale = Vector2(1.0, 1.0)
 	self_bar_jog.rect_scale = Vector2(1.0, 1.0)
 	self_bar_beat.rect_scale = Vector2(1.2, 1.2)
+	postChoice_popup_sprite.get_node("Surp").visible = false
+	postChoice_popup_sprite.get_node("Buff").visible = false
+	postChoice_popup_sprite.get_node("Jog").visible = false
+	postChoice_popup_sprite.get_node("Beat").visible = true
 
 
 # ANIMATIONS
@@ -105,8 +129,59 @@ func anim_lose_beat():
 	$Control/SelfAnimationPlayer.play("LoseBeat")
 
 
+
+
 func _on_glossary_pressed():
 	pass # Replace with function body.
 
 
 
+
+func popup_postChoice_self():
+	postChoice_popup_anim.play_backwards("PopupPostChoice")
+	if postChoice_popup_sprite.get_node("Surp").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SELF").format(\
+			{var1=get_self_surp().value})
+	elif postChoice_popup_sprite.get_node("Buff").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SELF").format(\
+			{var1=get_self_buff()})
+	elif postChoice_popup_sprite.get_node("Jog").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SELF").format(\
+			{var1=get_self_jog()})
+	elif postChoice_popup_sprite.get_node("Beat").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SELF").format(\
+			{var1=get_self_beat()})
+func popup_postChoice_society():
+	postChoice_popup_anim.play_backwards("PopupPostChoice")
+	if postChoice_popup_sprite.get_node("Surp").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SOCIETY").format(\
+			{var1=get_self_surp()})
+	elif postChoice_popup_sprite.get_node("Buff").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SOCIETY").format(\
+			{var1=get_self_buff()})
+	elif postChoice_popup_sprite.get_node("Jog").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SOCIETY").format(\
+			{var1=get_self_jog()})
+	elif postChoice_popup_sprite.get_node("Beat").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SOCIETY").format(\
+			{var1=get_self_beat()})
+func popup_postChoice_sustainability():
+	postChoice_popup_anim.play_backwards("PopupPostChoice")
+	if postChoice_popup_sprite.get_node("Surp").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SUSTAINABILITY").format(\
+			{var1=get_self_surp()})
+	elif postChoice_popup_sprite.get_node("Buff").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SUSTAINABILITY").format(\
+			{var1=get_self_buff()})
+	elif postChoice_popup_sprite.get_node("Jog").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SUSTAINABILITY").format(\
+			{var1=get_self_jog()})
+	elif postChoice_popup_sprite.get_node("Beat").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_SUSTAINABILITY").format(\
+			{var1=get_self_beat()})
+
+
+
+func _on_PostChoicePopup_NextButton_pressed():
+	postChoice_popup_anim.play("PopupPostChoice")
+	emit_signal("turnOver")

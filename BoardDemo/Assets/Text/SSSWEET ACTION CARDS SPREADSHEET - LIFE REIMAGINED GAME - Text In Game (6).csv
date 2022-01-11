@@ -40,9 +40,12 @@ Super Power:   Music, Empathy",
 OUTRO,"[center]You are ready to play. Enjoy the game, and re-imagine your life for the better.[/center]",
 ,,
 ,,
-CHOICE_SOCIETY,"Your player has {var1} ‘Self’ points.  You made a choice for society, good for you, the people around you have benefited. If you choose to benefit society at every turn, you will neglect yourself.",
-CHOICE_SELF,"Your player has {var1} ‘Self’ points.  You made a choice to do something for yourself. Self care is key. If you choose yourself every time, what kind of member of society would you be?",
-CHOICE_SUSTAINABILITY,"Your player has {var1} ‘Self’ points.  The Earth will benefit from your sustainable choices for generations to come. It was a little bit harder, but if everyone does a little bit of the work, no one has to suffer.",
+CHOICE_SOCIETY,"You have {var1} [b]Self[/b] points.
+You made a choice for [b]society[/b], good for you, the people around you have benefited. However, if you choose to benefit society at every turn, you will neglect yourself.",
+CHOICE_SELF,"You have {var1} [b]Self[/b] points.
+You made a choice to do something for your [b]self[/b]. Self care is key!  But, if we all choose ourself every time, what kind of world would we be in?",
+CHOICE_SUSTAINABILITY,"You have {var1} [b]Self[/b] points.
+The Earth will benefit from your [b]sustainable choices[/b] for generations to come.  It was a little bit harder, but if everyone does a little bit of the work, no one has to suffer.",
 ,,
 ,,
 ACTION_CARD_01,[center][b]City Hall[/b] is a place to voice public concerns and address them.[/center],"1. Justice:                City Hall
@@ -53,11 +56,11 @@ ACTION_CARD_03,[center]We must have our [b]Health[/b] in order to be our best se
 "
 ACTION_CARD_04,[center]Those who do not know their history are doomed to repeat it. Get [b]Educated[/b].[/center],"4. Education:           School
 "
-ACTION_CARD_05,"[center]We all have a right to shelter and place to rest, [/center]","5. Housing:              House
+ACTION_CARD_05,"[center]We all have a right to shelter and a place to rest, [/center]","5. Housing:              House
 "
-ACTION_CARD_06,[center]We all have a right to sustainable farming practices and food rich in nutritional value.[/center],"6. Food:                   Box of Fruit
+ACTION_CARD_06,[center]We all have a right to sustainable farming practices and [b]food[/b] with nutritional value.[/center],"6. Food:                   Box of Fruit
 "
-ACTION_CARD_07,[center][b]Community[/b] brings us together in times of need and in times of joy.[/center],"7. Community:         Meeting People sign
+ACTION_CARD_07,"[center][b]Community[/b] brings us together, in times of need and in times of joy.[/center]","7. Community:         Meeting People sign
 "
 ACTION_CARD_08,[center]A productive day is however you define it.[/center],"8. Work:                   Laptop
 "

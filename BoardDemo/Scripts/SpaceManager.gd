@@ -26,6 +26,7 @@ func _ready():
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	assets = get_node("/root/Main/Environment/Category Assets")
 	top_bar = get_node("/root/Main/GUI/TopBar")
+	top_bar.connect("turnOver", self, "handle_turnOver")
 	for b in buttons.get_children():
 		b.visible = false
 
@@ -113,7 +114,17 @@ func handle_events_demo(c):
 	# Popup in top left corner
 	popup_ACchoice.popup()
 	yield(get_tree().create_timer(5.0), "timeout")
-	
+	# This waits for the popup Action Card Choice to pop down
+	# Popup Post Action Card Choice
+	if s1 == 5:
+		top_bar.popup_postChoice_self()
+	elif s2 == 5:
+		top_bar.popup_postChoice_society()
+	elif s3 == 5:
+		top_bar.popup_postChoice_sustainability()
+
+func handle_turnOver():
+	# needs a signal from 'next' button on post-choice popup
 	cur_player.has_rolled = false
 	cur_player.active = false
 

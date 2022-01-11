@@ -43,7 +43,7 @@ pause={
 
 [locale]
 
-translations=PoolStringArray( "res://Assets/Text/SSSWEET ACTION CARDS SPREADSHEET - LIFE REIMAGINED GAME - Text In Game (5).en.translation" )
+translations=PoolStringArray( "res://Assets/Text/SSSWEET ACTION CARDS SPREADSHEET - LIFE REIMAGINED GAME - Text In Game (6).en.translation" )
 
 [rendering]
 
