@@ -33,7 +33,7 @@ extra_spacing_space = 3
 font_data = ExtResource( 1 )
 
 [sub_resource type="Animation" id=24]
-length = 3.2
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_scale")
 tracks/0/interp = 1
@@ -41,7 +41,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.6, 2.4 ),
+"times": PoolRealArray( 0, 1.6, 2.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
@@ -70,17 +70,25 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
-tracks/3/type = "value"
-tracks/3/path = NodePath(".:rect_position")
+tracks/3/type = "bezier"
+tracks/3/path = NodePath(".:rect_scale:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1.6, 2, 2.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 8, -26 ), Vector2( 8, -26 ), Vector2( 8, -50 ), Vector2( 8, -20 ) ]
+"points": PoolRealArray( 1e-05, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.55, 0, 0.55, 0 ),
+"times": PoolRealArray( 0, 1.6, 2.8 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath(".:rect_scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1e-05, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.55, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.6, 2.8 )
 }
 
 [node name="WelcomeINTRODUCTIONS" type="Node2D"]
@@ -101,9 +109,9 @@ __meta__ = {
 
 [node name="TextBubble" type="TextureRect" parent="Control"]
 margin_left = 8.0
-margin_top = -20.0
+margin_top = -32.0
 margin_right = 1020.0
-margin_bottom = 361.0
+margin_bottom = 349.0
 rect_pivot_offset = Vector2( 490, 150 )
 texture = ExtResource( 4 )
 expand = true
@@ -157,6 +165,7 @@ __meta__ = {
 anims/PopupText = SubResource( 24 )
 
 [node name="Frgnd" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0.75 )
 position = Vector2( 121.393, 404.493 )
 rotation = 3.14159
 scale = Vector2( 0.15, -0.15 )
@@ -168,7 +177,7 @@ __meta__ = {
 visible = false
 frames = ExtResource( 2 )
 animation = "BeatWalk"
-frame = 3
+frame = 2
 speed_scale = 0.7
 playing = true
 
@@ -176,7 +185,6 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "BuffWalk"
-frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -184,7 +192,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "JogWalk"
-frame = 2
+frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -192,7 +200,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "SurpWalk"
-frame = 2
+frame = 1
 speed_scale = 0.7
 playing = true
 

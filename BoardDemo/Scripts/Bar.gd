@@ -144,41 +144,41 @@ func popup_postChoice_self():
 			{var1=get_self_surp().value})
 	elif postChoice_popup_sprite.get_node("Buff").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SELF").format(\
-			{var1=get_self_buff()})
+			{var1=get_self_buff().value})
 	elif postChoice_popup_sprite.get_node("Jog").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SELF").format(\
-			{var1=get_self_jog()})
+			{var1=get_self_jog().value})
 	elif postChoice_popup_sprite.get_node("Beat").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SELF").format(\
-			{var1=get_self_beat()})
+			{var1=get_self_beat().value})
 func popup_postChoice_society():
 	postChoice_popup_anim.play_backwards("PopupPostChoice")
 	if postChoice_popup_sprite.get_node("Surp").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SOCIETY").format(\
-			{var1=get_self_surp()})
+			{var1=get_self_surp().value})
 	elif postChoice_popup_sprite.get_node("Buff").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SOCIETY").format(\
-			{var1=get_self_buff()})
+			{var1=get_self_buff().value})
 	elif postChoice_popup_sprite.get_node("Jog").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SOCIETY").format(\
-			{var1=get_self_jog()})
+			{var1=get_self_jog().value})
 	elif postChoice_popup_sprite.get_node("Beat").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SOCIETY").format(\
-			{var1=get_self_beat()})
+			{var1=get_self_beat().value})
 func popup_postChoice_sustainability():
 	postChoice_popup_anim.play_backwards("PopupPostChoice")
 	if postChoice_popup_sprite.get_node("Surp").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SUSTAINABILITY").format(\
-			{var1=get_self_surp()})
+			{var1=get_self_surp().value})
 	elif postChoice_popup_sprite.get_node("Buff").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SUSTAINABILITY").format(\
-			{var1=get_self_buff()})
+			{var1=get_self_buff().value})
 	elif postChoice_popup_sprite.get_node("Jog").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SUSTAINABILITY").format(\
-			{var1=get_self_jog()})
+			{var1=get_self_jog().value})
 	elif postChoice_popup_sprite.get_node("Beat").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SUSTAINABILITY").format(\
-			{var1=get_self_beat()})
+			{var1=get_self_beat().value})
 
 
 

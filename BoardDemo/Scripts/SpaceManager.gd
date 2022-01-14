@@ -14,6 +14,9 @@ var cur_assets = null
 var click = null
 var top_bar = null
 
+var first_round = false
+var _round = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
@@ -116,17 +119,25 @@ func handle_events_demo(c):
 	yield(get_tree().create_timer(5.0), "timeout")
 	# This waits for the popup Action Card Choice to pop down
 	# Popup Post Action Card Choice
-	if s1 == 5:
-		top_bar.popup_postChoice_self()
-	elif s2 == 5:
-		top_bar.popup_postChoice_society()
-	elif s3 == 5:
-		top_bar.popup_postChoice_sustainability()
+	if first_round == false:
+		if s1 == 5:
+			top_bar.popup_postChoice_self()
+		elif s2 == 5:
+			top_bar.popup_postChoice_society()
+		elif s3 == 5:
+			top_bar.popup_postChoice_sustainability()
+	else:
+		cur_player.has_rolled = false
+		cur_player.active = false
+		_round += 1
 
 func handle_turnOver():
 	# needs a signal from 'next' button on post-choice popup
 	cur_player.has_rolled = false
 	cur_player.active = false
+	_round += 1
+	if _round >=4:
+		first_round = true
 
 
 # interprets the card values and hides the choice UI
