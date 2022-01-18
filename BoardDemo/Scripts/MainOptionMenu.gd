@@ -19,3 +19,13 @@ func _process(delta):
 func _on_return_pressed():
 	get_parent().get_node("MainButtons").visible = true
 	self.visible = false
+
+
+func _on_CreditsReturn_pressed():
+	get_parent().get_node("Credits").visible = false
+	get_parent().get_node("MainButtons").visible = true
+
+
+func _on_credits_pressed():
+	get_parent().get_node("Credits").visible = true
+	get_parent().get_node("MainButtons").visible = false

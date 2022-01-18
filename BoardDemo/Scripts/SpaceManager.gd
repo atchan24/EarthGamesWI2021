@@ -22,16 +22,18 @@ func _ready():
 	rng.randomize()
 	manager = get_node("/root/Main")
 	choice_gui = get_node("/root/Main/GUI/ChoiceGUI")
-	popup_ACchoice = get_node("/root/Main/GUI/PopupActionCardChoice")
+	popup_ACchoice = get_node("/root/Main/GUI/TopBar/PopupActionCardChoice")
 	buttons = get_node("/root/Main/GUI/Choice Buttons")
 	click = get_node("/root/Main/AmbientAudio/Click")
 	choice_gui.get_node("Control").visible = false
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	assets = get_node("/root/Main/Environment/Category Assets")
 	top_bar = get_node("/root/Main/GUI/TopBar")
+	
 	top_bar.connect("turnOver", self, "handle_turnOver")
 	for b in buttons.get_children():
 		b.visible = false
+
 
 func start_card_event(category, player, bonus):
 	# var new_pause_state = not get_tree().paused
@@ -69,7 +71,11 @@ func start_card_event(category, player, bonus):
 	for b in buttons.get_children():
 		b.visible = true
 	var top_
-	top_bar.visible = false
+	
+	# !!!!!!!!!!
+	#top_bar.visible = false
+	top_bar.get_node("AnimationPlayer").play("UIDrawCard")
+	
 	top_bar.get_counter().text = ""
 
 func _on_ChoiceA_pressed():
@@ -84,7 +90,10 @@ func _on_ChoiceC_pressed():
 # use this version of handle_events for Earth Week demo
 func handle_events_demo(c):
 	click.play()
-	get_node("/root/Main/GUI/TopBar").visible = true
+	#get_node("/root/Main/GUI/TopBar").visible = true
+	#top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
+	#yield(get_tree().create_timer(2.0), "timeout")
+	
 	var s1 = 0
 	var s2 = 0
 	var s3 = 0
@@ -115,11 +124,13 @@ func handle_events_demo(c):
 			break
 	
 	# Popup in top left corner
+	top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
+	yield(get_tree().create_timer(2.0), "timeout")
 	popup_ACchoice.popup()
 	yield(get_tree().create_timer(5.0), "timeout")
 	# This waits for the popup Action Card Choice to pop down
 	# Popup Post Action Card Choice
-	if first_round == false:
+	if first_round == false:               #If the first round has not been completed
 		if s1 == 5:
 			top_bar.popup_postChoice_self()
 		elif s2 == 5:

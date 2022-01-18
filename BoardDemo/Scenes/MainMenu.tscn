@@ -51,6 +51,75 @@ margin_left = 17.0
 margin_top = 0.63
 script = ExtResource( 14 )
 
+[node name="Credits" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 602.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Credits"]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Credits/CenterContainer"]
+margin_left = 62.0
+margin_top = 50.0
+margin_right = 962.0
+margin_bottom = 550.0
+rect_min_size = Vector2( 900, 500 )
+size_flags_horizontal = 0
+color = Color( 0.164706, 0.4, 0.466667, 0.745098 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="TextureButton" parent="Credits/CenterContainer/ColorRect"]
+margin_left = 680.0
+margin_top = 433.0
+margin_right = 880.0
+margin_bottom = 483.0
+rect_min_size = Vector2( 200, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Credits/CenterContainer/ColorRect/Close"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "Close"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/CenterContainer"]
+margin_left = 132.0
+margin_top = 100.0
+margin_right = 892.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 760, 400 )
+custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+custom_fonts/normal_font = ExtResource( 12 )
+bbcode_enabled = true
+bbcode_text = "Credits:
+
+This is where the credits would go. Please add your name and role to the credits cell of the SWEEEET spreadsheet, on the 'game text' tab. We can seperate the roles or just list everybody together. We can hyperlink and do bold fonts."
+text = "Credits:
+
+This is where the credits would go. Please add your name and role to the credits cell of the SWEEEET spreadsheet, on the 'game text' tab. We can seperate the roles or just list everybody together. We can hyperlink and do bold fonts."
+
 [node name="MainButtons" type="GridContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -80,8 +149,8 @@ reference_path = "res://Scenes/WelcomeHOWTOPLAY.tscn"
 [node name="Label" type="Label" parent="MainButtons/newgame"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+custom_fonts/font = ExtResource( 12 )
 text = "New Game"
 align = 1
 valign = 1
@@ -104,8 +173,8 @@ script = ExtResource( 5 )
 [node name="Label3" type="Label" parent="MainButtons/exit"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+custom_fonts/font = ExtResource( 12 )
 text = "Exit"
 align = 1
 valign = 1
@@ -129,8 +198,8 @@ reference_path = "options"
 [node name="Label2" type="Label" parent="MainButtons/options"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+custom_fonts/font = ExtResource( 12 )
 text = "Options"
 align = 1
 valign = 1
@@ -155,8 +224,8 @@ reference_path = "credits"
 [node name="Label2" type="Label" parent="MainButtons/credits"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+custom_fonts/font = ExtResource( 12 )
 text = "Credits"
 align = 1
 valign = 1
@@ -189,3 +258,6 @@ pitch_scale = 2.21
 stream = ExtResource( 4 )
 volume_db = -28.0
 autoplay = true
+
+[connection signal="pressed" from="Credits/CenterContainer/ColorRect/Close" to="OptionMenu" method="_on_CreditsReturn_pressed"]
+[connection signal="pressed" from="MainButtons/credits" to="OptionMenu" method="_on_credits_pressed"]
