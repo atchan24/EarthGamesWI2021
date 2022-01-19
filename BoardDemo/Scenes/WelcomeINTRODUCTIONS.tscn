@@ -11,28 +11,28 @@
 [ext_resource path="res://Audio Assets/274175__mafon2__park-ambience-mostly-birds-Good.ogg" type="AudioStream" id=9]
 [ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=10]
 
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=1]
 size = 40
 outline_size = 3
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=2]
 size = 36
 outline_size = 1
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=20]
+[sub_resource type="DynamicFont" id=3]
 size = 40
 outline_size = 3
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=4]
 length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rect_scale")
@@ -125,9 +125,9 @@ margin_left = 60.0
 margin_top = 135.0
 margin_right = 946.0
 margin_bottom = 279.0
+custom_fonts/bold_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
-custom_fonts/bold_font = SubResource( 23 )
-custom_fonts/normal_font = SubResource( 22 )
 bbcode_enabled = true
 bbcode_text = "[center]Welcome to the game of [b]'Life Re-Imagined'[/b]. "
 text = "Welcome to the game of 'Life Re-Imagined'. "
@@ -152,8 +152,8 @@ __meta__ = {
 [node name="Label" type="Label" parent="Control/TextBubble/NextButton"]
 margin_right = 234.0
 margin_bottom = 69.0
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
-custom_fonts/font = SubResource( 20 )
 text = "Next"
 align = 1
 valign = 1
@@ -162,7 +162,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/TextBubble"]
-anims/PopupText = SubResource( 24 )
+anims/PopupText = SubResource( 4 )
 
 [node name="Frgnd" type="Node2D" parent="."]
 modulate = Color( 1, 1, 1, 0.75 )
@@ -177,7 +177,6 @@ __meta__ = {
 visible = false
 frames = ExtResource( 2 )
 animation = "BeatWalk"
-frame = 5
 speed_scale = 0.7
 playing = true
 
@@ -185,7 +184,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "BuffWalk"
-frame = 3
+frame = 4
 speed_scale = 0.7
 playing = true
 
@@ -201,7 +200,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "SurpWalk"
-frame = 4
+frame = 5
 speed_scale = 0.7
 playing = true
 

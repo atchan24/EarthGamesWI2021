@@ -64,7 +64,7 @@ func start_card_event(category, player, bonus):
 	choice_gui.get_node("Control").visible = true
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = true
 	# img path
-	choice_gui.change_background("res://Assets/Cards/Card_" + category.replace(" ", "") + ".png")
+	choice_gui.change_background(category, "res://Assets/Cards/Card_" + category.replace(" ", "") + ".png")
 	
 	popup_ACchoice.reset_popup(category)
 	

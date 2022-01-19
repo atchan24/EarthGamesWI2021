@@ -431,7 +431,7 @@ extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=21]
 size = 40
 outline_size = 3
 extra_spacing_top = 3
@@ -445,8 +445,7 @@ extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=21]
-resource_name = "PopupPostChoice"
+[sub_resource type="Animation" id=23]
 tracks/0/type = "bezier"
 tracks/0/path = NodePath(".:rect_scale:x")
 tracks/0/interp = 1
@@ -652,7 +651,7 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"points": PoolRealArray( 73.2267, -0.25, 0, 0.25, 0, 100, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 73.2267, -0.25, 0, 0.25, 0, 106, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
 tracks/15/type = "bezier"
@@ -672,7 +671,7 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"points": PoolRealArray( 73.7801, -0.25, 0, 0.25, 0, 100, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 73.7801, -0.25, 0, 0.25, 0, 106, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
 
@@ -692,8 +691,8 @@ margin_left = 511.687
 margin_top = 38.1637
 margin_right = 551.687
 margin_bottom = 78.1637
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -723,8 +722,8 @@ __meta__ = {
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Surp"]
 margin_right = 150.0
 margin_bottom = 44.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Self:  Surp"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -747,8 +746,8 @@ margin_left = -48.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -760,8 +759,8 @@ margin_left = -48.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -784,8 +783,8 @@ __meta__ = {
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Buff"]
 margin_right = 150.0
 margin_bottom = 44.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Self:  Buff"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -805,8 +804,8 @@ margin_left = -48.0
 margin_top = -1.0
 margin_bottom = 39.0
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -819,8 +818,8 @@ margin_top = -1.0
 margin_bottom = 39.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -843,8 +842,8 @@ __meta__ = {
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Jog"]
 margin_right = 150.0
 margin_bottom = 44.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Self:  Jog"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -863,8 +862,8 @@ modulate = Color( 1, 1, 1, 0 )
 margin_left = -48.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -876,8 +875,8 @@ margin_left = -48.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -900,8 +899,8 @@ __meta__ = {
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Beat"]
 margin_right = 150.0
 margin_bottom = 44.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Self:  Beat"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -923,8 +922,8 @@ modulate = Color( 1, 1, 1, 0 )
 margin_left = -48.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -936,8 +935,8 @@ margin_left = -48.0
 margin_bottom = 40.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -982,8 +981,8 @@ margin_left = 9.0
 margin_top = -36.0
 margin_right = 151.0
 margin_bottom = 10.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Society"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1018,8 +1017,8 @@ margin_top = -36.0
 margin_right = 271.0
 margin_bottom = 12.0
 rect_min_size = Vector2( 1, 1 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 5 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Sustainability"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1052,8 +1051,8 @@ margin_top = 463.0
 margin_right = 384.0
 margin_bottom = 517.0
 rect_pivot_offset = Vector2( 0, 54 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1066,8 +1065,8 @@ margin_top = 463.387
 margin_right = 848.366
 margin_bottom = 517.387
 rect_pivot_offset = Vector2( 0, 54 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1135,8 +1134,8 @@ margin_left = 108.0
 margin_top = 29.0
 margin_right = 876.0
 margin_bottom = 79.0
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 16 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Glossary:"
 align = 1
 valign = 1
@@ -1147,9 +1146,9 @@ margin_left = 30.0
 margin_top = 82.0
 margin_right = 956.0
 margin_bottom = 466.0
-custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/bold_font = SubResource( 17 )
 custom_fonts/normal_font = SubResource( 18 )
+custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 bbcode_enabled = true
 bbcode_text = "[center][b]Self:[/b]
  Our own individual life, including our physical, emotional, and spiritual needs.
@@ -1256,8 +1255,8 @@ __meta__ = {
 [node name="Label" type="Label" parent="PostChoicePopup/TextureRect/TextureButton"]
 margin_right = 233.0
 margin_bottom = 67.0
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 20 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Next"
 align = 1
 valign = 1
@@ -1267,9 +1266,9 @@ margin_left = -549.812
 margin_top = -190.125
 margin_right = 201.188
 margin_bottom = 20.875
-custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
-custom_fonts/bold_font = SubResource( 23 )
+custom_fonts/bold_font = SubResource( 21 )
 custom_fonts/normal_font = SubResource( 22 )
+custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 bbcode_enabled = true
 bbcode_text = "You have 25 out of 40 [b]Self[/b] points.  
 You made a choice for [b]society[/b], good for you, the people around you have benefited.  However, if you choose to benefit society at every turn, you will neglect yourself."
@@ -1288,7 +1287,6 @@ scale = Vector2( 0.15, -0.15 )
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "SurpIdle"
-frame = 3
 speed_scale = 0.7
 playing = true
 
@@ -1297,7 +1295,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "BuffIdle"
-frame = 1
+frame = 4
 speed_scale = 0.7
 playing = true
 
@@ -1315,12 +1313,12 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "BeatIdle"
-frame = 1
+frame = 4
 speed_scale = 0.7
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PostChoicePopup"]
-anims/PopupPostChoice = SubResource( 21 )
+anims/PopupPostChoice = SubResource( 23 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/UIDrawCard = SubResource( 24 )
