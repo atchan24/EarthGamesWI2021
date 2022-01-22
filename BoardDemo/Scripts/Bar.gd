@@ -39,9 +39,9 @@ func _ready():
 	player3.connect("player3lose", self, "anim_lose_jog")
 	player4.connect("player4lose", self, "anim_lose_beat")
 	
-	self_bar_buff.modulate = Color(0.8, 0.8, 0.8)
-	self_bar_jog.modulate = Color(0.8, 0.8, 0.8)
-	self_bar_beat.modulate = Color(0.8, 0.8, 0.8)
+	self_bar_buff.modulate = Color(0.75, 0.75, 0.75)
+	self_bar_jog.modulate = Color(0.75, 0.75, 0.75)
+	self_bar_beat.modulate = Color(0.75, 0.75, 0.75)
 
 
 func update_score(node, score):
@@ -75,35 +75,35 @@ func handle_P1_active():
 #	self_bar_jog.rect_scale = Vector2(1.0, 1.0)
 #	self_bar_beat.rect_scale = Vector2(1.0, 1.0)
 	self_bar_surp.modulate = Color(1, 1, 1)
-	self_bar_buff.modulate = Color(0.8, 0.8, 0.8)
-	self_bar_jog.modulate = Color(0.8, 0.8, 0.8)
-	self_bar_beat.modulate = Color(0.8, 0.8, 0.8)
+	self_bar_buff.modulate = Color(0.75, 0.75, 0.75)
+	self_bar_jog.modulate = Color(0.75, 0.75, 0.75)
+	self_bar_beat.modulate = Color(0.75, 0.75, 0.75)
 	postChoice_popup_sprite.get_node("Surp").visible = true
 	postChoice_popup_sprite.get_node("Buff").visible = false
 	postChoice_popup_sprite.get_node("Jog").visible = false
 	postChoice_popup_sprite.get_node("Beat").visible = false
 func handle_P2_active():
-	self_bar_surp.modulate = Color(0.8, 0.8, 0.8)
+	self_bar_surp.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_buff.modulate = Color(1, 1, 1)
-	self_bar_jog.modulate = Color(0.8, 0.8, 0.8)
-	self_bar_beat.modulate = Color(0.8, 0.8, 0.8)
+	self_bar_jog.modulate = Color(0.75, 0.75, 0.75)
+	self_bar_beat.modulate = Color(0.75, 0.75, 0.75)
 	postChoice_popup_sprite.get_node("Surp").visible = false
 	postChoice_popup_sprite.get_node("Buff").visible = true
 	postChoice_popup_sprite.get_node("Jog").visible = false
 	postChoice_popup_sprite.get_node("Beat").visible = false
 func handle_P3_active():
-	self_bar_surp.modulate = Color(0.8, 0.8, 0.8)
-	self_bar_buff.modulate = Color(0.8, 0.8, 0.8)
+	self_bar_surp.modulate = Color(0.75, 0.75, 0.75)
+	self_bar_buff.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_jog.modulate = Color(1, 1, 1)
-	self_bar_beat.modulate = Color(0.8, 0.8, 0.8)
+	self_bar_beat.modulate = Color(0.75, 0.75, 0.75)
 	postChoice_popup_sprite.get_node("Surp").visible = false
 	postChoice_popup_sprite.get_node("Buff").visible = false
 	postChoice_popup_sprite.get_node("Jog").visible = true
 	postChoice_popup_sprite.get_node("Beat").visible = false
 func handle_P4_active():
-	self_bar_surp.modulate = Color(0.8, 0.8, 0.8)
-	self_bar_buff.modulate = Color(0.8, 0.8, 0.8)
-	self_bar_jog.modulate = Color(0.8, 0.8, 0.8)
+	self_bar_surp.modulate = Color(0.75, 0.75, 0.75)
+	self_bar_buff.modulate = Color(0.75, 0.75, 0.75)
+	self_bar_jog.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_beat.modulate = Color(1, 1, 1)
 	postChoice_popup_sprite.get_node("Surp").visible = false
 	postChoice_popup_sprite.get_node("Buff").visible = false

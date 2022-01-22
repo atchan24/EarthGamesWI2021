@@ -36,6 +36,14 @@ func _ready():
 
 
 func start_card_event(category, player, bonus):
+	var n = rng.randi_range(0, 1)
+	if n == 0:
+		start_action_card_event(category, player, bonus)
+	else:
+		start_other_card_event(player)
+
+
+func start_action_card_event(category, player, bonus):
 	# var new_pause_state = not get_tree().paused
 	# get_tree().paused = new_pause_state
 	if card_data == null :
@@ -78,6 +86,7 @@ func start_card_event(category, player, bonus):
 	
 	top_bar.get_counter().text = ""
 
+
 func _on_ChoiceA_pressed():
 	handle_events_demo("choice-a")
 
@@ -90,9 +99,6 @@ func _on_ChoiceC_pressed():
 # use this version of handle_events for Earth Week demo
 func handle_events_demo(c):
 	click.play()
-	#get_node("/root/Main/GUI/TopBar").visible = true
-	#top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
-	#yield(get_tree().create_timer(2.0), "timeout")
 	
 	var s1 = 0
 	var s2 = 0
@@ -138,9 +144,14 @@ func handle_events_demo(c):
 		elif s3 == 5:
 			top_bar.popup_postChoice_sustainability()
 	else:
-		cur_player.has_rolled = false
-		cur_player.active = false
-		_round += 1
+		handle_turnOver()
+
+
+func start_other_card_event(player):
+	print("Other card event")
+	cur_player = player
+	handle_turnOver()
+
 
 func handle_turnOver():
 	# needs a signal from 'next' button on post-choice popup
