@@ -36,11 +36,11 @@ func _ready():
 
 
 func start_card_event(category, player, bonus):
-	var n = rng.randi_range(0, 1)
+	var n = rng.randi_range(0, 4)
 	if n == 0:
-		start_action_card_event(category, player, bonus)
-	else:
 		start_other_card_event(player)
+	else:
+		start_action_card_event(category, player, bonus)
 
 
 func start_action_card_event(category, player, bonus):
@@ -69,8 +69,6 @@ func start_action_card_event(category, player, bonus):
 	choice_gui.get_node("Control/ChoiceAText").text = card["self"]["choice"]
 	choice_gui.get_node("Control/ChoiceBText").text = card["society"]["choice"]
 	choice_gui.get_node("Control/ChoiceCText").text = card["sustainability"]["choice"]
-	choice_gui.get_node("Control").visible = true
-	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = true
 	# img path
 	choice_gui.change_background(category, "res://Assets/Cards/Card_" + category.replace(" ", "") + ".png")
 	
@@ -78,13 +76,10 @@ func start_action_card_event(category, player, bonus):
 	
 	for b in buttons.get_children():
 		b.visible = true
-	var top_
-	
-	# !!!!!!!!!!
-	#top_bar.visible = false
-	top_bar.get_node("AnimationPlayer").play("UIDrawCard")
-	
 	top_bar.get_counter().text = ""
+	
+	choice_gui.get_node("AnimationPlayer").play("DrawCard")
+	top_bar.get_node("AnimationPlayer").play("UIDrawCard")
 
 
 func _on_ChoiceA_pressed():
@@ -119,8 +114,10 @@ func handle_events_demo(c):
 	# attach signals to top_bar.gd to play anims for player +/- 5.
 	manager.update_score(s2, s3)
 	
-	choice_gui.get_node("Control").visible = false
-	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
+	choice_gui.get_node("AnimationPlayer").play_backwards("DrawCard")
+	top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
+	yield(get_tree().create_timer(3.0), "timeout")
+	
 	for b in buttons.get_children():
 		b.visible = false
 	for a in cur_assets.get_children():
@@ -130,8 +127,6 @@ func handle_events_demo(c):
 			break
 	
 	# Popup in top left corner
-	top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
-	yield(get_tree().create_timer(2.0), "timeout")
 	popup_ACchoice.popup()
 	yield(get_tree().create_timer(5.0), "timeout")
 	# This waits for the popup Action Card Choice to pop down

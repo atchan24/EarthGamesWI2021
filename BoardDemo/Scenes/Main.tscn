@@ -196,7 +196,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.424805, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BuffIdle"
-frame = 2
+frame = 4
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
@@ -246,7 +246,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BeatIdle"
-frame = 5
+frame = 1
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]
@@ -262,7 +262,7 @@ max_distance = 100.0
 [node name="Justice" type="Node" parent="Environment/Category Assets"]
 
 [node name="CityHall2" parent="Environment/Category Assets/Justice" instance=ExtResource( 39 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 64.1595, -49.8374, -99.5078 )
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -49.837, -99.508 )
 visible = false
 
 [node name="Equity" type="Node" parent="Environment/Category Assets"]
