@@ -130,14 +130,20 @@ func handle_events_demo(c):
 	popup_ACchoice.popup()
 	yield(get_tree().create_timer(5.0), "timeout")
 	# This waits for the popup Action Card Choice to pop down
-	# Popup Post Action Card Choice
-	if first_round == false:               #If the first round has not been completed
+	popup_post_card_event(s1, s2, s3)
+
+
+func popup_post_card_event(s1, s2, s3):
+	#If the first round has not been completed
+	if first_round == false:               
 		if s1 == 5:
 			top_bar.popup_postChoice_self()
 		elif s2 == 5:
 			top_bar.popup_postChoice_society()
 		elif s3 == 5:
 			top_bar.popup_postChoice_sustainability()
+		else:
+			top_bar.popup_postChoice_nothing()
 	else:
 		handle_turnOver()
 
@@ -145,7 +151,8 @@ func handle_events_demo(c):
 func start_other_card_event(player):
 	print("Other card event")
 	cur_player = player
-	handle_turnOver()
+	top_bar.get_counter().text = ""
+	popup_post_card_event(0, 0, 0)
 
 
 func handle_turnOver():

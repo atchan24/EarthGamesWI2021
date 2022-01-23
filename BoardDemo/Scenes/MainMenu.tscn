@@ -95,8 +95,8 @@ __meta__ = {
 [node name="Label" type="Label" parent="Credits/CenterContainer/ColorRect/Close"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Close"
 align = 1
 valign = 1
@@ -110,15 +110,15 @@ margin_top = 100.0
 margin_right = 892.0
 margin_bottom = 500.0
 rect_min_size = Vector2( 760, 400 )
-custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/normal_font = ExtResource( 12 )
+custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 bbcode_enabled = true
 bbcode_text = "Credits:
 
-This is where the credits would go. Please add your name and role to the credits cell of the SWEEEET spreadsheet, on the 'game text' tab. We can seperate the roles or just list everybody together. We can hyperlink and do bold fonts."
+This is where the credits would go. Please add your name and role to the credits cell of the SSSWEET spreadsheet, on the 'Text in Game' tab. We can seperate the roles or just list everybody together. We can hyperlink and do bold fonts."
 text = "Credits:
 
-This is where the credits would go. Please add your name and role to the credits cell of the SWEEEET spreadsheet, on the 'game text' tab. We can seperate the roles or just list everybody together. We can hyperlink and do bold fonts."
+This is where the credits would go. Please add your name and role to the credits cell of the SSSWEET spreadsheet, on the 'Text in Game' tab. We can seperate the roles or just list everybody together. We can hyperlink and do bold fonts."
 
 [node name="MainButtons" type="GridContainer" parent="."]
 anchor_right = 1.0
@@ -149,8 +149,8 @@ reference_path = "res://Scenes/WelcomeHOWTOPLAY.tscn"
 [node name="Label" type="Label" parent="MainButtons/newgame"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "New Game"
 align = 1
 valign = 1
@@ -173,8 +173,8 @@ script = ExtResource( 5 )
 [node name="Label3" type="Label" parent="MainButtons/exit"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Exit"
 align = 1
 valign = 1
@@ -198,8 +198,8 @@ reference_path = "options"
 [node name="Label2" type="Label" parent="MainButtons/options"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Options"
 align = 1
 valign = 1
@@ -224,8 +224,8 @@ reference_path = "credits"
 [node name="Label2" type="Label" parent="MainButtons/credits"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Credits"
 align = 1
 valign = 1

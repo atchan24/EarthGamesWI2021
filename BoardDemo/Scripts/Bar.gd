@@ -187,7 +187,20 @@ func popup_postChoice_sustainability():
 	elif postChoice_popup_sprite.get_node("Beat").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SUSTAINABILITY").format(\
 			{var1=get_self_beat().value})
-
+func popup_postChoice_nothing():
+	postChoice_popup_anim.play_backwards("PopupPostChoice")
+	if postChoice_popup_sprite.get_node("Surp").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_NOTHING").format(\
+			{var1=get_self_surp().value})
+	elif postChoice_popup_sprite.get_node("Buff").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_NOTHING").format(\
+			{var1=get_self_buff().value})
+	elif postChoice_popup_sprite.get_node("Jog").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_NOTHING").format(\
+			{var1=get_self_jog().value})
+	elif postChoice_popup_sprite.get_node("Beat").visible == true:
+		postChoice_popup_text.bbcode_text = tr("CHOICE_NOTHING").format(\
+			{var1=get_self_beat().value})
 
 
 func _on_PostChoicePopup_NextButton_pressed():

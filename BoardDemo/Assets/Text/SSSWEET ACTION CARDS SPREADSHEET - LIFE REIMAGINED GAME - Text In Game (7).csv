@@ -40,12 +40,14 @@ Super Power:   Music, Empathy",
 OUTRO,"[center]You are ready to play. Enjoy the game, and re-imagine your life for the better.[/center]",
 ,,
 ,,
-CHOICE_SOCIETY,"You have {var1} [b]Self[/b] points.
+CHOICE_SOCIETY,"You have {var1} out of 40 [b]Self[/b] points.
 You made a choice for [b]society[/b], good for you, the people around you have benefited. However, if you choose to benefit society at every turn, you will neglect yourself.",
-CHOICE_SELF,"You have {var1} [b]Self[/b] points.
+CHOICE_SELF,"You have {var1} out of 40 [b]Self[/b] points.
 You made a choice to do something for your [b]self[/b]. Self care is key!  But, if we all choose ourself every time, what kind of world would we be in?",
-CHOICE_SUSTAINABILITY,"You have {var1} [b]Self[/b] points.
+CHOICE_SUSTAINABILITY,"You have {var1} out of 40 [b]Self[/b] points.
 The Earth will benefit from your [b]sustainable choices[/b] for generations to come.  It was a little bit harder, but if everyone does a little bit of the work, no one has to suffer.",
+CHOICE_NOTHING,"You have {var1} out of 40 [b]Self[/b] points.
+I've set it up so there is a 1/4 chance of drawing an event card. Right now the code just passes the turn, but I am getting it ready for some kind of event cards.",
 ,,
 ,,
 ACTION_CARD_01,[center][b]City Hall[/b] is a place to voice public concerns and address them.[/center],"1. Justice:                City Hall
@@ -97,3 +99,20 @@ GLOSSARY_03,Sustainability,
 GLOSSARY_04,Decent Living Requirements,
 GLOSSARY_05,Terawatt,
 GLOSSARY_06,BIPOC,
+,,
+,,
+,,
+PAUSE CARDS / RESILIENCE CHALLENGES / OPPORTUNITIES / TRANSITIONS,,
+EVENT_CARD_01,"A universal basic income passed in the US Congress. Collect +5 self points (society, sustainability).",
+EVENT_CARD_02,"A reparations bill passed - add +5 for self/society - everyone has universal housing, healthcare, nutrition, jobs, and access to services ",
+EVENT_CARD_03,"A Green New Deal visioning game has been released - play to learn to do your part to create a just transition and gain +5 society, sustainability, self points",
+EVENT_CARD_04,"Green infrastructure bill passes with 15 million new good jobs with benefits a living wage and union protection - all choose new career OR add +5 points to self, society, sustainability",
+EVENT_CARD_05,"Universal #JobsAndCare Bill passes where all seniors, families, and people with disabilities have access to universal good paying jobs and care in old age or as kids/families/people with disabilities - add +5 points",
+,,
+Emergency Adaptation (negative points/solidarity calling),,
+EVENT_CARD_06,"Poor whites take out frustration and lack of education on non-white populations, society loses points / all players add 5+ points to society to heal and prevent further racism from self category",
+EVENT_CARD_07,Global pandemic hits - all players lose job and unless frontline worker - choose new career,
+EVENT_CARD_08,"Fires devastate the west coast - all players contribute 5+ points to sustainability and society - pay firefighters equally, safety, GND for west coast",
+EVENT_CARD_09,Overfishing in the ocean and animal based diet with trash and pollution damage the ocean - all players asked to contribute to 5+ for sustainability for sustainable fishing,
+EVENT_CARD_10,"Refugee crisis - accept refugees and pay reparations for destroying homes - +5 from all players for society, fold new arrivals into care and repair system jobs and training etc",
+EVENT_CARD_11,"Storm hits Gulf South, people lose power, all players asked to contribute +5 self points to society and sustainability to recover communities and build adaptation preparedness in futute GND for the South #GulfSouth4GND",
