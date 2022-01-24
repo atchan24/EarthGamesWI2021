@@ -5,6 +5,8 @@ signal turnOver
 
 onready var main = get_parent().get_parent()
 
+onready var spaces = main.get_node("Spaces")
+
 onready var players = main.get_node("Players")
 onready var player1 = players.get_node("Player1")
 onready var player2 = players.get_node("Player2")
@@ -82,6 +84,7 @@ func handle_P1_active():
 	postChoice_popup_sprite.get_node("Buff").visible = false
 	postChoice_popup_sprite.get_node("Jog").visible = false
 	postChoice_popup_sprite.get_node("Beat").visible = false
+	update_turn_label()
 func handle_P2_active():
 	self_bar_surp.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_buff.modulate = Color(1, 1, 1)
@@ -91,6 +94,7 @@ func handle_P2_active():
 	postChoice_popup_sprite.get_node("Buff").visible = true
 	postChoice_popup_sprite.get_node("Jog").visible = false
 	postChoice_popup_sprite.get_node("Beat").visible = false
+	update_turn_label()
 func handle_P3_active():
 	self_bar_surp.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_buff.modulate = Color(0.75, 0.75, 0.75)
@@ -100,6 +104,7 @@ func handle_P3_active():
 	postChoice_popup_sprite.get_node("Buff").visible = false
 	postChoice_popup_sprite.get_node("Jog").visible = true
 	postChoice_popup_sprite.get_node("Beat").visible = false
+	update_turn_label()
 func handle_P4_active():
 	self_bar_surp.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_buff.modulate = Color(0.75, 0.75, 0.75)
@@ -109,6 +114,13 @@ func handle_P4_active():
 	postChoice_popup_sprite.get_node("Buff").visible = false
 	postChoice_popup_sprite.get_node("Jog").visible = false
 	postChoice_popup_sprite.get_node("Beat").visible = true
+	update_turn_label()
+
+
+func update_turn_label():
+	var turn = spaces._round
+	turn += 1
+	$Label.text = "Turn " + str(turn)
 
 
 # ANIMATIONS

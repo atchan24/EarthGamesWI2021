@@ -65,6 +65,7 @@ func _process(delta):
 			if spaces[current].category != "Travel":
 				roll -= 1
 			
+#			# This stops the player at the last square
 #			var temp = current + 1
 #			if temp >= spaces.size():
 #				roll = 0 # stop moving once you hit the end
@@ -76,7 +77,7 @@ func _process(delta):
 				spaces[current].call_manager(self)
 			current += 1
 			if current == 21:
-				current = 0
+				current = 0      # This lets the player go past the last square
 		sprite.set_animation(walk)
 		if !player_audio.playing:
 			player_audio.play(0.0)
@@ -84,6 +85,7 @@ func _process(delta):
 		sprite.set_animation(idle)
 		if player_audio.playing:
 			player_audio.stop()
+		# This stops the player after the current_turn # = turn_max #
 		if get_parent().cur_turn >= get_parent().final_turn:
 			done = true
 

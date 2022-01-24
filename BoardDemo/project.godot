@@ -16,7 +16,7 @@ _global_script_class_icons={
 
 config/name="Board Demo"
 run/main_scene="res://Scenes/SplashScreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://Assets/Art/Logos/IconV2.png"
 
 [autoload]
 

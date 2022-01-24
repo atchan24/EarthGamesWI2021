@@ -1,6 +1,7 @@
 extends Node2D
 
 var anim 
+var animPlayer
 var n = "0"
 var cur = 0
 var roll_counter
@@ -10,14 +11,17 @@ signal spinner_done
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	anim = get_node("SpinnerAnim")
+	animPlayer = get_node("AnimationPlayer")
 	roll_counter = get_node("/root/Main/GUI/TopBar").get_counter()
-	self.visible = false
+
 
 func play(num):
-	self.visible = true
+	animPlayer.play("Ready")
+	yield(animPlayer, "animation_finished")
 	anim.play("Spinner Base")
 	n = str(num)
-	
+
+
 func playing():
 	return anim.playing
 
@@ -33,6 +37,8 @@ func _on_SpinnerAnim_animation_finished():
 	else:
 		cur = 0
 		yield(get_tree().create_timer(1.5), "timeout")
-		emit_signal("spinner_done")
 		anim.playing = false
-		self.visible = false
+		animPlayer.play_backwards("Ready")
+		yield(animPlayer, "animation_finished")
+		emit_signal("spinner_done")
+
