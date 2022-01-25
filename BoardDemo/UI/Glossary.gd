@@ -6,7 +6,7 @@ onready var popup_anim = get_node("AnimationPlayer")
 
 
 func _ready():
-	pass # Replace with function body.
+	popup_anim.play("popupGlossary")
 
 
 func _on_glossary_pressed():

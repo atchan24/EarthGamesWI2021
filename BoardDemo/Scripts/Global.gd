@@ -4,6 +4,9 @@ var loader
 var time_max = 100
 var current_scene = null
 
+# movement cost per block for summoned player
+var movement_cost = 2
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var root = get_tree().get_root()

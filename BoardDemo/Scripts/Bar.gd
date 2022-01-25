@@ -130,22 +130,43 @@ func anim_add_society():
 func anim_add_sustainability():
 	$Control/AnimationPlayer.play("AddSustainability")
 
-func anim_add_surp():
+func anim_add_surp(score):
+#	var new_string = "+" + str(score)
+	$VBoxContainer/SelfBar_Surp/AddSurp.text = "+" + str(score)
 	$Control/SelfAnimationPlayer.play("AddSurp")
-func anim_add_buff():
+func anim_add_buff(score):
+#	var new_string = "+" + str(score)
+	$VBoxContainer/SelfBar_Buff/AddBuff.text = "+" + str(score)
 	$Control/SelfAnimationPlayer.play("AddBuff")
-func anim_add_jog():
+func anim_add_jog(score):
+#	var new_string = "+" + str(score)
+#	print(score + " potatoes")
+	$VBoxContainer/SelfBar_Job/AddJog.text = "+" + str(score)
 	$Control/SelfAnimationPlayer.play("AddJog")
-func anim_add_beat():
+func anim_add_beat(score):
+#	var new_string = "+" + str(score)
+	$VBoxContainer/SelfBar_Beat/AddBeat.text = "+" + str(score)
 	$Control/SelfAnimationPlayer.play("AddBeat")
 	
-func anim_lose_surp():
+func anim_lose_surp(score):
+#	var new_string = "-" + str(score)
+	$VBoxContainer/SelfBar_Surp.value = player1.self_score
+	$VBoxContainer/SelfBar_Surp/LoseSurp.text = str(score)
 	$Control/SelfAnimationPlayer.play("LoseSurp")
-func anim_lose_buff():
+func anim_lose_buff(score):
+#	var new_string = "-" + str(score)
+	$VBoxContainer/SelfBar_Buff.value = player2.self_score
+	$VBoxContainer/SelfBar_Buff/LoseBuff.text = str(score)
 	$Control/SelfAnimationPlayer.play("LoseBuff")
-func anim_lose_jog():
+func anim_lose_jog(score):
+#	var new_string = "-" + str(score)
+	$VBoxContainer/SelfBar_Jog.value = player3.self_score
+	$VBoxContainer/SelfBar_Jog/LoseJog.text = str(score)
 	$Control/SelfAnimationPlayer.play("LoseJog")
-func anim_lose_beat():
+func anim_lose_beat(score):
+#	var new_string = str(score)
+	$VBoxContainer/SelfBar_Beat.value = player4.self_score
+	$VBoxContainer/SelfBar_Beat/LoseBeat.text = str(score)
 	$Control/SelfAnimationPlayer.play("LoseBeat")
 
 
