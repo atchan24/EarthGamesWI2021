@@ -46,6 +46,7 @@ func _process(delta):
 		sprite.set_animation(idle)
 		if player_audio.playing:
 			player_audio.stop()
+		get_node("/root/Main").end_game()
 		return
 	if active && !moving:
 		bar.update_score(bar.get_self_surp(), self_score)
@@ -56,7 +57,11 @@ func _process(delta):
 		yield(spinner, "spinner_done")
 		moving = true
 		has_rolled = true
-		get_parent().cur_turn += 1
+		
+#		if !counted_turn:
+#			get_parent().cur_turn += 1
+#			counted_turn = true
+		
 	if moving:
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
@@ -88,8 +93,10 @@ func _process(delta):
 		if player_audio.playing:
 			player_audio.stop()
 		# This stops the player after the current_turn # = turn_max #
-#		if get_parent().cur_turn >= get_parent().final_turn:
-#			done = true
+		if get_parent().cur_turn >= get_parent().final_turn:
+			print("current: " + str(get_parent().cur_turn))
+			print("final: " + str(get_parent().final_turn))
+			done = true
 		call_card = true
 
 func is_done():

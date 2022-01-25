@@ -132,20 +132,20 @@ func anim_add_sustainability():
 
 func anim_add_surp(score):
 #	var new_string = "+" + str(score)
-	$VBoxContainer/SelfBar_Surp/AddSurp.text = "+" + str(score)
+	$VBoxContainer/SelfBar_Surp/AddSurp.text = str("+") + str(score)
 	$Control/SelfAnimationPlayer.play("AddSurp")
 func anim_add_buff(score):
 #	var new_string = "+" + str(score)
-	$VBoxContainer/SelfBar_Buff/AddBuff.text = "+" + str(score)
+	$VBoxContainer/SelfBar_Buff/AddBuff.text = str("+") + str(score)
 	$Control/SelfAnimationPlayer.play("AddBuff")
 func anim_add_jog(score):
 #	var new_string = "+" + str(score)
 #	print(score + " potatoes")
-	$VBoxContainer/SelfBar_Job/AddJog.text = "+" + str(score)
+	$VBoxContainer/SelfBar_Job/AddJog.text = str("+") + str(score)
 	$Control/SelfAnimationPlayer.play("AddJog")
 func anim_add_beat(score):
 #	var new_string = "+" + str(score)
-	$VBoxContainer/SelfBar_Beat/AddBeat.text = "+" + str(score)
+	$VBoxContainer/SelfBar_Beat/AddBeat.text = str("+") + str(score)
 	$Control/SelfAnimationPlayer.play("AddBeat")
 	
 func anim_lose_surp(score):
