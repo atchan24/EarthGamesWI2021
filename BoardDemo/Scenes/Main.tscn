@@ -196,7 +196,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.424805, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BuffIdle"
-frame = 1
+frame = 5
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
@@ -221,7 +221,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "JogIdle"
-frame = 3
+frame = 4
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player3"]
@@ -246,7 +246,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BeatIdle"
-frame = 4
+frame = 2
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]
@@ -1217,7 +1217,6 @@ category = "Truth"
 [node name="Space21" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.9817, 0, 32.7323 )
 category = "Death"
-
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceA" to="Spaces" method="_on_ChoiceA_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceB" to="Spaces" method="_on_ChoiceB_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceC" to="Spaces" method="_on_ChoiceC_pressed"]

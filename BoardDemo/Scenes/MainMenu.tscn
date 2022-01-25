@@ -47,6 +47,7 @@ __meta__ = {
 }
 
 [node name="OptionMenu" parent="." instance=ExtResource( 13 )]
+visible = false
 margin_left = 17.0
 margin_top = 0.63
 script = ExtResource( 14 )
@@ -258,6 +259,5 @@ pitch_scale = 2.21
 stream = ExtResource( 4 )
 volume_db = -28.0
 autoplay = true
-
 [connection signal="pressed" from="Credits/CenterContainer/ColorRect/Close" to="OptionMenu" method="_on_CreditsReturn_pressed"]
 [connection signal="pressed" from="MainButtons/credits" to="OptionMenu" method="_on_credits_pressed"]

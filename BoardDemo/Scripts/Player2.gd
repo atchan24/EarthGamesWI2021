@@ -2,8 +2,8 @@ extends KinematicBody
 
 ### THIS IS FOR PLAYER 2: Buff
 
-signal player2lose
-signal player2add
+signal player2lose(score)
+signal player2add(score)
 
 
 const velocity = 10
@@ -22,6 +22,7 @@ var spaces = null
 var roll_counter = null
 var spinner = null
 var bar = null
+var call_card = true
 
 export var idle = ""
 export var walk = ""
@@ -71,7 +72,7 @@ func _process(delta):
 #				done = true
 				
 			moving = roll > 0
-			if !moving: 
+			if !moving && call_card: 
 				# call tile script
 				spaces[current].call_manager(self)
 			current += 1
@@ -84,8 +85,9 @@ func _process(delta):
 		sprite.set_animation(idle)
 		if player_audio.playing:
 			player_audio.stop()
-		if get_parent().cur_turn >= get_parent().final_turn:
-			done = true
+#		if get_parent().cur_turn >= get_parent().final_turn:
+#			done = true
+		call_card = true
 
 func is_done():
 	return done
@@ -94,9 +96,9 @@ func update_values(s):
 	self_score += s
 	print(self.name + ": " + str(self_score))
 	if s > 0:
-		emit_signal("player2add")
+		emit_signal("player2add", s)
 	else:
-		emit_signal("player2lose")
+		emit_signal("player2lose", s)
 
 
 func get_score():

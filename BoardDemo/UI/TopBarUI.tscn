@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Assets/Bars/Green.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Bars/Base.png" type="Texture" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://Assets/Art/button_small_green.png" type="Texture" id=23]
 [ext_resource path="res://Assets/Art/button_small_blue.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Art/button_small_yellow.png" type="Texture" id=25]
+[ext_resource path="res://UI/Invite.gd" type="Script" id=26]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -424,12 +425,41 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 1.3 )
 }
 
-[sub_resource type="DynamicFont" id=20]
-size = 40
-outline_size = 3
-extra_spacing_top = 3
-extra_spacing_space = 3
-font_data = ExtResource( 5 )
+[sub_resource type="Animation" id=20]
+resource_name = "popupGlossary"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TextureRect:rect_scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.15, 0, 0, -0.95, 0, 0.5, 0 ),
+"times": PoolRealArray( 0, 1.3 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TextureRect:rect_scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.3 )
+}
 
 [sub_resource type="DynamicFont" id=21]
 size = 40
@@ -439,13 +469,20 @@ extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=22]
+size = 40
+outline_size = 3
+extra_spacing_top = 3
+extra_spacing_space = 3
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=23]
 size = 36
 outline_size = 1
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=24]
 tracks/0/type = "bezier"
 tracks/0/path = NodePath(".:rect_scale:x")
 tracks/0/interp = 1
@@ -491,8 +528,7 @@ tracks/3/keys = {
 "values": [ true, false, false ]
 }
 
-[sub_resource type="Animation" id=24]
-resource_name = "UIDrawCard"
+[sub_resource type="Animation" id=25]
 length = 1.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("VBoxContainer/SelfBar_Surp:rect_position")
@@ -611,71 +647,71 @@ tracks/10/keys = {
 "values": [ true, false, false ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("PopupActionCardChoice:visible")
+tracks/11/path = NodePath("Control/button_big_blue:modulate")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ true, false, false ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("Control/button_big_blue:modulate")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("Control/SocietyBar:rect_position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 175.614, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.5, 1.2 )
+}
 tracks/13/type = "bezier"
-tracks/13/path = NodePath("Control/SocietyBar:rect_position:x")
+tracks/13/path = NodePath("Control/SocietyBar:rect_position:y")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"points": PoolRealArray( 175.614, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 73.2267, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
 tracks/14/type = "bezier"
-tracks/14/path = NodePath("Control/SocietyBar:rect_position:y")
+tracks/14/path = NodePath("Control/SustainBar:rect_position:x")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"points": PoolRealArray( 73.2267, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 522.207, -0.25, 0, 0.25, 0, 714, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
 tracks/15/type = "bezier"
-tracks/15/path = NodePath("Control/SustainBar:rect_position:x")
+tracks/15/path = NodePath("Control/SustainBar:rect_position:y")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"points": PoolRealArray( 522.207, -0.25, 0, 0.25, 0, 714, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 73.7801, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
-tracks/16/type = "bezier"
-tracks/16/path = NodePath("Control/SustainBar:rect_position:y")
+tracks/16/type = "value"
+tracks/16/path = NodePath("Control/SustainBar/SustainScore:rect_position")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"points": PoolRealArray( 73.7801, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.5, 1.2 )
+"times": PoolRealArray( 0, 0.9, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9, -36 ), Vector2( 9, -36 ), Vector2( 9, 0 ) ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("Control/SustainBar/SustainScore:rect_position")
+tracks/17/path = NodePath("Control/SocietyBar/SocietyScore:rect_position")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
@@ -687,24 +723,12 @@ tracks/17/keys = {
 "values": [ Vector2( 9, -36 ), Vector2( 9, -36 ), Vector2( 9, 0 ) ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("Control/SocietyBar/SocietyScore:rect_position")
+tracks/18/path = NodePath("Label:modulate")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/imported = false
 tracks/18/enabled = true
 tracks/18/keys = {
-"times": PoolRealArray( 0, 0.9, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 9, -36 ), Vector2( 9, -36 ), Vector2( 9, 0 ) ]
-}
-tracks/19/type = "value"
-tracks/19/path = NodePath("Label:modulate")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/keys = {
 "times": PoolRealArray( 0, 1.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -1150,8 +1174,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PopupActionCardChoice" parent="." instance=ExtResource( 22 )]
-
 [node name="Glossary" type="Control" parent="."]
 margin_right = 147.0
 margin_bottom = 62.0
@@ -1190,7 +1212,6 @@ margin_top = 11.0
 margin_right = 1015.0
 margin_bottom = 567.0
 rect_min_size = Vector2( 10, 10 )
-rect_scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 18 )
 expand = true
 __meta__ = {
@@ -1207,9 +1228,11 @@ custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Glossary:"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Glossary/TextureRect"]
-modulate = Color( 1, 1, 1, 0 )
 margin_left = 30.0
 margin_top = 82.0
 margin_right = 956.0
@@ -1285,6 +1308,252 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Glossary"]
 anims/popupGlossary = SubResource( 19 )
 
+[node name="Invite" type="Control" parent="."]
+margin_top = -122.0
+margin_right = 147.0
+margin_bottom = -60.0
+mouse_filter = 1
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="Invite"]
+margin_left = 880.0
+margin_top = 400.0
+margin_right = 1041.0
+margin_bottom = 452.0
+texture_normal = ExtResource( 24 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 25 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Invite/TextureButton"]
+margin_top = 10.0
+margin_right = 159.0
+margin_bottom = 65.0
+custom_fonts/font = SubResource( 2 )
+text = "invite
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Invite"]
+margin_left = 11.0
+margin_top = 133.0
+margin_right = 1015.0
+margin_bottom = 689.0
+rect_min_size = Vector2( 10, 10 )
+texture = ExtResource( 18 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Invite/TextureRect"]
+margin_left = 108.0
+margin_top = 29.0
+margin_right = 876.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 16 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "Invite a player!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="Invite/TextureRect"]
+margin_left = -3.0
+margin_top = 20.0
+margin_right = 248.0
+margin_bottom = 91.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Invite/TextureRect/TextureButton2"]
+margin_right = 242.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 2 )
+text = "Close"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="invite_surp" type="TextureButton" parent="Invite/TextureRect"]
+margin_left = 274.067
+margin_top = 121.08
+margin_right = 525.067
+margin_bottom = 192.08
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Invite/TextureRect/invite_surp"]
+margin_right = 242.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 2 )
+text = "Invite Surp!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="invite_buff" type="TextureButton" parent="Invite/TextureRect"]
+margin_left = 276.775
+margin_top = 208.622
+margin_right = 527.775
+margin_bottom = 279.622
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Invite/TextureRect/invite_buff"]
+margin_right = 242.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 2 )
+text = "Invite Buff!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="invite_job" type="TextureButton" parent="Invite/TextureRect"]
+margin_left = 277.677
+margin_top = 290.75
+margin_right = 528.677
+margin_bottom = 361.75
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Invite/TextureRect/invite_job"]
+margin_right = 242.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 2 )
+text = "Invite Jog!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="invite_beat" type="TextureButton" parent="Invite/TextureRect"]
+margin_left = 280.385
+margin_top = 372.878
+margin_right = 531.385
+margin_bottom = 443.878
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Invite/TextureRect/invite_beat"]
+margin_right = 242.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 2 )
+text = "Invite Beat!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Beat_face2" type="TextureRect" parent="Invite/TextureRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -838.1
+margin_top = 359.8
+margin_right = -763.1
+margin_bottom = 434.8
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jog_face2" type="TextureRect" parent="Invite/TextureRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -836.2
+margin_top = 277.4
+margin_right = -761.2
+margin_bottom = 352.4
+texture = ExtResource( 12 )
+expand = true
+
+[node name="Buff_face2" type="TextureRect" parent="Invite/TextureRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -833.35
+margin_top = 196.9
+margin_right = -758.35
+margin_bottom = 271.9
+texture = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Surp_face2" type="TextureRect" parent="Invite/TextureRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -829.55
+margin_top = 115.45
+margin_right = -754.55
+margin_bottom = 190.45
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Invite"]
+anims/popupGlossary = SubResource( 20 )
+
 [node name="PostChoicePopup" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -1323,7 +1592,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="PostChoicePopup/TextureRect/TextureButton"]
 margin_right = 233.0
 margin_bottom = 67.0
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 21 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Next"
 align = 1
@@ -1334,8 +1603,8 @@ margin_left = -549.812
 margin_top = -190.125
 margin_right = 201.188
 margin_bottom = 20.875
-custom_fonts/bold_font = SubResource( 21 )
-custom_fonts/normal_font = SubResource( 22 )
+custom_fonts/bold_font = SubResource( 22 )
+custom_fonts/normal_font = SubResource( 23 )
 custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 bbcode_enabled = true
 bbcode_text = "You have 25 out of 40 [b]Self[/b] points.  
@@ -1373,7 +1642,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "JogIdle"
-frame = 4
+frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -1387,11 +1656,18 @@ speed_scale = 0.7
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PostChoicePopup"]
-anims/PopupPostChoice = SubResource( 23 )
+anims/PopupPostChoice = SubResource( 24 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/UIDrawCard = SubResource( 24 )
+anims/UIDrawCard = SubResource( 25 )
 
+[node name="PopupActionCardChoice" parent="." instance=ExtResource( 22 )]
 [connection signal="pressed" from="Glossary/TextureButton" to="Glossary" method="_on_glossary_pressed"]
 [connection signal="pressed" from="Glossary/TextureRect/TextureButton2" to="Glossary" method="_on_CloseGlossary_pressed"]
+[connection signal="pressed" from="Invite/TextureButton" to="Invite" method="_on_invite_pressed"]
+[connection signal="pressed" from="Invite/TextureRect/TextureButton2" to="Invite" method="_on_ClosedInvite_pressed"]
+[connection signal="pressed" from="Invite/TextureRect/invite_surp" to="Invite" method="_on_invite_surp_pressed"]
+[connection signal="pressed" from="Invite/TextureRect/invite_buff" to="Invite" method="_on_invite_buff_pressed"]
+[connection signal="pressed" from="Invite/TextureRect/invite_job" to="Invite" method="_on_invite_job_pressed"]
+[connection signal="pressed" from="Invite/TextureRect/invite_beat" to="Invite" method="_on_invite_beat_pressed"]
 [connection signal="pressed" from="PostChoicePopup/TextureRect/TextureButton" to="." method="_on_PostChoicePopup_NextButton_pressed"]

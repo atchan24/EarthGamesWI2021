@@ -2,8 +2,8 @@ extends KinematicBody
 
 ### THIS IS FOR PLAYER 1: Serp
 
-signal player1lose
-signal player1add
+signal player1lose(score)
+signal player1add(score)
 
 
 const velocity = 10
@@ -15,6 +15,7 @@ var roll = 0
 var rng = RandomNumberGenerator.new()
 var done = false
 var has_rolled = false
+var call_card = true
 
 var sprite = null
 var player_audio = null
@@ -72,9 +73,10 @@ func _process(delta):
 #				done = true
 				
 			moving = roll > 0
-			if !moving: 
+			if !moving && call_card: 
 				# call tile script
 				spaces[current].call_manager(self)
+				
 			current += 1
 			if current == 21:
 				current = 0      # This lets the player go past the last square
@@ -86,8 +88,9 @@ func _process(delta):
 		if player_audio.playing:
 			player_audio.stop()
 		# This stops the player after the current_turn # = turn_max #
-		if get_parent().cur_turn >= get_parent().final_turn:
-			done = true
+#		if get_parent().cur_turn >= get_parent().final_turn:
+#			done = true
+		call_card = true
 
 func is_done():
 	return done
@@ -96,9 +99,9 @@ func update_values(s):
 	self_score += s
 	print(self.name + ": " + str(self_score))
 	if s > 0:
-		emit_signal("player1add")
+		emit_signal("player1add", s)
 	else:
-		emit_signal("player1lose")
+		emit_signal("player1lose", s)
 
 
 func get_score():

@@ -6,7 +6,6 @@
 [ext_resource path="res://UI/VolumeSlider.gd" type="Script" id=4]
 
 [node name="OptionMenu" type="Control"]
-visible = false
 margin_left = -0.89093
 margin_top = 0.629974
 margin_right = 1024.11
@@ -66,11 +65,38 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -47.0
 margin_bottom = -4.0
+rect_pivot_offset = Vector2( -650.006, -58 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Volume"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect/VBoxContainer/VolumeSlider"]
+margin_left = -22.0
+margin_top = 33.0
+margin_right = 228.0
+margin_bottom = 59.0
+rect_pivot_offset = Vector2( -650.006, -58 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "Movement Cost"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="move_cost" type="TextEdit" parent="ColorRect/VBoxContainer/VolumeSlider"]
+margin_left = 72.881
+margin_top = 66.1781
+margin_right = 122.881
+margin_bottom = 96.1781
+rect_min_size = Vector2( 50, 30 )
+text = "2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -96,6 +122,6 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="value_changed" from="ColorRect/VBoxContainer/VolumeSlider" to="ColorRect/VBoxContainer/VolumeSlider" method="_on_VolumeSlider_value_changed"]
+[connection signal="text_changed" from="ColorRect/VBoxContainer/VolumeSlider/move_cost" to="." method="_on_move_cost_text_changed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/return" to="." method="_on_return_pressed"]
