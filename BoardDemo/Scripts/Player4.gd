@@ -46,6 +46,7 @@ func _process(delta):
 		sprite.set_animation(idle)
 		if player_audio.playing:
 			player_audio.stop()
+		get_node("/root/Main").end_game()
 		return
 	if active && !moving:
 		bar.update_score(bar.get_self_beat(), self_score)
@@ -86,8 +87,8 @@ func _process(delta):
 		sprite.set_animation(idle)
 		if player_audio.playing:
 			player_audio.stop()
-#		if get_parent().cur_turn >= get_parent().final_turn:
-#			done = true
+		if get_parent().cur_turn >= get_parent().final_turn:
+			done = true
 		call_card = true
 
 func is_done():
