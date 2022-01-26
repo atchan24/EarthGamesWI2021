@@ -170,6 +170,7 @@ script = ExtResource( 30 )
 player_number = "player1"
 player_name_upper = "Surp"
 player_name_lower = "surp"
+max_movement = 4
 
 [node name="PlayerCamera" type="Camera" parent="Players/Player1"]
 transform = Transform( 1, 0, 0, 0, 0.931495, 0.363755, 0, -0.363755, 0.931495, 1.531, 6.91326, 14.7294 )
@@ -184,6 +185,7 @@ script = ExtResource( 30 )
 player_number = "player2"
 player_name_upper = "Buff"
 player_name_lower = "buff"
+self_score = 30
 
 [node name="CollisionShape" type="CollisionShape" parent="Players/Player2"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
@@ -195,7 +197,6 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.424805, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BuffIdle"
-frame = 3
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
@@ -210,6 +211,8 @@ script = ExtResource( 30 )
 player_number = "player3"
 player_name_upper = "Jog"
 player_name_lower = "jog"
+self_score = 20
+max_movement = 6
 
 [node name="CollisionShape" type="CollisionShape" parent="Players/Player3"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
@@ -236,6 +239,8 @@ script = ExtResource( 30 )
 player_number = "player4"
 player_name_upper = "Beat"
 player_name_lower = "beat"
+self_score = 25
+max_movement = 8
 
 [node name="CollisionShape" type="CollisionShape" parent="Players/Player4"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
@@ -247,6 +252,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BeatIdle"
+frame = 3
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]
