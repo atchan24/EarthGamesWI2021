@@ -11,7 +11,7 @@ var cam = null;
 var end = false
 
 var cur_turn = 0
-var final_turn = 20  # each player gets 5 turns
+var final_turn = 13  # each player gets 5 turns
 
 
 # Called when the node enters the scene tree for the first time.
@@ -31,6 +31,10 @@ func _process(delta):
 
 
 func next_player():
+	cur_turn += 1
+	print("current turn:")
+	print(cur_turn)
+	
 	active_player = (active_player + 1) % players.size()
 	var cur = 0                   # cur gets bigger when each players 
 								  # reaches their 'done' = true
@@ -54,9 +58,6 @@ func next_player():
 
 func active_player():
 	print("Turn Queue Active Player: ", active_player)
-	cur_turn += 1
-	print("current turn:")
-	print(cur_turn)
 	if active_player == 0:
 		emit_signal("P1_active")
 	elif active_player == 1:
@@ -65,3 +66,5 @@ func active_player():
 		emit_signal("P3_active")
 	elif active_player == 3:
 		emit_signal("P4_active")
+
+

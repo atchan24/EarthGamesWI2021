@@ -31,15 +31,17 @@ func _ready():
 	players.connect("P3_active", self, "handle_P3_active")
 	players.connect("P4_active", self, "handle_P4_active")
 	
-	player1.connect("player1add", self, "anim_add_surp")
-	player2.connect("player2add", self, "anim_add_buff")
-	player3.connect("player3add", self, "anim_add_jog")
-	player4.connect("player4add", self, "anim_add_beat")
-	
-	player1.connect("player1lose", self, "anim_lose_surp")
-	player2.connect("player2lose", self, "anim_lose_buff")
-	player3.connect("player3lose", self, "anim_lose_jog")
-	player4.connect("player4lose", self, "anim_lose_beat")
+#	for player in players.get_children():
+#		player.connect("%sadd"%[player.player_number], self, "anim_add_%s"%[player.player_name_lower])
+#	player1.connect("player1add", self, "anim_add_surp")
+#	player2.connect("player2add", self, "anim_add_buff")
+#	player3.connect("player3add", self, "anim_add_jog")
+#	player4.connect("player4add", self, "anim_add_beat")
+#
+#	player1.connect("player1lose", self, "anim_lose_surp")
+#	player2.connect("player2lose", self, "anim_lose_buff")
+#	player3.connect("player3lose", self, "anim_lose_jog")
+#	player4.connect("player4lose", self, "anim_lose_beat")
 	
 	self_bar_buff.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_jog.modulate = Color(0.75, 0.75, 0.75)
@@ -72,6 +74,7 @@ func get_sustain():
 
 # Highlight the player's UI whose turn it is.
 func handle_P1_active():
+	print("CHICKEN BANANANANANANANA")
 #	self_bar_surp.rect_scale = Vector2(1.2, 1.2)
 #	self_bar_buff.rect_scale = Vector2(1.0, 1.0)
 #	self_bar_jog.rect_scale = Vector2(1.0, 1.0)
@@ -85,6 +88,7 @@ func handle_P1_active():
 	postChoice_popup_sprite.get_node("Jog").visible = false
 	postChoice_popup_sprite.get_node("Beat").visible = false
 	update_turn_label()
+
 func handle_P2_active():
 	self_bar_surp.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_buff.modulate = Color(1, 1, 1)
@@ -95,6 +99,7 @@ func handle_P2_active():
 	postChoice_popup_sprite.get_node("Jog").visible = false
 	postChoice_popup_sprite.get_node("Beat").visible = false
 	update_turn_label()
+
 func handle_P3_active():
 	self_bar_surp.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_buff.modulate = Color(0.75, 0.75, 0.75)
@@ -105,6 +110,7 @@ func handle_P3_active():
 	postChoice_popup_sprite.get_node("Jog").visible = true
 	postChoice_popup_sprite.get_node("Beat").visible = false
 	update_turn_label()
+
 func handle_P4_active():
 	self_bar_surp.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_buff.modulate = Color(0.75, 0.75, 0.75)
@@ -130,44 +136,58 @@ func anim_add_society():
 func anim_add_sustainability():
 	$Control/AnimationPlayer.play("AddSustainability")
 
-func anim_add_surp(score):
-#	var new_string = "+" + str(score)
-	$VBoxContainer/SelfBar_Surp/AddSurp.text = str("+") + str(score)
-	$Control/SelfAnimationPlayer.play("AddSurp")
-func anim_add_buff(score):
-#	var new_string = "+" + str(score)
-	$VBoxContainer/SelfBar_Buff/AddBuff.text = str("+") + str(score)
-	$Control/SelfAnimationPlayer.play("AddBuff")
-func anim_add_jog(score):
-#	var new_string = "+" + str(score)
-#	print(score + " potatoes")
-	$VBoxContainer/SelfBar_Job/AddJog.text = str("+") + str(score)
-	$Control/SelfAnimationPlayer.play("AddJog")
-func anim_add_beat(score):
-#	var new_string = "+" + str(score)
-	$VBoxContainer/SelfBar_Beat/AddBeat.text = str("+") + str(score)
-	$Control/SelfAnimationPlayer.play("AddBeat")
-	
-func anim_lose_surp(score):
-#	var new_string = "-" + str(score)
-	$VBoxContainer/SelfBar_Surp.value = player1.self_score
-	$VBoxContainer/SelfBar_Surp/LoseSurp.text = str(score)
-	$Control/SelfAnimationPlayer.play("LoseSurp")
-func anim_lose_buff(score):
-#	var new_string = "-" + str(score)
-	$VBoxContainer/SelfBar_Buff.value = player2.self_score
-	$VBoxContainer/SelfBar_Buff/LoseBuff.text = str(score)
-	$Control/SelfAnimationPlayer.play("LoseBuff")
-func anim_lose_jog(score):
-#	var new_string = "-" + str(score)
-	$VBoxContainer/SelfBar_Jog.value = player3.self_score
-	$VBoxContainer/SelfBar_Jog/LoseJog.text = str(score)
-	$Control/SelfAnimationPlayer.play("LoseJog")
-func anim_lose_beat(score):
-#	var new_string = str(score)
-	$VBoxContainer/SelfBar_Beat.value = player4.self_score
-	$VBoxContainer/SelfBar_Beat/LoseBeat.text = str(score)
-	$Control/SelfAnimationPlayer.play("LoseBeat")
+func _on_playerAdd(score, player_name_upper):
+	var nodeLocation = "VBoxContainer/SelfBar_%s/Add%s"%[player_name_upper, player_name_upper]
+	get_node(nodeLocation).text = str("+") + str(score)
+	var anim_name = "Add%s"%[player_name_upper]
+	$Control/SelfAnimationPlayer.play(anim_name)
+
+func _on_playerLose(score, player_name_upper):
+	var nodeLocation = "VBoxContainer/SelfBar_%s"%[player_name_upper]
+	get_node(nodeLocation).value = player1.self_score
+	var childLocation = "VBoxContainer/SelfBar_%s/Lose%s"%[player_name_upper, player_name_upper]
+	get_node(childLocation).text = str(score)
+	var anim_name = "Lose%s"%[player_name_upper]
+	$Control/SelfAnimationPlayer.play(anim_name)
+
+#func anim_add_surp(score):
+##	var new_string = "+" + str(score)
+#	$VBoxContainer/SelfBar_Surp/AddSurp.text = str("+") + str(score)
+#	$Control/SelfAnimationPlayer.play("AddSurp")
+#func anim_add_buff(score):
+##	var new_string = "+" + str(score)
+#	$VBoxContainer/SelfBar_Buff/AddBuff.text = str("+") + str(score)
+#	$Control/SelfAnimationPlayer.play("AddBuff")
+#func anim_add_jog(score):
+##	var new_string = "+" + str(score)
+##	print(score + " potatoes")
+#	$VBoxContainer/SelfBar_Jog/AddJog.text = str("+") + str(score)
+#	$Control/SelfAnimationPlayer.play("AddJog")
+#func anim_add_beat(score):
+##	var new_string = "+" + str(score)
+#	$VBoxContainer/SelfBar_Beat/AddBeat.text = str("+") + str(score)
+#	$Control/SelfAnimationPlayer.play("AddBeat")
+#
+#func anim_lose_surp(score):
+##	var new_string = "-" + str(score)
+#	$VBoxContainer/SelfBar_Surp.value = player1.self_score
+#	$VBoxContainer/SelfBar_Surp/LoseSurp.text = str(score)
+#	$Control/SelfAnimationPlayer.play("LoseSurp")
+#func anim_lose_buff(score):
+##	var new_string = "-" + str(score)
+#	$VBoxContainer/SelfBar_Buff.value = player2.self_score
+#	$VBoxContainer/SelfBar_Buff/LoseBuff.text = str(score)
+#	$Control/SelfAnimationPlayer.play("LoseBuff")
+#func anim_lose_jog(score):
+##	var new_string = "-" + str(score)
+#	$VBoxContainer/SelfBar_Jog.value = player3.self_score
+#	$VBoxContainer/SelfBar_Jog/LoseJog.text = str(score)
+#	$Control/SelfAnimationPlayer.play("LoseJog")
+#func anim_lose_beat(score):
+##	var new_string = str(score)
+#	$VBoxContainer/SelfBar_Beat.value = player4.self_score
+#	$VBoxContainer/SelfBar_Beat/LoseBeat.text = str(score)
+#	$Control/SelfAnimationPlayer.play("LoseBeat")
 
 
 
@@ -239,3 +259,9 @@ func popup_postChoice_nothing():
 func _on_PostChoicePopup_NextButton_pressed():
 	postChoice_popup_anim.play("PopupPostChoice")
 	emit_signal("turnOver")
+
+
+
+
+
+
