@@ -5,8 +5,8 @@ export var player_name_upper = "Player"
 export var player_name_lower = "player"
 export var self_score = 15
 export var max_movement = 10
-
-#signal player1lose(score)
+#taco
+#signal player1lose(score)  
 #signal player1add(score)
 signal playerLose(score, player_name_upper)
 signal playerAdd(score, player_name_upper)

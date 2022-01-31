@@ -29,7 +29,7 @@
 [ext_resource path="res://Audio Assets/Step-1-Louder-Louder.ogg" type="AudioStream" id=27]
 [ext_resource path="res://Assets/Characters/Animations/CharacterAnims.tres" type="SpriteFrames" id=28]
 [ext_resource path="res://Audio Assets/bass_and_vibe_soundtrack.ogg" type="AudioStream" id=29]
-[ext_resource path="res://Player_Template.gd" type="Script" id=30]
+[ext_resource path="res://Scripts/Player_Template.gd" type="Script" id=30]
 [ext_resource path="res://Scripts/Player1.gd" type="Script" id=31]
 [ext_resource path="res://UI/TopBarUI.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=38]
@@ -72,6 +72,7 @@
 [ext_resource path="res://Assets/Reactive Assets/RainbowFlagRA.tscn" type="PackedScene" id=76]
 [ext_resource path="res://Assets/Reactive Assets/ParakeetRA.tscn" type="PackedScene" id=77]
 [ext_resource path="res://Assets/Reactive Assets/FruitTreeRA.tscn" type="PackedScene" id=78]
+
 
 [sub_resource type="CapsuleShape" id=1]
 height = 1.5
