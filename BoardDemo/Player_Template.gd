@@ -11,6 +11,10 @@ export var max_movement = 10
 signal playerLose(score, player_name_upper)
 signal playerAdd(score, player_name_upper)
 
+signal player1lose(score)
+signal player1add(score)
+
+
 const velocity = 10
 
 var current = 0

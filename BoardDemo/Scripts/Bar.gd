@@ -30,15 +30,14 @@ func _ready():
 	players.connect("P2_active", self, "handle_P2_active")
 	players.connect("P3_active", self, "handle_P3_active")
 	players.connect("P4_active", self, "handle_P4_active")
-	
-#	for player in players.get_children():
+
 #		player.connect("%sadd"%[player.player_number], self, "anim_add_%s"%[player.player_name_lower])
-#	player1.connect("player1add", self, "anim_add_surp")
+	player1.connect("player1add", self, "anim_add_surp")
 #	player2.connect("player2add", self, "anim_add_buff")
 #	player3.connect("player3add", self, "anim_add_jog")
 #	player4.connect("player4add", self, "anim_add_beat")
 #
-#	player1.connect("player1lose", self, "anim_lose_surp")
+	player1.connect("player1lose", self, "anim_lose_surp")
 #	player2.connect("player2lose", self, "anim_lose_buff")
 #	player3.connect("player3lose", self, "anim_lose_jog")
 #	player4.connect("player4lose", self, "anim_lose_beat")
@@ -150,10 +149,10 @@ func _on_playerLose(score, player_name_upper):
 	var anim_name = "Lose%s"%[player_name_upper]
 	$Control/SelfAnimationPlayer.play(anim_name)
 
-#func anim_add_surp(score):
-##	var new_string = "+" + str(score)
-#	$VBoxContainer/SelfBar_Surp/AddSurp.text = str("+") + str(score)
-#	$Control/SelfAnimationPlayer.play("AddSurp")
+func anim_add_surp(score):
+#	var new_string = "+" + str(score)
+	$VBoxContainer/SelfBar_Surp/AddSurp.text = str("+") + str(score)
+	$Control/SelfAnimationPlayer.play("AddSurp")
 #func anim_add_buff(score):
 ##	var new_string = "+" + str(score)
 #	$VBoxContainer/SelfBar_Buff/AddBuff.text = str("+") + str(score)
@@ -168,11 +167,11 @@ func _on_playerLose(score, player_name_upper):
 #	$VBoxContainer/SelfBar_Beat/AddBeat.text = str("+") + str(score)
 #	$Control/SelfAnimationPlayer.play("AddBeat")
 #
-#func anim_lose_surp(score):
-##	var new_string = "-" + str(score)
-#	$VBoxContainer/SelfBar_Surp.value = player1.self_score
-#	$VBoxContainer/SelfBar_Surp/LoseSurp.text = str(score)
-#	$Control/SelfAnimationPlayer.play("LoseSurp")
+func anim_lose_surp(score):
+#	var new_string = "-" + str(score)
+	$VBoxContainer/SelfBar_Surp.value = player1.self_score
+	$VBoxContainer/SelfBar_Surp/LoseSurp.text = str(score)
+	$Control/SelfAnimationPlayer.play("LoseSurp")
 #func anim_lose_buff(score):
 ##	var new_string = "-" + str(score)
 #	$VBoxContainer/SelfBar_Buff.value = player2.self_score

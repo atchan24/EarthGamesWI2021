@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=80 format=2]
 
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://Assets/Characters/Animations/CharacterAnims.tres" type="SpriteFrames" id=28]
 [ext_resource path="res://Audio Assets/bass_and_vibe_soundtrack.ogg" type="AudioStream" id=29]
 [ext_resource path="res://Player_Template.gd" type="Script" id=30]
+[ext_resource path="res://Scripts/Player1.gd" type="Script" id=31]
 [ext_resource path="res://UI/TopBarUI.tscn" type="PackedScene" id=34]
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=38]
 [ext_resource path="res://Assets/Reactive Assets/CityHallRA.tscn" type="PackedScene" id=39]
@@ -166,11 +167,7 @@ script = ExtResource( 6 )
 
 [node name="Player1" parent="Players" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7771, 1.69547, 2.02599 )
-script = ExtResource( 30 )
-player_number = "player1"
-player_name_upper = "Surp"
-player_name_lower = "surp"
-max_movement = 4
+script = ExtResource( 31 )
 
 [node name="PlayerCamera" type="Camera" parent="Players/Player1"]
 transform = Transform( 1, 0, 0, 0, 0.931495, 0.363755, 0, -0.363755, 0.931495, 1.531, 6.91326, 14.7294 )
@@ -197,6 +194,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.424805, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BuffIdle"
+frame = 3
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
@@ -224,7 +222,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "JogIdle"
-frame = 3
+frame = 1
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player3"]
@@ -252,7 +250,6 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BeatIdle"
-frame = 3
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]
@@ -1226,8 +1223,6 @@ category = "Death"
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceA" to="Spaces" method="_on_ChoiceA_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceB" to="Spaces" method="_on_ChoiceB_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceC" to="Spaces" method="_on_ChoiceC_pressed"]
-[connection signal="playerAdd" from="Players/Player1" to="GUI/TopBar" method="_on_playerAdd"]
-[connection signal="playerLose" from="Players/Player1" to="GUI/TopBar" method="_on_playerLose"]
 [connection signal="playerAdd" from="Players/Player2" to="GUI/TopBar" method="_on_playerAdd"]
 [connection signal="playerLose" from="Players/Player2" to="GUI/TopBar" method="_on_playerLose"]
 [connection signal="playerAdd" from="Players/Player3" to="GUI/TopBar" method="_on_playerAdd"]
