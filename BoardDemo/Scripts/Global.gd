@@ -15,8 +15,9 @@ func _ready():
 	
 func goto_scene(path):
 	loader = ResourceLoader.load_interactive(path)
-	if loader == null:
+	while loader == null:
 		print("error in generating loader")
+		loader = ResourceLoader.load_interactive(path)
 		return
 	get_node("/root/Loading").visible = true
 	set_process(true)
