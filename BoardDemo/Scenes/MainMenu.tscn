@@ -1,0 +1,263 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Assets/Title/TitleScreenNoButtons3.png" type="Texture" id=2]
+[ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio Assets/trumpet_soundtrack.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Scripts/MainMenuButton.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Art/button_big_green.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Art/button_big_purple_pressed.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Art/button_big_purple.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Art/button_big_yellow.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Art/button_big_yellow_pressed.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Art/button_big_green_pressed.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Fonts/Winkle32.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Scenes/OptionMenu.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scripts/MainOptionMenu.gd" type="Script" id=14]
+
+[sub_resource type="Animation" id=1]
+resource_name = "FadeFrom"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.772549, 0.960784, 0.960784, 1 ), Color( 0.772549, 0.960784, 0.960784, 1 ), Color( 0.772549, 0.960784, 0.960784, 0 ) ]
+}
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 511.175, 299.75 )
+scale = Vector2( 0.533307, 0.554537 )
+texture = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="Sprite"]
+margin_left = -474.125
+margin_top = 142.033
+margin_right = 418.875
+margin_bottom = 499.033
+color = Color( 1, 1, 1, 0.52549 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionMenu" parent="." instance=ExtResource( 13 )]
+visible = false
+margin_left = 17.0
+margin_top = 0.63
+script = ExtResource( 14 )
+
+[node name="Credits" type="Control" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 602.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="Credits"]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Credits/CenterContainer"]
+margin_left = 62.0
+margin_top = 50.0
+margin_right = 962.0
+margin_bottom = 550.0
+rect_min_size = Vector2( 900, 500 )
+size_flags_horizontal = 0
+color = Color( 0.164706, 0.4, 0.466667, 0.745098 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="TextureButton" parent="Credits/CenterContainer/ColorRect"]
+margin_left = 680.0
+margin_top = 433.0
+margin_right = 880.0
+margin_bottom = 483.0
+rect_min_size = Vector2( 200, 50 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Credits/CenterContainer/ColorRect/Close"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "Close"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Credits/CenterContainer"]
+margin_left = 132.0
+margin_top = 100.0
+margin_right = 892.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 760, 400 )
+custom_fonts/normal_font = ExtResource( 12 )
+custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+bbcode_enabled = true
+bbcode_text = "Credits:
+
+This is where the credits would go. Please add your name and role to the credits cell of the SSSWEET spreadsheet, on the 'Text in Game' tab. We can seperate the roles or just list everybody together. We can hyperlink and do bold fonts."
+text = "Credits:
+
+This is where the credits would go. Please add your name and role to the credits cell of the SSSWEET spreadsheet, on the 'Text in Game' tab. We can seperate the roles or just list everybody together. We can hyperlink and do bold fonts."
+
+[node name="MainButtons" type="GridContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 279.0
+margin_top = 405.0
+margin_right = 735.0
+margin_bottom = 606.0
+custom_constants/vseparation = 32
+custom_constants/hseparation = 32
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="newgame" type="TextureButton" parent="MainButtons"]
+margin_right = 200.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 200, 60 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 11 )
+expand = true
+script = ExtResource( 5 )
+reference_path = "res://Scenes/WelcomeHOWTOPLAY.tscn"
+
+[node name="Label" type="Label" parent="MainButtons/newgame"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "New Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit" type="TextureButton" parent="MainButtons"]
+margin_left = 232.0
+margin_right = 432.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 200, 60 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+expand = true
+script = ExtResource( 5 )
+
+[node name="Label3" type="Label" parent="MainButtons/exit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "Exit"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="options" type="TextureButton" parent="MainButtons"]
+margin_top = 92.0
+margin_right = 200.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 200, 60 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 10 )
+expand = true
+script = ExtResource( 5 )
+reference_path = "options"
+
+[node name="Label2" type="Label" parent="MainButtons/options"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "Options"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="credits" type="TextureButton" parent="MainButtons"]
+margin_left = 232.0
+margin_top = 92.0
+margin_right = 432.0
+margin_bottom = 152.0
+rect_min_size = Vector2( 200, 60 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 10 )
+texture_hover = ExtResource( 10 )
+expand = true
+script = ExtResource( 5 )
+reference_path = "credits"
+
+[node name="Label2" type="Label" parent="MainButtons/credits"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "Credits"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 1024, 600 )
+mouse_filter = 2
+color = Color( 0.772549, 0.960784, 0.960784, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
+autoplay = "FadeFrom"
+anims/FadeFrom = SubResource( 1 )
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -2.943
+pitch_scale = 2.21
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -28.0
+autoplay = true
+[connection signal="pressed" from="Credits/CenterContainer/ColorRect/Close" to="OptionMenu" method="_on_CreditsReturn_pressed"]
+[connection signal="pressed" from="MainButtons/credits" to="OptionMenu" method="_on_credits_pressed"]

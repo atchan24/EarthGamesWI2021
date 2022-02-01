@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Characters/Animations/CharacterAnims.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Assets/Winkle-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/Loading.gd" type="Script" id=3]
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 48
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="LoadingScreen" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 430.343
+margin_top = 260.544
+margin_right = 618.343
+margin_bottom = 306.544
+custom_fonts/normal_font = SubResource( 1 )
+text = "Loading..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 943.722, 510.893 )
+scale = Vector2( 0.08, 0.08 )
+frames = ExtResource( 1 )
+animation = "BuffWalk"
+frame = 3
+playing = true
+flip_h = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+margin_right = 1025.0
+margin_bottom = 601.0
+color = Color( 0.772549, 0.960784, 0.960784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

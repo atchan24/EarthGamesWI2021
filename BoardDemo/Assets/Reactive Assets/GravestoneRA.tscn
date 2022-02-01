@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ReactiveAsset.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Demo Art/Grave_Stone.png" type="Texture" id=2]
+
+[node name="GravestoneRA" type="KinematicBody"]
+transform = Transform( 0.423596, 0, 0, 0, 0.423596, 0, 0, 0, 0.0847193, 106.79, 0, 31.503 )
+script = ExtResource( 1 )
+
+[node name="Gravestone" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000213623, 6.11623, 0.00326538 )
+billboard = 2
+texture = ExtResource( 2 )

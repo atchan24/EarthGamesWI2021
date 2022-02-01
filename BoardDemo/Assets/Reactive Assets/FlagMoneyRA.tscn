@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/ReactiveAsset.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Demo Art/Flag_Money.png" type="Texture" id=2]
+
+[node name="FlagMoneyRA" type="KinematicBody"]
+transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, -34.811, 0, -92.049 )
+script = ExtResource( 1 )
+
+[node name="Flag_Money" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000434875, 9.67778, -0.00286865 )
+billboard = 2
+texture = ExtResource( 2 )

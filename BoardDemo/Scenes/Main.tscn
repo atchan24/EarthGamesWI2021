@@ -1,0 +1,1232 @@
+[gd_scene load_steps=80 format=2]
+
+[ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/SpaceManager.gd" type="Script" id=2]
+[ext_resource path="res://Terrain/Space.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Terrain/Tree.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Terrain/House.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/TurnQueue.gd" type="Script" id=6]
+[ext_resource path="res://UI/Spinner.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Wave 2/FloorHQ_Nugget1.png" type="Texture" id=8]
+[ext_resource path="res://UI/ChoiceButton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Terrain/Grass.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Terrain/SkyFog.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI/ChoiceGUI.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Wave 1/Bush.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Wave 1/Fire.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Wave 1/Tent.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Wave 1/Water.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Wave 1/Mountain.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Ashley_Art/City.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Reactive Assets/LittleLibraryRA.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Assets/Wave 1/Sun.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Wave 1/Squirrel.png" type="Texture" id=22]
+[ext_resource path="res://UI/EndingUI.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Assets/Ashley_Art/Tree.PNG" type="Texture" id=24]
+[ext_resource path="res://Assets/Wave 1/Rock.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Ashley_Art/Bird.PNG" type="Texture" id=26]
+[ext_resource path="res://Audio Assets/Step-1-Louder-Louder.ogg" type="AudioStream" id=27]
+[ext_resource path="res://Assets/Characters/Animations/CharacterAnims.tres" type="SpriteFrames" id=28]
+[ext_resource path="res://Audio Assets/bass_and_vibe_soundtrack.ogg" type="AudioStream" id=29]
+[ext_resource path="res://Scripts/Player_Template.gd" type="Script" id=30]
+[ext_resource path="res://Scripts/Player1.gd" type="Script" id=31]
+[ext_resource path="res://UI/TopBarUI.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Scripts/GameManager.gd" type="Script" id=38]
+[ext_resource path="res://Assets/Reactive Assets/CityHallRA.tscn" type="PackedScene" id=39]
+[ext_resource path="res://Assets/Reactive Assets/FlowerRA.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Assets/Reactive Assets/TurbineRA.tscn" type="PackedScene" id=41]
+[ext_resource path="res://Assets/Demo Art/Meeting_Sign.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Reactive Assets/HealthTentRA.tscn" type="PackedScene" id=43]
+[ext_resource path="res://Assets/Demo Art/Bank.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Demo Art/Gate.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Reactive Assets/PaintPaletteRA.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Assets/Reactive Assets/BicycleRA.tscn" type="PackedScene" id=47]
+[ext_resource path="res://Assets/Reactive Assets/MusicNoteRA.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Scripts/ReactiveAsset.gd" type="Script" id=49]
+[ext_resource path="res://Assets/Reactive Assets/HouseRA.tscn" type="PackedScene" id=50]
+[ext_resource path="res://Assets/Reactive Assets/MeetingPeopleRA.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Assets/Reactive Assets/LawBuildingRA.tscn" type="PackedScene" id=52]
+[ext_resource path="res://Assets/Demo Art/WindTurbine.PNG" type="Texture" id=53]
+[ext_resource path="res://Assets/Reactive Assets/FoodBoxRA.tscn" type="PackedScene" id=54]
+[ext_resource path="res://Assets/Reactive Assets/SolarPanelRA.tscn" type="PackedScene" id=55]
+[ext_resource path="res://Assets/Demo Art/Barn.png" type="Texture" id=56]
+[ext_resource path="res://Assets/Wave 2/Horse.png" type="Texture" id=57]
+[ext_resource path="res://Assets/Wave 2/Bench.png" type="Texture" id=58]
+[ext_resource path="res://Assets/Wave 1/Telephone Line.png" type="Texture" id=59]
+[ext_resource path="res://Assets/Wave 2/Recycling.png" type="Texture" id=60]
+[ext_resource path="res://Assets/Ashley_Art/Shell.PNG" type="Texture" id=61]
+[ext_resource path="res://Assets/Art/IMG_0709.PNG" type="Texture" id=62]
+[ext_resource path="res://Assets/Art/IMG_0733.PNG" type="Texture" id=63]
+[ext_resource path="res://Assets/Art/IMG_0735.PNG" type="Texture" id=64]
+[ext_resource path="res://Assets/Reactive Assets/LaptopRA.tscn" type="PackedScene" id=65]
+[ext_resource path="res://Assets/Wave 1/Book.png" type="Texture" id=66]
+[ext_resource path="res://Assets/Reactive Assets/ProtestLandRA.tscn" type="PackedScene" id=67]
+[ext_resource path="res://Assets/Reactive Assets/FlagMoneyRA.tscn" type="PackedScene" id=68]
+[ext_resource path="res://Assets/Art/IMG_0738.PNG" type="Texture" id=69]
+[ext_resource path="res://Assets/Art/IMG_0704.PNG" type="Texture" id=70]
+[ext_resource path="res://Audio Assets/274175__mafon2__park-ambience-mostly-birds-Good.ogg" type="AudioStream" id=71]
+[ext_resource path="res://Audio Assets/Button_Clicks.wav" type="AudioStream" id=73]
+[ext_resource path="res://Assets/Reactive Assets/SchoolRA.tscn" type="PackedScene" id=74]
+[ext_resource path="res://Assets/Reactive Assets/GravestoneRA.tscn" type="PackedScene" id=75]
+[ext_resource path="res://Assets/Reactive Assets/RainbowFlagRA.tscn" type="PackedScene" id=76]
+[ext_resource path="res://Assets/Reactive Assets/ParakeetRA.tscn" type="PackedScene" id=77]
+[ext_resource path="res://Assets/Reactive Assets/FruitTreeRA.tscn" type="PackedScene" id=78]
+
+
+[sub_resource type="CapsuleShape" id=1]
+height = 1.5
+
+[sub_resource type="PlaneMesh" id=2]
+size = Vector2( 1000, 1000 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.0705882, 0.537255, 0.109804, 1 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.101961, 0.196078, 0.709804, 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_texture = ExtResource( 8 )
+
+[sub_resource type="PlaneMesh" id=6]
+material = SubResource( 5 )
+size = Vector2( 300, 300 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 500, 0, 500 )
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 38 )
+
+[node name="AmbientAudio" type="Node" parent="."]
+pause_mode = 2
+
+[node name="BirdAmbience" type="AudioStreamPlayer" parent="AmbientAudio"]
+stream = ExtResource( 71 )
+volume_db = -5.049
+autoplay = true
+
+[node name="BGM" type="AudioStreamPlayer" parent="AmbientAudio"]
+stream = ExtResource( 29 )
+volume_db = -28.0
+autoplay = true
+
+[node name="Click" type="AudioStreamPlayer" parent="AmbientAudio"]
+stream = ExtResource( 73 )
+volume_db = -4.4
+pitch_scale = 2.35
+
+[node name="GUI" type="Node" parent="."]
+pause_mode = 2
+
+[node name="Spinner" parent="GUI" instance=ExtResource( 7 )]
+
+[node name="ChoiceGUI" parent="GUI" instance=ExtResource( 13 )]
+
+[node name="Choice Buttons" type="Node" parent="GUI"]
+
+[node name="ChoiceA" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
+margin_left = 111.0
+margin_top = 242.0
+margin_right = 360.0
+margin_bottom = 521.0
+text = "A"
+
+[node name="ChoiceB" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
+margin_left = 392.0
+margin_top = 251.0
+margin_right = 640.0
+margin_bottom = 537.0
+text = "B"
+
+[node name="ChoiceC" parent="GUI/Choice Buttons" instance=ExtResource( 9 )]
+margin_left = 671.0
+margin_top = 254.0
+margin_right = 920.0
+margin_bottom = 539.0
+text = "C"
+
+[node name="EndingUI" parent="GUI" instance=ExtResource( 23 )]
+visible = false
+
+[node name="TopBar" parent="GUI" instance=ExtResource( 34 )]
+margin_left = -1.0
+margin_top = -1.0
+margin_right = -1.0
+margin_bottom = -383.0
+
+[node name="PauseMenu" parent="." instance=ExtResource( 11 )]
+
+[node name="Sun" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.910785, 0.412882, 0, -0.412882, 0.910785, 204.159, 38.4672, -8.56393 )
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 12 )]
+
+[node name="Players" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="Player1" parent="Players" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7771, 1.69547, 2.02599 )
+script = ExtResource( 31 )
+
+[node name="PlayerCamera" type="Camera" parent="Players/Player1"]
+transform = Transform( 1, 0, 0, 0, 0.931495, 0.363755, 0, -0.363755, 0.931495, 1.531, 6.91326, 14.7294 )
+current = true
+fov = 61.8
+near = 5.02
+far = 451.5
+
+[node name="Player2" type="KinematicBody" parent="Players"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.4563, 2.07182, -19.2213 )
+script = ExtResource( 30 )
+player_number = "player2"
+player_name_upper = "Buff"
+player_name_lower = "buff"
+self_score = 30
+
+[node name="CollisionShape" type="CollisionShape" parent="Players/Player2"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Players/Player2"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.424805, 0 )
+billboard = 2
+frames = ExtResource( 28 )
+animation = "BuffIdle"
+frame = 3
+playing = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
+stream = ExtResource( 27 )
+unit_db = 80.0
+max_db = -0.776
+max_distance = 100.0
+
+[node name="Player3" type="KinematicBody" parent="Players"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.084, 1.31781, -9.86353 )
+script = ExtResource( 30 )
+player_number = "player3"
+player_name_upper = "Jog"
+player_name_lower = "jog"
+self_score = 20
+max_movement = 6
+
+[node name="CollisionShape" type="CollisionShape" parent="Players/Player3"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Players/Player3"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
+billboard = 2
+frames = ExtResource( 28 )
+animation = "JogIdle"
+frame = 1
+playing = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player3"]
+stream = ExtResource( 27 )
+unit_db = 80.0
+max_db = -0.776
+max_distance = 100.0
+
+[node name="Player4" type="KinematicBody" parent="Players"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.4914, 1.45217, -14.6549 )
+script = ExtResource( 30 )
+player_number = "player4"
+player_name_upper = "Beat"
+player_name_lower = "beat"
+self_score = 25
+max_movement = 8
+
+[node name="CollisionShape" type="CollisionShape" parent="Players/Player4"]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Players/Player4"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
+billboard = 2
+frames = ExtResource( 28 )
+animation = "BeatIdle"
+playing = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]
+stream = ExtResource( 27 )
+unit_db = 80.0
+max_db = -0.776
+max_distance = 100.0
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="Category Assets" type="Node" parent="Environment"]
+
+[node name="Justice" type="Node" parent="Environment/Category Assets"]
+
+[node name="CityHall2" parent="Environment/Category Assets/Justice" instance=ExtResource( 39 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -49.837, -99.508 )
+visible = false
+
+[node name="Equity" type="Node" parent="Environment/Category Assets"]
+
+[node name="RainbowFlagRA" parent="Environment/Category Assets/Equity" instance=ExtResource( 76 )]
+transform = Transform( 0.737002, 0, 0, 0, 0.737002, 0, 0, 0, 0.737002, 84.9766, -16.0837, -39.8599 )
+visible = false
+
+[node name="Health" type="Node" parent="Environment/Category Assets"]
+
+[node name="HealthTentRA" parent="Environment/Category Assets/Health" instance=ExtResource( 43 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 102.924, -14.5282, -59.9636 )
+visible = false
+
+[node name="Education" type="Node" parent="Environment/Category Assets"]
+
+[node name="SchoolRA" parent="Environment/Category Assets/Education" instance=ExtResource( 74 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.1554, -23.3219, -89.5178 )
+visible = false
+script = ExtResource( 49 )
+
+[node name="Housing" type="Node" parent="Environment/Category Assets"]
+
+[node name="HouseRA" parent="Environment/Category Assets/Housing" instance=ExtResource( 50 )]
+transform = Transform( 1.00483, 0, 0, 0, 1.00483, 0, 0, 0, 0.200966, 77.8143, -22.3427, -90.3234 )
+visible = false
+script = ExtResource( 49 )
+
+[node name="Food" type="Node" parent="Environment/Category Assets"]
+
+[node name="FoodBoxRA" parent="Environment/Category Assets/Food" instance=ExtResource( 54 )]
+transform = Transform( 0.47354, 0, 0, 0, 0.47354, 0, 0, 0, 0.363425, 32.7017, -9.54966, -92.9802 )
+visible = false
+script = ExtResource( 49 )
+
+[node name="Community" type="Node" parent="Environment/Category Assets"]
+
+[node name="MeetingPeopleRA" parent="Environment/Category Assets/Community" instance=ExtResource( 51 )]
+transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, 2.841, -13.2989, -82.363 )
+visible = false
+script = ExtResource( 49 )
+
+[node name="Work" type="Node" parent="Environment/Category Assets"]
+
+[node name="LaptopRA" parent="Environment/Category Assets/Work" instance=ExtResource( 65 )]
+transform = Transform( 0.523221, 0, 0, 0, 0.523221, 0, 0, 0, 0.104644, -50.3489, -11.5259, -94.6504 )
+visible = false
+script = ExtResource( 49 )
+
+[node name="Energy" type="Node" parent="Environment/Category Assets"]
+
+[node name="TurbineRA" parent="Environment/Category Assets/Energy" instance=ExtResource( 41 )]
+transform = Transform( 1.78123, 0, 0, 0, 1.78123, 0, 0, 0, 0.356246, -83.9572, -32.3922, -57.2621 )
+visible = false
+script = ExtResource( 49 )
+
+[node name="Mutual Aid" type="Node" parent="Environment/Category Assets"]
+
+[node name="FlagMoneyRA" parent="Environment/Category Assets/Mutual Aid" instance=ExtResource( 68 )]
+transform = Transform( 0.685586, 0, 0, 0, 0.685586, 0, 0, 0, 0.137118, -76.202, -18.2506, -33.2577 )
+visible = false
+
+[node name="Just Migration" type="Node" parent="Environment/Category Assets"]
+
+[node name="ParakeetRA" parent="Environment/Category Assets/Just Migration" instance=ExtResource( 77 )]
+transform = Transform( 0.287592, 0, 0, 0, 0.287592, 0, 0, 0, 0.287592, -101.829, -10.7134, -5.258 )
+visible = false
+
+[node name="Nature" type="Node" parent="Environment/Category Assets"]
+
+[node name="FlowerRA" parent="Environment/Category Assets/Nature" instance=ExtResource( 40 )]
+transform = Transform( 0.367082, 0, 0, 0, 0.367082, 0, 0, 0, 0.0734163, -66.4387, -10.3485, 36.757 )
+visible = false
+
+[node name="Recreation" type="Node" parent="Environment/Category Assets"]
+
+[node name="MusicNoteRA" parent="Environment/Category Assets/Recreation" instance=ExtResource( 48 )]
+transform = Transform( 0.40097, 0, 0, 0, 0.40097, 0, 0, 0, 0.30773, -111.611, -9.87679, 76.984 )
+visible = false
+
+[node name="Environment" type="Node" parent="Environment/Category Assets"]
+
+[node name="FruitTreeRA" parent="Environment/Category Assets/Environment" instance=ExtResource( 78 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -82.869, -20.306, 87.684 )
+visible = false
+
+[node name="Decolonization" type="Node" parent="Environment/Category Assets"]
+
+[node name="ProtestLandRA" parent="Environment/Category Assets/Decolonization" instance=ExtResource( 67 )]
+transform = Transform( 0.47769, 0, 0, 0, 0.47769, 0, 0, 0, 0.0955384, -12.853, -11.2391, 93.04 )
+visible = false
+
+[node name="Storytelling" type="Node" parent="Environment/Category Assets"]
+
+[node name="LittleLibraryRA" parent="Environment/Category Assets/Storytelling" instance=ExtResource( 20 )]
+transform = Transform( 0.539396, 0, 0, 0, 0.539396, 0, 0, 0, 0.539396, 25.605, -14.1263, 88.593 )
+visible = false
+
+[node name="Transport" type="Node" parent="Environment/Category Assets"]
+
+[node name="BicycleRA" parent="Environment/Category Assets/Transport" instance=ExtResource( 47 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.045, -14.3299, 90.595 )
+visible = false
+
+[node name="Arts" type="Node" parent="Environment/Category Assets"]
+
+[node name="PaintPaletteRA" parent="Environment/Category Assets/Arts" instance=ExtResource( 46 )]
+transform = Transform( 0.274485, 0, 0, 0, 0.322651, 0, 0, 0, 0.274485, 65.29, -13.0454, 92.172 )
+visible = false
+
+[node name="Resources" type="Node" parent="Environment/Category Assets"]
+
+[node name="SolarPanelRA" parent="Environment/Category Assets/Resources" instance=ExtResource( 55 )]
+transform = Transform( 0.71767, 0, 0, 0, 0.71767, 0, 0, 0, 0.143534, 67.654, -13.4053, 63.496 )
+visible = false
+
+[node name="Truth" type="Node" parent="Environment/Category Assets"]
+
+[node name="LawBuildingRA" parent="Environment/Category Assets/Truth" instance=ExtResource( 52 )]
+transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, 13.724, -30.1119, -103.077 )
+visible = false
+
+[node name="Death" type="Node" parent="Environment/Category Assets"]
+
+[node name="GravestoneRA" parent="Environment/Category Assets/Death" instance=ExtResource( 75 )]
+transform = Transform( 0.423596, 0, 0, 0, 0.423596, 0, 0, 0, 0.0847193, 106.79, -11.962, 31.503 )
+visible = false
+
+[node name="Ground" type="StaticBody" parent="Environment"]
+
+[node name="MeshInstance" type="MeshInstance" parent="Environment/Ground"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48146, -3.66754, -0.112953 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="Environment/Ground"]
+transform = Transform( 0.0575987, 0, 0, 0, 0.0115197, 0, 0, 0, 0.115197, -146.453, 0.001, 74.5385 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="Environment/Ground"]
+transform = Transform( 0.498327, -0.00817472, 0, 0.0408736, 0.0996653, 0, 0, 0, 1, 499.221, 0.001, 103.597 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 4 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="Environment/Ground"]
+transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, -0.000106812, 0, -3.8147e-05 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Environment/Ground"]
+shape = SubResource( 7 )
+
+[node name="Trees" type="Node" parent="Environment"]
+
+[node name="Tree" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -76.9319, 4.51643, -18.3867 )
+
+[node name="Tree2" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.9984, 4.32194, -12.7383 )
+
+[node name="Tree3" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -101.906, 4.21866, -5.39355 )
+
+[node name="Tree4" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1.19872, 0, 0, 0, 1, 106.186, 5.31797, -8.07542 )
+
+[node name="Tree5" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1.47829, 0, 0, 0, 1, 87.608, 6.56661, -17.4981 )
+
+[node name="Tree6" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1.46492, 0, 0, 0, 1, 76.4202, 6.4259, -6.69534 )
+
+[node name="Tree7" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -93.6113, 3.76681, -25.9128 )
+
+[node name="Tree8" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.3483, 3.76681, -16.7286 )
+
+[node name="Tree9" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -108.203, 3.76681, -44.9655 )
+
+[node name="Tree10_Grave" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 49.4654, 5.97922, 49.6531 )
+
+[node name="Tree11" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, -1.43652, 5.97922, 66.1604 )
+
+[node name="Tree12" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 47.4675, 5.97922, 68.173 )
+
+[node name="Tree13" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 33.7017, 5.97922, 73.1016 )
+
+[node name="Tree14" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 59.1301, 5.97922, 62.7706 )
+
+[node name="Tree15" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 11.1648, 5.97922, 65.1424 )
+
+[node name="Tree10_Grave2" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 99.9677, 5.97922, 45.5523 )
+
+[node name="Tree16" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 114.922, 5.97922, 43.4055 )
+
+[node name="Tree17" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 78.4754, 5.97922, 15.6876 )
+
+[node name="Tree18" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 87.3788, 5.97922, 34.3964 )
+
+[node name="Tree19" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 76.3882, 5.97922, 53.5438 )
+
+[node name="Tree20" parent="Environment/Trees" instance=ExtResource( 4 )]
+transform = Transform( 1.39389, 0, 0, 0, 1.39389, 0, 0, 0, 1.39389, 105.101, 5.97922, 21.769 )
+
+[node name="Grass" type="Node" parent="Environment"]
+
+[node name="Grass2" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.5763, 0, -4.62281 )
+
+[node name="Grass4" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -57.8718, 0, 5.5076 )
+
+[node name="Grass6" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -102.278, 0, -13.0646 )
+
+[node name="Grass18" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -78.7641, 0, -2.1321 )
+
+[node name="Grass7" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -68.8034, 0, 6.87429 )
+
+[node name="Grass9" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -74.4134, 0, -3.0451 )
+
+[node name="Grass11" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -97.0951, 0, -3.7999 )
+
+[node name="Grass12" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -67.6945, 0, 14.4565 )
+
+[node name="Grass13" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -64.8885, 0, 8.4486 )
+
+[node name="Grass14" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -97.1495, 0, 8.4486 )
+
+[node name="Grass15" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -106.535, 0, -1.50021 )
+
+[node name="Grass16" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -76.8061, 0, 5.08818 )
+
+[node name="Grass17" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -105.445, 0, 8.6608 )
+
+[node name="Grass19" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.292503, -3.8147e-06, 72.5189 )
+
+[node name="Grass20_Grave" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116.385, -3.8147e-06, 34.2998 )
+
+[node name="Grass21" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.9792, -3.8147e-06, 15.7276 )
+
+[node name="Grass22" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 109.809, -2.86103e-06, 33.4933 )
+
+[node name="Grass23" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 104.966, -3.8147e-06, 35.6665 )
+
+[node name="Grass24" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.677, -3.8147e-06, 21.1062 )
+
+[node name="Grass25" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 79.1087, -3.8147e-06, 24.9923 )
+
+[node name="Grass26" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.3377, -3.8147e-06, 43.2487 )
+
+[node name="Grass27" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 109.369, -3.8147e-06, 37.2408 )
+
+[node name="Grass28" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3137, -3.8147e-06, 76.6625 )
+
+[node name="Grass29" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.92825, -3.8147e-06, 66.7137 )
+
+[node name="Grass30" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.2439, -3.8147e-06, 77.9474 )
+
+[node name="Grass31" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74061, -3.8147e-06, 85.8025 )
+
+[node name="Grass32" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.3971, -3.8147e-06, 72.5189 )
+
+[node name="Grass33" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.102, -3.8147e-06, 82.6493 )
+
+[node name="Grass34" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.6954, -3.8147e-06, 64.0771 )
+
+[node name="Grass35" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80.2093, -3.8147e-06, 75.0096 )
+
+[node name="Grass36" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90.17, -3.8147e-06, 84.016 )
+
+[node name="Grass37" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 84.56, -3.8147e-06, 74.0966 )
+
+[node name="Grass38" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.825, -3.8147e-06, 73.3418 )
+
+[node name="Grass39" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 83.054, -3.8147e-06, 91.5982 )
+
+[node name="Grass40" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.0849, -3.8147e-06, 85.5903 )
+
+[node name="Grass41" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 61.8239, -3.8147e-06, 85.5903 )
+
+[node name="Grass42" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51.7847, -3.8147e-06, 58.1286 )
+
+[node name="Grass43" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 79.754, -3.8147e-06, 86.8752 )
+
+[node name="Grass44" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.5284, -3.8147e-06, 85.8025 )
+
+[node name="Grass" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.9948, 0, -11.1744 )
+
+[node name="Grass3" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.9958, 0, -21.4623 )
+
+[node name="Grass5" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.8095, 0, -3.60131 )
+
+[node name="Grass8" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 88.0024, 0, -13.4806 )
+
+[node name="Grass10" parent="Environment/Grass" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90.2059, 0, -5.44071 )
+
+[node name="Misc" type="Node" parent="Environment"]
+
+[node name="Bank" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, -44.5002, 12.0877, -99.7072 )
+billboard = 2
+texture = ExtResource( 44 )
+
+[node name="TelephonePole" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.73973, 0, 0, 0, 1.73973, 0, 0, 0, 0.347947, -57.5877, 7.96942, -90.2484 )
+billboard = 2
+texture = ExtResource( 59 )
+
+[node name="TelephonePole2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.73973, 0, 0, 0, 1.73973, 0, 0, 0, 0.347947, -61.9501, 7.96942, -69.7795 )
+billboard = 2
+texture = ExtResource( 59 )
+
+[node name="TelephonePole3" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.73973, 0, 0, 0, 1.73973, 0, 0, 0, 0.347947, -66.6829, 7.96942, -53.8008 )
+billboard = 2
+texture = ExtResource( 59 )
+
+[node name="TelephonePole4" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.73973, 0, 0, 0, 1.73973, 0, 0, 0, 0.347947, -74.5564, 7.96942, -40.4645 )
+billboard = 2
+texture = ExtResource( 59 )
+
+[node name="RecyclingBin" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.549121, 0, 0, 0, 0.549121, 0, 0, 0, 0.109825, -90.8054, 1.87504, -29.9086 )
+billboard = 2
+texture = ExtResource( 60 )
+
+[node name="Bench" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.823527, 0, 0, 0, 0.823527, 0, 0, 0, 0.164706, 33.3488, 2.61309, 89.4783 )
+billboard = 2
+texture = ExtResource( 58 )
+
+[node name="Bench2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.823527, 0, 0, 0, 0.823527, 0, 0, 0, 0.164706, 84.9953, 2.3941, 37.0222 )
+billboard = 2
+texture = ExtResource( 58 )
+
+[node name="Horse" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.823527, 0, 0, 0, 0.823527, 0, 0, 0, 0.164706, -68.6269, 3.67004, 85.9878 )
+billboard = 2
+texture = ExtResource( 57 )
+
+[node name="Horse2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.823527, 0, 0, 0, 0.823527, 0, 0, 0, 0.164706, -38.1854, 3.67004, 80.4254 )
+flip_h = true
+modulate = Color( 0.615686, 0.309804, 0.309804, 1 )
+billboard = 2
+texture = ExtResource( 57 )
+
+[node name="Corn" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.461878, 0.249413, 0, -0.183934, 0.626301, 0, 0, 0, 0.0994314, -48.7111, 5.05475, 72.391 )
+billboard = 2
+texture = ExtResource( 63 )
+
+[node name="Corn2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.461878, 0.249413, 0, -0.183934, 0.626301, 0, 0, 0, 0.0994314, -43.1314, 5.00698, 72.391 )
+billboard = 2
+texture = ExtResource( 63 )
+
+[node name="Corn3" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.461878, 0.249413, 0, -0.183934, 0.626301, 0, 0, 0, 0.0994314, -54.9437, 4.55734, 72.391 )
+billboard = 2
+texture = ExtResource( 63 )
+
+[node name="Corn4" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.461878, 0.249413, 0, -0.183934, 0.626301, 0, 0, 0, 0.0994314, -51.9127, 4.99102, 76.144 )
+billboard = 2
+texture = ExtResource( 63 )
+
+[node name="Corn5" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.461878, 0.249413, 0, -0.183934, 0.626301, 0, 0, 0, 0.0994314, -45.7287, 4.8505, 76.144 )
+billboard = 2
+texture = ExtResource( 63 )
+
+[node name="Barn" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.48567, 0.00819391, 0, -0.00819391, 1.48567, 0, 0, 0, 0.297139, -23.099, 9.87971, 75.52 )
+billboard = 2
+texture = ExtResource( 56 )
+
+[node name="Turbine" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, -72.9194, 11.209, -80.4942 )
+billboard = 2
+texture = ExtResource( 53 )
+
+[node name="Turbine2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.48569, 0, 0, 0, 1.48569, 0, 0, 0, 0.297139, -91.5102, 11.209, -41.2909 )
+billboard = 2
+texture = ExtResource( 53 )
+
+[node name="Canvas" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.41458, 0, 0, 0, 0.57021, 0, 0, 0, 0.41458, 63.0835, 2.17928, 91.4749 )
+billboard = 2
+texture = ExtResource( 42 )
+
+[node name="Brush" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.185681, 0, 0, 0, 0.255384, 0, 0, 0, 0.185681, 62.9534, 1.77823, 91.8313 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 64 )
+
+[node name="Seashell_Round" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.668469, 0, 0, 0, 0.668469, 0, 0, 0, 0.668469, -113.594, 1.68035, 41.8265 )
+billboard = 2
+texture = ExtResource( 61 )
+
+[node name="Seashell_Round2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.251946, 0.0628265, 0, -0.0628265, 0.251946, 0, 0, 0, 0.259661, -109.068, 1.54372, 60.5782 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 70 )
+
+[node name="Seashell_Round3" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.668469, 0, 0, 0, 0.668469, 0, 0, 0, 0.668469, -114.33, 1.68035, 83.4222 )
+flip_v = true
+billboard = 2
+texture = ExtResource( 61 )
+
+[node name="Seashell_Long" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.288728, 0, 0, 0, 0.288728, 0, 0, 0, 0.288728, -107.46, 0.537444, 75.7593 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 69 )
+
+[node name="Gate" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.12935, 0, 0, 0, 1.12935, 0, 0, 0, 1.12935, 106.778, 2.01801, 41.9743 )
+flip_h = true
+texture = ExtResource( 45 )
+
+[node name="Gate2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1.12935, 0, 0, 0, 1.12935, 0, 0, 0, 1.12935, 106.778, 2.01801, 25.8975 )
+flip_h = true
+texture = ExtResource( 45 )
+
+[node name="Gate3" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.00877107, 0, -1.12931, 0, 1.12935, 0, 1.12931, 0, 0.00877107, 99.0907, 2.01801, 34.2689 )
+flip_h = true
+texture = ExtResource( 45 )
+
+[node name="Gate4" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.00877107, 0, -1.12931, 0, 1.12935, 0, 1.12931, 0, 0.00877107, 114.287, 2.01801, 34.1508 )
+flip_h = true
+texture = ExtResource( 45 )
+
+[node name="House" parent="Environment/Misc" instance=ExtResource( 5 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 59.1189, 6.74733, 56.7292 )
+
+[node name="Bush" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.567078, 0, 0, 0, 0.343112, 0, 0, 0, 1, 95.6719, 1.03657, 0 )
+billboard = 2
+texture = ExtResource( 14 )
+
+[node name="Bush2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.567078, 0, 0, 0, 0.343112, 0, 0, 0, 1, 71.142, 1.03657, -10.611 )
+billboard = 2
+texture = ExtResource( 14 )
+
+[node name="Bush3" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.567078, 0, 0, 0, 0.343112, 0, 0, 0, 1, 51.2836, 1.03657, 83.0665 )
+billboard = 2
+texture = ExtResource( 14 )
+
+[node name="Bush4" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.567078, 0, 0, 0, 0.343112, 0, 0, 0, 1, 12.0889, 1.03657, 72.696 )
+billboard = 2
+texture = ExtResource( 14 )
+
+[node name="Bush5" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.567078, 0, 0, 0, 0.343112, 0, 0, 0, 1, 99.9306, 1.03656, 52.6531 )
+billboard = 2
+texture = ExtResource( 14 )
+
+[node name="Bush6" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.567078, 0, 0, 0, 0.343112, 0, 0, 0, 1, 5.89702, 1.03657, 85.5113 )
+billboard = 2
+texture = ExtResource( 14 )
+
+[node name="Rock" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 89.9236, 0.499657, -10.611 )
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 97.171, 0.499657, -5.58938 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock3" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 72.8624, 0.499657, -8.82759 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock4" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 97.1071, -0.18661, -17.4539 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock5" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 96.0612, -0.18661, -17.4539 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock6" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 97.761, -0.18661, -17.3683 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock7" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 95.7977, -0.18661, -18.0107 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock8_Grave" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 24.4157, 0.499657, 63.8585 )
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock9" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 24.2842, 0.499657, 85.2385 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock10" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 7.65375, 0.499657, 79.15 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock11" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 55.7814, 0.721377, 70.5237 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock12" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 15.2748, 0.628927, 63.8302 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock13" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 57.0128, 0.283319, 79.5413 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Rock14" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 72.6211, 0.635997, 57.8056 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 25 )
+
+[node name="Tent" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 103.77, 3.01182, -20.3109 )
+billboard = 2
+texture = ExtResource( 16 )
+
+[node name="Fire" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 96.8788, 0.976644, -17.8844 )
+billboard = 2
+texture = ExtResource( 15 )
+
+[node name="TreeAlt" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.2695, 6.0239, -21.5079 )
+billboard = 2
+texture = ExtResource( 24 )
+
+[node name="TreeAlt2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.501, 6.0239, -23.9329 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 24 )
+
+[node name="TreeAlt3" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111.732, 6.0239, -1.62677 )
+billboard = 2
+texture = ExtResource( 24 )
+
+[node name="Squirrel" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, 76.9658, 0.787371, -4.28392 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 22 )
+
+[node name="Squirrel2" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 1, -104.554, 0.787369, -4.24696 )
+billboard = 2
+texture = ExtResource( 22 )
+
+[node name="Book" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.285093, 0, 0, 0, 0.285093, 0, 0, 0, 1.42547, 33.3564, 3.25763, 89.8939 )
+billboard = 2
+texture = ExtResource( 66 )
+
+[node name="Bird" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 1, 96.8061, 2.91642, 0.184485 )
+billboard = 2
+texture = ExtResource( 26 )
+
+[node name="Background" type="Node" parent="Environment/Misc"]
+
+[node name="Mountain" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, 219.793, 63.6407, -132.634 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain2" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, 358.894, 67.1092, -124.822 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain3" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 1, 164.694, 50.4, -129.378 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain4" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, -93.3832, 63.6407, -144.301 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain10" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, -413.342, 63.6407, -202.239 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain11" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, -340.051, 67.1092, -202.239 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain12" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 1, -22.1499, 50.4, -126.67 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain13" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, -119.268, 63.6407, -127.316 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain5" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, 46.5944, 67.1092, -147.658 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain6" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 1, 94.9876, 50.4, -129.378 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain7" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, 312.367, 63.6407, -138.22 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain8" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 1, -246.409, 67.1092, -160.903 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Mountain9" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 12, 0, 0, 0, 12, 0, 0, 0, 1, 282.755, 18.7245, -121.835 )
+billboard = 2
+shaded = true
+texture = ExtResource( 18 )
+
+[node name="Water" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -168.26, 0.56577, 43.6141 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water2" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -137.419, 1.39077, 56.4495 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water3" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -164.194, 0.565762, 52.3109 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water4" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -150.775, 1.03184, 32.8328 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water13" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -168.26, 0.56577, 78.5799 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water14" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -164.194, 0.565762, 87.2767 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water15" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -150.775, 1.03184, 67.7986 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water5" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -166.944, 0.565766, 24.2007 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water6" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -136.256, -0.18126, 47.9821 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water7" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -136.1, 0.56577, 28.4874 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water8" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -137.176, 1.03184, 39.5876 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water9" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -137.419, 1.03184, 91.8495 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water10" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -140.563, 1.03184, 83.3822 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water11" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -136.1, 1.82128, 63.8874 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="Water12" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -138.877, -0.916085, 74.9876 )
+billboard = 2
+shaded = true
+texture = ExtResource( 17 )
+
+[node name="City" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 2.26811, 0, 0, 0, 2.26811, 0, 0, 0, 0.453622, -47.1751, 13.7135, -106.381 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 62 )
+
+[node name="City3" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, -78.1518, 13.4881, -102.008 )
+billboard = 2
+texture = ExtResource( 19 )
+
+[node name="City2" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, -14.9634, 13.4881, -102.878 )
+billboard = 2
+texture = ExtResource( 19 )
+
+[node name="City4" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 1.91853, 0, 0, 0, 1.91853, 0, 0, 0, 0.383706, 36.0991, 11.9983, -108.401 )
+flip_h = true
+billboard = 2
+texture = ExtResource( 62 )
+
+[node name="City5" type="Sprite3D" parent="Environment/Misc/Background"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, 91.1707, 13.4881, -106.753 )
+billboard = 2
+texture = ExtResource( 19 )
+
+[node name="Sun" type="Sprite3D" parent="Environment/Misc"]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, -190.512, 68.256, -172.129 )
+billboard = 2
+texture = ExtResource( 21 )
+
+[node name="Camera" type="Camera" parent="Environment/Misc"]
+transform = Transform( 0.937925, 0.0439387, -0.344043, 0, 0.991943, 0.126684, 0.346837, -0.11882, 0.930369, 81.2938, 6.28681, 5.88307 )
+far = 646.3
+
+[node name="Spaces" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Space" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86.1491, -3.8147e-06, 4.82499 )
+category = "Justice"
+
+[node name="Space2" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81.0252, 0, -21.2346 )
+category = "Equity"
+
+[node name="Space3" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 92.4301, 0, -47.5987 )
+category = "Health"
+
+[node name="Space4" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 89.5807, 0, -78.3195 )
+category = "Education"
+
+[node name="Space5" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54.6555, 3.8147e-06, -88.1127 )
+category = "Housing"
+
+[node name="Space6" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1697, -1.90735e-06, -100.456 )
+category = "Food"
+
+[node name="Space7" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.43973, 0, -86.3052 )
+category = "Community"
+
+[node name="Space8" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -42.0501, -3.8147e-06, -80.2685 )
+category = "Work"
+
+[node name="Space9" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -58.2001, 0, -40.6301 )
+category = "Energy"
+
+[node name="Space10" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -83.4815, 0, -24.1128 )
+category = "Mutual Aid"
+
+[node name="Space11" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -92.4598, 0, 0.912515 )
+category = "Just Migration"
+
+[node name="Space12" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60.7971, -1.14441e-05, 37.8342 )
+category = "Nature"
+
+[node name="Space13" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -101.437, -3.8147e-06, 82.6815 )
+category = "Recreation"
+
+[node name="Space14" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -85.8301, 7.62939e-06, 96.5527 )
+category = "Environment"
+
+[node name="Space15" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0832, -3.8147e-06, 100.753 )
+category = "Decolonization"
+
+[node name="Space16" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6622, 0, 94.3812 )
+category = "Storytelling"
+
+[node name="Space17" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.2787, 0, 98.7954 )
+category = "Transport"
+
+[node name="Space18" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.1632, 0, 94.6457 )
+category = "Arts"
+
+[node name="Space19" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.2579, -1.90735e-06, 71.9362 )
+category = "Resources"
+
+[node name="Space20" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 88.1826, -3.8147e-06, 56.3667 )
+category = "Truth"
+
+[node name="Space21" parent="Spaces" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.9817, 0, 32.7323 )
+category = "Death"
+[connection signal="pressed" from="GUI/Choice Buttons/ChoiceA" to="Spaces" method="_on_ChoiceA_pressed"]
+[connection signal="pressed" from="GUI/Choice Buttons/ChoiceB" to="Spaces" method="_on_ChoiceB_pressed"]
+[connection signal="pressed" from="GUI/Choice Buttons/ChoiceC" to="Spaces" method="_on_ChoiceC_pressed"]
+[connection signal="playerAdd" from="Players/Player2" to="GUI/TopBar" method="_on_playerAdd"]
+[connection signal="playerLose" from="Players/Player2" to="GUI/TopBar" method="_on_playerLose"]
+[connection signal="playerAdd" from="Players/Player3" to="GUI/TopBar" method="_on_playerAdd"]
+[connection signal="playerLose" from="Players/Player3" to="GUI/TopBar" method="_on_playerLose"]
+[connection signal="playerAdd" from="Players/Player4" to="GUI/TopBar" method="_on_playerAdd"]
+[connection signal="playerLose" from="Players/Player4" to="GUI/TopBar" method="_on_playerLose"]

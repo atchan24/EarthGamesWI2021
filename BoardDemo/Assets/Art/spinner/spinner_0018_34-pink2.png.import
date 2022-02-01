@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spinner_0018_34-pink2.png-6c6e4934aa205eb822026c382546b564.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Art/spinner/spinner_0018_34-pink2.png"
+dest_files=[ "res://.import/spinner_0018_34-pink2.png-6c6e4934aa205eb822026c382546b564.stex" ]
+
+[params]
+
+compress/mode=1
+compress/lossy_quality=0.6
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

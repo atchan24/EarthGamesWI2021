@@ -1,0 +1,369 @@
+{
+    "Justice": [
+        {
+            "pillar": "Repair",
+            "prompt": "It’s time for the end of white supremacy - for Black, Indigenous, and People Of Color (BIPOC)  liberation, reparations, and collective evolution.",
+            "self": {
+                "choice": "Make a post on social media to share your support."
+            },
+            "society": {
+                "choice": "Organize to achieve land back and reparations through social, cultural, economic and political movements."
+            },
+            "sustainability": {
+                "choice": "Prioritize the most affected communities by sending a continuous donation to services with low funding."
+            }
+        }
+    ],
+    "Equity": [
+        {
+            "pillar": "Protect",
+            "prompt": "Black, Indigenous, and People of Color (BIPOC) and LGBTQ+ communities are still fighting for their rights to control their own destiny and achieve equity.",
+            "self": {
+                "choice" : "Make sure you can vote freely to make your voice heard."
+            },
+            "society": {
+		"choice" : "Support movements to pass bills to protect voting rights by calling your representatives or protesting."
+		},
+            "sustainability": {
+		"choice" : "Make sure impacted communities can control their own lives and environment through treaties, representation, and equal legal protections rooted in historic understanding."
+		}
+        }
+    ],
+    "Health": [
+        {
+            "pillar": "Invest",
+            "prompt": "Honor your breath, the breath of all people, and the air itself as a way to center in health.",
+            "self": {
+                "choice": "Take 5 minutes to deeply breathe some fresh air (meditate)."
+            },
+            "society": {
+                "choice": "Learn CPR to help people breathe."
+            },
+            "sustainability": {
+                "choice": "Read and communicate the Green New Deal and other visions for a just transition to a regenerative economy - so we can all breathe a sigh of relief in clean air."
+            }
+        },
+        {
+            "pillar": "Protect",
+            "prompt": "Take steps to protect yourself, others, and the natural world.",
+            "self": {
+                "choice": "Get your coronavirus vaccine if safe for you."
+            },
+            "society": {
+                "choice": "Call your members of Congress to advocate for Medicare For All."
+            },
+            "sustainability": {
+                "choice": "Prevent further encroachment into wild places to protect environmental health."
+            }
+        }
+    ],
+    "Education": [
+        {
+            "pillar": "Repair",
+            "prompt": "The American education system has many great qualities or intentions; it also has a lot of room to grow as a vehicle and key piece of reparations.",
+            "self": {
+                "choice": "Read The 1619 Project to educate yourself on the consequences of slavery and the contributions of Black Americans"
+            },
+            "society": {
+                "choice": "Organize a School Strike for Equity in funding and representation."
+            },
+            "sustainability": {
+                "choice": "Run for school board on a Reparations platform."
+            }
+        }
+    ],
+    "Housing": [
+        {
+            "pillar": "Repair",
+            "prompt": "We believe housing is a human right so everyone should have a home, and a sustainable world where everyone can live in harmony with the Earth.",
+            "self": {
+                "choice": "Live in an affordable, comfortable home where you don’t worry about paying the bills - sanctuary."
+            },
+            "society": {
+                "choice": "Support universal green housing efforts with transit connected, walkable communities through localized advocacy in your community through the Green New Deal Network."
+            },
+            "sustainability": {
+                "choice": "Promote a Global Green New Deal - green public housing at the national and global level."
+            }
+        }
+    ],
+    "Food": [
+        {
+            "pillar": "Repair",
+            "prompt": "Repair our bodies and our relationships to the Earth by growing and sharing food while honoring the land and water in which it grows.",
+            "self": {
+                "choice": "Take care of your body, all people, and the Earth by eating more plant-based meals."
+            },
+            "society": {
+                "choice": "Advocate with your members of Congress for food stamps in the US and nutrition for all globally so everyone can get what they need to survive and thrive."
+            },
+            "sustainability": {
+                "choice": "Support small farmers to employ sustainable farming practices and localize food supplies,  in large-scale agribusiness."
+            }
+        }   
+    ],
+    "Community": [
+        {
+            "pillar": "Protect",
+            "prompt": "We can take responsibility for our own parts of the world on a local level. Think global, and act local!",
+            "self": {
+                "choice": "Get to know your neighborhood while getting exercise by walking/biking to work and errands"
+            },
+            "society": {
+                "choice": "Organize community meetings to listen to neighbors’ needs and concerns."
+            },
+            "sustainability": {
+                "choice": "Developing a Green Benefit District plan for your neighborhood."
+            }
+        }   
+    ],
+    "Work": [
+        {
+            "pillar": "Transform",
+            "prompt": "Work can and should be a place for liberation, balance, and positive change.  It’s one way we contribute to society and a sustainable future.",
+            "self": {
+                "choice": "If you feel like you are overly responsible, make space for and follow new leadership, and kick back to rest and totally let go of the day."
+            },
+            "society": {
+                "choice": "Accept a position of leadership in your democratic Labor Union."
+            },
+            "sustainability": {
+                "choice": "Establish zero waste guidelines for your workplace."
+            }
+        }   
+    ],
+    "Energy": [
+        {
+            "pillar": "Invest",
+            "prompt": "We have to invest time, energy and money into universal access to a clean, sustainable power grid.",
+            "self": {
+                "choice": "Put up a clothes line for the ultimate solar clothes dryer."
+            },
+            "society": {
+                "choice": "Start a clean power utility in your community."
+            },
+            "sustainability": {
+                "choice": "Introduce a solar feed-in tariff for farmers to become sustainable and generate a secondary income."
+            }
+        }   
+    ],
+    "Mutual Aid": [
+        {
+            "pillar": "Repair",
+            "prompt": "People should come together as a community to support each other directly with resources and services to fulfill needs and address systemic problems.",
+            "self": {
+                "choice": "Look up an online how-to video to repair a broken object or appliance"
+            },
+            "society": {
+                "choice": "Establish a Fix-it Clinic in your area"
+            },
+            "sustainability": {
+                "choice": "Implement a right-to-repair policy so we can make planned obsolescence obsolete."
+            }
+        },
+        {
+            "pillar": "Invest",
+            "prompt": "Mutual aid (people coming together as communities to support each other directly with resources and services) is gaining ground as a concept and tactic for fulfilling needs and addressing systemic problems.",
+            "self": {
+                "choice": "Provide a Skill Share session as a “Public Amateur”"
+            },
+            "society": {
+                "choice": "Organize a weekend Skill Share event with fellow Public Amateurs"
+            },
+            "sustainability": {
+		"choice": "Build and maintain a community garden"
+		}
+        }
+    ],
+    "Just Migration": [
+        {
+            "pillar": "Protect",
+            "prompt": "It is critical that wealthy consumer nations welcome those who have been displaced from their homes due to inequities.",
+            "self": {
+                "choice": "Read poetry or watch videos about migration struggles and solidarity."
+            },
+            "society": {
+                "choice": "Advocate for migrants rights and services, by lobbying, protesting, civil disobedience, or direct service."
+            },
+            "sustainability": {
+                "choice": "Help ensure migrants are some of the first to benefit from clean energy and practices."
+            }
+        }   
+    ],
+    "Nature": [
+        {
+            "pillar": "Protect",
+            "prompt": "Nature in all its forms has the right to exist, persist, maintain, and regenerate its vital cycles.",
+            "self": {
+                "choice": "Chill out under your favorite tree and observe seasonal changes"
+            },
+            "society": {
+                "choice": "Lobby local officials with the power to grant or deny permits to loggers."
+            },
+            "sustainability": {
+                "choice": "Invest and transition the logger workers to tree farmers and eco-restoration workers."
+            }
+        },
+        {
+            "pillar": "Invest",
+            "prompt": "Nature in all its forms has the right to exist, persist, maintain, and regenerate its vital cycles.",
+            "self": {
+                "choice": "Observe the cycle of the moon outside, from a window, or on an app ( ie. Sky Safari, Star Walk, Star Chart, Night Sky Pro, Pocket Universe)"
+            },
+            "society": {
+                "choice": "Observe bird behavior of individual birds, species, and interspecies  -- with other bird lovers if possible"
+            },
+            "sustainability": {
+                "choice": "Research the wisdom of the ancestors about how humans are connected to Earth and all her systems."
+            }
+        }   
+    ],
+    "Recreation": [
+        {
+            "pillar": "Invest",
+            "prompt": "All living things experience cycles of energy.  Humans need rest and play, just as nature relies on the seasons for rejuvenation.",
+            "self": {
+                "choice": "Improve your musical skills by practicing on an instrument."
+            },
+            "society": {
+                "choice": "Advocate for budgeting for public arts programs where we can collectively create and celebrate."
+            },
+            "sustainability": {
+                "choice": "Ensure vacations and recreation are sustainable by lobbying for investment in bullet train systems and plastic alternative laws."
+            }
+        }   
+    ],
+    "Environment": [
+        {
+            "pillar": "Repair",
+            "prompt": "People, animals and plants are both part of and dependent upon an overall structure that provides the conditions and resources needed for survival.",
+            "self": {
+                "choice": "Clean your space and adopt some plants for a restful home."
+            },
+            "society": {
+                "choice": "Ensure public green space is built, protected, rehabilitated, and maintained."
+            },
+            "sustainability": {
+                "choice": "Clean up the oceans as an eco-tourist activity people are subsidized to do."
+            }
+        }   
+    ],
+    "Decolonization": [
+        {
+            "pillar": "Invest",
+            "prompt": "Systems created in colonized lands are based on the privilege and worldview of the oppressor.  The hierarchy they established is the basis of inequity.",
+            "self": {
+                "choice": "Pay a Land Tax to local Indigenous people"
+            },
+            "society": {
+                "choice": "Help fund and promote a Land Trust for local Indigenous people"
+            },
+            "sustainability": {
+                "choice": "Promote adoption of traditional ecological knowledge (TEK) on all Public Lands"
+            }
+        }   
+    ],
+    "Storytelling": [
+        {
+            "pillar": "Transform",
+            "prompt": "Humans have always learned about the world through stories shared, so we must know those that reflect the truth of our full diversity.",
+            "self": {
+                "choice": "Imagine “being in another person’s shoes” to understand their perspective and how they might feel."
+            },
+            "society": {
+                "choice": "Participate in a community storytelling project. Share your story and listen to others."
+            },
+            "sustainability": {
+                "choice": "Attend your neighborhood Environmental Justice film festival."
+            }
+        }   
+    ],
+    "Transport": [
+        {
+            "pillar": "Transform",
+            "prompt": "Transportation generates the largest share of greenhouse gases.  Everyone is dependent on it, so clean and equitable methods must be accessible to all.",
+            "self": {
+                "choice": "Make sure you can easily move around by living close to public transportation in a safe, walkable, bikeable city."
+            },
+            "society": {
+                "choice": "Consider a career in public transportation planning, construction, maintenance, or operation to help people use comfortable, fast, reliable, accessible bullet trains in smart green cities."
+            },
+            "sustainability": {
+                "choice": "Help facilitate the just transition of workers and communities to clean transportation that is convenient and serves everyone equally."
+            }
+        },
+        {
+            "pillar": "Repair",
+            "prompt": "Transportation generates the largest share of greenhouse gases.  Everyone is dependent on it, so clean and equitable methods must be accessible to all.",
+            "self": {
+                "choice": "Fix up your old bike that’s been collecting dust in the garage."
+            },
+            "society": {
+                "choice": "Lobby your local city council to turn a 60s era urban freeway into a people-first boulevard."
+            },
+            "sustainability": {
+                "choice": "Replace your city’s diesel bus fleet with electric buses with dedicated lane service."
+            }
+        }    
+    ],
+    "Arts": [
+        {
+            "pillar": "Protect",
+            "prompt": "Human creativity and expression are a source of joy, recreation, appreciation of beauty, social commentary, and ingenuity.",
+            "self": {
+                "choice": "Create an arts and crafts project using eco-friendly materials."
+            },
+            "society": {
+                "choice": "Contribute to a student made video game that communicates the Green New Deal and its benefits to society."
+            },
+            "sustainability": {
+                "choice": "Lobby officials to maintain public arts budget for youth in low-income areas and schools."
+            }
+        }   
+    ],
+    "Resources": [
+        {
+            "pillar": "Repair",
+            "prompt": "Fixing and reusing may take time, but it saves on energy and resources that come with dismantling and remanufacturing.",
+            "self": {
+                "choice": "Mend the small hole in your favorite socks — a stitch in time saves 9!"
+            },
+            "society": {
+                "choice": "Volunteer to help fix the gate at your local school."
+            },
+            "sustainability": {
+                "choice": "Participate in a wetlands restoration project in your county."
+            }
+        }   
+    ],
+    "Truth": [
+        {
+            "pillar": "Repair",
+            "prompt": "Tell the truth. Demand the truth.  Strive to understand the truth.",
+            "self": {
+                "choice": "Learn about white privilege, supremacy, and American exceptionalism and the harm it’s caused."
+            },
+            "society": {
+                "choice": "Organize an event where people share their stories, tactics, etc about overcoming oppression."
+            },
+            "sustainability": {
+                "choice": "Integrate a truth and reconciliation process centered in schools to learn the truth and make reparations for climate justice."
+            }
+        }   
+    ],
+    "Death": [
+        {
+            "pillar": "Transform",
+            "prompt": "All living things die.",
+            "self": {
+                "choice": "Join a 12-month group meditation practice following Stephen Levine’s “A Year to Live”"
+            },
+            "society": {
+                "choice": " Join a Threshold Choir to help families and the dying through the passing"
+            },
+            "sustainability": {
+                "choice": "Promote laws and ordinances for low-resource burial or cremation"
+            }
+        }   
+    ]
+}
