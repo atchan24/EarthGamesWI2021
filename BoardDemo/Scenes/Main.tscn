@@ -73,7 +73,6 @@
 [ext_resource path="res://Assets/Reactive Assets/ParakeetRA.tscn" type="PackedScene" id=77]
 [ext_resource path="res://Assets/Reactive Assets/FruitTreeRA.tscn" type="PackedScene" id=78]
 
-
 [sub_resource type="CapsuleShape" id=1]
 height = 1.5
 
@@ -169,6 +168,8 @@ script = ExtResource( 6 )
 [node name="Player1" parent="Players" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7771, 1.69547, 2.02599 )
 script = ExtResource( 31 )
+idle = "SurpIdle"
+walk = "SurpWalk"
 
 [node name="PlayerCamera" type="Camera" parent="Players/Player1"]
 transform = Transform( 1, 0, 0, 0, 0.931495, 0.363755, 0, -0.363755, 0.931495, 1.531, 6.91326, 14.7294 )
@@ -184,6 +185,8 @@ player_number = "player2"
 player_name_upper = "Buff"
 player_name_lower = "buff"
 self_score = 30
+idle = "BuffIdle"
+walk = "BuffWalk"
 
 [node name="CollisionShape" type="CollisionShape" parent="Players/Player2"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
@@ -212,6 +215,8 @@ player_name_upper = "Jog"
 player_name_lower = "jog"
 self_score = 20
 max_movement = 6
+idle = "JogIdle"
+walk = "JogWalk"
 
 [node name="CollisionShape" type="CollisionShape" parent="Players/Player3"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
@@ -223,7 +228,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "JogIdle"
-frame = 1
+frame = 3
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player3"]
@@ -240,6 +245,8 @@ player_name_upper = "Beat"
 player_name_lower = "beat"
 self_score = 25
 max_movement = 8
+idle = "BeatIdle"
+walk = "BeatWalk"
 
 [node name="CollisionShape" type="CollisionShape" parent="Players/Player4"]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 0, 0 )
@@ -1221,6 +1228,7 @@ category = "Truth"
 [node name="Space21" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.9817, 0, 32.7323 )
 category = "Death"
+
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceA" to="Spaces" method="_on_ChoiceA_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceB" to="Spaces" method="_on_ChoiceB_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceC" to="Spaces" method="_on_ChoiceC_pressed"]
