@@ -32,8 +32,7 @@ func _process(delta):
 
 func next_player():
 	cur_turn += 1
-	print("current turn:")
-	print(cur_turn)
+	print("current turn: ", cur_turn)
 	
 	active_player = (active_player + 1) % players.size()
 	var cur = 0                   # cur gets bigger when each players 
@@ -57,7 +56,8 @@ func next_player():
 
 
 func active_player():
-	print("Turn Queue Active Player: ", active_player)
+	print("Turn Queue Active Player: ", active_player + 1)
+	print("Turn Queue Current Turn: ", cur_turn)
 	if active_player == 0:
 		emit_signal("P1_active")
 	elif active_player == 1:

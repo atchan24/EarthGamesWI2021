@@ -1212,6 +1212,7 @@ margin_top = 11.0
 margin_right = 1015.0
 margin_bottom = 567.0
 rect_min_size = Vector2( 10, 10 )
+rect_scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 18 )
 expand = true
 __meta__ = {
@@ -1233,6 +1234,7 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Glossary/TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 30.0
 margin_top = 82.0
 margin_right = 956.0
@@ -1309,6 +1311,7 @@ __meta__ = {
 anims/popupGlossary = SubResource( 19 )
 
 [node name="Invite" type="Control" parent="."]
+visible = false
 margin_top = -122.0
 margin_right = 147.0
 margin_bottom = -60.0
@@ -1352,6 +1355,7 @@ margin_top = 133.0
 margin_right = 1015.0
 margin_bottom = 689.0
 rect_min_size = Vector2( 10, 10 )
+rect_scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 18 )
 expand = true
 __meta__ = {
@@ -1624,6 +1628,7 @@ scale = Vector2( 0.15, -0.15 )
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "SurpIdle"
+frame = 2
 speed_scale = 0.7
 playing = true
 
@@ -1632,7 +1637,6 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "BuffIdle"
-frame = 4
 speed_scale = 0.7
 playing = true
 
@@ -1641,7 +1645,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "JogIdle"
-frame = 2
+frame = 5
 speed_scale = 0.7
 playing = true
 
@@ -1650,7 +1654,6 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "BeatIdle"
-frame = 4
 speed_scale = 0.7
 playing = true
 
@@ -1661,6 +1664,7 @@ anims/PopupPostChoice = SubResource( 24 )
 anims/UIDrawCard = SubResource( 25 )
 
 [node name="PopupActionCardChoice" parent="." instance=ExtResource( 22 )]
+
 [connection signal="pressed" from="Glossary/TextureButton" to="Glossary" method="_on_glossary_pressed"]
 [connection signal="pressed" from="Glossary/TextureRect/TextureButton2" to="Glossary" method="_on_CloseGlossary_pressed"]
 [connection signal="pressed" from="Invite/TextureButton" to="Invite" method="_on_invite_pressed"]

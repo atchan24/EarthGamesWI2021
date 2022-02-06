@@ -193,6 +193,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "JogWalk"
+frame = 4
 speed_scale = 0.7
 playing = true
 
