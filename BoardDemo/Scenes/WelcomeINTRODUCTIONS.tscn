@@ -177,7 +177,6 @@ __meta__ = {
 visible = false
 frames = ExtResource( 2 )
 animation = "BeatWalk"
-frame = 5
 speed_scale = 0.7
 playing = true
 
@@ -185,7 +184,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "BuffWalk"
-frame = 3
+frame = 4
 speed_scale = 0.7
 playing = true
 
@@ -193,7 +192,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "JogWalk"
-frame = 4
+frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -201,7 +200,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "SurpWalk"
-frame = 4
+frame = 5
 speed_scale = 0.7
 playing = true
 

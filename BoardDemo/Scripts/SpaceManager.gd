@@ -36,11 +36,11 @@ func _ready():
 
 
 func start_card_event(category, player, bonus):
-	var n = rng.randi_range(0, 4)
-	if n == 0:
-		start_other_card_event(player)
-	else:
-		start_action_card_event(category, player, bonus)
+#	var n = rng.randi_range(0, 4)
+#	if n == 0:
+#		start_other_card_event(player)
+#	else:
+	start_action_card_event(category, player, bonus)
 
 
 func start_action_card_event(category, player, bonus):
@@ -70,7 +70,8 @@ func start_action_card_event(category, player, bonus):
 	choice_gui.get_node("Control/ChoiceBText").text = card["society"]["choice"]
 	choice_gui.get_node("Control/ChoiceCText").text = card["sustainability"]["choice"]
 	# img path
-	choice_gui.change_background(category, "res://Assets/Cards/Card_" + category.replace(" ", "") + ".png")
+	#choice_gui.change_background(category, "res://Assets/Cards/Card_" + category.replace(" ", "") + ".png")
+	choice_gui.change_background(category, "res://Assets/Cards/" + category.replace(" ", "") + ".png")
 	
 	popup_ACchoice.reset_popup(category)
 	
