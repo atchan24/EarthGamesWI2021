@@ -19,6 +19,8 @@ var invite_popup = null
 var first_round = false
 var _round = 0
 
+var option_clicked = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
@@ -88,13 +90,19 @@ func start_action_card_event(category, player, bonus, end_turn):
 
 
 func _on_ChoiceA_pressed():
-	handle_events_demo("choice-a", false)
+	if !option_clicked:
+		option_clicked = true
+		handle_events_demo("choice-a", false)
 
 func _on_ChoiceB_pressed():
-	handle_events_demo("choice-b", false)
+	if !option_clicked:
+		option_clicked = true
+		handle_events_demo("choice-b", false)
 
 func _on_ChoiceC_pressed():
-	handle_events_demo("choice-c", false)
+	if !option_clicked:
+		option_clicked = true
+		handle_events_demo("choice-c", false)
 
 func check_square_for_teammates():
 	pass
@@ -153,6 +161,7 @@ func handle_events_demo(c, end_turn):
 		# Popup in top left corner
 		popup_ACchoice.popup()
 		yield(get_tree().create_timer(5.0), "timeout")
+		option_clicked = false
 		# This waits for the popup Action Card Choice to pop down
 		popup_post_card_event(s1, s2, s3)
 #	ALL OF THIS NEEDS TO BE MOVED
@@ -208,5 +217,6 @@ func handle_events(c):
 			a.visible = true
 			break
 	cur_player.active = false
+	
 	# var new_pause_state = not get_tree().paused
 	# get_tree().paused = new_pause_state

@@ -75,12 +75,12 @@ func _process(_delta):
 #			get_parent().cur_turn += 1
 #			counted_turn = true
 		
-	if moving:
+	if moving and roll > 0:
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
 		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity * ceil(roll / 1.5))
 		sprite.set_flip_h(pos.x > 0)
-		if pos.length() < 1 :
+		if pos.length() < 1 and roll > 0:
 			if spaces[current].category != "Travel":
 				roll -= 1
 			
@@ -98,9 +98,6 @@ func _process(_delta):
 			current += 1
 			if current == 21:
 				current = 0      # This lets the player go past the last square
-		sprite.set_animation(walk)
-		if !player_audio.playing:
-			player_audio.play(0.0)
 	else:
 		sprite.set_animation(idle)
 		if player_audio.playing:
