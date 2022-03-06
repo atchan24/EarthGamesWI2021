@@ -76,6 +76,7 @@ func _process(_delta):
 #			counted_turn = true
 		
 	if moving and roll > 0:
+		sprite.set_animation(walk)
 		var pos = spaces[current].translation - global_transform.origin
 		pos = Vector3(pos.x, 0, pos.z)
 		move_and_slide(Vector3(pos.x, 0, pos.z).normalized() * velocity * ceil(roll / 1.5))
