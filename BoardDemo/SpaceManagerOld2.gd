@@ -128,7 +128,7 @@ func handle_events_demo(c, end_turn):
 #	invite_popup.play_backwards("inviteMenu")
 #	choice_gui.get_node("AnimationPlayer").play_backwards("DrawCard")
 	
-#	cur_player.update_values(s1 + cur_bonus)
+	cur_player.update_values(s1 + cur_bonus)
 	# send signal from player scripts emitted with update_value()
 	# attach signals to top_bar.gd to play anims for player +/- 5.
 	manager.update_score(s2, s3)
@@ -166,7 +166,6 @@ func popup_post_card_event(s1, s2, s3):
 			top_bar.popup_postChoice_nothing()
 	else:
 		handle_turnOver()
-		invite_screen.update_invite_values()
 
 
 func start_other_card_event(player):

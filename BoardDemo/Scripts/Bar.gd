@@ -32,12 +32,12 @@ func _ready():
 	players.connect("P4_active", self, "handle_P4_active")
 
 #		player.connect("%sadd"%[player.player_number], self, "anim_add_%s"%[player.player_name_lower])
-	player1.connect("player1add", self, "anim_add_surp")
+#	player1.connect("player1add", self, "anim_add_surp")
 #	player2.connect("player2add", self, "anim_add_buff")
 #	player3.connect("player3add", self, "anim_add_jog")
 #	player4.connect("player4add", self, "anim_add_beat")
 #
-	player1.connect("player1lose", self, "anim_lose_surp")
+#	player1.connect("player1lose", self, "anim_lose_surp")
 #	player2.connect("player2lose", self, "anim_lose_buff")
 #	player3.connect("player3lose", self, "anim_lose_jog")
 #	player4.connect("player4lose", self, "anim_lose_beat")
@@ -211,6 +211,7 @@ func popup_postChoice_self():
 	elif postChoice_popup_sprite.get_node("Beat").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SELF").format(\
 			{var1=get_self_beat().value})
+
 func popup_postChoice_society():
 	postChoice_popup_anim.play_backwards("PopupPostChoice")
 	if postChoice_popup_sprite.get_node("Surp").visible == true:
@@ -225,6 +226,7 @@ func popup_postChoice_society():
 	elif postChoice_popup_sprite.get_node("Beat").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SOCIETY").format(\
 			{var1=get_self_beat().value})
+
 func popup_postChoice_sustainability():
 	postChoice_popup_anim.play_backwards("PopupPostChoice")
 	if postChoice_popup_sprite.get_node("Surp").visible == true:
@@ -258,9 +260,4 @@ func popup_postChoice_nothing():
 func _on_PostChoicePopup_NextButton_pressed():
 	postChoice_popup_anim.play("PopupPostChoice")
 	emit_signal("turnOver")
-
-
-
-
-
 

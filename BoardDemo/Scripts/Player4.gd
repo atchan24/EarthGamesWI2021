@@ -41,7 +41,7 @@ func _ready():
 	spinner = get_node("/root/Main/GUI/Spinner")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if done:
 		sprite.set_animation(idle)
 		if player_audio.playing:

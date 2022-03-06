@@ -4,6 +4,8 @@ var loader
 var time_max = 100
 var current_scene = null
 
+var players_invited = 0
+
 # movement cost per block for summoned player
 var movement_cost = 2
 

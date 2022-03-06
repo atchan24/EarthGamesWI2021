@@ -23,7 +23,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if $Frgnd.position.x <= 0:
 		$Frgnd.position.x += 0.3
 		

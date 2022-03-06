@@ -13,8 +13,6 @@ var assets = null
 var cur_assets = null
 var click = null
 var top_bar = null
-var invite_screen = null
-var invite_popup = null
 
 var first_round = false
 var _round = 0
@@ -31,23 +29,21 @@ func _ready():
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	assets = get_node("/root/Main/Environment/Category Assets")
 	top_bar = get_node("/root/Main/GUI/TopBar")
-	invite_screen = get_node("/root/Main/GUI/TopBar/Invite")
-	invite_popup = invite_screen.get_node("AnimationPlayer")
 	
 	top_bar.connect("turnOver", self, "handle_turnOver")
 	for b in buttons.get_children():
 		b.visible = false
 
 
-func start_card_event(category, player, bonus, end_turn):
+func start_card_event(category, player, bonus):
 #	var n = rng.randi_range(0, 4)
 #	if n == 0:
 #		start_other_card_event(player)
 #	else:
-	start_action_card_event(category, player, bonus, end_turn)
+	start_action_card_event(category, player, bonus)
 
 
-func start_action_card_event(category, player, bonus, end_turn):
+func start_action_card_event(category, player, bonus):
 	# var new_pause_state = not get_tree().paused
 	# get_tree().paused = new_pause_state
 	if card_data == null :
@@ -59,7 +55,7 @@ func start_action_card_event(category, player, bonus, end_turn):
 		var choices = ["choice-a", "choice-b", "choice-c"]
 		cur_player = player
 		cur_bonus = bonus
-		handle_events_demo(choices[rng.randi_range(0, 2)], end_turn)
+		handle_events_demo(choices[rng.randi_range(0, 2)])
 		return
 	for c in assets.get_children():
 		if (c.name == category):
@@ -88,19 +84,19 @@ func start_action_card_event(category, player, bonus, end_turn):
 
 
 func _on_ChoiceA_pressed():
-	handle_events_demo("choice-a", false)
+	handle_events_demo("choice-a")
 
 func _on_ChoiceB_pressed():
-	handle_events_demo("choice-b", false)
+	handle_events_demo("choice-b")
 
 func _on_ChoiceC_pressed():
-	handle_events_demo("choice-c", false)
+	handle_events_demo("choice-c")
 
 func check_square_for_teammates():
 	pass
 
 # use this version of handle_events for Earth Week demo
-func handle_events_demo(c, end_turn):
+func handle_events_demo(c):
 	click.play()
 	
 	var s1 = 0
@@ -112,45 +108,38 @@ func handle_events_demo(c, end_turn):
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
 		s2 = 5 + (cur_bonus * Global.players_invited)
-#		top_bar.get_node('Control/AnimationPlayer/AddSociety').text = "+" + str(s2)
-#		top_bar.anim_add_society()          # anim to +5 society 
+		top_bar.get_node('Control/AnimationPlayer/AddSociety').text = "+" + str(s2)
+		top_bar.anim_add_society()          # anim to +5 society 
 	elif c == "choice-c":
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
 		s3 = 5 + (cur_bonus * Global.players_invited)
-#		top_bar.get_node('Control/AnimationPlayer/AddSustainability').text = "+" + str(s3)
-#		top_bar.anim_add_sustainability()   # anim to +5 sustainability
+		top_bar.get_node('Control/AnimationPlayer/AddSustainability').text = "+" + str(s3)
+		top_bar.anim_add_sustainability()   # anim to +5 sustainability
 	
 	Global.players_invited = 0
-	invite_screen.choice = c
-	print("choice: " + String(c))
-	invite_popup.play_backwards("inviteMenu")
-#	invite_popup.play_backwards("inviteMenu")
-#	choice_gui.get_node("AnimationPlayer").play_backwards("DrawCard")
-	
 #	cur_player.update_values(s1 + cur_bonus)
 	# send signal from player scripts emitted with update_value()
 	# attach signals to top_bar.gd to play anims for player +/- 5.
 	manager.update_score(s2, s3)
-#
-	choice_gui.get_node("AnimationPlayer").play_backwards("DrawCard")
-#	top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
 	
-	if end_turn:
-		yield(get_tree().create_timer(3.0), "timeout")
-		for b in buttons.get_children():
-			b.visible = false
-		for a in cur_assets.get_children():
-			if !(a.visible):
-				a.visible = true
-				yield(a, "finished_moving")
-				break
-		# Popup in top left corner
-		popup_ACchoice.popup()
-		yield(get_tree().create_timer(5.0), "timeout")
-		# This waits for the popup Action Card Choice to pop down
-		popup_post_card_event(s1, s2, s3)
-#	ALL OF THIS NEEDS TO BE MOVED
+	choice_gui.get_node("AnimationPlayer").play_backwards("DrawCard")
+	top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
+	yield(get_tree().create_timer(3.0), "timeout")
+	
+	for b in buttons.get_children():
+		b.visible = false
+	for a in cur_assets.get_children():
+		if !(a.visible):
+			a.visible = true
+			yield(a, "finished_moving")
+			break
+	
+	# Popup in top left corner
+	popup_ACchoice.popup()
+	yield(get_tree().create_timer(5.0), "timeout")
+	# This waits for the popup Action Card Choice to pop down
+	popup_post_card_event(s1, s2, s3)
 
 
 func popup_post_card_event(s1, s2, s3):
@@ -166,7 +155,6 @@ func popup_post_card_event(s1, s2, s3):
 			top_bar.popup_postChoice_nothing()
 	else:
 		handle_turnOver()
-		invite_screen.update_invite_values()
 
 
 func start_other_card_event(player):

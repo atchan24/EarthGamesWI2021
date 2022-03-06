@@ -11,8 +11,8 @@ export var max_movement = 10
 signal playerLose(score, player_name_upper)
 signal playerAdd(score, player_name_upper)
 
-signal player1lose(score)
-signal player1add(score)
+#signal player1lose(score)
+#signal player1add(score)
 
 
 const velocity = 10
@@ -36,6 +36,7 @@ export var idle = ""
 export var walk = ""
 export var active = false
 
+onready var invite_screen = get_node("/root/Main/GUI/TopBar/Invite")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -52,7 +53,7 @@ func _ready():
 	spinner = get_node("/root/Main/GUI/Spinner")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if done:
 		sprite.set_animation(idle)
 		if player_audio.playing:
@@ -110,6 +111,7 @@ func _process(delta):
 			print("final: " + str(get_parent().final_turn))
 			done = true
 		call_card = true
+		invite_screen.update_invite_values()
 
 func is_done():
 	return done
