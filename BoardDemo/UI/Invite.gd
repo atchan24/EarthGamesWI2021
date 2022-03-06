@@ -65,10 +65,10 @@ func summon(player):
 		target = player4.current - player.current
 	var score_change = abs(target * int(Global.movement_cost)) * -1
 #	spaces[target].bonus_value += 10
-	player.update_values(score_change)
 	player.call_card = false
 	player.moving = true
 	player.roll = target
+	player.update_values(score_change)
 #	spaces[player.current].call_manager(player, player.players_invited)
 
 func find_active_player():
@@ -98,20 +98,25 @@ func update_invite_values():
 
 func _on_invite_buff_pressed():
 	summon(player2)
+	find_active_player().update_values(-5)
 	manager.handle_events_demo(choice, true)
 	
 func _on_invite_surp_pressed():
 	summon(player1)
+	find_active_player().update_values(-5)
 	manager.handle_events_demo(choice, true)
 	
 func _on_invite_job_pressed():
 	summon(player3)
+	find_active_player().update_values(-5)
 	manager.handle_events_demo(choice, true)
 
 func _on_invite_beat_pressed():
 	summon(player4)
+	find_active_player().update_values(-5)
 	manager.handle_events_demo(choice, true)
 
 
 func _on_go_alone_pressed():
+	find_active_player().update_values(-5)
 	manager.handle_events_demo(choice, true)

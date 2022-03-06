@@ -108,6 +108,7 @@ func handle_events_demo(c, end_turn):
 	var s3 = 0
 	if c == "choice-a":
 		s1 = 5
+		cur_player.update_values(s1);
 	elif c == "choice-b":
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
@@ -124,19 +125,23 @@ func handle_events_demo(c, end_turn):
 	Global.players_invited = 0
 	invite_screen.choice = c
 	print("choice: " + String(c))
-	invite_popup.play_backwards("inviteMenu")
+	
+	if c != "choice-a":
+		invite_popup.play_backwards("inviteMenu")
+		
 #	invite_popup.play_backwards("inviteMenu")
 #	choice_gui.get_node("AnimationPlayer").play_backwards("DrawCard")
 	
 #	cur_player.update_values(s1 + cur_bonus)
 	# send signal from player scripts emitted with update_value()
 	# attach signals to top_bar.gd to play anims for player +/- 5.
-	manager.update_score(s2, s3)
+	
 #
 	choice_gui.get_node("AnimationPlayer").play_backwards("DrawCard")
 #	top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
 	
-	if end_turn:
+	if end_turn or c == "choice-a":
+		manager.update_score(s2, s3)
 		yield(get_tree().create_timer(3.0), "timeout")
 		for b in buttons.get_children():
 			b.visible = false
