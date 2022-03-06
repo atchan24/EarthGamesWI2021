@@ -173,6 +173,7 @@ volume_db = -4.407
 pitch_scale = 2.35
 
 [node name="OptionMenu" parent="Pause" instance=ExtResource( 10 )]
-
+visible = false
 [connection signal="pressed" from="Pause/PauseMenu/MenuButtons/resume" to="Pause" method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause/PauseMenu/MenuButtons/options" to="Pause/OptionMenu" method="_on_options_pressed"]
 [connection signal="pressed" from="Pause/PauseMenu/MenuButtons/menu" to="Pause" method="_on_menu_pressed"]

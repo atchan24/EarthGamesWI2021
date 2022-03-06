@@ -7,11 +7,12 @@ onready var movement_box = get_node("ColorRect/VBoxContainer/VolumeSlider/move_c
 func _ready():
 	Global.movement_cost = movement_box.text
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	if (get_parent().get_node("PauseMenu").visible == true):
-		self.visible = false
+#func _process(_delta):
+#	if (get_parent().get_node("PauseMenu").visible == false):
+#		self.visible = true
+#	else:
+#		self.visible = false
 
 
 func _on_return_pressed():
@@ -21,3 +22,7 @@ func _on_return_pressed():
 
 func _on_move_cost_text_changed():
 	Global.movement_cost = movement_box.text
+
+
+func _on_options_pressed():
+	self.visible = true
