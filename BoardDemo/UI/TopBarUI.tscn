@@ -1824,7 +1824,6 @@ scale = Vector2( 0.15, -0.15 )
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "SurpIdle"
-frame = 4
 speed_scale = 0.7
 playing = true
 
@@ -1833,7 +1832,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "BuffIdle"
-frame = 2
+frame = 4
 speed_scale = 0.7
 playing = true
 
@@ -1842,7 +1841,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "JogIdle"
-frame = 5
+frame = 3
 speed_scale = 0.7
 playing = true
 
@@ -1851,7 +1850,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "BeatIdle"
-frame = 2
+frame = 4
 speed_scale = 0.7
 playing = true
 

@@ -50,9 +50,9 @@ CHOICE_NOTHING,"You have {var1} out of 40 [b]Self[/b] points.
 I've set it up so there is a 1/4 chance of drawing an event card. Right now the code just passes the turn, but I am getting it ready for some kind of event cards.",
 ,,
 ,,
-ACTION_CARD_01,[center][b]City Hall[/b] is a place to voice public concerns and address them.[/center],"1. Justice:                City Hall
+ACTION_CARD_01,"[center][b]City Hall[/b] is a place to voice public concerns.[/center]","1. Justice:                City Hall
 "
-ACTION_CARD_02,[center]The [b]Pride Flag[/b] represent the rights of all LGBTQIA+ people to be who they are.[/center],"2. Equity:                 Rainbow Flag
+ACTION_CARD_02,[center]The [b]Pride Flag[/b] represents the rights of all LGBTQIA+ people to be who they are.[/center],"2. Equity:                 Rainbow Flag
 "
 ACTION_CARD_03,[center]We must have our [b]Health[/b] in order to be our best self. Get check-ups regularly.[/center],"3. Health:                 Health Tent
 "
@@ -60,13 +60,13 @@ ACTION_CARD_04,[center]Those who do not know their history are doomed to repeat 
 "
 ACTION_CARD_05,"[center]We all have a right to shelter and a place to rest, [/center]","5. Housing:              House
 "
-ACTION_CARD_06,[center]We all have a right to sustainable farming practices and [b]food[/b] with nutritional value.[/center],"6. Food:                   Box of Fruit
+ACTION_CARD_06,"[center]We all have a right to healthy, sustainably farmed [b]food[/b].[/center]","6. Food:                   Box of Fruit
 "
 ACTION_CARD_07,"[center][b]Community[/b] brings us together, in times of need and in times of joy.[/center]","7. Community:         Meeting People sign
 "
 ACTION_CARD_08,[center]A productive day is however you define it.[/center],"8. Work:                   Laptop
 "
-ACTION_CARD_09,"[center]We all have a right to sustainable [b]Energy[/b]. Even for a future population of 10 billion, the decent living requirement could be met for everyone with under 5 TW of power.[/center]","9. Energy:                Wind Turbine
+ACTION_CARD_09,"[center]We all have a right to sustainable [b]Energy[/b]. [/center]","9. Energy:                Wind Turbine
 "
 ACTION_CARD_10,"[center][b]Mutual Aid[/b] is compassion for one another, seeking to give others the chances you could afford.[/center]","10. Mutual Aid:         Flag Money
 "

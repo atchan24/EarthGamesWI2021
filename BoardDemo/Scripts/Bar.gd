@@ -46,7 +46,6 @@ func _ready():
 	self_bar_jog.modulate = Color(0.75, 0.75, 0.75)
 	self_bar_beat.modulate = Color(0.75, 0.75, 0.75)
 
-
 func update_score(node, score):
 	node.value = score
 

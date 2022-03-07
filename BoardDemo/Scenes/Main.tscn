@@ -170,7 +170,7 @@ script = ExtResource( 30 )
 player_number = "player1"
 player_name_upper = "Surp"
 player_name_lower = "surp"
-max_movement = 4
+max_movement = 1
 idle = "SurpIdle"
 walk = "SurpWalk"
 
@@ -188,6 +188,7 @@ player_number = "player2"
 player_name_upper = "Buff"
 player_name_lower = "buff"
 self_score = 30
+max_movement = 8
 idle = "BuffIdle"
 walk = "BuffWalk"
 
@@ -201,6 +202,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.424805, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BuffIdle"
+frame = 3
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
@@ -216,7 +218,7 @@ player_number = "player3"
 player_name_upper = "Jog"
 player_name_lower = "jog"
 self_score = 20
-max_movement = 6
+max_movement = 8
 idle = "JogIdle"
 walk = "JogWalk"
 
@@ -230,7 +232,7 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "JogIdle"
-frame = 2
+frame = 4
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player3"]
@@ -260,7 +262,6 @@ transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BeatIdle"
-frame = 3
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]

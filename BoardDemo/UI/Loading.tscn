@@ -1,12 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Characters/Animations/CharacterAnims.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Winkle-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Loading.gd" type="Script" id=3]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 48
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 34
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
@@ -16,12 +22,44 @@ font_data = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 430.343
-margin_top = 260.544
-margin_right = 618.343
-margin_bottom = 306.544
+margin_left = 707.743
+margin_top = 536.1
+margin_right = 895.743
+margin_bottom = 582.1
 custom_fonts/normal_font = SubResource( 1 )
 text = "Loading..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowToPlay" type="RichTextLabel" parent="."]
+margin_left = 390.0
+margin_top = 50.95
+margin_right = 640.0
+margin_bottom = 96.95
+custom_fonts/normal_font = SubResource( 1 )
+text = "How To Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_left = 64.4999
+margin_top = 128.5
+margin_right = 964.5
+margin_bottom = 528.5
+custom_fonts/normal_font = SubResource( 2 )
+text = "1) Press spacebar to spin and move your avatar
+
+2) On Action Cards, pick one of the 3 choices:
+Self: earn 5 Self points
+Society: invest 5 Self points to earn 5 Society points
+Sustainability: invest 5 Self points to earn 5 Sustainability points
+
+3) Invite a friend to earn even more Society and Sustainability points! It costs them Self points to move though.
+
+4) Watch the world change based on your actions
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }

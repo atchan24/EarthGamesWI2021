@@ -8,7 +8,7 @@ onready var richText = get_node("Control/TextBubble/RichTextLabel")
 onready var nextButton = get_node("Control/TextBubble/NextButton")
 onready var popup_anim = get_node("Control/TextBubble/AnimationPlayer")
 
-var dialog = ["WELCOME_01", "WELCOME_02", "WELCOME_03", "WELCOME_04",]
+var dialog = ["WELCOME_01", "WELCOME_02"]
 var page = 0
 
 
