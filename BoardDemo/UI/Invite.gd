@@ -16,15 +16,23 @@ onready var player4 = players.get_node("Player4")
 
 onready var surp_distance = get_node("TextureRect/surp_costs/distance")
 onready var surp_cost = get_node("TextureRect/surp_costs/self_cost")
+onready var surp_button = get_node("TextureRect/invite_surp")
+onready var surp_button_label = get_node("TextureRect/invite_surp/Label")
 
 onready var buff_distance = get_node("TextureRect/buff_costs/distance")
 onready var buff_cost = get_node("TextureRect/buff_costs/self_cost")
+onready var buff_button = get_node("TextureRect/invite_buff")
+onready var buff_button_label = get_node("TextureRect/invite_buff/Label")
 
 onready var jog_distance = get_node("TextureRect/jog_costs/distance")
 onready var jog_cost = get_node("TextureRect/jog_costs/self_cost")
+onready var jog_button = get_node("TextureRect/invite_jog")
+onready var jog_button_label = get_node("TextureRect/invite_jog/Label")
 
 onready var beat_distance = get_node("TextureRect/beat_costs/distance")
 onready var beat_cost = get_node("TextureRect/beat_costs/self_cost")
+onready var beat_button = get_node("TextureRect/invite_beat")
+onready var beat_button_label = get_node("TextureRect/invite_beat/Label")
 
 var manager = null
 
@@ -33,7 +41,7 @@ var choice = null
 const velocity = 10
 
 func _ready():
-	popup_anim.play("inviteMenu")
+#	popup_anim.play("inviteMenu")
 	spaces = get_node("/root/Main/Spaces").get_children()
 	manager = get_node("/root/Main/Spaces")
 #	update_invite_values()
@@ -42,9 +50,9 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_invite_pressed():
-	popup_anim.play_backwards("inviteMenu")
-#	update_invite_values()
+#func _on_invite_pressed():
+#	popup_anim.play_backwards("inviteMenu")
+##	update_invite_values()
 
 
 func _on_ClosedInvite_pressed():
@@ -53,7 +61,7 @@ func _on_ClosedInvite_pressed():
 func summon(player):
 #	player.players_invited += 1
 	Global.players_invited += 1
-	popup_anim.play("inviteMenu")
+#	popup_anim.play("inviteMenu")
 	var target
 	if player1.active == true:
 		target = player1.current - player.current
@@ -83,27 +91,95 @@ func find_active_player():
 
 func update_invite_values():
 	var active_player = find_active_player()
-
-	surp_distance.text = str(active_player.current - player1.current) + " spaces away, "
-	surp_cost.text = "-" + str((active_player.current - player1.current) * int(Global.movement_cost)) + " self points"
+	var active_player_distance = get_node("TextureRect/%s_costs/distance"%active_player.player_name_lower)
+	var active_player_cost = get_node("TextureRect/%s_costs/self_cost"%active_player.player_name_lower)
+	var active_player_button = get_node("TextureRect/invite_%s"%active_player.player_name_lower)
+	var active_player_button_label = get_node("TextureRect/invite_%s/Label"%active_player.player_name_lower)
+#	print("active player: " + str(active_player.player_name_lower))
+##	print("%s_distance"%active_player.player_name_lower)
+#	print(get_node("TextureRect/%s_costs/distance"%active_player.player_name_lower).text)
 	
-	buff_distance.text = str(active_player.current - player2.current) + " spaces away, "
-	buff_cost.text = "-" + str((active_player.current - player2.current) * int(Global.movement_cost)) + " self points"
+	if active_player.current > player1.current:
+		surp_button.visible = true
+		surp_distance.text = str(active_player.current - player1.current) + " spaces away, "
+		var movement_cost = (active_player.current - player1.current) * int(Global.movement_cost)
+		surp_cost.text = "-" + str(movement_cost) + " self points"
+		surp_button_label.text = "Invite Surp!"
+		
+		if movement_cost > player1.self_score:
+			surp_button.visible = false
+			surp_distance.text = "Surp needs " + str(movement_cost) + " energy to move " + str(active_player.current - player1.current) + " squares"
+			surp_cost.text = ""
+	else:
+		surp_button.visible = false
+		surp_distance.text = "Can't invite someone in front of you!"
+		surp_cost.text = ""
 	
-	jog_distance.text = str(active_player.current - player3.current) + " spaces away, "
-	jog_cost.text = "-" + str((active_player.current - player3.current) * int(Global.movement_cost)) + " self points"
+	if active_player.current > player2.current:
+		buff_button.visible = true
+		buff_distance.text = str(active_player.current - player2.current) + " spaces away, "
+		var movement_cost = (active_player.current - player2.current) * int(Global.movement_cost)
+		buff_cost.text = "-" + str(movement_cost) + " self points"
+		buff_button_label.text = "Invite Buff!"
+		
+		if movement_cost > player2.self_score:
+			buff_button.visible = false
+			buff_distance.text = "Buff needs " + str(movement_cost) + " energy to move " + str(active_player.current - player2.current) + " squares"
+			buff_cost.text = ""
+	else:
+		buff_button.visible = false
+		buff_distance.text = "Can't invite someone in front of you!"
+		buff_cost.text = ""
 	
-	beat_distance.text = str(active_player.current - player4.current) + " spaces away, "
-	beat_cost.text = "-" + str((active_player.current - player4.current) * int(Global.movement_cost)) + " self points"
+	if active_player.current > player3.current:
+		jog_button.visible = true
+		jog_distance.text = str(active_player.current - player3.current) + " spaces away, "
+		var movement_cost = (active_player.current - player3.current) * int(Global.movement_cost)
+		jog_cost.text = "-" + str(movement_cost) + " self points"
+		jog_button_label.text = "Invite Jog!"
+		
+		if movement_cost > player3.self_score:
+			jog_button.visible = false
+			jog_distance.text = "Jog needs " + str(movement_cost) + " energy to move " + str(active_player.current - player3.current) + " squares"
+			jog_cost.text = ""
+	else:
+		jog_button.visible = false
+		jog_distance.text = "Can't invite someone in front of you!"
+		jog_cost.text = ""
+	
+	if active_player.current > player4.current:
+		beat_button.visible = true
+		beat_distance.text = str(active_player.current - player4.current) + " spaces away, "
+		var movement_cost = (active_player.current - player4.current) * int(Global.movement_cost)
+		beat_cost.text = "-" + str(movement_cost) + " self points"
+		beat_button_label.text = "Invite Beat!"
+		
+		if movement_cost > player4.self_score:
+			beat_button.visible = false
+			beat_distance.text = "Beat needs " + str(movement_cost) + " energy to move " + str(active_player.current - player4.current) + " squares"
+			beat_cost.text = ""
+	else:
+		beat_button.visible = false
+		beat_distance.text = "Can't invite someone in front of you!"
+		beat_cost.text = ""
+	
+	active_player_distance.text = ""
+	active_player_cost.text = ""
+	active_player_button.visible = true
+	active_player_button_label.text = "Go Alone!"
 
 func _on_invite_buff_pressed():
-	summon(player2)
-	find_active_player().update_values(-5)
+	var active_player = find_active_player()
+	if active_player.player_name_lower != player2.player_name_lower:
+		summon(player2)
+	active_player.update_values(-5)
 	manager.handle_events_demo(choice, true)
 	
 func _on_invite_surp_pressed():
-	summon(player1)
-	find_active_player().update_values(-5)
+	var active_player = find_active_player()
+	if active_player.player_name_lower != player1.player_name_lower:
+		summon(player2)
+	active_player.update_values(-5)
 	manager.handle_events_demo(choice, true)
 	
 func _on_invite_job_pressed():

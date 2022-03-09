@@ -109,7 +109,7 @@ func _process(_delta):
 			print("final: " + str(get_parent().final_turn))
 			done = true
 		call_card = true
-		invite_screen.update_invite_values()
+#		invite_screen.update_invite_values()
 
 func is_done():
 	return done

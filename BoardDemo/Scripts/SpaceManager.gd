@@ -134,7 +134,9 @@ func handle_events_demo(c, end_turn):
 	invite_screen.choice = c
 	print("choice: " + String(c))
 	
-	if c != "choice-a":
+	if c != "choice-a" and !end_turn:
+		invite_screen.visible = true
+		invite_screen.update_invite_values()
 		invite_popup.play_backwards("inviteMenu")
 		
 #	invite_popup.play_backwards("inviteMenu")
@@ -149,6 +151,8 @@ func handle_events_demo(c, end_turn):
 #	top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
 	
 	if end_turn or c == "choice-a":
+		if c != "choice-a":
+			invite_popup.play("inviteMenu")
 		manager.update_score(s2, s3)
 		yield(get_tree().create_timer(3.0), "timeout")
 		for b in buttons.get_children():
@@ -180,7 +184,7 @@ func popup_post_card_event(s1, s2, s3):
 			top_bar.popup_postChoice_nothing()
 	else:
 		handle_turnOver()
-		invite_screen.update_invite_values()
+#		invite_screen.update_invite_values()
 
 
 func start_other_card_event(player):
