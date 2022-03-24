@@ -70,7 +70,6 @@ __meta__ = {
 }
 
 [node name="EarthGamesLogo" type="Sprite" parent="."]
-visible = false
 position = Vector2( 481.005, 316.014 )
 texture = ExtResource( 1 )
 
@@ -80,6 +79,7 @@ position = Vector2( 507.463, 292.075 )
 texture = ExtResource( 3 )
 
 [node name="LogoBTG" type="Sprite" parent="."]
+visible = false
 position = Vector2( 512, 300 )
 texture = ExtResource( 4 )
 

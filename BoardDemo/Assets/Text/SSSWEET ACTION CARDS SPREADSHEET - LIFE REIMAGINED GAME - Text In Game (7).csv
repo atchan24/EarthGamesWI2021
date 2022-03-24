@@ -6,13 +6,13 @@ Funded by many generous donors
 
 Original inspiration:                              Lisa Z-C                                
 
-Engineering, Development:                Andrew, Jimmy, Rikki Parent, Edgar, Ben, Dargan
+Engineering, Development:                Andrew, Jimmy, Rikki Parent, Edgar, Ben, Dargan, Carlos
 
-Writing:                          Sven, Lisa, Misty, Darryl, John, Dargan, Ben
+Writing:                          Sven, Lisa, Misty, Darryl, John, Dargan, Ben, Amanda, Carlos, Lauren, Rikki, Jamel
 
 Graphics and Design:                          Carlos Nuñez, Rikki
 
-Music and Sound:                              Dargan
+Music:                                        Dargan
 
 
 ",
@@ -56,11 +56,11 @@ ACTION_CARD_03,[center]We must have [b]Health[/b] in order to be our best self. 
 "
 ACTION_CARD_04,[center]Those who do not know their history are doomed to repeat it. Get [b]Educated[/b].[/center],"4. Education:           School
 "
-ACTION_CARD_05,"[center]We all have a right to shelter and a place to rest, [/center]","5. Housing:              House
+ACTION_CARD_05,"[center]We all deserve shelter and a place to rest, [/center]","5. Housing:              House
 "
 ACTION_CARD_06,"[center]We all have a right to healthy [b]food[/b].[/center]","6. Food:                   Box of Fruit
 "
-ACTION_CARD_07,"[center][b]Community[/b] brings us together, in times of need of joy.[/center]","7. Community:         Meeting People sign
+ACTION_CARD_07,"[center]People have the power.[/center]","7. Community:         Meeting People sign
 "
 ACTION_CARD_08,[center]A productive day is however you define it.[/center],"8. Work:                   Laptop
 "
@@ -74,17 +74,17 @@ ACTION_CARD_12,"[center][b]Nature[/b] has given us everything. Without nature, w
 "
 ACTION_CARD_13,[center][b]Recreation[/b]: the work you do only for yourself.[/center],"13. Recreation:         Music note
 "
-ACTION_CARD_14,[center]The diversity of [b]Environments[/b] on this planet is awe inspiring and incredibly delicate.[/center],"14. Environment:      Fruit Tree
+ACTION_CARD_14,[center]The diversity of [b]Environments[/b] on this planet are inspiring and delicate.[/center],"14. Environment:      Fruit Tree
 "
-ACTION_CARD_15,"[center]Our histories are intertwined across the globe, and injustices can still be repaired.[/center]","15. Decolonization:  Protest
+ACTION_CARD_15,"[center]Our histories are intertwined across the globe. Injustices can be repaired.[/center]","15. Decolonization:  Protest
 "
 ACTION_CARD_16,"[center]Reality or fiction, we are defined by the [b]stories[/b] we share with everyone everyday.[/center]","16. Storytelling:        Library
 "
-ACTION_CARD_17,"[center]Comercial or residential, the way we conduct [b]Transport[/b] is a big part of our lives.[/center]","17. Transport:           Bicycle
+ACTION_CARD_17,"[center][b]Transport[/b] moves the world.[/center]","17. Transport:           Bicycle
 "
-ACTION_CARD_18,"[center]There is an individual [b]Style[/b] in all of us, if you give it a chance to develope.[/center]","18. Arts:                    Paint Palette
+ACTION_CARD_18,"[center]Develop a [b]Style[/b] of your own.[/center]","18. Arts:                    Paint Palette
 "
-ACTION_CARD_19,[center]We all have a right to build ourselves a sutainable future. Where are the [b]Resources[/b] going?[/center],"19. Resources:         Solar Panel
+ACTION_CARD_19,[center]We all have a right to build a better future. Where are the [b]Resources[/b] going?[/center],"19. Resources:         Solar Panel
 "
 ACTION_CARD_20,[center]The [b]Truth[/b] cannot protect itself. It needs truth speakers to defend it.[/center],"20. Truth:                  Law Building
 "
@@ -113,4 +113,4 @@ EVENT_CARD_07,Global pandemic hits - all players lose job and unless frontline w
 EVENT_CARD_08,"Fires devastate the west coast - all players contribute 5+ points to sustainability and society - pay firefighters equally, safety, GND for west coast",
 EVENT_CARD_09,Overfishing in the ocean and animal based diet with trash and pollution damage the ocean - all players asked to contribute to 5+ for sustainability for sustainable fishing,
 EVENT_CARD_10,"Refugee crisis - accept refugees and pay reparations for destroying homes - +5 from all players for society, fold new arrivals into care and repair system jobs and training etc",
-EVENT_CARD_11,"Storm hits Gulf South, people lose power, all players asked to contribute +5 self points to society and sustainability to recover communities and build adaptation preparedness in futute GND for the South #GulfSouth4GND",
+EVENT_CARD_11,"Storm hits Gulf South, people lose power, all players asked to contribute +5 self points to society and sustainability to recover communities and build adaptation preparedness in future GND for the South #GulfSouth4GND",

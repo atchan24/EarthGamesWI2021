@@ -67,7 +67,7 @@ scale = Vector2( -0.15, 0.15 )
 position = Vector2( -1947.27, 3071.12 )
 frames = ExtResource( 2 )
 animation = "BeatWalk"
-frame = 3
+frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -75,7 +75,7 @@ playing = true
 position = Vector2( -4679.35, 2979.53 )
 frames = ExtResource( 2 )
 animation = "BuffWalk"
-frame = 1
+frame = 5
 speed_scale = 0.7
 playing = true
 
@@ -83,6 +83,7 @@ playing = true
 position = Vector2( -3225.96, 3153.77 )
 frames = ExtResource( 2 )
 animation = "JogWalk"
+frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -90,7 +91,6 @@ playing = true
 position = Vector2( -6074.04, 3023.74 )
 frames = ExtResource( 2 )
 animation = "SurpWalk"
-frame = 2
 speed_scale = 0.7
 playing = true
 

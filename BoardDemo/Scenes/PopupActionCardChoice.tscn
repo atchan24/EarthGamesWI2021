@@ -150,6 +150,7 @@ __meta__ = {
 anims/popup_choiceObject = SubResource( 3 )
 
 [node name="StickerBook" type="Control" parent="."]
+visible = false
 show_behind_parent = true
 margin_right = 207.0
 margin_bottom = 72.0
@@ -187,7 +188,6 @@ margin_top = 11.0
 margin_right = 1015.0
 margin_bottom = 567.0
 rect_min_size = Vector2( 10, 10 )
-rect_scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {

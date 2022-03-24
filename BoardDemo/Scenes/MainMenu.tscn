@@ -116,10 +116,44 @@ custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 bbcode_enabled = true
 bbcode_text = "Credits:
 
-This is where the credits would go. Please add your name and role to the credits cell of the SSSWEET spreadsheet, on the 'Text in Game' tab. We can seperate the roles or just list everybody together. We can hyperlink and do bold fonts."
+Created by Be The Green and EarthGames Studio
+
+Funded by many generous donors
+
+Original inspiration: 
+                             Lisa Z-C                                
+
+Engineering, Development:                
+Andrew, Jimmy, Rikki Parent, Edgar, Ben, Dargan, Carlos
+
+Writing:                          
+Sven, Lisa, Misty, Darryl, John, Dargan, Ben, Amanda, Carlos, Lauren, Rikki, Jamel
+
+Graphics and Design:          
+                Carlos, Rikki
+
+Music: 
+             Dargan"
 text = "Credits:
 
-This is where the credits would go. Please add your name and role to the credits cell of the SSSWEET spreadsheet, on the 'Text in Game' tab. We can seperate the roles or just list everybody together. We can hyperlink and do bold fonts."
+Created by Be The Green and EarthGames Studio
+
+Funded by many generous donors
+
+Original inspiration: 
+                             Lisa Z-C                                
+
+Engineering, Development:                
+Andrew, Jimmy, Rikki Parent, Edgar, Ben, Dargan, Carlos
+
+Writing:                          
+Sven, Lisa, Misty, Darryl, John, Dargan, Ben, Amanda, Carlos, Lauren, Rikki, Jamel
+
+Graphics and Design:          
+                Carlos, Rikki
+
+Music: 
+             Dargan"
 
 [node name="MainButtons" type="GridContainer" parent="."]
 anchor_right = 1.0
@@ -241,7 +275,7 @@ margin_right = 1024.0
 margin_bottom = 600.0
 rect_min_size = Vector2( 1024, 600 )
 mouse_filter = 2
-color = Color( 0.772549, 0.960784, 0.960784, 0 )
+color = Color( 0.772549, 0.960784, 0.960784, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -4,7 +4,7 @@ var rng = RandomNumberGenerator.new()
 var manager = null
 var card_data = null
 var cur_player = null
-var cur_bonus = 0
+var cur_bonus = 5
 var card = null
 var choice_gui = null
 var popup_ACchoice
@@ -120,13 +120,13 @@ func handle_events_demo(c, end_turn):
 	elif c == "choice-b":
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
-		s2 = 5 + (cur_bonus * Global.players_invited)
+		s2 = 2 + (cur_bonus * Global.players_invited)
 #		top_bar.get_node('Control/AnimationPlayer/AddSociety').text = "+" + str(s2)
 #		top_bar.anim_add_society()          # anim to +5 society 
 	elif c == "choice-c":
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
-		s3 = 5 + (cur_bonus * Global.players_invited)
+		s3 = 2 + (cur_bonus * Global.players_invited)
 #		top_bar.get_node('Control/AnimationPlayer/AddSustainability').text = "+" + str(s3)
 #		top_bar.anim_add_sustainability()   # anim to +5 sustainability
 	
@@ -176,9 +176,9 @@ func popup_post_card_event(s1, s2, s3):
 	if first_round == false:               
 		if s1 == 5:
 			top_bar.popup_postChoice_self()
-		elif s2 == 5:
+		elif s2 == 1:
 			top_bar.popup_postChoice_society()
-		elif s3 == 5:
+		elif s3 == 1:
 			top_bar.popup_postChoice_sustainability()
 		else:
 			top_bar.popup_postChoice_nothing()
@@ -207,7 +207,7 @@ func handle_turnOver():
 func handle_events(c):
 	click.play()
 	var choice = card[c]
-	cur_player.update_values(choice["self"] + cur_bonus)
+	cur_player.update_values(choice["self"]) #+ cur_bonus)
 	manager.update_score(choice["society"], choice["sustainability"])
 	# add logic to increase bonus of a future space defined by offset
 	# need to retrive current space to determine offset by relative position

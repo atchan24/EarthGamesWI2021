@@ -24,5 +24,5 @@ func _on_ButtonEnd_pressed():
 		get_node("Society").visible = true
 		first_click = false
 	else:
-		get_tree().quit()
-		#get_tree().change_scene("res://Scenes/MainMenu.tscn")
+		#get_tree().quit()
+		get_tree().change_scene("res://Scenes/MainMenu.tscn")

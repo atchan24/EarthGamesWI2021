@@ -2,53 +2,53 @@
     "Justice": [
         {
             "pillar": "Repair",
-            "prompt": "Now is the time for the end of white supremacy, and the liberation of communities of color.",
+            "prompt": "What movements will you connect with to help end white supremacy and liberate communities of color?",
             "self": {
-                "choice": "Make a post on social media to share your support."
+                "choice": "Movement for Black Lives chapters around the country, on social media."
             },
             "society": {
-                "choice": "Organize for reparations through social, cultural, and political movements."
+                "choice": "Movement for reparations, for descendants of slaves."
             },
             "sustainability": {
-                "choice": "Raise funds for land back movements, which return land ownership to Indigenous peoples."
+                "choice": "Land back movements, which return land ownership to Indigenous peoples."
             }
         }, 
         {
             "pillar": "Invest",
-            "prompt": "The communities most impacted by the climate crisis contribute to the problem the least.",
+            "prompt": "The communities most impacted by the climate crisis contribute to the problem the least. Who will you help raise funds for?",
             "self": {
-                "choice": "Prepare your own home for a weather emergency."
+                "choice": "Your own neighborhood, so it is prepared for a weather emergency."
             },
             "society": {
-                "choice": "Raise funds for Cancer Alley in Lousiana."
+                "choice": "Cancer Alley in Louisiana, which faces hurricanes and pollution."
             },
             "sustainability": {
-                "choice": "Help spread the word about cooling centers to folks who lack air conditioning."
+                "choice": "Housing projects without air conditioning, which are facing increasing heat."
             }
         } 
     ],
     "Equity": [
         {
             "pillar": "Protect",
-            "prompt": "How will you support BIPOC communities in their fight for the basic rights of all people?",
+            "prompt": "How will you support Black communities in their fight for the basic rights of all people?",
             "self": {
-                "choice" : "Make sure you can vote freely to make your voice heard."
+                "choice" : "Vote to make your voice heard."
             },
             "society": {
-		        "choice" : "Protect voting rights by calling your representatives or protesting."
+		        "choice" : "Protect voting rights by calling your representatives."
 		    },
             "sustainability": {
-		        "choice" : "Work on the election campaigns of BIPOC candidates."
+		        "choice" : "Work on the election campaigns of Black candidates."
 		    }
         },
         {
             "pillar": "Invest",
             "prompt": "A Black homeowner is less likely to have solar panels on their homes. We need energy justice!",
             "self": {
-                "choice" : "Get a grant or loan for solar panels on your rooftop."
+                "choice" : "Get a grant for solar panels on your rooftop."
             },
             "society": {
-                "choice" : "Start or join a solar cooperative with your neighbors."
+                "choice" : "Start a solar cooperative with your neighbors."
             },
             "sustainability": {
                 "choice" : "Work on Justice40 campaigns, so 40 percent of energy investments go to underserved communities."
@@ -74,51 +74,51 @@
             "pillar": "Protect",
             "prompt": "Take steps to protect yourself, others, and the natural world from pandemics.",
             "self": {
-                "choice": "Get the coronavirus vaccine or booster."
+                "choice": "Get the coronavirus vaccine."
             },
             "society": {
-                "choice": "Call your members of Congress to advocate for Medicare For All."
+                "choice": "Call Congress to ask for Medicare For All."
             },
             "sustainability": {
-                "choice": "Attend a protest to stop the development of wild places, to protect environmental health."
+                "choice": "Protest the destruction of forests."
             }
         }
     ],
     "Education": [
         {
             "pillar": "Repair",
-            "prompt": "The American education system has many great qualities, but it still does not provide equal access to education for all.",
+            "prompt": "The American education system still does not provide equal education for all. How will you help improve it?",
             "self": {
-                "choice": "Read The 1619 Project to educate yourself on the consequences of slavery."
+                "choice": "Read The 1619 Project to educate yourself."
             },
             "society": {
-                "choice": "Organize a school strike for equity in funding and representation."
+                "choice": "Organize a school strike for equity in funding."
             },
             "sustainability": {
-                "choice": "Run for school board on a reparations platform."
+                "choice": "Plan to run for school board."
             }
         },
         {
             "pillar": "Transform",
-            "prompt": "The fossil fuel industry has attempted to get climate denial materials into schools for years, often in the form of lessons written by the industry.",
+            "prompt": "Climate denial lessons written by the fossil fuel industry are being taught in schools. What will you learn about and share?",
             "self": {
-                "choice" : "Post on Big Oil social media accounts about your views on their deceit."
+                "choice" : "False advertising techniques."
             },
             "society": {
-                "choice" : "Do some myth busting by learning and sharing ways to debunk climate lies."
+                "choice" : "Information that debunks climate lies."
             },
             "sustainability": {
-                "choice" : "Teach about the tactics of misinformation, so people can recognize it in many different contexts."
+                "choice" : "The tactics of misinformation, so people can recognize it in many different contexts."
             }
         },
     {
             "pillar": "Protect",
             "prompt": "Angry parents have been attending school board meetings to protest student climate strikes. How would you respond peacefully?",
             "self": {
-                "choice" : "Join the students on their strike as a chaperone, watching out for their safety."
+                "choice" : "Join the students on their strike."
             },
             "society": {
-                "choice" : "Speak at the school board meeting about the urgency of the climate crisis."
+                "choice" : "Speak about climate at the school board meeting."
             },
             "sustainability": {
                 "choice" : "Support virtual strikes that reduce fossil fuel use."
@@ -128,65 +128,65 @@
     "Housing": [
         {
             "pillar": "Repair",
-            "prompt": "The racial wealth gap is huge, and largely exists because of unfair housing practices in the past, which prevented Black Americans from becoming homeowners.",
+            "prompt": "The racial wealth gap is huge, and largely exists because of unfair housing practices in the past. Which of these will you learn about and share?",
             "self": {
-                "choice": "Learn about redlining, where entire neighborhoods of color were deemed unworthy to obtain loans for home purchases."
+                "choice": "Redlining, where Black neighborhoods were not allowed to obtain loans for home purchases."
             },
             "society": {
-                "choice": "Discriminatory housing practices still exist. Spread the word about how these are against the law."
+                "choice": "Discriminatory and illegal housing practices that still exist."
             },
             "sustainability": {
-                "choice": "Create an art project about how reparations need to be made for centuries of unpaid labor and racist economic practices."
+                "choice": "Connections between air pollution and housing discrimination."
             }
         },
       {
             "pillar": "Protect",
-            "prompt": "Gentrification happens when developers, in cooperation with cities, create conditions which result in the transfer of property from lower income people of color to higher income city residents.",
+            "prompt": "You are writing a utopian short story, in which the problem of affordable housing is solved. What is your ideal solution?",
             "self": {
-                "choice" : "Choose to live in housing where the community is diverse."
+                "choice" : "Expanded public housing, guaranteed for everyone."
             },
             "society": {
-                "choice" : "Look for grants that allow current residents to stay in their homes."
+                "choice" : "Tiny houses for anyone falling on hard times."
             },
             "sustainability": {
-                "choice" : "Reduce the burden of home ownership for low income residents by adding solar power and weatherization."
+                "choice" : "Community scale solar power and weatherization in all residences, to lower maintenance costs."
             }
         }
     ],
     "Food": [
         {
             "pillar": "Repair",
-            "prompt": "Repair our relationships to the Earth by growing and sharing food, while honoring the land and water in which it grows.",
+            "prompt": "How will you help honor the land and water in which our food grows?",
             "self": {
-                "choice": "Take care of your body and the Earth by eating more plant based meals."
+                "choice": "Eat more plant based meals."
             },
             "society": {
-                "choice": "Advocate with your members of Congress for food stamps in the US and so everyone can get what they need to survive and thrive."
+                "choice": "Volunteer in a community garden that grows free fresh food."
             },
             "sustainability": {
-                "choice": "Support small farmers to employ sustainable farming practices and localize food supplies."
+                "choice": "Support small farmers that grow sustainably."
             }
         },
       {
           "pillar": "Transform",
           "prompt": "Food waste is rampant in the United States. Can we make use of it before it spoils?",
           "self": {
-              "choice" : "Do some dumpster diving behind grocery stores and see what you can find."
+              "choice" : "Dumpster dive behind a grocery store to see what you can find."
           },
           "society": {
-            "choice" : "Help with partnerships between grocery stores and mutual aid organizations."
+            "choice" : "Build partnerships between grocery stores and mutual aid groups."
           },
           "sustainability": {
-            "choice" : "Support organizations working to standardize best by dates on food."
+            "choice" : "Support movements to standardize best by dates on food."
           }
       }
     ],
     "Community": [
         {
             "pillar": "Protect",
-            "prompt": "We can take responsibility for our own parts of the world on a local level. Think global, and act local.",
+            "prompt": "We can take responsibility for our own parts of the world on a local level. How will you think global, and act local?",
             "self": {
-                "choice": "Get to know your neighborhood while getting exercise by walking and biking to activities."
+                "choice": "Get to know your neighborhood by walking and biking around."
             },
             "society": {
                 "choice": "Plan a block party to celebrate with your neighbors."
@@ -212,25 +212,25 @@
     "Work": [
         {
             "pillar": "Transform",
-            "prompt": "Work is about the contribution you can make, not just the paycheck you receive.",
+            "prompt": "Work is about the contribution you can make, not just the paycheck you receive. Which of these could you commit to do?",
             "self": {
-                "choice": "Choose a career that marries your skills with community needs."
+                "choice": "Choosing a career that marries your skills with community needs."
             },
             "society": {
-                "choice": "Accept a position of leadership in your democratic labor union."
+                "choice": "Accepting a position of leadership in your democratic labor union."
             },
             "sustainability": {
-                "choice": "Establish zero waste guidelines for your workplace."
+                "choice": "Working for a climate justice nonprofit."
             }
-        }, 
+        },                                                                                                                                                                 
         {
             "pillar": "Protect",
-            "prompt": "The company you work for is making more and more profit, but workers have not gotten a raise in years. All the profit is captured by those at the top.",
+            "prompt": "Workers at your company have not gotten a raise in years. How can you prevent all the profit from being captured by those at the top?",
             "self": {
                 "choice": "Ask your boss for a raise for yourself, and for others in your division."
             },
             "society": {
-                "choice": "Research and share information about executive and worker pay."
+                "choice": "Share information about executive pay compared with workers."
             },
             "sustainability": {
                 "choice": "Take your concerns to labor union organizers."
@@ -240,9 +240,9 @@
     "Energy": [
         {
             "pillar": "Invest",
-            "prompt": "We have to invest time, energy and money into universal access to a clean, sustainable power grid.",
+            "prompt": "What action will you take towards universal access to clean, sustainable power?",
             "self": {
-                "choice": "Read about solar cooperatives in Puerto Rico and Hawaii"
+                "choice": "Read about solar cooperatives in Puerto Rico and Hawaii."
             },
             "society": {
                 "choice": "Avoid using energy during peak demand times."
@@ -253,7 +253,7 @@
         }, 
         {
             "pillar": "Protect",
-            "prompt": "The energy system was built for public benefit, so everyone would have access to electricity. How do we make sure electricity is for people instead of profit?",
+            "prompt": "How do we make sure electricity is for people instead of profit?",
             "self": {
                 "choice": "Find out how much money your building would save by putting solar panels on the roof."
             },
@@ -268,20 +268,20 @@
     "Mutual Aid": [
         {
             "pillar": "Repair",
-            "prompt": "People should support each other to fulfill needs and address systemic problems.",
+            "prompt": "Items are often designed to break, so people will buy more frequently. How can you help??",
             "self": {
                 "choice": "Look up an online video to repair a broken object or appliance."
             },
             "society": {
-                "choice": "Establish a Fix It Yourself Clinic in your area."
+                "choice": "Establish a community Fix It Yourself Clinic in your area."
             },
             "sustainability": {
-                "choice": "Call your legislature about right to repair laws, so we can make planned obsolescence obsolete."
+                "choice": "Call your legislature about right to repair laws."
             }
         },
         {
             "pillar": "Invest",
-            "prompt": "A big hurricane just hit the coast! Mutual aid networks can get help to those who need it.",
+            "prompt": "A big hurricane just hit the coast! Mutual aid networks can get help to those who need it most.",
             "self": {
                 "choice": "Connect with mutual aid networks in your community."
             },
@@ -296,53 +296,53 @@
     "Just Migration": [
         {
             "pillar": "Protect",
-            "prompt": "How do wealthy nations welcome those who have been displaced from their homes due to inequities?",
+            "prompt": "How can you help wealthy nations welcome those who have been displaced from their homes due to inequities?",
             "self": {
-                "choice": "Read poetry or watch films about migration struggles and solidarity."
+                "choice": "Invite your friends to watch a film about a migrant's journey."
             },
             "society": {
-                "choice": "Advocate for migrants rights and services by lobbying, protesting, or direct service."
+                "choice": "Advocate for migrant rights to your government."
             },
             "sustainability": {
-                "choice": "Help ensure migrants are some of the first to benefit from clean energy and practices."
+                "choice": "Connect with organizations working on environmental justice for migrant communities."
             }
         },
       {
           "pillar": "Invest",
-          "prompt": "In 2020, a record 55 million people were forced to move within their countries due to extreme weather events.",
+          "prompt": "In 2020, a record 55 million people were forced to move within their countries due to extreme weather events. What will you learn about and share?",
           "self": {
-              "choice" : "Educate yourself about Loss and Damage, to repair for the destruction already being wreaked by the climate crisis."
+              "choice" : "Arts and cuisine of affected countries."
           },
           "society": {
-            "choice" : "Get involved the human rights organization Climate Refugees."
+            "choice" : "The history of Hurricane Katrina."
           },
           "sustainability": {
-            "choice" : "Advocate for unlocking private investment in climate adaptation and resilience."
+            "choice" : "Loss and Damage, to repair for the destruction already being wreaked by the climate crisis."
           }
       }
     ],
     "Nature": [
         {
             "pillar": "Protect",
-            "prompt": "Nature in all its forms has the right to exist, persist, maintain, and regenerate its vital cycles.",
+            "prompt": "Can you find a way to speak for the trees?",
             "self": {
-                "choice": "Chill out under your favorite tree and observe seasonal changes."
+                "choice": "Observe seasonal changes from under your favorite tree."
             },
             "society": {
-                "choice": "Call local officials to deny permits to loggers and ensure a just transition for workers."
+                "choice": "Call local officials to deny permits for logging."
             },
             "sustainability": {
-                "choice": "Tell your senator to pass the Civilian Climate Corps so logger workers can instead work on restoring ecosystems."
+                "choice": "Tell your senator to pass the Civilian Climate Corps so former loggers can work on restoring ecosystems."
             }
         },
         {
             "pillar": "Invest",
-            "prompt": "How can we appreciate nature and ensure that it has a right to exist?",
+            "prompt": "How can you appreciate nature today?",
             "self": {
-                "choice": "Observe the cycle of the moon outside, from a window, or on an app."
+                "choice": "Observe the cycle of the moon."
             },
             "society": {
-                "choice": "Observe bird behavior with other bird lovers."
+                "choice": "Watch bird behavior with other bird lovers."
             },
             "sustainability": {
                 "choice": "Research the wisdom of the ancestors about how humans are connected to Earth."
@@ -352,7 +352,7 @@
     "Recreation": [
         {
             "pillar": "Invest",
-            "prompt": "Humans need rest and play, just as nature relies on the seasons for rejuvenation.",
+            "prompt": "Humans need rest and play. What will you do for yourself or others?",
             "self": {
                 "choice": "Improve your musical skills by practicing an instrument."
             },
@@ -360,42 +360,42 @@
                 "choice": "Tell your local officials to budget for public arts programs."
             },
             "sustainability": {
-                "choice": "Ensure vacations are sustainable by calling your representative about investment in high speed train systems."
+                "choice": "Call your representative about investment in high speed train systems."
             }
         }, 
         {
             "pillar": "Repair",
-            "prompt": "Recreation time in the outdoors can be regenerative and open to all, not extractive, expensive and exclusive.",
+            "prompt": "Recreation time in the outdoors does not have to be extractive, expensive or exclusive. How will you spend spring break?",
             "self": {
-                "choice": "Spend your vacation working on an international volunteer project."
+                "choice": "Working on an international volunteer project."
             },
             "society": {
-                "choice": "Volunteer to assist or guide urban youth on a trip to a national park."
+                "choice": "Assisting urban youth on a trip to a national park."
             },
             "sustainability": {
-                "choice": "Take a vacation service outing, to hike while contributing to backcountry trail maintenance."
+                "choice": "Contributing to backcountry trail maintenance."
             }
         }
     ],
     "Environment": [
         {
             "pillar": "Repair",
-            "prompt": "People, animals and plants are all part of an overall structure that provides the conditions and resources needed for survival.",
+            "prompt": "How will you help grow plants in your surroundings?",
             "self": {
-                "choice": "Clean your space and adopt some plants for a restful home."
+                "choice": "Adopt some plants for a more restful home."
             },
             "society": {
-                "choice": "Ensure public green space is built, protected, rehabilitated, and maintained."
+                "choice": "Ensure public green space is built and maintained."
             },
             "sustainability": {
-                "choice": "Clean up the oceans as a tourist activity people are subsidized to do."
+                "choice": "Work in your yard or a community garden, planting food or flowers."
             }
         },
       {
           "pillar": "Transform",
-          "prompt": "All living beings need four essential elements of a healthy habitat, which are food, water, shelter, and space.",
+          "prompt": "All living beings need food, water, shelter, and space. How will you transform your environment?",
           "self": {
-              "choice": "Create shade in your outside space."
+              "choice": "Create shade in an outside space."
           },
           "society": {
               "choice": "Work on establishing a habitat in a local schoolyard."
@@ -421,22 +421,22 @@
         }, 
         {
             "pillar": "Protect",
-            "prompt": "Your government is planning a military campaign against a sovereign country, which it has no right to invade.",
+            "prompt": "Your government is planning a military campaign against a sovereign country, which it has no right to invade. How will you protest?",
             "self": {
-                "choice": "Protest the use of military force in your neighborhood. "
+                "choice": "By putting signs up in your windows."
             },
             "society": {
-                "choice": "Learn and teach about the culture of the country where the action is taking place."
+                "choice": "By learning and teaching about the culture of the country where the action is taking place."
             },
             "sustainability": {
-                "choice": "Connect with demilitarization movements, which seek to cut the budget of the entire military."
+                "choice": "With demilitarization movements, which seek to cut the budget of the entire military."
             }
         }
     ],
     "Storytelling": [
         {
             "pillar": "Transform",
-            "prompt": "Humans have always learned about the world through stories shared, so we must know those that reflect the truth of our full diversity.",
+            "prompt": "Humans have always learned about the world through stories shared. How will you help spread stories that reflect the truth of our full diversity?",
             "self": {
                 "choice": "Tell your unique personal story, through art, song, or some other expression."
             },
@@ -449,7 +449,7 @@
         },
         {
             "pillar": "Repair",
-            "prompt": "Learn and share the stories of others, both near and far.",
+            "prompt": "How will you learn and share the stories of others, both near and far?",
             "self": {
                 "choice": "Imagine being in the shoes of another person to understand their perspective and how they might feel."
             },
@@ -464,20 +464,20 @@
     "Transport": [
         {
             "pillar": "Transform",
-            "prompt": "You are ready to think beyond the electric car as a cleaner transportation solution. What do you encourage your friends to do?",
+            "prompt": "You are ready to think beyond the electric car for clean transportation. What do you encourage your friends to do?",
             "self": {
-                "choice": "Make sure they can easily move around by living close to public transportation in a walkable, bikeable city."
+                "choice": "Buy a two-seat electric scooter."
             },
             "society": {
-                "choice": "Consider a career in public transportation to help people use fast and reliable light rail."
+                "choice": "Consider a career in public transportation."
             },
             "sustainability": {
-                "choice": "Help facilitate the just transition of workers and drivers to public transit that serves everyone."
+                "choice": "Live close to public transportation in a walkable, bikeable city."
             }
         },
         {
             "pillar": "Repair",
-            "prompt": "Transportation generates a lot of pollution. Everyone is dependent on it, so clean and equitable methods must be accessible to all.",
+            "prompt": "Everyone is dependent on transportation, so clean and equitable methods must be accessible to all. What will you do?",
             "self": {
                 "choice": "Fix up an old bike that you bought at a yard sale."
             },
@@ -492,12 +492,12 @@
     "Arts": [
         {
             "pillar": "Protect",
-            "prompt": "Human creativity and expression are a source of joy, beauty, social commentary, and ingenuity.",
+            "prompt": "Human creativity and expression are a source of joy, beauty, social commentary, and ingenuity. How will you support the arts?",
             "self": {
                 "choice": "Create an arts and crafts project using ecofriendly materials."
             },
             "society": {
-                "choice": "Contribute to a student made video game that communicates the Green New Deal and its benefits to society."
+                "choice": "Contribute to a student made video game that communicates about the Green New Deal."
             },
             "sustainability": {
                 "choice": "Contact local officials to maintain a public arts budget for youth in low income areas."
@@ -505,7 +505,7 @@
         },
       {
           "pillar": "Transform",
-          "prompt": "Music can give us inspiration and strength to keep up our struggle for climate justice!",
+          "prompt": "Music can give us inspiration and strength to keep up our struggle for climate justice! How will you spread the vibes?",
           "self": {
               "choice": "Find some climate justice songs and learn the words. Sing it loud!"
           },
@@ -520,7 +520,7 @@
     "Resources": [
         {
             "pillar": "Repair",
-            "prompt": "Fixing and reusing may take time, but it saves on energy and resources that come with dismantling and recycling.",
+            "prompt": "Fixing and reusing may take time, but it saves on energy and resources that come with dismantling and recycling. What will you help to repair?",
             "self": {
                 "choice": "Mend the small hole in your favorite socks. A stitch in time saves 9!"
             },
@@ -533,7 +533,7 @@
         },
         {
             "pillar": "Transform",
-            "prompt": "We throw away 300 million tons of plastic each year, nearly equivalent to the weight of the human population. How can we quit plastics?",
+            "prompt": "We throw away 300 million tons of plastic each year, nearly equivalent to the weight of the human population. How can you help the world to quit plastics?",
             "self": {
                 "choice": "Choose to refuse single use plastics."
             },
@@ -548,28 +548,28 @@
     "Truth": [
         {
             "pillar": "Repair",
-            "prompt": "Tell the truth. Demand the truth.  Strive to understand the truth.",
+            "prompt": "How will you strive to tell and demand the truth?",
             "self": {
-                "choice": "Learn about white privilege, supremacy, and American exceptionalism and the harm these have caused."
+                "choice": "Learn about white supremacy and American exceptionalism, and the harm they have caused."
             },
             "society": {
-                "choice": "Organize an event where people share their stories and tactics about overcoming oppression."
+                "choice": "Organize an event where people share their stories about overcoming oppression."
             },
             "sustainability": {
-                "choice": "Integrate a truth and reconciliation process centered in schools to learn the truth and make reparations for climate justice."
+                "choice": "Integrate a truth and reconciliation process for climate justice, centered in schools."
             }
         },
       {
           "pillar": "Invest",
           "prompt": "Journalism is going through tough times. What can you do to support those who report the truth?",
           "self": {
-              "choice": "Get educated on disinformation campaigns and share what you learn with your friends."
+              "choice": "Get educated about disinformation campaigns."
           },
           "society": {
               "choice": "Support a national environmental investigative journalism project."
           },
           "sustainability": {
-              "choice": "Help to fund local reporters who are covering the ins and outs of local government, where a lot of policy is implemented!"
+              "choice": "Help to fund reporters who are covering local government."
           }
       }
     ],
@@ -578,13 +578,13 @@
             "pillar": "Transform",
             "prompt": "All living things die.",
             "self": {
-                "choice": "Join a 12 month group meditation practice following A Year to Live by Steven Levine."
+                "choice": "Join a group meditation practice."
             },
             "society": {
-                "choice": " Join a Threshold Choir to help families and the dying through the passing."
+                "choice": "Join a Threshold Choir to help families and the dying through the passing."
             },
             "sustainability": {
-                "choice": "Promote laws and ordinances for low resource burial or cremation."
+                "choice": "Promote laws for low resource burial or cremation."
             }
         }
     ]

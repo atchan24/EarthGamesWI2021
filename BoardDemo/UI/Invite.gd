@@ -47,8 +47,8 @@ func _ready():
 #	update_invite_values()
 #	set_process(false)
 
-func _process(delta):
-	pass
+#func _process(delta):
+#	pass
 
 #func _on_invite_pressed():
 #	popup_anim.play_backwards("inviteMenu")
@@ -178,17 +178,21 @@ func _on_invite_buff_pressed():
 func _on_invite_surp_pressed():
 	var active_player = find_active_player()
 	if active_player.player_name_lower != player1.player_name_lower:
-		summon(player2)
+		summon(player1)
 	active_player.update_values(-5)
 	manager.handle_events_demo(choice, true)
 	
 func _on_invite_job_pressed():
-	summon(player3)
+	var active_player = find_active_player()
+	if active_player.player_name_lower != player3.player_name_lower:
+		summon(player3)
 	find_active_player().update_values(-5)
 	manager.handle_events_demo(choice, true)
 
 func _on_invite_beat_pressed():
-	summon(player4)
+	var active_player = find_active_player()
+	if active_player.player_name_lower != player4.player_name_lower:
+		summon(player4)
 	find_active_player().update_values(-5)
 	manager.handle_events_demo(choice, true)
 

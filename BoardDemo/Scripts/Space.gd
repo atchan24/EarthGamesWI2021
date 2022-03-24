@@ -4,7 +4,7 @@ var manager = null
 
 export var category : String
 
-var bonus_value = 10
+var bonus_value = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
