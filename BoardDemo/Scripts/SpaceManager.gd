@@ -196,6 +196,7 @@ func start_other_card_event(player):
 
 func handle_turnOver():
 	# needs a signal from 'next' button on post-choice popup
+	top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
 	cur_player.has_rolled = false
 	cur_player.active = false
 	_round += 1

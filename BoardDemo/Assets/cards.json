@@ -2,15 +2,15 @@
     "Justice": [
         {
             "pillar": "Repair",
-            "prompt": "What movements will you connect with to help end white supremacy and liberate communities of color?",
+            "prompt": "What movements will you connect with to help end white supremacy?",
             "self": {
                 "choice": "Movement for Black Lives chapters around the country, on social media."
             },
             "society": {
-                "choice": "Movement for reparations, for descendants of slaves."
+                "choice": "Movement for reparations, for descendants of enslaved and exploited peoples."
             },
             "sustainability": {
-                "choice": "Land back movements, which return land ownership to Indigenous peoples."
+                "choice": "Frontline environmental justice organizations led by Black women."
             }
         }, 
         {
@@ -43,7 +43,7 @@
         },
         {
             "pillar": "Invest",
-            "prompt": "A Black homeowner is less likely to have solar panels on their homes. We need energy justice!",
+            "prompt": "Black homeowners are less likely to have solar panels on their homes. We need energy justice!",
             "self": {
                 "choice" : "Get a grant for solar panels on your rooftop."
             },

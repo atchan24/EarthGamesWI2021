@@ -124,7 +124,13 @@ func handle_P4_active():
 func update_turn_label():
 	var turn = spaces._round
 	turn += 1
-	$Label.text = "Turn " + str(turn)
+	$Label.text = str((32-turn)) + " Seasons Left"
+	#if turn % 4 == 0: 
+	#	$Label/BigLabel.text = "Only" + str((32-turn)/4) + " Years Left!!!"
+	#	$Label/BigLabel.visible = true
+	#	yield(get_tree().create_timer(1.5), "timeout")
+	#	$Label/BigLabel.visible = false
+		
 
 
 # ANIMATIONS
@@ -259,4 +265,5 @@ func popup_postChoice_nothing():
 func _on_PostChoicePopup_NextButton_pressed():
 	postChoice_popup_anim.play("PopupPostChoice")
 	emit_signal("turnOver")
+
 

@@ -165,7 +165,7 @@ transform = Transform( 1, 0, 0, 0, 0.910785, 0.412882, 0, -0.412882, 0.910785, 2
 script = ExtResource( 6 )
 
 [node name="Player1" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.7771, 1.69547, 2.02599 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.777, 1.695, 3.026 )
 script = ExtResource( 30 )
 player_number = "player1"
 player_name_upper = "Surp"
@@ -182,7 +182,7 @@ near = 5.02
 far = 451.5
 
 [node name="Player2" type="KinematicBody" parent="Players"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.4563, 2.07182, -19.2213 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98, 2.072, -15 )
 script = ExtResource( 30 )
 player_number = "player2"
 player_name_upper = "Buff"
@@ -199,9 +199,11 @@ disabled = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Players/Player2"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.424805, 0 )
+offset = Vector2( 700, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BuffIdle"
+frame = 4
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player2"]
@@ -211,7 +213,7 @@ max_db = -0.776
 max_distance = 100.0
 
 [node name="Player3" type="KinematicBody" parent="Players"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101.084, 1.31781, -9.86353 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 104, 1.318, -9.864 )
 script = ExtResource( 30 )
 player_number = "player3"
 player_name_upper = "Jog"
@@ -228,6 +230,7 @@ disabled = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Players/Player3"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.366223, 0 )
+offset = Vector2( -700, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "JogIdle"
@@ -241,7 +244,7 @@ max_db = -0.776
 max_distance = 100.0
 
 [node name="Player4" type="KinematicBody" parent="Players"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.4914, 1.45217, -14.6549 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91.491, 3.452, -14.655 )
 script = ExtResource( 30 )
 player_number = "player4"
 player_name_upper = "Beat"
@@ -258,10 +261,11 @@ disabled = true
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Players/Player4"]
 transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 1, 0, 0.556051, 0 )
+offset = Vector2( 0, -500 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "BeatIdle"
-frame = 3
+frame = 1
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player4"]
@@ -1138,7 +1142,7 @@ billboard = 2
 texture = ExtResource( 19 )
 
 [node name="Sun" type="Sprite3D" parent="Environment/Misc"]
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, -190.512, 68.256, -172.129 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 1, -190.512, 88, -172.129 )
 billboard = 2
 texture = ExtResource( 21 )
 

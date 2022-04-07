@@ -22,7 +22,7 @@ font_data = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
+layer = 0
 
 [node name="Background" type="ColorRect" parent="CanvasLayer"]
 margin_right = 1025.0
@@ -77,6 +77,6 @@ position = Vector2( 943.722, 510.893 )
 scale = Vector2( 0.08, 0.08 )
 frames = ExtResource( 1 )
 animation = "BuffWalk"
-frame = 3
+frame = 2
 playing = true
 flip_h = true

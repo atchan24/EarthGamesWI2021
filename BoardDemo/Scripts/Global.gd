@@ -22,6 +22,7 @@ func goto_scene(path):
 		loader = ResourceLoader.load_interactive(path)
 		return
 	get_node("/root/Loading").visible = true
+	get_node("/root/Loading/CanvasLayer/Background").visible = true
 	set_process(true)
 	current_scene.queue_free()
 	

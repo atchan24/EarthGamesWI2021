@@ -143,8 +143,10 @@ tracks/9/keys = {
 script = ExtResource( 2 )
 
 [node name="Control" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
+rect_scale = Vector2( 0.5, -0.5 )
 rect_pivot_offset = Vector2( 512, 300 )
 mouse_filter = 1
 __meta__ = {
@@ -216,9 +218,11 @@ __meta__ = {
 layer = -1
 
 [node name="Sprite" type="TextureRect" parent="Control/CanvasLayer"]
-margin_top = 34.0
+visible = false
+margin_top = -460.0
 margin_right = 1024.0
-margin_bottom = 554.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.5, -0.5 )
 rect_pivot_offset = Vector2( 300, 200 )
 texture = ExtResource( 1 )
 expand = true
@@ -231,7 +235,7 @@ __meta__ = {
 show_behind_parent = true
 margin_right = 1024.0
 margin_bottom = 520.0
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 __meta__ = {
@@ -241,7 +245,7 @@ __meta__ = {
 [node name="Template2" type="TextureRect" parent="Control/CanvasLayer/Sprite"]
 margin_right = 1024.0
 margin_bottom = 520.0
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 __meta__ = {
@@ -249,6 +253,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control/CanvasLayer/Sprite"]
+visible = false
 margin_left = 420.0
 margin_top = 29.0
 margin_right = 763.0
