@@ -37,16 +37,23 @@ func _ready():
 	invite_popup = invite_screen.get_node("AnimationPlayer")
 	
 	top_bar.connect("turnOver", self, "handle_turnOver")
+	choice_gui.connect("yearly_event_complete", self, "finish_other_card_event")
 	for b in buttons.get_children():
 		b.visible = false
 
 
-func start_card_event(category, player, bonus, end_turn):
-#	var n = rng.randi_range(0, 4)
-#	if n == 0:
-#		start_other_card_event(player)
-#	else:
-	start_action_card_event(category, player, bonus, end_turn)
+func start_other_card_event():
+	print("Other card event")
+	choice_gui.get_node("AnimationPlayer").play("YearlyEvent")
+	top_bar.get_counter().text = ""
+	popup_post_card_event(0, 0, 0)
+	#pause game (dont let player spin)
+	#choose card depending on cur_scores
+	#add or subtract points according to card
+	
+func finish_other_card_event():
+	choice_gui.get_node("AnimationPlayer").play_backwards("YearlyEvent")
+	#unpause game
 
 
 func start_action_card_event(category, player, bonus, end_turn):
@@ -121,14 +128,14 @@ func handle_events_demo(c, end_turn):
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
 		s2 = 2 + (cur_bonus * Global.players_invited)
-#		top_bar.get_node('Control/AnimationPlayer/AddSociety').text = "+" + str(s2)
-#		top_bar.anim_add_society()          # anim to +5 society 
+		top_bar.get_node('Control/AnimationPlayer/AddSociety').text = "+" + str(s2)
+		top_bar.anim_add_society()          # anim to +5 society 
 	elif c == "choice-c":
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
 		s3 = 2 + (cur_bonus * Global.players_invited)
-#		top_bar.get_node('Control/AnimationPlayer/AddSustainability').text = "+" + str(s3)
-#		top_bar.anim_add_sustainability()   # anim to +5 sustainability
+		top_bar.get_node('Control/AnimationPlayer/AddSustainability').text = "+" + str(s3)
+		top_bar.anim_add_sustainability()   # anim to +5 sustainability
 	
 	Global.players_invited = 0
 	invite_screen.choice = c
@@ -140,7 +147,6 @@ func handle_events_demo(c, end_turn):
 		invite_popup.play_backwards("inviteMenu")
 		
 #	invite_popup.play_backwards("inviteMenu")
-#	choice_gui.get_node("AnimationPlayer").play_backwards("DrawCard")
 	
 #	cur_player.update_values(s1 + cur_bonus)
 	# send signal from player scripts emitted with update_value()
@@ -148,7 +154,6 @@ func handle_events_demo(c, end_turn):
 	
 #
 	choice_gui.get_node("AnimationPlayer").play_backwards("DrawCard")
-#	top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
 	
 	if end_turn or c == "choice-a":
 		if c != "choice-a":
@@ -187,11 +192,7 @@ func popup_post_card_event(s1, s2, s3):
 #		invite_screen.update_invite_values()
 
 
-func start_other_card_event(player):
-	print("Other card event")
-	cur_player = player
-	top_bar.get_counter().text = ""
-	popup_post_card_event(0, 0, 0)
+
 
 
 func handle_turnOver():

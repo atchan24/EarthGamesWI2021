@@ -48,6 +48,11 @@ func _on_Timer_timeout():
 	richText.set_visible_characters(richText.get_visible_characters() + 1 )
 
 
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_SPACE:
+			_on_NextButton_pressed()
+
 func _on_NextButton_pressed():
 	
 	next_pressed += 1

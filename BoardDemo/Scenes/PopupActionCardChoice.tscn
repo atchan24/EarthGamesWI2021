@@ -508,5 +508,6 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StickerBook"]
 anims/popupStickerBook = SubResource( 6 )
+
 [connection signal="pressed" from="StickerBook/TextureButton" to="." method="_on_StickerBook_pressed"]
 [connection signal="pressed" from="StickerBook/TextureRect/TextureButton2" to="." method="_on_StickerBook_Closed_pressed"]

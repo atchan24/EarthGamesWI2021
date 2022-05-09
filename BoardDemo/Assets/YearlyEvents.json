@@ -1,0 +1,45 @@
+{
+    "Self": [
+        {
+            "status": "Good",
+            "prompt": "A universal basic income passed in the US Congress. Collect +5 self points (society, sustainability)."
+        }, 
+        {
+            "status": "Medium",
+            "prompt": "A Green New Deal visioning game has been released - play to learn to do your part to create a just transition and gain +5 society, sustainability, self points."
+        }, 
+        {
+            "status": "Bad",
+            "prompt": "Poor whites take out frustration and lack of education on non-white populations, society loses points / all players add 5+ points to society to heal and prevent further racism from self category."
+        } 
+    ],
+    "Society": [
+        {
+            "status": "Good",
+            "prompt": "A reparations bill passed - add +5 for self/society - everyone has universal housing, healthcare, nutrition, jobs, and access to services."
+        }, 
+        {
+            "status": "Medium",
+            "prompt": "Refugee crisis - accept refugees and pay reparations for destroying homes - +5 from all players for society, fold new arrivals into care and repair system jobs and training etc."
+        }, 
+        {
+            "status": "Bad",
+            "prompt": "Global pandemic hits - all players lose -5 self/society points."
+        } 
+    ],
+    "Sustainability": [
+        {
+            "status": "Good",
+            "prompt": "Green infrastructure bill passes with 15 million new good jobs with benefits a living wage and union protection - add +5 points to self, society, sustainability"
+        },
+        {
+            "status": "Medium",
+            "prompt": "Fires devastate the west coast - all players contribute 5+ points to sustainability and society - pay firefighters equally, safety, GND for west coast."
+            }, 
+        {
+            "status": "Bad",
+            "prompt": "Overfishing in the ocean and animal based diet with trash and pollution damage the ocean - all players asked to contribute to 5+ for sustainability for sustainable fishing."
+        }
+
+    ]
+}
