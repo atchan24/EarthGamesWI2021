@@ -163,7 +163,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=10]
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Beat/AddBeat:modulate")
 tracks/0/interp = 1
@@ -171,10 +171,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 0.713726, 1, 0.72549, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Beat/AddBeat:rect_scale")
@@ -183,14 +183,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 2 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
 [sub_resource type="Animation" id=11]
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Buff/AddBuff:modulate")
 tracks/0/interp = 1
@@ -198,10 +198,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 0.713726, 1, 0.72549, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Buff/AddBuff:rect_scale")
@@ -210,14 +210,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 2 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
 [sub_resource type="Animation" id=12]
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Jog/AddJog:modulate")
 tracks/0/interp = 1
@@ -225,10 +225,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 0.713726, 1, 0.72549, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Jog/AddJog:rect_scale")
@@ -237,14 +237,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 2 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
 [sub_resource type="Animation" id=13]
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Surp/AddSurp:modulate")
 tracks/0/interp = 1
@@ -252,10 +252,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 0.713726, 1, 0.72549, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Surp/AddSurp:rect_scale")
@@ -264,14 +264,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 2 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
 [sub_resource type="Animation" id=14]
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Beat/LoseBeat:modulate")
 tracks/0/interp = 1
@@ -279,10 +279,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.713726, 0.713726, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Beat/LoseBeat:rect_scale")
@@ -291,14 +291,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 2 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
 [sub_resource type="Animation" id=15]
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Buff/LoseBuff:modulate")
 tracks/0/interp = 1
@@ -306,10 +306,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.713726, 0.713726, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Buff/LoseBuff:rect_scale")
@@ -318,14 +318,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 2 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
 [sub_resource type="Animation" id=16]
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Jog/LoseJog:rect_scale")
 tracks/0/interp = 1
@@ -333,7 +333,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 2 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
@@ -345,14 +345,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.713726, 0.713726, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="Animation" id=17]
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Surp/LoseSurp:rect_scale")
 tracks/0/interp = 1
@@ -360,7 +360,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( -0.01, 0.5, 2 ),
+"times": PoolRealArray( -0.01, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
@@ -372,10 +372,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.713726, 0.713726, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="DynamicFont" id=18]
@@ -1975,7 +1975,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "JogIdle"
-frame = 3
+frame = 1
 speed_scale = 0.7
 playing = true
 
