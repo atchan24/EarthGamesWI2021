@@ -55,7 +55,13 @@ func update_score(soc, sus):
 	bar.update_score(bar.get_sustain(), sustainability)
 	print("Society: " + str(society))
 	print("Sustainability: " + str(sustainability))
-
+	if soc > 1:
+		bar.get_node('Control/AnimationPlayer/AddSociety').text = "+" + str(soc)
+		bar.anim_add_society()
+	if sus > 1:
+		bar.get_node('Control/AnimationPlayer/AddSustainability').text = "+" + str(sus)
+		bar.anim_add_sustainability()
+	
 
 func end_game():
 	var soc_ending
@@ -101,3 +107,7 @@ func get_sustainability():
 	return sustainability
 	
 	
+
+
+
+

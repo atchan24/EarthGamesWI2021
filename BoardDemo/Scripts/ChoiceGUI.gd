@@ -16,5 +16,4 @@ func change_background(category, path):
 	label.text = category
 
 
-func _on_YearlyEventNextButton_pressed():
-	emit_signal("yearly_event_complete")
+

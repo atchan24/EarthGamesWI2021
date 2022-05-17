@@ -159,15 +159,26 @@ func _unhandled_input(event):
 # ANIMATIONS
 func anim_add_society():
 	$Control/AnimationPlayer.play("AddSociety")
+	$Control/SocietyBar/SocietyScore.text = "Society: "+ str(get_society().value) + "-" + str(get_society().max_value)
+	
 
 func anim_add_sustainability():
 	$Control/AnimationPlayer.play("AddSustainability")
+	$Control/SocietyBar/SocietyScore.text = "Society: "+ str(get_sustain().value) + "-" + str(get_sustain().max_value)
 
 func _on_playerAdd(score, player_name_upper):
 	var nodeLocation = "VBoxContainer/SelfBar_%s/Add%s"%[player_name_upper, player_name_upper]
 	get_node(nodeLocation).text = str("+") + str(score)
 	var anim_name = "Add%s"%[player_name_upper]
 	$Control/SelfAnimationPlayer.play(anim_name)
+	update_score($VBoxContainer/SelfBar_Surp, player1.self_score)
+	update_score($VBoxContainer/SelfBar_Buff, player2.self_score)
+	update_score($VBoxContainer/SelfBar_Jog, player3.self_score)
+	update_score($VBoxContainer/SelfBar_Beat, player4.self_score)
+	$VBoxContainer/SelfBar_Surp/SelfScore.text = " Surp: " + str(get_self_surp().value) + "-" + str(get_self_surp().max_value)
+	$VBoxContainer/SelfBar_Buff/SelfScore.text = " Buff: " + str(get_self_buff().value) + "-" + str(get_self_buff().max_value)
+	$VBoxContainer/SelfBar_Jog/SelfScore.text = " Jog: " + str(get_self_jog().value) + "-" + str(get_self_jog().max_value)
+	$VBoxContainer/SelfBar_Beat/SelfScore.text = " Beat: " + str(get_self_beat().value) + "-" + str(get_self_beat().max_value)
 
 func _on_playerLose(score, player_name_upper):
 	var nodeLocation = "VBoxContainer/SelfBar_%s"%[player_name_upper]
@@ -176,6 +187,15 @@ func _on_playerLose(score, player_name_upper):
 	get_node(childLocation).text = str(score)
 	var anim_name = "Lose%s"%[player_name_upper]
 	$Control/SelfAnimationPlayer.play(anim_name)
+	update_score($VBoxContainer/SelfBar_Surp, player1.self_score)
+	update_score($VBoxContainer/SelfBar_Buff, player2.self_score)
+	update_score($VBoxContainer/SelfBar_Jog, player3.self_score)
+	update_score($VBoxContainer/SelfBar_Beat, player4.self_score)
+	$VBoxContainer/SelfBar_Surp/SelfScore.text = " Surp: " + str(get_self_surp().value) + "-" + str(get_self_surp().max_value)
+	$VBoxContainer/SelfBar_Buff/SelfScore.text = " Buff: " + str(get_self_buff().value) + "-" + str(get_self_buff().max_value)
+	$VBoxContainer/SelfBar_Jog/SelfScore.text = " Jog: " + str(get_self_jog().value) + "-" + str(get_self_jog().max_value)
+	$VBoxContainer/SelfBar_Beat/SelfScore.text = " Beat: " + str(get_self_beat().value) + "-" + str(get_self_beat().max_value)
+
 
 #func anim_add_surp(score):
 #	var new_string = "+" + str(score)

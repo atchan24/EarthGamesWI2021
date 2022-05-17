@@ -35,8 +35,14 @@ onready var beat_button = get_node("TextureRect/invite_beat")
 onready var beat_button_label = get_node("TextureRect/invite_beat/Label")
 
 var manager = null
-
+var top_bar = null
+var self_bars_anim_player = null
 var choice = null
+
+var movement_cost_p1 = 0
+var movement_cost_p2 = 0
+var movement_cost_p3 = 0
+var movement_cost_p4 = 0
 
 const velocity = 10
 
@@ -44,6 +50,8 @@ func _ready():
 #	popup_anim.play("inviteMenu")
 	spaces = get_node("/root/Main/Spaces").get_children()
 	manager = get_node("/root/Main/Spaces")
+	top_bar = get_node("/root/Main/GUI/TopBar")
+	self_bars_anim_player = get_node("/root/Main/GUI/TopBar/Control/SelfAnimationPlayer")
 #	update_invite_values()
 #	set_process(false)
 
@@ -102,13 +110,13 @@ func update_invite_values():
 	if active_player.current > player1.current:
 		surp_button.visible = true
 		surp_distance.text = str(active_player.current - player1.current) + " spaces away, "
-		var movement_cost = (active_player.current - player1.current) * int(Global.movement_cost)
-		surp_cost.text = "-" + str(movement_cost) + " self points"
+		movement_cost_p1 = (active_player.current - player1.current) * int(Global.movement_cost)
+		surp_cost.text = "-" + str(movement_cost_p1) + " self points"
 		surp_button_label.text = "Invite Surp!"
 		
-		if movement_cost > player1.self_score:
+		if movement_cost_p1 > player1.self_score:
 			surp_button.visible = false
-			surp_distance.text = "Surp needs " + str(movement_cost) + " energy to move " + str(active_player.current - player1.current) + " squares"
+			surp_distance.text = "Surp needs " + str(movement_cost_p1) + " energy to move " + str(active_player.current - player1.current) + " squares"
 			surp_cost.text = ""
 	else:
 		surp_button.visible = false
@@ -118,13 +126,13 @@ func update_invite_values():
 	if active_player.current > player2.current:
 		buff_button.visible = true
 		buff_distance.text = str(active_player.current - player2.current) + " spaces away, "
-		var movement_cost = (active_player.current - player2.current) * int(Global.movement_cost)
-		buff_cost.text = "-" + str(movement_cost) + " self points"
+		movement_cost_p2 = (active_player.current - player2.current) * int(Global.movement_cost)
+		buff_cost.text = "-" + str(movement_cost_p2) + " self points"
 		buff_button_label.text = "Invite Buff!"
 		
-		if movement_cost > player2.self_score:
+		if movement_cost_p2 > player2.self_score:
 			buff_button.visible = false
-			buff_distance.text = "Buff needs " + str(movement_cost) + " energy to move " + str(active_player.current - player2.current) + " squares"
+			buff_distance.text = "Buff needs " + str(movement_cost_p2) + " energy to move " + str(active_player.current - player2.current) + " squares"
 			buff_cost.text = ""
 	else:
 		buff_button.visible = false
@@ -134,13 +142,13 @@ func update_invite_values():
 	if active_player.current > player3.current:
 		jog_button.visible = true
 		jog_distance.text = str(active_player.current - player3.current) + " spaces away, "
-		var movement_cost = (active_player.current - player3.current) * int(Global.movement_cost)
-		jog_cost.text = "-" + str(movement_cost) + " self points"
+		movement_cost_p3 = (active_player.current - player3.current) * int(Global.movement_cost)
+		jog_cost.text = "-" + str(movement_cost_p3) + " self points"
 		jog_button_label.text = "Invite Jog!"
 		
-		if movement_cost > player3.self_score:
+		if movement_cost_p3 > player3.self_score:
 			jog_button.visible = false
-			jog_distance.text = "Jog needs " + str(movement_cost) + " energy to move " + str(active_player.current - player3.current) + " squares"
+			jog_distance.text = "Jog needs " + str(movement_cost_p3) + " energy to move " + str(active_player.current - player3.current) + " squares"
 			jog_cost.text = ""
 	else:
 		jog_button.visible = false
@@ -150,13 +158,13 @@ func update_invite_values():
 	if active_player.current > player4.current:
 		beat_button.visible = true
 		beat_distance.text = str(active_player.current - player4.current) + " spaces away, "
-		var movement_cost = (active_player.current - player4.current) * int(Global.movement_cost)
-		beat_cost.text = "-" + str(movement_cost) + " self points"
+		movement_cost_p4 = (active_player.current - player4.current) * int(Global.movement_cost)
+		beat_cost.text = "-" + str(movement_cost_p4) + " self points"
 		beat_button_label.text = "Invite Beat!"
 		
-		if movement_cost > player4.self_score:
+		if movement_cost_p4 > player4.self_score:
 			beat_button.visible = false
-			beat_distance.text = "Beat needs " + str(movement_cost) + " energy to move " + str(active_player.current - player4.current) + " squares"
+			beat_distance.text = "Beat needs " + str(movement_cost_p4) + " energy to move " + str(active_player.current - player4.current) + " squares"
 			beat_cost.text = ""
 	else:
 		beat_button.visible = false
@@ -174,6 +182,8 @@ func _on_invite_buff_pressed():
 		summon(player2)
 	active_player.update_values(-5)
 	manager.handle_events_demo(choice, true)
+	yield(self_bars_anim_player, "animation_finished")
+	top_bar._on_playerLose(-movement_cost_p2, "Buff")
 	
 func _on_invite_surp_pressed():
 	var active_player = find_active_player()
@@ -181,6 +191,8 @@ func _on_invite_surp_pressed():
 		summon(player1)
 	active_player.update_values(-5)
 	manager.handle_events_demo(choice, true)
+	yield(self_bars_anim_player, "animation_finished")
+	top_bar._on_playerLose(-movement_cost_p1, "Surp")
 	
 func _on_invite_job_pressed():
 	var active_player = find_active_player()
@@ -188,6 +200,8 @@ func _on_invite_job_pressed():
 		summon(player3)
 	find_active_player().update_values(-5)
 	manager.handle_events_demo(choice, true)
+	yield(self_bars_anim_player, "animation_finished")
+	top_bar._on_playerLose(-movement_cost_p3, "Jog")
 
 func _on_invite_beat_pressed():
 	var active_player = find_active_player()
@@ -195,6 +209,8 @@ func _on_invite_beat_pressed():
 		summon(player4)
 	find_active_player().update_values(-5)
 	manager.handle_events_demo(choice, true)
+	yield(self_bars_anim_player, "animation_finished")
+	top_bar._on_playerLose(-movement_cost_p4, "Beat")
 
 
 func _on_go_alone_pressed():

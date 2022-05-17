@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/Cards/Work.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/ChoiceGUI.gd" type="Script" id=2]
@@ -8,9 +8,6 @@
 [ext_resource path="res://Assets/Cards/Card_BackTemplate_V1.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Cards/Card_Template3_over.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Cards/Card_BackTemplate_V2.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Art/button_big_purple_pressed.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Art/button_big_purple.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Art/button_big_yellow_pressed.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Cards/Card_BackTemplate_V3.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
@@ -430,31 +427,6 @@ text = "-A universal basic income passed in the US Congress. Collect +5 self poi
 -Universal #JobsAndCare Bill passes where all seniors, families, and people with disabilities have access to universal good paying jobs and care in old age or as kids/families/people with disabilities - add +5 points
 "
 
-[node name="TextureButton" type="TextureButton" parent="YearlyEvent/CanvasLayer/Sprite/Label2"]
-margin_left = 294.0
-margin_top = 368.0
-margin_right = 564.0
-margin_bottom = 441.0
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 11 )
-texture_disabled = ExtResource( 10 )
-expand = true
-stretch_mode = 4
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="YearlyEvent/CanvasLayer/Sprite/Label2/TextureButton"]
-margin_right = 251.0
-margin_bottom = 74.0
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
-text = "Continue"
-align = 1
-valign = 1
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/DrawCard = SubResource( 5 )
 anims/YearlyEvent = SubResource( 6 )
-
-[connection signal="pressed" from="YearlyEvent/CanvasLayer/Sprite/Label2/TextureButton" to="." method="_on_YearlyEventNextButton_pressed"]

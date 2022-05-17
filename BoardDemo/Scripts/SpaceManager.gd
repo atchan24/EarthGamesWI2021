@@ -37,7 +37,6 @@ func _ready():
 	invite_popup = invite_screen.get_node("AnimationPlayer")
 	
 	top_bar.connect("turnOver", self, "handle_turnOver")
-	choice_gui.connect("yearly_event_complete", self, "finish_other_card_event")
 	for b in buttons.get_children():
 		b.visible = false
 
@@ -46,13 +45,16 @@ func start_other_card_event():
 	print("Other card event")
 	choice_gui.get_node("AnimationPlayer").play("YearlyEvent")
 	top_bar.get_counter().text = ""
+	manager.get_node("GUI/TextureButton").show()
 	popup_post_card_event(0, 0, 0)
 	#pause game (dont let player spin)
 	#choose card depending on cur_scores
 	#add or subtract points according to card
-	
-func finish_other_card_event():
+
+func _on_YearlyEventNext_pressed():
+	emit_signal("yearly_event_complete")
 	choice_gui.get_node("AnimationPlayer").play_backwards("YearlyEvent")
+	manager.get_node("GUI/TextureButton").show()
 	#unpause game
 
 
@@ -123,19 +125,16 @@ func handle_events_demo(c, end_turn):
 	var s3 = 0
 	if c == "choice-a":
 		s1 = 5
-		cur_player.update_values(s1);
+		cur_player.update_values(s1)
+		# ^^^
 	elif c == "choice-b":
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
-		s2 = 2 + (cur_bonus * Global.players_invited)
-		top_bar.get_node('Control/AnimationPlayer/AddSociety').text = "+" + str(s2)
-		top_bar.anim_add_society()          # anim to +5 society 
+		s2 = 4 + (cur_bonus * Global.players_invited)
 	elif c == "choice-c":
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
-		s3 = 2 + (cur_bonus * Global.players_invited)
-		top_bar.get_node('Control/AnimationPlayer/AddSustainability').text = "+" + str(s3)
-		top_bar.anim_add_sustainability()   # anim to +5 sustainability
+		s3 = 4 + (cur_bonus * Global.players_invited)
 	
 	Global.players_invited = 0
 	invite_screen.choice = c
@@ -159,6 +158,8 @@ func handle_events_demo(c, end_turn):
 		if c != "choice-a":
 			invite_popup.play("inviteMenu")
 		manager.update_score(s2, s3)
+		# ^^^^ This line updates score AND plays anims for soc and sus score
+		# ^^^^ in GameManager.gd which calls anims from top_bar
 		yield(get_tree().create_timer(3.0), "timeout")
 		for b in buttons.get_children():
 			b.visible = false
@@ -181,9 +182,9 @@ func popup_post_card_event(s1, s2, s3):
 	if first_round == false:               
 		if s1 == 5:
 			top_bar.popup_postChoice_self()
-		elif s2 == 1:
+		elif s2 >= 1:
 			top_bar.popup_postChoice_society()
-		elif s3 == 1:
+		elif s3 >= 1:
 			top_bar.popup_postChoice_sustainability()
 		else:
 			top_bar.popup_postChoice_nothing()
@@ -210,7 +211,12 @@ func handle_events(c):
 	click.play()
 	var choice = card[c]
 	cur_player.update_values(choice["self"]) #+ cur_bonus)
+	# ^^^^ This line updates score AND plays anims for self scores
+	# ^^^^ in PlayerTemplate.gd which emits signal to top_bar (somehow?)
 	manager.update_score(choice["society"], choice["sustainability"])
+	# ^^^^ This line updates score AND plays anims for soc and sus score
+	# ^^^^ in GameManager.gd which calls anims from top_bar
+	
 	# add logic to increase bonus of a future space defined by offset
 	# need to retrive current space to determine offset by relative position
 	# call something to hide UI
@@ -226,3 +232,6 @@ func handle_events(c):
 	
 	# var new_pause_state = not get_tree().paused
 	# get_tree().paused = new_pause_state
+
+
+

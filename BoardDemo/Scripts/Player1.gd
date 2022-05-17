@@ -104,7 +104,7 @@ func is_done():
 
 func update_values(s):
 	self_score += s
-	print(self.name + ": " + str(self_score))
+	print("updating " + self.name + " self score: " + str(self_score))
 	if s > 0:
 		emit_signal("player1add", s)
 	else:
