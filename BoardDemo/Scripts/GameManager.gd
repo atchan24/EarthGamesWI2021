@@ -49,19 +49,27 @@ func _ready():
 
 
 func update_score(soc, sus):
+	# 1. add scores to the game soc and sus
 	society += soc
 	sustainability += sus
+	# 2. update the +X animation label 
+	bar.get_node('Control/AnimationPlayer/AddSociety').text = str(soc)
+	bar.get_node('Control/AnimationPlayer/AddSustainability').text = str(sus)
+	# 3. Play animations 
+	if soc != 0:
+		bar.get_node('Control/AnimationPlayer').play("AddSociety")
+	if sus != 0:
+		bar.get_node('Control/AnimationPlayer').play("AddSustainability")
+	# 4. Update the Progress bar Label nodes
+	bar.get_node('Control/SocietyBar/SocietyScore').text = "Society: "+ str(society) + "-" + str(40)
+	bar.get_node('Control/SustainBar/SustainScore').text = "Sustainability: "+ str(sustainability) + "-" + str(40)
+	# 5. update the TextureProgress bar nodes and text
 	bar.update_score(bar.get_society(), society)
 	bar.update_score(bar.get_sustain(), sustainability)
 	print("Society: " + str(society))
 	print("Sustainability: " + str(sustainability))
-	if soc > 1:
-		bar.get_node('Control/AnimationPlayer/AddSociety').text = "+" + str(soc)
-		bar.anim_add_society()
-	if sus > 1:
-		bar.get_node('Control/AnimationPlayer/AddSustainability').text = "+" + str(sus)
-		bar.anim_add_sustainability()
 	
+
 
 func end_game():
 	var soc_ending

@@ -1,44 +1,42 @@
 {
-    "Self": [
+    "SocietyGood": [
         {
             "status": "Good",
-            "prompt": "A universal basic income passed in the US Congress. Collect +5 self points (society, sustainability)."
+            "prompt": "A universal basic income passed in the US Congress. Everyone collects +3 self points and Society gains +12 points."
         }, 
         {
-            "status": "Medium",
-            "prompt": "A Green New Deal visioning game has been released - play to learn to do your part to create a just transition and gain +5 society, sustainability, self points."
+            "status": "Good",
+            "prompt": "A reparations bill passed - add +12 for society - everyone has universal housing, healthcare, nutrition, jobs, and access to services. Everyone collects +3 self points"
+        }
+    ],
+    "SocietyBad": [ 
+        {
+            "status": "Bad",
+            "prompt": "Refugee crisis - accept refugees and pay reparations for destroying homes - Society loses 8 points and -2 from all players, fold new arrivals into care and repair system jobs and training etc."
         }, 
         {
             "status": "Bad",
-            "prompt": "Poor whites take out frustration and lack of education on non-white populations, society loses points / all players add 5+ points to society to heal and prevent further racism from self category."
-        } 
-    ],
-    "Society": [
-        {
-            "status": "Good",
-            "prompt": "A reparations bill passed - add +5 for self/society - everyone has universal housing, healthcare, nutrition, jobs, and access to services."
-        }, 
-        {
-            "status": "Medium",
-            "prompt": "Refugee crisis - accept refugees and pay reparations for destroying homes - +5 from all players for society, fold new arrivals into care and repair system jobs and training etc."
+            "prompt": "Poor whites take out frustration and lack of education on non-white populations, society loses 8 points / all players lose 2 points to society to heal and prevent further racism from self category."
         }, 
         {
             "status": "Bad",
-            "prompt": "Global pandemic hits - all players lose -5 self/society points."
+            "prompt": "Global pandemic hits - Society loses 8 points and all players lose 2 self points."
         } 
     ],
-    "Sustainability": [
+    "SustainabilityGood": [
         {
             "status": "Good",
-            "prompt": "Green infrastructure bill passes with 15 million new good jobs with benefits a living wage and union protection - add +5 points to self, society, sustainability"
-        },
+            "prompt": "Green infrastructure bill passes with 15 million new good jobs with benefits a living wage and union protection - add +3 points to all self. Sustainability gets +12 points."
+        }
+    ],
+    "SustainabilityBad": [
         {
-            "status": "Medium",
-            "prompt": "Fires devastate the west coast - all players contribute 5+ points to sustainability and society - pay firefighters equally, safety, GND for west coast."
+            "status": "Bad",
+            "prompt": "Fires devastate the west coast - all players contribute 2 points to sustainability and sustainability loses 8 points - pay firefighters equally, safety, GND for west coast."
             }, 
         {
             "status": "Bad",
-            "prompt": "Overfishing in the ocean and animal based diet with trash and pollution damage the ocean - all players asked to contribute to 5+ for sustainability for sustainable fishing."
+            "prompt": "Overfishing in the ocean and animal based diet with trash and pollution damage the ocean - all players contribute 2 points for sustainable fishing. Sustainability loses 8 points."
         }
 
     ]

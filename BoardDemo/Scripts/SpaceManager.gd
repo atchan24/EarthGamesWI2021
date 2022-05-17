@@ -3,6 +3,7 @@ extends Node
 var rng = RandomNumberGenerator.new()
 var manager = null
 var card_data = null
+var yearly_event_data = null
 var cur_player = null
 var cur_bonus = 5
 var card = null
@@ -13,6 +14,7 @@ var assets = null
 var cur_assets = null
 var click = null
 var top_bar = null
+var self_anim_player = null
 var invite_screen = null
 var invite_popup = null
 
@@ -33,6 +35,7 @@ func _ready():
 	choice_gui.get_node("Control/CanvasLayer/Sprite").visible = false
 	assets = get_node("/root/Main/Environment/Category Assets")
 	top_bar = get_node("/root/Main/GUI/TopBar")
+	self_anim_player = top_bar.get_node("Control/SelfAnimationPlayer")
 	invite_screen = get_node("/root/Main/GUI/TopBar/Invite")
 	invite_popup = invite_screen.get_node("AnimationPlayer")
 	
@@ -41,20 +44,96 @@ func _ready():
 		b.visible = false
 
 
-func start_other_card_event():
-	print("Other card event")
+func start_yearly_card_event():
+	var x = null
+	var category = null
+	if yearly_event_data == null :
+		yearly_event_data = manager.yearly_event_data
+	print("Yearly card event")
 	choice_gui.get_node("AnimationPlayer").play("YearlyEvent")
 	top_bar.get_counter().text = ""
 	manager.get_node("GUI/TextureButton").show()
 	popup_post_card_event(0, 0, 0)
 	#pause game (dont let player spin)
+	
 	#choose card depending on cur_scores
 	#add or subtract points according to card
+	if manager.get_society() < 20:
+		category = "SocietyBad"
+		x = 1
+		print("Yearly event card: Society Bad")
+	elif manager.get_sustainability() < 20:
+		category = "SustainabilityBad"
+		x = 2
+		print("Yearly event card: Sustain Bad")
+	elif manager.get_society() >= 20:
+		category = "SocietyGood"
+		x = 3
+		print("Yearly event card: Society Good")
+	elif manager.get_sustainability() >= 20:
+		category = "SustainabilityGood"
+		x = 4
+		print("Yearly event card: Sustain Good")
+	var cards = yearly_event_data[category]
+	card = cards[rng.randi_range(0, cards.size() - 1)] # picks a random card from that status
+	choice_gui.get_node("YearlyEvent/CanvasLayer/Sprite/Label2/Label").text \
+		= card.prompt
+		
+	handle_yearly_card_event(x)
+
+
+
+func handle_yearly_card_event(x):
+	print("Yearly event points updated")
+	# Handles adding or subtracting points based on the 
+	# Yearly event card drawn
+	var Surp = get_node("/root/Main/Players/Player1")
+	var Buff = get_node("/root/Main/Players/Player2")
+	var Jog = get_node("/root/Main/Players/Player3")
+	var Beat = get_node("/root/Main/Players/Player4")
+	if x == 1: # Soc bad
+		manager.update_score(-8, 0)
+		Surp.update_values(-2)
+		yield(self_anim_player, "animation_finished")
+		Buff.update_values(-2)
+		yield(self_anim_player, "animation_finished")
+		Jog.update_values(-2)
+		yield(self_anim_player, "animation_finished")
+		Beat.update_values(-2)
+	if x == 2: # Sus bad
+		manager.update_score(0, -8)
+		Surp.update_values(-2)
+		yield(self_anim_player, "animation_finished")
+		Buff.update_values(-2)
+		yield(self_anim_player, "animation_finished")
+		Jog.update_values(-2)
+		yield(self_anim_player, "animation_finished")
+		Beat.update_values(-2)
+	if x == 3: # Soc good
+		manager.update_score(12, 0)
+		Surp.update_values(3)
+		yield(self_anim_player, "animation_finished")
+		Buff.update_values(3)
+		yield(self_anim_player, "animation_finished")
+		Jog.update_values(3)
+		yield(self_anim_player, "animation_finished")
+		Beat.update_values(3)
+	if x == 4: # Sus good
+		manager.update_score(0, 12)
+		Surp.update_values(3)
+		yield(self_anim_player, "animation_finished")
+		Buff.update_values(3)
+		yield(self_anim_player, "animation_finished")
+		Jog.update_values(3)
+		yield(self_anim_player, "animation_finished")
+		Beat.update_values(3)
+
 
 func _on_YearlyEventNext_pressed():
-	emit_signal("yearly_event_complete")
+	#emit_signal("yearly_event_complete")
 	choice_gui.get_node("AnimationPlayer").play_backwards("YearlyEvent")
-	manager.get_node("GUI/TextureButton").show()
+	manager.get_node("GUI/TextureButton").hide()
+	top_bar.get_node("AnimationPlayer").play_backwards("UIDrawCard")
 	#unpause game
 
 

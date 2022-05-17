@@ -31,17 +31,6 @@ func _ready():
 	players.connect("P2_active", self, "handle_P2_active")
 	players.connect("P3_active", self, "handle_P3_active")
 	players.connect("P4_active", self, "handle_P4_active")
-
-#	player.connect("%sadd"%[player.player_number], self, "anim_add_%s"%[player.player_name_lower])
-#	player1.connect("player1add", self, "anim_add_surp")
-#	player2.connect("player2add", self, "anim_add_buff")
-#	player3.connect("player3add", self, "anim_add_jog")
-#	player4.connect("player4add", self, "anim_add_beat")
-#
-#	player1.connect("player1lose", self, "anim_lose_surp")
-#	player2.connect("player2lose", self, "anim_lose_buff")
-#	player3.connect("player3lose", self, "anim_lose_jog")
-#	player4.connect("player4lose", self, "anim_lose_beat")
 	
 	self_bar_surp.rect_scale = Vector2(1.1, 1.1)
 	self_bar_buff.modulate = Color(0.7, 0.7, 0.7)
@@ -143,7 +132,7 @@ func update_turn_label():
 		$Control/button_big_blue/PressSpinner/BigLabel.text = "Only" + str((32-turn)/4) + " Years Left!!!"
 		$Control/button_big_blue/PressSpinner/BigLabel.visible = true
 		yield(get_tree().create_timer(3.0), "timeout")
-		spaces.start_other_card_event()
+		spaces.start_yearly_card_event()
 		$AnimationPlayer.play("UIDrawCard")
 		$Control/button_big_blue/PressSpinner/BigLabel.visible = false
 	
@@ -157,15 +146,6 @@ func _unhandled_input(event):
 
 
 # ANIMATIONS
-func anim_add_society():
-	$Control/AnimationPlayer.play("AddSociety")
-	$Control/SocietyBar/SocietyScore.text = "Society: "+ str(get_society().value) + "-" + str(get_society().max_value)
-	
-
-func anim_add_sustainability():
-	$Control/AnimationPlayer.play("AddSustainability")
-	$Control/SocietyBar/SocietyScore.text = "Society: "+ str(get_sustain().value) + "-" + str(get_sustain().max_value)
-
 func _on_playerAdd(score, player_name_upper):
 	var nodeLocation = "VBoxContainer/SelfBar_%s/Add%s"%[player_name_upper, player_name_upper]
 	get_node(nodeLocation).text = str("+") + str(score)
@@ -201,40 +181,6 @@ func _on_playerLose(score, player_name_upper):
 #	var new_string = "+" + str(score)
 #	$VBoxContainer/SelfBar_Surp/AddSurp.text = str("+") + str(score)
 #	$Control/SelfAnimationPlayer.play("AddSurp")
-#func anim_add_buff(score):
-##	var new_string = "+" + str(score)
-#	$VBoxContainer/SelfBar_Buff/AddBuff.text = str("+") + str(score)
-#	$Control/SelfAnimationPlayer.play("AddBuff")
-#func anim_add_jog(score):
-##	var new_string = "+" + str(score)
-##	print(score + " potatoes")
-#	$VBoxContainer/SelfBar_Jog/AddJog.text = str("+") + str(score)
-#	$Control/SelfAnimationPlayer.play("AddJog")
-#func anim_add_beat(score):
-##	var new_string = "+" + str(score)
-#	$VBoxContainer/SelfBar_Beat/AddBeat.text = str("+") + str(score)
-#	$Control/SelfAnimationPlayer.play("AddBeat")
-#
-#func anim_lose_surp(score):
-#	var new_string = "-" + str(score)
-#	$VBoxContainer/SelfBar_Surp.value = player1.self_score
-#	$VBoxContainer/SelfBar_Surp/LoseSurp.text = str(score)
-#	$Control/SelfAnimationPlayer.play("LoseSurp")
-#func anim_lose_buff(score):
-##	var new_string = "-" + str(score)
-#	$VBoxContainer/SelfBar_Buff.value = player2.self_score
-#	$VBoxContainer/SelfBar_Buff/LoseBuff.text = str(score)
-#	$Control/SelfAnimationPlayer.play("LoseBuff")
-#func anim_lose_jog(score):
-##	var new_string = "-" + str(score)
-#	$VBoxContainer/SelfBar_Jog.value = player3.self_score
-#	$VBoxContainer/SelfBar_Jog/LoseJog.text = str(score)
-#	$Control/SelfAnimationPlayer.play("LoseJog")
-#func anim_lose_beat(score):
-##	var new_string = str(score)
-#	$VBoxContainer/SelfBar_Beat.value = player4.self_score
-#	$VBoxContainer/SelfBar_Beat/LoseBeat.text = str(score)
-#	$Control/SelfAnimationPlayer.play("LoseBeat")
 
 
 
