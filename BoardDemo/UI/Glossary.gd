@@ -11,8 +11,8 @@ func _ready():
 
 
 func _on_glossary_pressed():
-	popup_anim.play_backwards("popupGlossary")
+	popup_anim.play("popupGlossary")
 
 
 func _on_CloseGlossary_pressed():
-	popup_anim.play("popupGlossary")
+	popup_anim.play_backwards("popupGlossary")

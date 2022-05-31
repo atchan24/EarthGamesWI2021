@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Assets/Bars/Green.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Bars/Base.png" type="Texture" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://Assets/Demo Art/ParakeetWhite.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Art/button_big_blue_pressed.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Art/button_big_yellow_pressed.png" type="Texture" id=16]
-[ext_resource path="res://UI/Glossary.gd" type="Script" id=17]
 [ext_resource path="res://Assets/Art/button_big_yellow.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Art/button_big_purple_pressed.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Art/button_big_purple.png" type="Texture" id=20]
@@ -385,67 +384,6 @@ extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=19]
-size = 38
-outline_size = 2
-extra_spacing_top = 3
-extra_spacing_space = 3
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=20]
-size = 36
-outline_size = 1
-extra_spacing_top = 3
-extra_spacing_space = 3
-font_data = ExtResource( 5 )
-
-[sub_resource type="Animation" id=21]
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("TextureRect:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TextureRect/RichTextLabel:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.7 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("TextureRect:rect_scale:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.15, 0, 0, -0.95, 0, 0.5, 0 ),
-"times": PoolRealArray( 0, 1.3 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("TextureRect:rect_scale:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1.3 )
-}
-
 [sub_resource type="DynamicFont" id=22]
 size = 24
 outline_size = 1
@@ -675,71 +613,71 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 1.2 )
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Glossary/TextureButton:visible")
+tracks/10/path = NodePath("Control/button_big_blue:modulate")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ true, false, false ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("Control/button_big_blue:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("Control/SocietyBar:rect_position:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 120, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.5, 1.2 )
+}
 tracks/12/type = "bezier"
-tracks/12/path = NodePath("Control/SocietyBar:rect_position:x")
+tracks/12/path = NodePath("Control/SocietyBar:rect_position:y")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"points": PoolRealArray( 175.614, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 73.2267, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
 tracks/13/type = "bezier"
-tracks/13/path = NodePath("Control/SocietyBar:rect_position:y")
+tracks/13/path = NodePath("Control/SustainBar:rect_position:x")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"points": PoolRealArray( 73.2267, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 550, -0.25, 0, 0.25, 0, 714, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
 tracks/14/type = "bezier"
-tracks/14/path = NodePath("Control/SustainBar:rect_position:x")
+tracks/14/path = NodePath("Control/SustainBar:rect_position:y")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"points": PoolRealArray( 522.207, -0.25, 0, 0.25, 0, 714, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 73.7801, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
-tracks/15/type = "bezier"
-tracks/15/path = NodePath("Control/SustainBar:rect_position:y")
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/SustainBar/SustainScore:rect_position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"points": PoolRealArray( 73.7801, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.5, 1.2 )
+"times": PoolRealArray( 0, 0.9, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9, -36 ), Vector2( 9, -36 ), Vector2( 9, 0 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Control/SustainBar/SustainScore:rect_position")
+tracks/16/path = NodePath("Control/SocietyBar/SocietyScore:rect_position")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -751,24 +689,12 @@ tracks/16/keys = {
 "values": [ Vector2( 9, -36 ), Vector2( 9, -36 ), Vector2( 9, 0 ) ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("Control/SocietyBar/SocietyScore:rect_position")
+tracks/17/path = NodePath("Control/button_big_blue/PressSpinner/Label:modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 0, 0.9, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 9, -36 ), Vector2( 9, -36 ), Vector2( 9, 0 ) ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Control/button_big_blue/PressSpinner/Label:modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 1.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -791,8 +717,8 @@ margin_left = 511.687
 margin_top = 38.1637
 margin_right = 551.687
 margin_bottom = 78.1637
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -824,8 +750,8 @@ __meta__ = {
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Surp"]
 margin_right = 241.0
 margin_bottom = 44.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = " Surp: 15-40"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -852,8 +778,8 @@ margin_right = 300.0
 margin_bottom = 86.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -867,8 +793,8 @@ margin_right = 300.0
 margin_bottom = 86.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -892,8 +818,8 @@ __meta__ = {
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Buff"]
 margin_right = 232.0
 margin_bottom = 44.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = " Buff: 30-40"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -917,8 +843,8 @@ margin_right = 299.0
 margin_bottom = 85.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -932,8 +858,8 @@ margin_right = 299.0
 margin_bottom = 85.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -957,8 +883,8 @@ __meta__ = {
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Jog"]
 margin_right = 226.0
 margin_bottom = 44.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = " Jog: 20-40"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -982,8 +908,8 @@ margin_right = 299.0
 margin_bottom = 86.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -997,8 +923,8 @@ margin_right = 299.0
 margin_bottom = 86.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1022,8 +948,8 @@ __meta__ = {
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Beat"]
 margin_right = 231.0
 margin_bottom = 44.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "  Beat: 25-40"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1050,8 +976,8 @@ margin_right = 299.0
 margin_bottom = 86.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1065,8 +991,8 @@ margin_right = 299.0
 margin_bottom = 86.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "-5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1128,17 +1054,17 @@ margin_left = 175.143
 margin_top = -129.584
 margin_right = 628.143
 margin_bottom = -81.584
-custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Only 8 Years Left!!!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="SocietyBar" type="TextureProgress" parent="Control"]
-margin_left = 175.614
+margin_left = 120.0
 margin_top = 73.2267
-margin_right = 487.614
+margin_right = 432.0
 margin_bottom = 127.227
 max_value = 40.0
 texture_under = ExtResource( 2 )
@@ -1153,8 +1079,8 @@ margin_left = 9.0
 margin_top = -36.0
 margin_right = 312.0
 margin_bottom = 10.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 6 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Society: 0-40"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1171,9 +1097,9 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 7 )
 
 [node name="SustainBar" type="TextureProgress" parent="Control"]
-margin_left = 522.207
+margin_left = 550.0
 margin_top = 73.7801
-margin_right = 834.207
+margin_right = 862.0
 margin_bottom = 127.78
 max_value = 40.0
 texture_under = ExtResource( 2 )
@@ -1184,18 +1110,18 @@ __meta__ = {
 }
 
 [node name="Flower" type="Sprite" parent="Control/SustainBar"]
-position = Vector2( 386.768, 9.21533 )
+position = Vector2( 396.768, 11.2153 )
 scale = Vector2( -0.2, 0.2 )
 texture = ExtResource( 9 )
 
 [node name="FlowerYellow" type="Sprite" parent="Control/SustainBar"]
-position = Vector2( 414.261, 60.4458 )
+position = Vector2( 409.261, 62.4458 )
 rotation = -1.20775
 scale = Vector2( -0.1, 0.1 )
 texture = ExtResource( 6 )
 
 [node name="ParakeetWhite" type="Sprite" parent="Control/SustainBar"]
-position = Vector2( 417.477, 9.4917 )
+position = Vector2( 417.477, 12.4917 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 14 )
 
@@ -1205,8 +1131,8 @@ margin_top = -36.0
 margin_right = 325.0
 margin_bottom = 65.0
 rect_min_size = Vector2( 1, 1 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
 custom_fonts/normal_font = SubResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
 text = "Sustainability: 0-40"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1218,15 +1144,15 @@ anims/AddSustainability = SubResource( 9 )
 
 [node name="AddSociety" type="Label" parent="Control/AnimationPlayer"]
 visible = false
-modulate = Color( 1, 1, 1, 0 )
+modulate = Color( 1, 1, 1, 0.5 )
 margin_left = 307.0
 margin_top = 548.0
 margin_right = 376.0
 margin_bottom = 602.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 54 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1241,8 +1167,8 @@ margin_right = 691.63
 margin_bottom = 582.925
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 54 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "+5"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -1259,141 +1185,6 @@ anims/LoseJog = SubResource( 16 )
 anims/LoseSurp = SubResource( 17 )
 
 [node name="Tween" type="Tween" parent="Control"]
-
-[node name="Glossary" type="Control" parent="."]
-visible = false
-margin_right = 147.0
-margin_bottom = 62.0
-mouse_filter = 1
-script = ExtResource( 17 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton" type="TextureButton" parent="Glossary"]
-margin_left = 880.0
-margin_top = 400.0
-margin_right = 1041.0
-margin_bottom = 452.0
-texture_normal = ExtResource( 24 )
-texture_pressed = ExtResource( 23 )
-texture_hover = ExtResource( 25 )
-expand = true
-stretch_mode = 5
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Glossary/TextureButton"]
-margin_right = 159.0
-margin_bottom = 49.0
-custom_fonts/font = SubResource( 2 )
-text = "glossary"
-align = 1
-valign = 1
-
-[node name="TextureRect" type="TextureRect" parent="Glossary"]
-margin_left = 11.0
-margin_top = 11.0
-margin_right = 1015.0
-margin_bottom = 567.0
-rect_min_size = Vector2( 10, 10 )
-texture = ExtResource( 18 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Glossary/TextureRect"]
-margin_left = 108.0
-margin_top = 29.0
-margin_right = 876.0
-margin_bottom = 79.0
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
-custom_fonts/font = SubResource( 18 )
-text = "Glossary:"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Glossary/TextureRect"]
-margin_left = 30.0
-margin_top = 82.0
-margin_right = 956.0
-margin_bottom = 466.0
-custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
-custom_fonts/bold_font = SubResource( 19 )
-custom_fonts/normal_font = SubResource( 20 )
-bbcode_enabled = true
-bbcode_text = "[center][b]Self:[/b]
- Our own individual life, including our physical, emotional, and spiritual needs.
-
-[b]Society:[/b]
-The people and their energy that make up the communities around us, shaping our way of life.
-
-[b]Sustainability:[/b]
-How efficiently one uses their resources, and how many resources one consumes.
-
-[b]Decent Living Requirements:[/b]
-Even for a potential  future population of 10 billion people, the decent living requirement could be met for everyone with under 5 TW of power.
-
-[b]Terawatt:[/b]
-
-
-[b]BIPOC:[/b]
-Black and Indigeonous People of Color[/center]"
-text = "Self:
- Our own individual life, including our physical, emotional, and spiritual needs.
-
-Society:
-The people and their energy that make up the communities around us, shaping our way of life.
-
-Sustainability:
-How efficiently one uses their resources, and how many resources one consumes.
-
-Decent Living Requirements:
-Even for a potential  future population of 10 billion people, the decent living requirement could be met for everyone with under 5 TW of power.
-
-Terawatt:
-
-
-BIPOC:
-Black and Indigeonous People of Color"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton2" type="TextureButton" parent="Glossary/TextureRect"]
-margin_left = -3.0
-margin_top = 20.0
-margin_right = 248.0
-margin_bottom = 91.0
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 15 )
-expand = true
-stretch_mode = 5
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Glossary/TextureRect/TextureButton2"]
-margin_right = 242.0
-margin_bottom = 68.0
-custom_fonts/font = SubResource( 2 )
-text = "Close"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Glossary"]
-anims/popupGlossary = SubResource( 21 )
 
 [node name="Invite" type="Control" parent="."]
 visible = false
@@ -1452,8 +1243,8 @@ margin_left = 108.0
 margin_top = 29.0
 margin_right = 876.0
 margin_bottom = 79.0
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Invite a player!"
 align = 1
 valign = 1
@@ -1682,10 +1473,10 @@ __meta__ = {
 margin_top = 2.0
 margin_right = 137.0
 margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 22 )
 text = "0 spaces away,"
 align = 1
 valign = 1
@@ -1698,10 +1489,10 @@ margin_left = 149.0
 margin_top = 2.0
 margin_right = 300.0
 margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 22 )
 text = "0 self points"
 align = 1
 valign = 1
@@ -1723,10 +1514,10 @@ __meta__ = {
 margin_top = 2.0
 margin_right = 137.0
 margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 22 )
 text = "0 spaces away,"
 align = 1
 valign = 1
@@ -1739,10 +1530,10 @@ margin_left = 149.0
 margin_top = 2.0
 margin_right = 300.0
 margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 22 )
 text = "0 self points"
 align = 1
 valign = 1
@@ -1764,10 +1555,10 @@ __meta__ = {
 margin_top = 2.0
 margin_right = 137.0
 margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 22 )
 text = "0 spaces away,"
 align = 1
 valign = 1
@@ -1780,10 +1571,10 @@ margin_left = 149.0
 margin_top = 2.0
 margin_right = 300.0
 margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 22 )
 text = "0 self points"
 align = 1
 valign = 1
@@ -1805,10 +1596,10 @@ __meta__ = {
 margin_top = 2.0
 margin_right = 137.0
 margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 22 )
 text = "0 spaces away,"
 align = 1
 valign = 1
@@ -1821,10 +1612,10 @@ margin_left = 149.0
 margin_top = 2.0
 margin_right = 300.0
 margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 22 )
 text = "0 self points"
 align = 1
 valign = 1
@@ -1837,10 +1628,10 @@ margin_left = 79.9905
 margin_top = 84.6808
 margin_right = 906.991
 margin_bottom = 104.681
+custom_fonts/font = SubResource( 22 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 22 )
 text = "Get 10 bonus points for inviting a player. The player invited loses self for each square"
 align = 1
 valign = 1
@@ -1929,8 +1720,8 @@ __meta__ = {
 [node name="Label" type="Label" parent="PostChoicePopup/TextureRect/TextureButton"]
 margin_right = 233.0
 margin_bottom = 67.0
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/font = SubResource( 24 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Next"
 align = 1
 valign = 1
@@ -1940,9 +1731,9 @@ margin_left = -549.812
 margin_top = -190.125
 margin_right = 201.188
 margin_bottom = 20.875
-custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 custom_fonts/bold_font = SubResource( 25 )
 custom_fonts/normal_font = SubResource( 26 )
+custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 bbcode_enabled = true
 bbcode_text = "You have 25 out of 40 [b]Self[/b] points.  
 You made a choice for [b]society[/b], good for you, the people around you have benefited.  However, if you choose to benefit society at every turn, you will neglect yourself."
@@ -1961,7 +1752,7 @@ scale = Vector2( 0.15, -0.15 )
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "SurpIdle"
-frame = 5
+frame = 2
 speed_scale = 0.7
 playing = true
 
@@ -1970,7 +1761,6 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "BuffIdle"
-frame = 3
 speed_scale = 0.7
 playing = true
 
@@ -1979,7 +1769,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "JogIdle"
-frame = 5
+frame = 4
 speed_scale = 0.7
 playing = true
 
@@ -1988,7 +1778,6 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "BeatIdle"
-frame = 3
 speed_scale = 0.7
 playing = true
 
@@ -2000,8 +1789,6 @@ anims/UIDrawCard = SubResource( 28 )
 
 [node name="PopupActionCardChoice" parent="." instance=ExtResource( 22 )]
 
-[connection signal="pressed" from="Glossary/TextureButton" to="Glossary" method="_on_glossary_pressed"]
-[connection signal="pressed" from="Glossary/TextureRect/TextureButton2" to="Glossary" method="_on_CloseGlossary_pressed"]
 [connection signal="pressed" from="Invite/TextureButton" to="Invite" method="_on_invite_pressed"]
 [connection signal="pressed" from="Invite/TextureRect/TextureButton2" to="Invite" method="_on_ClosedInvite_pressed"]
 [connection signal="pressed" from="Invite/TextureRect/go_alone" to="Invite" method="_on_go_alone_pressed"]

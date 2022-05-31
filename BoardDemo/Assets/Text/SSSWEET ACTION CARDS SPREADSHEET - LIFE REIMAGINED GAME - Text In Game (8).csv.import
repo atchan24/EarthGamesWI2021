@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://Assets/Text/SSSWEET ACTION CARDS SPREADSHEET - LIFE REIMAGINED GAME - Text In Game (8).en.translation", "res://Assets/Text/SSSWEET ACTION CARDS SPREADSHEET - LIFE REIMAGINED GAME - Text In Game (8).es.translation" ]
+
+source_file="res://Assets/Text/SSSWEET ACTION CARDS SPREADSHEET - LIFE REIMAGINED GAME - Text In Game (8).csv"
+dest_files=[ "res://Assets/Text/SSSWEET ACTION CARDS SPREADSHEET - LIFE REIMAGINED GAME - Text In Game (8).en.translation", "res://Assets/Text/SSSWEET ACTION CARDS SPREADSHEET - LIFE REIMAGINED GAME - Text In Game (8).es.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

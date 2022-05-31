@@ -185,12 +185,6 @@ func _on_playerLose(score, player_name_upper):
 
 
 
-func _on_glossary_pressed():
-	pass # Replace with function body.
-
-
-
-
 func popup_postChoice_self():
 	postChoice_popup_anim.play_backwards("PopupPostChoice")
 	if postChoice_popup_sprite.get_node("Surp").visible == true:
@@ -235,6 +229,7 @@ func popup_postChoice_sustainability():
 	elif postChoice_popup_sprite.get_node("Beat").visible == true:
 		postChoice_popup_text.bbcode_text = tr("CHOICE_SUSTAINABILITY").format(\
 			{var1=get_self_beat().value})
+
 func popup_postChoice_nothing():
 	postChoice_popup_anim.play_backwards("PopupPostChoice")
 	if postChoice_popup_sprite.get_node("Surp").visible == true:

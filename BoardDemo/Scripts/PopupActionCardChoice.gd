@@ -9,7 +9,7 @@ var sticker_book
 var sticker_book_anim
 var stickers
 
-onready var glossary = get_parent().get_node("Glossary")
+onready var glossary = get_node("Backpack/Glossary")
 
 # sprite for the 21 objects that appear (based on board space)
 var sprite_Arts = load("res://Assets/Demo Art/Palette.png")
@@ -48,9 +48,9 @@ func _ready():
 		]
 	text = get_node("Control/TextureRect/RichTextLabel")
 	popup_anim = get_node("Control/AnimationPlayer")
-	sticker_book = get_node("StickerBook")
-	sticker_book_anim = get_node("StickerBook/AnimationPlayer")
-	stickers = get_node("StickerBook/TextureRect/Stickers")
+	sticker_book = get_node("Backpack/StickerBook")
+	sticker_book_anim = get_node("Backpack/StickerBook/AnimationPlayer")
+	stickers = get_node("Backpack/StickerBook/TextureRect/Stickers")
 	
 	add_all_stickers()
 
@@ -163,13 +163,23 @@ func popup():
 	popup_anim.play("popup_choiceObject")
 
 
+func _on_Backpack_Open_pressed():
+	sticker_book_anim.play("popupBackpack")
+
+func _on_BackpackClose_pressed():
+	sticker_book_anim.play_backwards("popupBackpack")
 
 
-func _on_StickerBook_pressed():
-	sticker_book_anim.play_backwards("popupStickerBook")
-	glossary.hide()
-
-
-func _on_StickerBook_Closed_pressed():
+func _on_MiniMap_pressed():
 	sticker_book_anim.play("popupStickerBook")
+	#glossary.hide()
+
+
+func _on_MiniMap_Close_pressed():
+	sticker_book_anim.play_backwards("popupStickerBook")	
+
+
+
+
+func _on_Glossary_pressed():
 	glossary.show()

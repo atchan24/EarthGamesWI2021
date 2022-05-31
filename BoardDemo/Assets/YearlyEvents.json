@@ -7,6 +7,10 @@
         {
             "status": "Good",
             "prompt": "A reparations bill passed - add +12 for society - everyone has universal housing, healthcare, nutrition, jobs, and access to services. Everyone collects +3 self points"
+        },
+        {
+		"status": "Good",
+		"prompt": "Universal #JobsAndCare Bill passes where all seniors, families, and people with disabilities have access to universal good paying jobs and care in old age or as kids/families/people with disabilities - add +12 for society. Everyone collects +3 self points."
         }
     ],
     "SocietyBad": [ 
@@ -26,7 +30,7 @@
     "SustainabilityGood": [
         {
             "status": "Good",
-            "prompt": "Green infrastructure bill passes with 15 million new good jobs with benefits a living wage and union protection - add +3 points to all self. Sustainability gets +12 points."
+            "prompt": "Green infrastructure bill passes with 15 million new good jobs with benefits a living wage and union protection - add +3 points to all. Sustainability gets +12 points."
         }
     ],
     "SustainabilityBad": [
@@ -37,6 +41,10 @@
         {
             "status": "Bad",
             "prompt": "Overfishing in the ocean and animal based diet with trash and pollution damage the ocean - all players contribute 2 points for sustainable fishing. Sustainability loses 8 points."
+        }, 
+        {
+            "status": "Bad",
+            "prompt": "Storm hits Gulf South. We must recover communities and build adaptation preparedness in futute GND for the South #GulfSouth4GND - all players contribute 2 points. Sustainability loses 8 points."
         }
 
     ]
