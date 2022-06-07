@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Assets/Art/button_big_yellow.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Demo Art/Laptop.png" type="Texture" id=2]
@@ -19,7 +19,13 @@
 [ext_resource path="res://Assets/Ending/Buff_face.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Wave 1/Apple.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Wave 1/Book.png" type="Texture" id=19]
-[ext_resource path="res://UI/Glossary.gd" type="Script" id=20]
+[ext_resource path="res://Assets/Demo Art/Bank.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Demo Art/WindTurbine.PNG" type="Texture" id=22]
+[ext_resource path="res://Assets/Demo Art/Barn.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Art/IMG_0733.PNG" type="Texture" id=24]
+[ext_resource path="res://Assets/Ashley_Art/City.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Art/IMG_0745.PNG" type="Texture" id=26]
+[ext_resource path="res://Assets/Art/IMG_0707.PNG" type="Texture" id=27]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -200,6 +206,42 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 1.4 )
 }
 
+[sub_resource type="Animation" id=13]
+resource_name = "popoupInstructions"
+length = 1.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("TextureRect:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.95, 0, 0.5, 0, 1, -0.25, 0, 0.15, 0 ),
+"times": PoolRealArray( 0, 1.4 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TextureRect:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.4 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureRect/RichTextLabel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="PopupActionCardChoice" type="Control"]
 script = ExtResource( 4 )
 __meta__ = {
@@ -285,6 +327,8 @@ margin_bottom = 95.0
 texture = ExtResource( 13 )
 expand = true
 stretch_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Backpack/OpenBkpk"]
 
 [node name="TextureRect" type="TextureRect" parent="Backpack"]
 margin_left = 11.0
@@ -437,10 +481,8 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="Backpack/StickerBook"]
-margin_left = 11.0
-margin_top = 11.0
-margin_right = 1015.0
-margin_bottom = 567.0
+margin_right = 1004.0
+margin_bottom = 556.0
 rect_min_size = Vector2( 10, 10 )
 rect_scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 1 )
@@ -450,16 +492,16 @@ __meta__ = {
 }
 
 [node name="FloorHqNugget1" type="Sprite" parent="Backpack/StickerBook/TextureRect"]
-position = Vector2( 498.166, 327.588 )
+position = Vector2( 512.052, 300.586 )
 rotation = -1.5708
-scale = Vector2( 0.163229, -0.332752 )
+scale = Vector2( 0.202103, -0.343403 )
 texture = ExtResource( 12 )
 
 [node name="Label" type="Label" parent="Backpack/StickerBook/TextureRect"]
-margin_left = 108.0
-margin_top = 29.0
-margin_right = 876.0
-margin_bottom = 79.0
+margin_left = 773.0
+margin_top = 522.0
+margin_right = 988.0
+margin_bottom = 567.0
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Mini Map:"
@@ -469,11 +511,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Node2D" type="Node2D" parent="Backpack/StickerBook/TextureRect"]
+
+[node name="IMG_0733" type="Sprite" parent="Backpack/StickerBook/TextureRect/Node2D"]
+position = Vector2( 452.997, 353.783 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 24 )
+
+[node name="IMG_0745" type="Sprite" parent="Backpack/StickerBook/TextureRect/Node2D"]
+position = Vector2( 266.12, 15.9214 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 26 )
+
+[node name="WindTurbine" type="Sprite" parent="Backpack/StickerBook/TextureRect/Node2D"]
+position = Vector2( 936.722, 372.249 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 22 )
+
+[node name="City" type="Sprite" parent="Backpack/StickerBook/TextureRect/Node2D"]
+position = Vector2( 993.321, 88.7772 )
+scale = Vector2( 0.229579, 0.242313 )
+texture = ExtResource( 25 )
+
+[node name="City2" type="Sprite" parent="Backpack/StickerBook/TextureRect/Node2D"]
+position = Vector2( 402.141, 29.4472 )
+scale = Vector2( 0.229579, 0.242313 )
+texture = ExtResource( 25 )
+
+[node name="IMG_0707" type="Sprite" parent="Backpack/StickerBook/TextureRect/Node2D"]
+position = Vector2( 555.542, 39.4037 )
+scale = Vector2( 0.0531922, 0.0515499 )
+texture = ExtResource( 27 )
+
+[node name="IMG_0708" type="Sprite" parent="Backpack/StickerBook/TextureRect/Node2D"]
+position = Vector2( 640.542, 34.4037 )
+scale = Vector2( 0.0531922, 0.0515499 )
+texture = ExtResource( 27 )
+
+[node name="Barn" type="Sprite" parent="Backpack/StickerBook/TextureRect/Node2D"]
+position = Vector2( 590.33, 344.033 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 23 )
+
+[node name="Bank" type="Sprite" parent="Backpack/StickerBook/TextureRect/Node2D"]
+position = Vector2( 60.5262, 67.0564 )
+scale = Vector2( 0.0973357, 0.0992881 )
+texture = ExtResource( 21 )
+
 [node name="TextureButton2" type="TextureButton" parent="Backpack/StickerBook/TextureRect"]
-margin_left = -3.0
-margin_top = 20.0
-margin_right = 248.0
-margin_bottom = 91.0
+margin_left = 756.291
+margin_top = 515.389
+margin_right = 1007.29
+margin_bottom = 586.389
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 6 )
 texture_hover = ExtResource( 5 )
@@ -496,257 +585,527 @@ __meta__ = {
 }
 
 [node name="Stickers" type="Node2D" parent="Backpack/StickerBook/TextureRect"]
-position = Vector2( 70, 80 )
+position = Vector2( 78, 87 )
 
 [node name="TextureRect" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 110.309
-margin_top = 24.0417
-margin_right = 230.309
-margin_bottom = 144.042
+margin_left = 112.0
+margin_top = -61.0
+margin_right = 302.0
+margin_bottom = 110.0
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect"]
+position = Vector2( 102.272, 54.7035 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect2" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 210.267
-margin_top = -2.82843
-margin_right = 330.267
-margin_bottom = 117.172
+margin_left = 228.682
+margin_top = 40.7272
+margin_right = 371.682
+margin_bottom = 185.727
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect2"]
+position = Vector2( 95.1365, -65.4064 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect2/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect3" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 304.569
-margin_top = 12.7279
-margin_right = 424.569
-margin_bottom = 132.728
+margin_left = 341.482
+margin_top = 1.15023
+margin_right = 461.482
+margin_bottom = 121.15
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect3"]
+position = Vector2( 96.3258, 1.1892 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect3/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect4" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 398.87
-margin_top = 8.48526
-margin_right = 518.87
-margin_bottom = 128.485
+margin_left = 448.0
+margin_top = -7.0
+margin_right = 630.0
+margin_bottom = 168.0
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect4"]
+position = Vector2( 98.7042, 9.51366 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect4/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect5" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 496.0
-margin_right = 616.0
-margin_bottom = 120.0
+margin_left = 585.348
+margin_top = -76.4137
+margin_right = 705.348
+margin_bottom = 43.5863
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect5"]
+position = Vector2( 90.3797, 51.1359 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect5/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect6" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 620.0
-margin_right = 740.0
-margin_bottom = 120.0
+margin_left = 671.091
+margin_top = 18.2269
+margin_right = 791.091
+margin_bottom = 138.227
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect6"]
+position = Vector2( 101.083, -30.9194 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect6/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect7" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 744.0
-margin_right = 864.0
-margin_bottom = 120.0
+margin_left = 727.066
+margin_top = -101.85
+margin_right = 847.066
+margin_bottom = 18.1499
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect7"]
+position = Vector2( 80, 170 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect7/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect8" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 759.433
-margin_top = 91.4731
-margin_right = 879.433
-margin_bottom = 211.473
+margin_left = 725.095
+margin_top = 126.424
+margin_right = 845.095
+margin_bottom = 246.424
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect8"]
+position = Vector2( 135.57, 44.0007 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect8/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect9" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 774.538
-margin_top = 183.397
-margin_right = 894.538
-margin_bottom = 303.397
+margin_left = 730.363
+margin_top = 256.454
+margin_right = 882.363
+margin_bottom = 407.454
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect9"]
+position = Vector2( 74.92, 11.8921 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect9/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect10" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 693.477
-margin_top = 282.392
-margin_right = 813.477
-margin_bottom = 402.392
+margin_left = 555.0
+margin_top = 145.0
+margin_right = 788.0
+margin_bottom = 303.0
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect10"]
+position = Vector2( 176.003, 192.652 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect10/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect11" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 598.274
-margin_top = 302.191
-margin_right = 718.274
-margin_bottom = 422.191
+margin_left = 569.836
+margin_top = 315.951
+margin_right = 689.836
+margin_bottom = 435.951
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect11"]
+position = Vector2( 20.2166, 57.0819 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect11/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect12" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 487.515
-margin_top = 341.789
-margin_right = 607.515
-margin_bottom = 461.789
+margin_left = 491.915
+margin_top = 283.999
+margin_right = 611.915
+margin_bottom = 403.999
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect12"]
+position = Vector2( 36.8654, 147.462 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect12/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect13" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 378.169
-margin_top = 365.831
-margin_right = 498.169
-margin_bottom = 485.831
+margin_left = 411.132
+margin_top = 361.336
+margin_right = 531.132
+margin_bottom = 481.336
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect13"]
+position = Vector2( 20.2165, 80.866 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect13/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect14" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 295.694
-margin_top = 341.789
-margin_right = 415.694
-margin_bottom = 461.789
+margin_left = 206.0
+margin_top = 260.946
+margin_right = 435.0
+margin_bottom = 527.946
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect14"]
+position = Vector2( 95.1365, 110.596 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect14/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect15" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 199.404
-margin_top = 325.782
-margin_right = 319.404
-margin_bottom = 445.782
+margin_left = 135.996
+margin_top = 195.06
+margin_right = 278.996
+margin_bottom = 349.06
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect15"]
+position = Vector2( 101.083, 177.192 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect15/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect16" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = 87.2304
-margin_top = 361.137
-margin_right = 207.23
-margin_bottom = 481.137
+margin_left = 114.2
+margin_top = 371.625
+margin_right = 234.2
+margin_bottom = 491.625
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect16"]
+position = Vector2( 34.487, 70.1632 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect16/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect17" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = -34.8427
-margin_top = 356.894
-margin_right = 85.1573
-margin_bottom = 476.894
+margin_left = -66.3071
+margin_top = 374.874
+margin_right = 53.6929
+margin_bottom = 494.874
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect17"]
+position = Vector2( 107.029, 82.0553 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect17/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect18" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = -48.0215
-margin_top = 252.243
-margin_right = 71.9785
-margin_bottom = 372.243
+margin_left = 29.4138
+margin_top = 271.244
+margin_right = 149.414
+margin_bottom = 391.244
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect18"]
+position = Vector2( -17.8381, 95.1365 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect18/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect19" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = -32.916
-margin_top = 147.591
-margin_right = 87.084
-margin_bottom = 267.591
+margin_left = -122.553
+margin_top = 165.583
+margin_right = 77.4467
+margin_bottom = 317.583
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect19"]
+position = Vector2( 126.056, 102.272 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect19/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect20" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = -75.7931
-margin_top = 92.4365
-margin_right = 44.2069
-margin_bottom = 212.437
+margin_left = 5.72717
+margin_top = 29.3182
+margin_right = 211.727
+margin_bottom = 202.318
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
@@ -755,68 +1114,102 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect20"]
+position = Vector2( 20.2165, 111.785 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect20/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureRect21" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Stickers"]
-margin_left = -2.70483
-margin_top = 11.8264
-margin_right = 117.295
-margin_bottom = 131.826
+margin_left = -91.7148
+margin_top = 73.8734
+margin_right = 28.2852
+margin_bottom = 193.873
 rect_min_size = Vector2( 120, 120 )
 texture = ExtResource( 8 )
 expand = true
 stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect21"]
+position = Vector2( 145.083, -45.1898 )
+
+[node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect21/Position2D"]
+margin_left = -5.0
+margin_top = -5.0
+margin_right = 5.0
+margin_bottom = 5.0
+rect_pivot_offset = Vector2( 5, 5 )
+color = Color( 0.745098, 0.278431, 0.278431, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Players" type="Node2D" parent="Backpack/StickerBook/TextureRect"]
 
-[node name="TextureRect" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Players"]
-margin_left = 691.551
-margin_top = 83.4386
-margin_right = 801.551
-margin_bottom = 193.439
-texture = ExtResource( 15 )
-expand = true
-stretch_mode = 5
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="TextureRect2" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Players"]
-margin_left = 380.423
-margin_top = 428.507
-margin_right = 490.423
-margin_bottom = 538.507
+margin_left = 586.757
+margin_top = 31.6703
+margin_right = 666.757
+margin_bottom = 111.67
 texture = ExtResource( 14 )
 expand = true
 stretch_mode = 5
+flip_h = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect3" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Players"]
-margin_left = 29.6985
-margin_top = 339.411
-margin_right = 139.698
-margin_bottom = 449.411
+margin_left = 446.997
+margin_top = 20.2245
+margin_right = 526.997
+margin_bottom = 100.225
 texture = ExtResource( 16 )
 expand = true
 stretch_mode = 5
+flip_h = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect4" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Players"]
-margin_left = 87.6813
-margin_top = 93.3381
-margin_right = 197.681
-margin_bottom = 203.338
+margin_left = 489.426
+margin_top = 31.766
+margin_right = 569.426
+margin_bottom = 111.766
 texture = ExtResource( 17 )
 expand = true
 stretch_mode = 5
+flip_h = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureRect" type="TextureRect" parent="Backpack/StickerBook/TextureRect/Players"]
+margin_left = 518.443
+margin_top = 33.8528
+margin_right = 598.443
+margin_bottom = 113.853
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spaces" type="Node2D" parent="Backpack/StickerBook/TextureRect"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Backpack/StickerBook"]
 anims/popupBackpack = SubResource( 6 )
@@ -826,7 +1219,6 @@ anims/popupStickerBook = SubResource( 7 )
 margin_right = 147.0
 margin_bottom = 62.0
 mouse_filter = 1
-script = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -935,9 +1327,121 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Backpack/Glossary"]
 anims/popupGlossary = SubResource( 12 )
 
+[node name="Instructions" type="Control" parent="Backpack"]
+margin_right = 147.0
+margin_bottom = 62.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Backpack/Instructions"]
+margin_left = 11.0
+margin_top = 11.0
+margin_right = 1015.0
+margin_bottom = 628.0
+rect_min_size = Vector2( 10, 10 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Backpack/Instructions/TextureRect"]
+margin_left = 108.0
+margin_top = 29.0
+margin_right = 876.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "How To Play:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Backpack/Instructions/TextureRect"]
+margin_left = 59.0
+margin_top = 112.0
+margin_right = 944.0
+margin_bottom = 431.0
+custom_fonts/bold_font = SubResource( 9 )
+custom_fonts/normal_font = SubResource( 10 )
+custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+custom_constants/line_separation = 2
+bbcode_enabled = true
+bbcode_text = "[center]      Press spacebar at the beginning of each turn to spin the spinner. Watch the avatar move the according number of spaces on the board. When the player finishes moving, they will draw an [b]Action Card[/b]. Select one of the given choices, either [b]self[/b], [b]society[/b], or [b]sustainability[/b].
+
+      Choosing the [b]self[/b] choice will gain you 5 self points. The [b]society[/b] choice will cost you 5 self points, and Society will receive 5 points. The [b]sustainability[/b] choice will cost you 5 self points, and Sustainability will gain 5 points. Watch the world change based on your actions."
+text = "      Press spacebar at the beginning of each turn to spin the spinner. Watch the avatar move the according number of spaces on the board. When the player finishes moving, they will draw an Action Card. Select one of the given choices, either self, society, or sustainability.
+
+      Choosing the self choice will gain you 5 self points. The society choice will cost you 5 self points, and Society will receive 5 points. The sustainability choice will cost you 5 self points, and Sustainability will gain 5 points. Watch the world change based on your actions."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="Backpack/Instructions/TextureRect"]
+margin_left = -3.0
+margin_top = 20.0
+margin_right = 248.0
+margin_bottom = 91.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Backpack/Instructions/TextureRect/TextureButton2"]
+margin_right = 242.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 11 )
+text = "Close"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureButton" parent="Backpack/Instructions/TextureRect"]
+margin_left = 657.359
+margin_top = 451.773
+margin_right = 908.359
+margin_bottom = 522.773
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Backpack/Instructions/TextureRect/Next"]
+margin_right = 242.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 11 )
+text = "Next"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Backpack/Instructions"]
+anims/popoupInstructions = SubResource( 13 )
+
 [connection signal="pressed" from="Backpack/OpenBkpk" to="." method="_on_Backpack_Open_pressed"]
 [connection signal="pressed" from="Backpack/TextureRect/Close" to="." method="_on_BackpackClose_pressed"]
 [connection signal="pressed" from="Backpack/TextureRect/Glossary" to="." method="_on_Glossary_pressed"]
 [connection signal="pressed" from="Backpack/TextureRect/MiniMap" to="." method="_on_MiniMap_pressed"]
+[connection signal="pressed" from="Backpack/TextureRect/Instructions" to="." method="_on_Instructions_pressed"]
 [connection signal="pressed" from="Backpack/StickerBook/TextureRect/TextureButton2" to="." method="_on_MiniMap_Close_pressed"]
-[connection signal="pressed" from="Backpack/Glossary/TextureRect/TextureButton2" to="Backpack/Glossary" method="_on_CloseGlossary_pressed"]
+[connection signal="pressed" from="Backpack/Glossary/TextureRect/TextureButton2" to="." method="_on_CloseGlossary_pressed"]
+[connection signal="pressed" from="Backpack/Instructions/TextureRect/TextureButton2" to="." method="_on_CloseInstructions_pressed"]
+[connection signal="pressed" from="Backpack/Instructions/TextureRect/Next" to="." method="_on_NextInstruction_pressed"]

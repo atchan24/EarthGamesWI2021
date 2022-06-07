@@ -184,6 +184,7 @@ func _on_invite_buff_pressed():
 	manager.handle_events_demo(choice, true)
 	yield(self_bars_anim_player, "animation_finished")
 	top_bar._on_playerLose(-movement_cost_p2, "Buff")
+	#reposition_players_on_minimap(player, x)
 	
 func _on_invite_surp_pressed():
 	var active_player = find_active_player()

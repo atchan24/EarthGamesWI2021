@@ -67,7 +67,7 @@ scale = Vector2( -0.15, 0.15 )
 position = Vector2( -1947.27, 3071.12 )
 frames = ExtResource( 2 )
 animation = "BeatWalk"
-frame = 2
+frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -75,6 +75,7 @@ playing = true
 position = Vector2( -4679.35, 2979.53 )
 frames = ExtResource( 2 )
 animation = "BuffWalk"
+frame = 5
 speed_scale = 0.7
 playing = true
 
@@ -82,7 +83,7 @@ playing = true
 position = Vector2( -3225.96, 3153.77 )
 frames = ExtResource( 2 )
 animation = "JogWalk"
-frame = 1
+frame = 4
 speed_scale = 0.7
 playing = true
 
@@ -90,7 +91,89 @@ playing = true
 position = Vector2( -6074.04, 3023.74 )
 frames = ExtResource( 2 )
 animation = "SurpWalk"
+speed_scale = 0.7
+playing = true
+
+[node name="PlayerSelect" type="HBoxContainer" parent="."]
+visible = false
+margin_top = 340.0
+margin_right = 987.0
+margin_bottom = 575.0
+custom_constants/separation = 12
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="PlayerSelect"]
+margin_left = 75.0
+margin_right = 275.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 200, 235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Surp" type="AnimatedSprite" parent="PlayerSelect/TextureButton"]
+position = Vector2( 100, 116 )
+scale = Vector2( 0.15, 0.15 )
+frames = ExtResource( 2 )
+animation = "SurpIdle"
+speed_scale = 0.7
+playing = true
+flip_h = true
+
+[node name="TextureButton2" type="TextureButton" parent="PlayerSelect"]
+margin_left = 287.0
+margin_right = 487.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 200, 235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buff" type="AnimatedSprite" parent="PlayerSelect/TextureButton2"]
+position = Vector2( 100, 116 )
+scale = Vector2( 0.15, 0.15 )
+frames = ExtResource( 2 )
+animation = "BuffIdle"
+speed_scale = 0.7
+playing = true
+flip_h = true
+
+[node name="TextureButton3" type="TextureButton" parent="PlayerSelect"]
+margin_left = 499.0
+margin_right = 699.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 200, 235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jog" type="AnimatedSprite" parent="PlayerSelect/TextureButton3"]
+position = Vector2( 100, 116 )
+scale = Vector2( 0.15, 0.15 )
+frames = ExtResource( 2 )
+animation = "JogIdle"
 frame = 1
+speed_scale = 0.7
+playing = true
+
+[node name="TextureButton4" type="TextureButton" parent="PlayerSelect"]
+margin_left = 711.0
+margin_right = 911.0
+margin_bottom = 235.0
+rect_min_size = Vector2( 200, 235 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Beat" type="AnimatedSprite" parent="PlayerSelect/TextureButton4"]
+position = Vector2( 100, 116 )
+scale = Vector2( 0.15, 0.15 )
+frames = ExtResource( 2 )
+animation = "BeatIdle"
+frame = 4
 speed_scale = 0.7
 playing = true
 

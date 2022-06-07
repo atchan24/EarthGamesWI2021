@@ -46,6 +46,7 @@ func _on_Timer_timeout():
 	richText.set_visible_characters(richText.get_visible_characters() + 1 )
 
 
+# cheat code for programer
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_SPACE:
@@ -60,6 +61,13 @@ func _on_NextButton_pressed():
 		richText.set_visible_characters(0)
 		$Timer.start()
 	else:
+		go_to_next_scene()
+		$Frgnd.hide()
+		$PlayerSelect.show()
+
+
+
+func go_to_next_scene():
 		popup_anim.play_backwards("PopupText")
 		yield(popup_anim, "animation_finished")
 		_d = get_node("/root/Global").goto_scene(destination)

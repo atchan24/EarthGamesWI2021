@@ -164,10 +164,9 @@ func start_action_card_event(category, player, bonus, end_turn):
 	choice_gui.get_node("Control/ChoiceBText").text = card["society"]["choice"]
 	choice_gui.get_node("Control/ChoiceCText").text = card["sustainability"]["choice"]
 	# img path
-	#choice_gui.change_background(category, "res://Assets/Cards/Card_" + category.replace(" ", "") + ".png")
 	choice_gui.change_background(category, "res://Assets/Cards/" + category.replace(" ", "") + ".png")
 	
-	popup_ACchoice.reset_popup(category)
+	popup_ACchoice.reset_popup(category, player)
 	
 	for b in buttons.get_children():
 		b.visible = true
@@ -209,11 +208,11 @@ func handle_events_demo(c, end_turn):
 	elif c == "choice-b":
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
-		s2 = 4 + (cur_bonus * Global.players_invited)
+		s2 = 5 + (cur_bonus * Global.players_invited)
 	elif c == "choice-c":
 		s1 = -5
 		print("players invited: " + str(Global.players_invited))
-		s3 = 4 + (cur_bonus * Global.players_invited)
+		s3 = 5 + (cur_bonus * Global.players_invited)
 	
 	Global.players_invited = 0
 	invite_screen.choice = c

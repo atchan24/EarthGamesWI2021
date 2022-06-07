@@ -167,6 +167,7 @@ func _on_playerLose(score, player_name_upper):
 	get_node(childLocation).text = str(score)
 	var anim_name = "Lose%s"%[player_name_upper]
 	$Control/SelfAnimationPlayer.play(anim_name)
+	
 	update_score($VBoxContainer/SelfBar_Surp, player1.self_score)
 	update_score($VBoxContainer/SelfBar_Buff, player2.self_score)
 	update_score($VBoxContainer/SelfBar_Jog, player3.self_score)

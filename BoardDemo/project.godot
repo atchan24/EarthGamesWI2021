@@ -57,7 +57,7 @@ pointing/emulate_touch_from_mouse=true
 
 [locale]
 
-translations=PoolStringArray( "res://Assets/Text/SSSWEET ACTION CARDS SPREADSHEET - LIFE REIMAGINED GAME - Text In Game (8).en.translation" )
+translations=PoolStringArray( "res://Assets/Text/SSSWEET ACTION CARDS SPREADSHEET - LIFE REIMAGINED GAME - Text In Game (11).en.translation" )
 
 [rendering]
 
