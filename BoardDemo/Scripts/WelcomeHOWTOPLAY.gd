@@ -8,7 +8,8 @@ onready var richText = get_node("Control/TextBubble/RichTextLabel")
 onready var nextButton = get_node("Control/TextBubble/NextButton")
 onready var popup_anim = get_node("Control/TextBubble/AnimationPlayer")
 
-var dialog = ["WELCOME_01", "WELCOME_02", "WELCOME_03", "WELCOME_04",]
+# removed some dialouge to make scene shorter
+var dialog = ["WELCOME_01", "WELCOME_02"] #"WELCOME_03", "WELCOME_04"]
 var page = 0
 
 
@@ -23,9 +24,9 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if $Frgnd.position.x <= 0:
-		$Frgnd.position.x += 0.3
+		$Frgnd.position.x += 0.6
 		
 	if richText.get_visible_characters() >= richText.get_total_character_count():
 		nextButton.disabled = false
@@ -45,6 +46,13 @@ func _on_Timer_timeout():
 	richText.set_visible_characters(richText.get_visible_characters() + 1 )
 
 
+# cheat code for programer
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_SPACE:
+			_on_NextButton_pressed()
+
+
 func _on_NextButton_pressed():
 	if page < dialog.size()-1:
 		print("next page")
@@ -53,6 +61,13 @@ func _on_NextButton_pressed():
 		richText.set_visible_characters(0)
 		$Timer.start()
 	else:
+		go_to_next_scene()
+		$Frgnd.hide()
+		$PlayerSelect.show()
+
+
+
+func go_to_next_scene():
 		popup_anim.play_backwards("PopupText")
 		yield(popup_anim, "animation_finished")
 		_d = get_node("/root/Global").goto_scene(destination)

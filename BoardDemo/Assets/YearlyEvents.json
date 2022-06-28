@@ -1,0 +1,51 @@
+{
+    "SocietyGood": [
+        {
+            "status": "Good",
+            "prompt": "A universal basic income passed in the US Congress. Everyone collects +3 self points and Society gains +12 points."
+        }, 
+        {
+            "status": "Good",
+            "prompt": "A reparations bill passed - add +12 for society - everyone has universal housing, healthcare, nutrition, jobs, and access to services. Everyone collects +3 self points"
+        },
+        {
+		"status": "Good",
+		"prompt": "Universal #JobsAndCare Bill passes where all seniors, families, and people with disabilities have access to universal good paying jobs and care in old age or as kids/families/people with disabilities - add +12 for society. Everyone collects +3 self points."
+        }
+    ],
+    "SocietyBad": [ 
+        {
+            "status": "Bad",
+            "prompt": "Refugee crisis - accept refugees and pay reparations for destroying homes - Society loses 8 points and -2 from all players, fold new arrivals into care and repair system jobs and training etc."
+        }, 
+        {
+            "status": "Bad",
+            "prompt": "Poor whites take out frustration and lack of education on non-white populations, society loses 8 points / all players lose 2 points to society to heal and prevent further racism from self category."
+        }, 
+        {
+            "status": "Bad",
+            "prompt": "Global pandemic hits - Society loses 8 points and all players lose 2 self points."
+        } 
+    ],
+    "SustainabilityGood": [
+        {
+            "status": "Good",
+            "prompt": "Green infrastructure bill passes with 15 million new good jobs with benefits a living wage and union protection - add +3 points to all. Sustainability gets +12 points."
+        }
+    ],
+    "SustainabilityBad": [
+        {
+            "status": "Bad",
+            "prompt": "Fires devastate the west coast - all players contribute 2 points to sustainability and sustainability loses 8 points - pay firefighters equally, safety, GND for west coast."
+            }, 
+        {
+            "status": "Bad",
+            "prompt": "Overfishing in the ocean and animal based diet with trash and pollution damage the ocean - all players contribute 2 points for sustainable fishing. Sustainability loses 8 points."
+        }, 
+        {
+            "status": "Bad",
+            "prompt": "Storm hits Gulf South. We must recover communities and build adaptation preparedness in futute GND for the South #GulfSouth4GND - all players contribute 2 points. Sustainability loses 8 points."
+        }
+
+    ]
+}

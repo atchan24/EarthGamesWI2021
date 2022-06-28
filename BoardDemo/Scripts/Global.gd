@@ -4,6 +4,8 @@ var loader
 var time_max = 100
 var current_scene = null
 
+var players_invited = 0
+
 # movement cost per block for summoned player
 var movement_cost = 2
 
@@ -20,6 +22,7 @@ func goto_scene(path):
 		loader = ResourceLoader.load_interactive(path)
 		return
 	get_node("/root/Loading").visible = true
+	get_node("/root/Loading/CanvasLayer/Background").visible = true
 	set_process(true)
 	current_scene.queue_free()
 	

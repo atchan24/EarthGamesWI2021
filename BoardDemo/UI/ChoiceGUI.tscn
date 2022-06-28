@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/Cards/Work.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/ChoiceGUI.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Assets/Cards/Card_Template3.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Cards/Card_BackTemplate_V1.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Cards/Card_Template3_over.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Cards/Card_BackTemplate_V2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Cards/Card_BackTemplate_V3.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 28
@@ -26,7 +28,14 @@ extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 4 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="DynamicFont" id=4]
+size = 40
+outline_size = 3
+extra_spacing_top = 3
+extra_spacing_space = 3
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=5]
 length = 2.0
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Control/CanvasLayer/Sprite:rect_scale:x")
@@ -139,12 +148,73 @@ tracks/9/keys = {
 "values": [ false, false, true, true ]
 }
 
+[sub_resource type="Animation" id=6]
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("YearlyEvent/CanvasLayer/Sprite:rect_scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.8, 2 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("YearlyEvent/CanvasLayer/Sprite:rect_scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -0.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.8, 2 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("YearlyEvent/CanvasLayer/Sprite:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -460 ), Vector2( 0, 34 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("YearlyEvent/CanvasLayer/Sprite/Template:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.2, 1.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 12 ), ExtResource( 12 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("YearlyEvent/CanvasLayer/Sprite/Label2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.2, 1.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true, true ]
+}
+
 [node name="ChoiceGUI" type="Node"]
 script = ExtResource( 2 )
 
 [node name="Control" type="Control" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
+rect_scale = Vector2( 0.5, -0.5 )
 rect_pivot_offset = Vector2( 512, 300 )
 mouse_filter = 1
 __meta__ = {
@@ -216,9 +286,11 @@ __meta__ = {
 layer = -1
 
 [node name="Sprite" type="TextureRect" parent="Control/CanvasLayer"]
-margin_top = 34.0
+visible = false
+margin_top = -460.0
 margin_right = 1024.0
-margin_bottom = 554.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.5, -0.5 )
 rect_pivot_offset = Vector2( 300, 200 )
 texture = ExtResource( 1 )
 expand = true
@@ -231,7 +303,7 @@ __meta__ = {
 show_behind_parent = true
 margin_right = 1024.0
 margin_bottom = 520.0
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 __meta__ = {
@@ -241,7 +313,7 @@ __meta__ = {
 [node name="Template2" type="TextureRect" parent="Control/CanvasLayer/Sprite"]
 margin_right = 1024.0
 margin_bottom = 520.0
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 expand = true
 stretch_mode = 6
 __meta__ = {
@@ -249,6 +321,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Control/CanvasLayer/Sprite"]
+visible = false
 margin_left = 420.0
 margin_top = 29.0
 margin_right = 763.0
@@ -277,5 +350,83 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="YearlyEvent" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="YearlyEvent"]
+layer = -1
+
+[node name="Sprite" type="TextureRect" parent="YearlyEvent/CanvasLayer"]
+margin_top = -460.0
+margin_right = 1024.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.5, -0.5 )
+rect_pivot_offset = Vector2( 300, 200 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Template" type="TextureRect" parent="YearlyEvent/CanvasLayer/Sprite"]
+show_behind_parent = true
+margin_right = 1024.0
+margin_bottom = 520.0
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="YearlyEvent/CanvasLayer/Sprite"]
+visible = false
+margin_left = 76.0
+margin_top = 29.0
+margin_right = 560.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+text = "Yearly Event Card:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="RichTextLabel" parent="YearlyEvent/CanvasLayer/Sprite/Label2"]
+margin_left = 45.0
+margin_top = 68.0
+margin_right = 832.0
+margin_bottom = 353.0
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]-A universal basic income passed in the US Congress. Collect +5 self points (society, sustainability).
+
+-A reparations bill passed - add +5 for self/society - everyone has universal housing, healthcare, nutrition, jobs, and access to services 
+
+-A Green New Deal visioning game has been released - play to learn to do your part to create a just transition and gain +5 society, sustainability, self points
+
+-Green infrastructure bill passes with 15 million new good jobs with benefits a living wage and union protection - all choose new career OR add +5 points to self, society, sustainability
+
+-Universal #JobsAndCare Bill passes where all seniors, families, and people with disabilities have access to universal good paying jobs and care in old age or as kids/families/people with disabilities - add +5 points
+[/center]"
+text = "-A universal basic income passed in the US Congress. Collect +5 self points (society, sustainability).
+
+-A reparations bill passed - add +5 for self/society - everyone has universal housing, healthcare, nutrition, jobs, and access to services 
+
+-A Green New Deal visioning game has been released - play to learn to do your part to create a just transition and gain +5 society, sustainability, self points
+
+-Green infrastructure bill passes with 15 million new good jobs with benefits a living wage and union protection - all choose new career OR add +5 points to self, society, sustainability
+
+-Universal #JobsAndCare Bill passes where all seniors, families, and people with disabilities have access to universal good paying jobs and care in old age or as kids/families/people with disabilities - add +5 points
+"
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/DrawCard = SubResource( 4 )
+anims/DrawCard = SubResource( 5 )
+anims/YearlyEvent = SubResource( 6 )

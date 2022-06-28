@@ -27,7 +27,7 @@ func move_body():
 		emit_signal("finished_moving")
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	#rot_speed = rad2deg(30)  # 30 deg/sec
 	if (visible && !done):
 		move_body()

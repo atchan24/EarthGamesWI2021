@@ -16,7 +16,6 @@
 [ext_resource path="res://Assets/Demo Art/ParakeetWhite.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Art/button_big_blue_pressed.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Art/button_big_yellow_pressed.png" type="Texture" id=16]
-[ext_resource path="res://UI/Glossary.gd" type="Script" id=17]
 [ext_resource path="res://Assets/Art/button_big_yellow.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Art/button_big_purple_pressed.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Art/button_big_purple.png" type="Texture" id=20]
@@ -26,6 +25,7 @@
 [ext_resource path="res://Assets/Art/button_small_blue.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Art/button_small_yellow.png" type="Texture" id=25]
 [ext_resource path="res://UI/Invite.gd" type="Script" id=26]
+[ext_resource path="res://Assets/Fonts/Winkle18.tres" type="DynamicFont" id=27]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -48,15 +48,26 @@ extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 40
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-use_mipmaps = true
-use_filter = true
-font_data = ExtResource( 5 )
+[sub_resource type="Animation" id=4]
+resource_name = "PressSpinner"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0 ), Vector2( 1, 1 ) ]
+}
 
 [sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
 size = 40
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
@@ -64,9 +75,16 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=6]
-resource_name = "AddSociety"
-length = 1.6
+[sub_resource type="DynamicFont" id=7]
+size = 40
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=8]
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer/AddSociety:rect_scale")
 tracks/0/interp = 1
@@ -74,10 +92,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.1, 0.3, 1, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0.1, 0.5, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ), Vector2( 2.5, 2.5 ) ]
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimationPlayer/AddSociety:modulate")
@@ -86,10 +104,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0.1, 0.6, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0.1, 0.3, 2, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("AnimationPlayer/AddSociety:visible")
@@ -98,15 +116,14 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 1.4, 1.6 ),
+"times": PoolRealArray( 0, 0.1, 2.8, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, true, false ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "AddSustainability"
-length = 1.6
+[sub_resource type="Animation" id=9]
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationPlayer/AddSustainability:modulate")
 tracks/0/interp = 1
@@ -114,10 +131,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.1, 0.6, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0.1, 0.3, 2, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("AnimationPlayer/AddSustainability:visible")
@@ -126,7 +143,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 1.4, 1.6 ),
+"times": PoolRealArray( 0, 0.1, 2.8, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ false, true, true, false ]
@@ -138,14 +155,14 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.1, 0.3, 1, 1.4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0.1, 0.5, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ), Vector2( 2.5, 2.5 ) ]
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "AddBeat"
+[sub_resource type="Animation" id=10]
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Beat/AddBeat:modulate")
 tracks/0/interp = 1
@@ -153,10 +170,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 0.713726, 1, 0.72549, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Beat/AddBeat:rect_scale")
@@ -165,14 +182,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "AddBuff"
+[sub_resource type="Animation" id=11]
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Buff/AddBuff:modulate")
 tracks/0/interp = 1
@@ -180,10 +197,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 0.713726, 1, 0.72549, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Buff/AddBuff:rect_scale")
@@ -192,14 +209,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "AddJog"
+[sub_resource type="Animation" id=12]
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Jog/AddJog:modulate")
 tracks/0/interp = 1
@@ -207,10 +224,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 0.713726, 1, 0.72549, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Jog/AddJog:rect_scale")
@@ -219,13 +236,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=13]
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Surp/AddSurp:modulate")
 tracks/0/interp = 1
@@ -233,10 +251,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 0.713726, 1, 0.72549, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Surp/AddSurp:rect_scale")
@@ -245,14 +263,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
-[sub_resource type="Animation" id=12]
-resource_name = "LoseBeat"
+[sub_resource type="Animation" id=14]
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Beat/LoseBeat:modulate")
 tracks/0/interp = 1
@@ -260,10 +278,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.713726, 0.713726, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Beat/LoseBeat:rect_scale")
@@ -272,13 +290,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=15]
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Buff/LoseBuff:modulate")
 tracks/0/interp = 1
@@ -286,10 +305,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.713726, 0.713726, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Buff/LoseBuff:rect_scale")
@@ -298,13 +317,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=16]
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Jog/LoseJog:rect_scale")
 tracks/0/interp = 1
@@ -312,10 +332,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
+"times": PoolRealArray( 0, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Jog/LoseJog:modulate")
@@ -324,13 +344,14 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.713726, 0.713726, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=17]
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("../VBoxContainer/SelfBar_Surp/LoseSurp:rect_scale")
 tracks/0/interp = 1
@@ -338,10 +359,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
+"times": PoolRealArray( -0.01, 0.5, 3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 2, 2 ) ]
+"values": [ Vector2( 2, 2 ), Vector2( 2, 2 ), Vector2( 3, 3 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../VBoxContainer/SelfBar_Surp/LoseSurp:modulate")
@@ -350,83 +371,28 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.1, 0.4, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3, 1.1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0.231373 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.713726, 0.713726, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="DynamicFont" id=16]
+[sub_resource type="DynamicFont" id=18]
 size = 52
 outline_size = 3
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=17]
-size = 38
-outline_size = 2
-extra_spacing_top = 3
-extra_spacing_space = 3
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=18]
-size = 36
+[sub_resource type="DynamicFont" id=22]
+size = 24
 outline_size = 1
-extra_spacing_top = 3
-extra_spacing_space = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=19]
-resource_name = "popupGlossary"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("TextureRect:rect_scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("TextureRect/RichTextLabel:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.7 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/2/type = "bezier"
-tracks/2/path = NodePath("TextureRect:rect_scale:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.15, 0, 0, -0.95, 0, 0.5, 0 ),
-"times": PoolRealArray( 0, 1.3 )
-}
-tracks/3/type = "bezier"
-tracks/3/path = NodePath("TextureRect:rect_scale:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0, 1.3 )
-}
-
-[sub_resource type="Animation" id=20]
-resource_name = "popupGlossary"
+[sub_resource type="Animation" id=23]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("TextureRect:rect_scale")
@@ -460,29 +426,41 @@ tracks/2/keys = {
 "points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0, 1.3 )
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("../EventCard/TextureButton:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 3411, 1005 ) ]
+}
 
-[sub_resource type="DynamicFont" id=21]
+[sub_resource type="DynamicFont" id=24]
 size = 40
 outline_size = 3
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=25]
 size = 40
 outline_size = 3
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=23]
+[sub_resource type="DynamicFont" id=26]
 size = 36
 outline_size = 1
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=27]
 tracks/0/type = "bezier"
 tracks/0/path = NodePath(".:rect_scale:x")
 tracks/0/interp = 1
@@ -528,7 +506,7 @@ tracks/3/keys = {
 "values": [ true, false, false ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=28]
 length = 1.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("VBoxContainer/SelfBar_Surp:rect_position")
@@ -635,71 +613,71 @@ tracks/9/keys = {
 "times": PoolRealArray( 0, 1.2 )
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Glossary/TextureButton:visible")
+tracks/10/path = NodePath("Control/button_big_blue:modulate")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.1, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 1,
-"values": [ true, false, false ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("Control/button_big_blue:modulate")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("Control/SocietyBar:rect_position:x")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 120, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.5, 1.2 )
+}
 tracks/12/type = "bezier"
-tracks/12/path = NodePath("Control/SocietyBar:rect_position:x")
+tracks/12/path = NodePath("Control/SocietyBar:rect_position:y")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"points": PoolRealArray( 175.614, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 73.2267, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
 tracks/13/type = "bezier"
-tracks/13/path = NodePath("Control/SocietyBar:rect_position:y")
+tracks/13/path = NodePath("Control/SustainBar:rect_position:x")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"points": PoolRealArray( 73.2267, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 550, -0.25, 0, 0.25, 0, 714, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
 tracks/14/type = "bezier"
-tracks/14/path = NodePath("Control/SustainBar:rect_position:x")
+tracks/14/path = NodePath("Control/SustainBar:rect_position:y")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"points": PoolRealArray( 522.207, -0.25, 0, 0.25, 0, 714, -0.25, 0, 0.25, 0 ),
+"points": PoolRealArray( 73.7801, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
 "times": PoolRealArray( 0.5, 1.2 )
 }
-tracks/15/type = "bezier"
-tracks/15/path = NodePath("Control/SustainBar:rect_position:y")
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/SustainBar/SustainScore:rect_position")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"points": PoolRealArray( 73.7801, -0.25, 0, 0.25, 0, 108, -0.25, 0, 0.25, 0 ),
-"times": PoolRealArray( 0.5, 1.2 )
+"times": PoolRealArray( 0, 0.9, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 9, -36 ), Vector2( 9, -36 ), Vector2( 9, 0 ) ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("Control/SustainBar/SustainScore:rect_position")
+tracks/16/path = NodePath("Control/SocietyBar/SocietyScore:rect_position")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
@@ -711,24 +689,12 @@ tracks/16/keys = {
 "values": [ Vector2( 9, -36 ), Vector2( 9, -36 ), Vector2( 9, 0 ) ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("Control/SocietyBar/SocietyScore:rect_position")
+tracks/17/path = NodePath("Control/button_big_blue/PressSpinner/Label:modulate")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 0, 0.9, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 9, -36 ), Vector2( 9, -36 ), Vector2( 9, 0 ) ]
-}
-tracks/18/type = "value"
-tracks/18/path = NodePath("Label:modulate")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/keys = {
 "times": PoolRealArray( 0, 1.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -773,6 +739,7 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 200, 40 )
 rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
+value = 15.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
 nine_patch_stretch = true
@@ -781,11 +748,11 @@ __meta__ = {
 }
 
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Surp"]
-margin_right = 150.0
+margin_right = 241.0
 margin_bottom = 44.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = " Surp"
+text = " Surp: 15-40"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -840,6 +807,7 @@ margin_bottom = 92.0
 rect_min_size = Vector2( 200, 40 )
 rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
+value = 30.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
 nine_patch_stretch = true
@@ -848,11 +816,11 @@ __meta__ = {
 }
 
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Buff"]
-margin_right = 150.0
+margin_right = 232.0
 margin_bottom = 44.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = " Buff"
+text = " Buff: 30-40"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -873,6 +841,7 @@ margin_left = 251.0
 margin_top = 45.0
 margin_right = 299.0
 margin_bottom = 85.0
+rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
@@ -903,6 +872,7 @@ margin_bottom = 144.0
 rect_min_size = Vector2( 200, 40 )
 rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
+value = 20.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
 nine_patch_stretch = true
@@ -911,11 +881,11 @@ __meta__ = {
 }
 
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Jog"]
-margin_right = 150.0
+margin_right = 226.0
 margin_bottom = 44.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = " Jog"
+text = " Jog: 20-40"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -936,6 +906,7 @@ margin_left = 251.0
 margin_top = 46.0
 margin_right = 299.0
 margin_bottom = 86.0
+rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
@@ -966,6 +937,7 @@ margin_bottom = 196.0
 rect_min_size = Vector2( 200, 40 )
 rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
+value = 25.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
 nine_patch_stretch = true
@@ -974,11 +946,11 @@ __meta__ = {
 }
 
 [node name="SelfScore" type="RichTextLabel" parent="VBoxContainer/SelfBar_Beat"]
-margin_right = 150.0
+margin_right = 231.0
 margin_bottom = 44.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = "  Beat"
+text = "  Beat: 25-40"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1002,6 +974,7 @@ margin_left = 251.0
 margin_top = 46.0
 margin_right = 299.0
 margin_bottom = 86.0
+rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 48, 0 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
@@ -1046,10 +1019,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PressSpinner" type="TextureRect" parent="Control/button_big_blue"]
+show_behind_parent = true
+margin_left = 62.0
+margin_top = -51.0
+margin_right = 961.0
+margin_bottom = 46.0
+rect_scale = Vector2( 1, 1e-05 )
+rect_pivot_offset = Vector2( 0, 102 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/button_big_blue/PressSpinner"]
+anims/PressSpinner = SubResource( 4 )
+
+[node name="Label" type="Label" parent="Control/button_big_blue/PressSpinner"]
+margin_left = 51.0
+margin_top = 17.0
+margin_right = 845.0
+margin_bottom = 55.0
+custom_fonts/font = SubResource( 1 )
+text = "Press spacebar to spin.  There are 32 Seasons Left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BigLabel" type="Label" parent="Control/button_big_blue/PressSpinner"]
+visible = false
+margin_left = 175.143
+margin_top = -129.584
+margin_right = 628.143
+margin_bottom = -81.584
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Only 8 Years Left!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="SocietyBar" type="TextureProgress" parent="Control"]
-margin_left = 175.614
+margin_left = 120.0
 margin_top = 73.2267
-margin_right = 487.614
+margin_right = 432.0
 margin_bottom = 127.227
 max_value = 40.0
 texture_under = ExtResource( 2 )
@@ -1062,11 +1077,11 @@ __meta__ = {
 [node name="SocietyScore" type="RichTextLabel" parent="Control/SocietyBar"]
 margin_left = 9.0
 margin_top = -36.0
-margin_right = 151.0
+margin_right = 312.0
 margin_bottom = 10.0
-custom_fonts/normal_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 6 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = "Society"
+text = "Society: 0-40"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1082,9 +1097,9 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 7 )
 
 [node name="SustainBar" type="TextureProgress" parent="Control"]
-margin_left = 522.207
+margin_left = 550.0
 margin_top = 73.7801
-margin_right = 834.207
+margin_right = 862.0
 margin_bottom = 127.78
 max_value = 40.0
 texture_under = ExtResource( 2 )
@@ -1094,45 +1109,47 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SustainScore" type="RichTextLabel" parent="Control/SustainBar"]
-margin_left = 9.0
-margin_top = -36.0
-margin_right = 271.0
-margin_bottom = 12.0
-rect_min_size = Vector2( 1, 1 )
-custom_fonts/normal_font = SubResource( 5 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = "Sustainability"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Flower" type="Sprite" parent="Control/SustainBar"]
-position = Vector2( 351.768, 9.21533 )
+position = Vector2( 396.768, 11.2153 )
 scale = Vector2( -0.2, 0.2 )
 texture = ExtResource( 9 )
 
 [node name="FlowerYellow" type="Sprite" parent="Control/SustainBar"]
-position = Vector2( 414.261, 60.4458 )
+position = Vector2( 409.261, 62.4458 )
 rotation = -1.20775
 scale = Vector2( -0.1, 0.1 )
 texture = ExtResource( 6 )
 
 [node name="ParakeetWhite" type="Sprite" parent="Control/SustainBar"]
-position = Vector2( 417.477, 9.4917 )
+position = Vector2( 417.477, 12.4917 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 14 )
 
+[node name="SustainScore" type="RichTextLabel" parent="Control/SustainBar"]
+margin_left = 9.0
+margin_top = -36.0
+margin_right = 325.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 1, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "Sustainability: 0-40"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
-anims/AddSociety = SubResource( 6 )
-anims/AddSustainability = SubResource( 7 )
+anims/AddSociety = SubResource( 8 )
+anims/AddSustainability = SubResource( 9 )
 
 [node name="AddSociety" type="Label" parent="Control/AnimationPlayer"]
 visible = false
-margin_left = 315.0
-margin_top = 463.0
-margin_right = 384.0
-margin_bottom = 517.0
+modulate = Color( 1, 1, 1, 0.5 )
+margin_left = 307.0
+margin_top = 548.0
+margin_right = 376.0
+margin_bottom = 602.0
+rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 54 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
@@ -1143,10 +1160,12 @@ __meta__ = {
 
 [node name="AddSustainability" type="Label" parent="Control/AnimationPlayer"]
 visible = false
-margin_left = 779.366
-margin_top = 463.387
-margin_right = 848.366
-margin_bottom = 517.387
+modulate = Color( 1, 1, 1, 0.5 )
+margin_left = 622.63
+margin_top = 528.925
+margin_right = 691.63
+margin_bottom = 582.925
+rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 0, 54 )
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
@@ -1156,159 +1175,16 @@ __meta__ = {
 }
 
 [node name="SelfAnimationPlayer" type="AnimationPlayer" parent="Control"]
-anims/AddBeat = SubResource( 8 )
-anims/AddBuff = SubResource( 9 )
-anims/AddJog = SubResource( 10 )
-anims/AddSurp = SubResource( 11 )
-anims/LoseBeat = SubResource( 12 )
-anims/LoseBuff = SubResource( 13 )
-anims/LoseJog = SubResource( 14 )
-anims/LoseSurp = SubResource( 15 )
+anims/AddBeat = SubResource( 10 )
+anims/AddBuff = SubResource( 11 )
+anims/AddJog = SubResource( 12 )
+anims/AddSurp = SubResource( 13 )
+anims/LoseBeat = SubResource( 14 )
+anims/LoseBuff = SubResource( 15 )
+anims/LoseJog = SubResource( 16 )
+anims/LoseSurp = SubResource( 17 )
 
-[node name="Label" type="Label" parent="."]
-margin_right = 186.0
-margin_bottom = 38.0
-custom_fonts/font = SubResource( 1 )
-text = "Turn 1"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Glossary" type="Control" parent="."]
-margin_right = 147.0
-margin_bottom = 62.0
-mouse_filter = 1
-script = ExtResource( 17 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton" type="TextureButton" parent="Glossary"]
-margin_left = 880.0
-margin_top = 400.0
-margin_right = 1041.0
-margin_bottom = 452.0
-texture_normal = ExtResource( 24 )
-texture_pressed = ExtResource( 23 )
-texture_hover = ExtResource( 25 )
-expand = true
-stretch_mode = 5
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Glossary/TextureButton"]
-margin_right = 159.0
-margin_bottom = 49.0
-custom_fonts/font = SubResource( 2 )
-text = "glossary"
-align = 1
-valign = 1
-
-[node name="TextureRect" type="TextureRect" parent="Glossary"]
-margin_left = 11.0
-margin_top = 11.0
-margin_right = 1015.0
-margin_bottom = 567.0
-rect_min_size = Vector2( 10, 10 )
-rect_scale = Vector2( 1e-05, 1e-05 )
-texture = ExtResource( 18 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Glossary/TextureRect"]
-margin_left = 108.0
-margin_top = 29.0
-margin_right = 876.0
-margin_bottom = 79.0
-custom_fonts/font = SubResource( 16 )
-custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
-text = "Glossary:"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Glossary/TextureRect"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 30.0
-margin_top = 82.0
-margin_right = 956.0
-margin_bottom = 466.0
-custom_fonts/bold_font = SubResource( 17 )
-custom_fonts/normal_font = SubResource( 18 )
-custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
-bbcode_enabled = true
-bbcode_text = "[center][b]Self:[/b]
- Our own individual life, including our physical, emotional, and spiritual needs.
-
-[b]Society:[/b]
-The people and their energy that make up the communities around us, shaping our way of life.
-
-[b]Sustainability:[/b]
-How efficiently one uses their resources, and how many resources one consumes.
-
-[b]Decent Living Requirements:[/b]
-Even for a potential  future population of 10 billion people, the decent living requirement could be met for everyone with under 5 TW of power.
-
-[b]Terawatt:[/b]
-
-
-[b]BIPOC:[/b]
-Black and Indigeonous People of Color[/center]"
-text = "Self:
- Our own individual life, including our physical, emotional, and spiritual needs.
-
-Society:
-The people and their energy that make up the communities around us, shaping our way of life.
-
-Sustainability:
-How efficiently one uses their resources, and how many resources one consumes.
-
-Decent Living Requirements:
-Even for a potential  future population of 10 billion people, the decent living requirement could be met for everyone with under 5 TW of power.
-
-Terawatt:
-
-
-BIPOC:
-Black and Indigeonous People of Color"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureButton2" type="TextureButton" parent="Glossary/TextureRect"]
-margin_left = -3.0
-margin_top = 20.0
-margin_right = 248.0
-margin_bottom = 91.0
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 16 )
-texture_hover = ExtResource( 15 )
-expand = true
-stretch_mode = 5
-__meta__ = {
-"_edit_group_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Glossary/TextureRect/TextureButton2"]
-margin_right = 242.0
-margin_bottom = 68.0
-custom_fonts/font = SubResource( 2 )
-text = "Close"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Glossary"]
-anims/popupGlossary = SubResource( 19 )
+[node name="Tween" type="Tween" parent="Control"]
 
 [node name="Invite" type="Control" parent="."]
 visible = false
@@ -1322,6 +1198,7 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="Invite"]
+visible = false
 margin_left = 880.0
 margin_top = 400.0
 margin_right = 1041.0
@@ -1351,11 +1228,10 @@ __meta__ = {
 
 [node name="TextureRect" type="TextureRect" parent="Invite"]
 margin_left = 11.0
-margin_top = 133.0
+margin_top = 180.0
 margin_right = 1015.0
-margin_bottom = 689.0
+margin_bottom = 680.0
 rect_min_size = Vector2( 10, 10 )
-rect_scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 18 )
 expand = true
 __meta__ = {
@@ -1367,7 +1243,7 @@ margin_left = 108.0
 margin_top = 29.0
 margin_right = 876.0
 margin_bottom = 79.0
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 18 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Invite a player!"
 align = 1
@@ -1377,10 +1253,11 @@ __meta__ = {
 }
 
 [node name="TextureButton2" type="TextureButton" parent="Invite/TextureRect"]
-margin_left = -3.0
-margin_top = 20.0
-margin_right = 248.0
-margin_bottom = 91.0
+visible = false
+margin_left = -15.0033
+margin_top = -0.577026
+margin_right = 235.997
+margin_bottom = 70.423
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 16 )
 texture_hover = ExtResource( 15 )
@@ -1396,6 +1273,33 @@ margin_right = 242.0
 margin_bottom = 68.0
 custom_fonts/font = SubResource( 2 )
 text = "Close"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="go_alone" type="TextureButton" parent="Invite/TextureRect"]
+visible = false
+margin_left = 736.0
+margin_top = 20.0
+margin_right = 987.0
+margin_bottom = 91.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Invite/TextureRect/go_alone"]
+margin_right = 242.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 2 )
+text = "Go Alone"
 align = 1
 valign = 1
 __meta__ = {
@@ -1454,7 +1358,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="invite_job" type="TextureButton" parent="Invite/TextureRect"]
+[node name="invite_jog" type="TextureButton" parent="Invite/TextureRect"]
 margin_left = 277.677
 margin_top = 290.75
 margin_right = 528.677
@@ -1469,7 +1373,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Invite/TextureRect/invite_job"]
+[node name="Label" type="Label" parent="Invite/TextureRect/invite_jog"]
 margin_right = 242.0
 margin_bottom = 68.0
 custom_fonts/font = SubResource( 2 )
@@ -1555,8 +1459,228 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="surp_costs" type="HSplitContainer" parent="Invite/TextureRect"]
+margin_left = 550.0
+margin_top = 163.0
+margin_right = 850.0
+margin_bottom = 188.0
+rect_min_size = Vector2( 300, 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="distance" type="Label" parent="Invite/TextureRect/surp_costs"]
+margin_top = 2.0
+margin_right = 137.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0 spaces away,"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="self_cost" type="Label" parent="Invite/TextureRect/surp_costs"]
+margin_left = 149.0
+margin_top = 2.0
+margin_right = 300.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0 self points"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buff_costs" type="HSplitContainer" parent="Invite/TextureRect"]
+margin_left = 550.0
+margin_top = 249.0
+margin_right = 850.0
+margin_bottom = 274.0
+rect_min_size = Vector2( 300, 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="distance" type="Label" parent="Invite/TextureRect/buff_costs"]
+margin_top = 2.0
+margin_right = 137.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0 spaces away,"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="self_cost" type="Label" parent="Invite/TextureRect/buff_costs"]
+margin_left = 149.0
+margin_top = 2.0
+margin_right = 300.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0 self points"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jog_costs" type="HSplitContainer" parent="Invite/TextureRect"]
+margin_left = 550.0
+margin_top = 333.0
+margin_right = 850.0
+margin_bottom = 358.0
+rect_min_size = Vector2( 300, 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="distance" type="Label" parent="Invite/TextureRect/jog_costs"]
+margin_top = 2.0
+margin_right = 137.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0 spaces away,"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="self_cost" type="Label" parent="Invite/TextureRect/jog_costs"]
+margin_left = 149.0
+margin_top = 2.0
+margin_right = 300.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0 self points"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="beat_costs" type="HSplitContainer" parent="Invite/TextureRect"]
+margin_left = 550.0
+margin_top = 415.0
+margin_right = 850.0
+margin_bottom = 440.0
+rect_min_size = Vector2( 300, 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="distance" type="Label" parent="Invite/TextureRect/beat_costs"]
+margin_top = 2.0
+margin_right = 137.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0 spaces away,"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="self_cost" type="Label" parent="Invite/TextureRect/beat_costs"]
+margin_left = 149.0
+margin_top = 2.0
+margin_right = 300.0
+margin_bottom = 22.0
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0 self points"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="subheader" type="Label" parent="Invite/TextureRect"]
+margin_left = 79.9905
+margin_top = 84.6808
+margin_right = 906.991
+margin_bottom = 104.681
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Get 10 bonus points for inviting a player. The player invited loses self for each square"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Invite"]
-anims/popupGlossary = SubResource( 20 )
+anims/inviteMenu = SubResource( 23 )
+
+[node name="EventCard" type="Control" parent="."]
+visible = false
+anchor_left = 3.205
+anchor_top = 4.433
+anchor_right = 3.205
+anchor_bottom = 4.433
+margin_left = -0.840012
+margin_top = -68.918
+margin_right = 513.16
+margin_bottom = 182.082
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="EventCard"]
+margin_top = -52.0
+margin_right = 3411.0
+margin_bottom = 953.0
+texture_normal = ExtResource( 20 )
+texture_pressed = ExtResource( 19 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EventCard/TextureButton"]
+margin_left = 87.0
+margin_top = 26.0
+margin_right = 495.0
+margin_bottom = 239.0
+custom_fonts/normal_font = ExtResource( 27 )
+text = "Event card!
+
+Click to continue...
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PostChoicePopup" type="Control" parent="."]
 margin_right = 40.0
@@ -1596,7 +1720,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="PostChoicePopup/TextureRect/TextureButton"]
 margin_right = 233.0
 margin_bottom = 67.0
-custom_fonts/font = SubResource( 21 )
+custom_fonts/font = SubResource( 24 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Next"
 align = 1
@@ -1607,8 +1731,8 @@ margin_left = -549.812
 margin_top = -190.125
 margin_right = 201.188
 margin_bottom = 20.875
-custom_fonts/bold_font = SubResource( 22 )
-custom_fonts/normal_font = SubResource( 23 )
+custom_fonts/bold_font = SubResource( 25 )
+custom_fonts/normal_font = SubResource( 26 )
 custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 bbcode_enabled = true
 bbcode_text = "You have 25 out of 40 [b]Self[/b] points.  
@@ -1645,7 +1769,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "JogIdle"
-frame = 5
+frame = 4
 speed_scale = 0.7
 playing = true
 
@@ -1658,19 +1782,18 @@ speed_scale = 0.7
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PostChoicePopup"]
-anims/PopupPostChoice = SubResource( 24 )
+anims/PopupPostChoice = SubResource( 27 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/UIDrawCard = SubResource( 25 )
+anims/UIDrawCard = SubResource( 28 )
 
 [node name="PopupActionCardChoice" parent="." instance=ExtResource( 22 )]
 
-[connection signal="pressed" from="Glossary/TextureButton" to="Glossary" method="_on_glossary_pressed"]
-[connection signal="pressed" from="Glossary/TextureRect/TextureButton2" to="Glossary" method="_on_CloseGlossary_pressed"]
 [connection signal="pressed" from="Invite/TextureButton" to="Invite" method="_on_invite_pressed"]
 [connection signal="pressed" from="Invite/TextureRect/TextureButton2" to="Invite" method="_on_ClosedInvite_pressed"]
+[connection signal="pressed" from="Invite/TextureRect/go_alone" to="Invite" method="_on_go_alone_pressed"]
 [connection signal="pressed" from="Invite/TextureRect/invite_surp" to="Invite" method="_on_invite_surp_pressed"]
 [connection signal="pressed" from="Invite/TextureRect/invite_buff" to="Invite" method="_on_invite_buff_pressed"]
-[connection signal="pressed" from="Invite/TextureRect/invite_job" to="Invite" method="_on_invite_job_pressed"]
+[connection signal="pressed" from="Invite/TextureRect/invite_jog" to="Invite" method="_on_invite_job_pressed"]
 [connection signal="pressed" from="Invite/TextureRect/invite_beat" to="Invite" method="_on_invite_beat_pressed"]
 [connection signal="pressed" from="PostChoicePopup/TextureRect/TextureButton" to="." method="_on_PostChoicePopup_NextButton_pressed"]

@@ -26,7 +26,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if richText.get_visible_characters() >= richText.get_total_character_count():
 		nextButton.disabled = false
 	else:
@@ -47,6 +47,11 @@ func _input(event):
 func _on_Timer_timeout():
 	richText.set_visible_characters(richText.get_visible_characters() + 1 )
 
+
+func _unhandled_input(event):
+	if event is InputEventKey:
+		if event.pressed and event.scancode == KEY_SPACE:
+			_on_NextButton_pressed()
 
 func _on_NextButton_pressed():
 	

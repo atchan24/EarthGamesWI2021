@@ -76,6 +76,7 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="ColorRect/VBoxContainer/VolumeSlider"]
+visible = false
 margin_left = -22.0
 margin_top = 33.0
 margin_right = 228.0
@@ -91,6 +92,7 @@ __meta__ = {
 }
 
 [node name="move_cost" type="TextEdit" parent="ColorRect/VBoxContainer/VolumeSlider"]
+visible = false
 margin_left = 72.881
 margin_top = 66.1781
 margin_right = 122.881

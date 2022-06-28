@@ -112,6 +112,7 @@ margin_left = 8.0
 margin_top = -32.0
 margin_right = 1020.0
 margin_bottom = 349.0
+rect_scale = Vector2( 1e-05, 1e-05 )
 rect_pivot_offset = Vector2( 490, 150 )
 texture = ExtResource( 4 )
 expand = true
@@ -165,7 +166,7 @@ __meta__ = {
 anims/PopupText = SubResource( 4 )
 
 [node name="Frgnd" type="Node2D" parent="."]
-modulate = Color( 1, 1, 1, 0.75 )
+modulate = Color( 1, 1, 1, 0 )
 position = Vector2( 121.393, 404.493 )
 rotation = 3.14159
 scale = Vector2( 0.15, -0.15 )
@@ -177,6 +178,7 @@ __meta__ = {
 visible = false
 frames = ExtResource( 2 )
 animation = "BeatWalk"
+frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -184,7 +186,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "BuffWalk"
-frame = 4
+frame = 5
 speed_scale = 0.7
 playing = true
 
@@ -192,7 +194,7 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "JogWalk"
-frame = 1
+frame = 3
 speed_scale = 0.7
 playing = true
 
@@ -200,7 +202,6 @@ playing = true
 visible = false
 frames = ExtResource( 2 )
 animation = "SurpWalk"
-frame = 5
 speed_scale = 0.7
 playing = true
 
@@ -208,7 +209,7 @@ playing = true
 margin_right = 1024.0
 margin_bottom = 600.0
 mouse_filter = 2
-color = Color( 0.772549, 0.960784, 0.960784, 0 )
+color = Color( 0.772549, 0.960784, 0.960784, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

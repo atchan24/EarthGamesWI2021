@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Characters/Animations/CharacterAnims.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Assets/Winkle-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Loading.gd" type="Script" id=3]
-
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -12,16 +11,63 @@ outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=2]
+size = 34
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
 [node name="LoadingScreen" type="Node2D"]
 script = ExtResource( 3 )
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+margin_right = 1025.0
+margin_bottom = 601.0
+color = Color( 0.772549, 0.960784, 0.960784, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 430.343
-margin_top = 260.544
-margin_right = 618.343
-margin_bottom = 306.544
+margin_left = 707.743
+margin_top = 536.1
+margin_right = 895.743
+margin_bottom = 582.1
 custom_fonts/normal_font = SubResource( 1 )
 text = "Loading..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowToPlay" type="RichTextLabel" parent="."]
+margin_left = 385.0
+margin_top = 51.0
+margin_right = 743.0
+margin_bottom = 166.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Tips for Playing Life Reimagined"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_left = 177.0
+margin_top = 197.0
+margin_right = 842.0
+margin_bottom = 529.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "1. Press 'R' to spin and move your avatar
+
+2. On Action Cards, pick one of the 3 choices:
+ Self: earn 5 Self points
+ Society: invest 5 Self points to earn 1 Society point
+ Sustainability: invest 5 Self points to earn 1 Sustainability point
+
+3. Invite a friend to earn even more Society and Sustainability points! It costs them Self points to move."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -31,17 +77,6 @@ position = Vector2( 943.722, 510.893 )
 scale = Vector2( 0.08, 0.08 )
 frames = ExtResource( 1 )
 animation = "BuffWalk"
-frame = 3
+frame = 2
 playing = true
 flip_h = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
-
-[node name="Background" type="ColorRect" parent="CanvasLayer"]
-margin_right = 1025.0
-margin_bottom = 601.0
-color = Color( 0.772549, 0.960784, 0.960784, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}

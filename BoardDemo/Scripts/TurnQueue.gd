@@ -11,7 +11,7 @@ var cam = null;
 var end = false
 
 var cur_turn = 0
-var final_turn = 8  # each player gets 2 turns
+var final_turn = 32  # each player gets 8 turns
 
 
 # Called when the node enters the scene tree for the first time.
@@ -23,7 +23,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if !players[active_player].active && !end:
 		players[active_player].remove_child(cam)
 		next_player()
