@@ -327,6 +327,9 @@ margin_bottom = 95.0
 texture = ExtResource( 13 )
 expand = true
 stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Backpack/OpenBkpk"]
 
@@ -484,7 +487,6 @@ __meta__ = {
 margin_right = 1004.0
 margin_bottom = 556.0
 rect_min_size = Vector2( 10, 10 )
-rect_scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
@@ -601,7 +603,7 @@ __meta__ = {
 }
 
 [node name="Position2D" type="Position2D" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect"]
-position = Vector2( 102.272, 54.7035 )
+position = Vector2( 102, 54 )
 
 [node name="ColorRect" type="ColorRect" parent="Backpack/StickerBook/TextureRect/Stickers/TextureRect/Position2D"]
 margin_left = -5.0
@@ -1341,6 +1343,7 @@ margin_top = 11.0
 margin_right = 1015.0
 margin_bottom = 628.0
 rect_min_size = Vector2( 10, 10 )
+rect_scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 1 )
 expand = true
 __meta__ = {
@@ -1362,6 +1365,7 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Backpack/Instructions/TextureRect"]
+modulate = Color( 1, 1, 1, 0.166667 )
 margin_left = 59.0
 margin_top = 112.0
 margin_right = 944.0
