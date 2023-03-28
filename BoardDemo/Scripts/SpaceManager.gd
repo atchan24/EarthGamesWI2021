@@ -46,6 +46,7 @@ func _ready():
 
 func start_yearly_card_event():
 	var x = null
+	var y = null
 	var category = null
 	if yearly_event_data == null :
 		yearly_event_data = manager.yearly_event_data
@@ -55,22 +56,22 @@ func start_yearly_card_event():
 	manager.get_node("GUI/TextureButton").show()
 	popup_post_card_event(0, 0, 0)
 	#pause game (dont let player spin)
-	
+	y = rng.randi_range(5, 20)
 	#choose card depending on cur_scores
 	#add or subtract points according to card
-	if manager.get_society() < 20:
+	if manager.get_society() < y:
 		category = "SocietyBad"
 		x = 1
 		print("Yearly event card: Society Bad")
-	elif manager.get_sustainability() < 20:
+	elif manager.get_sustainability() < y:
 		category = "SustainabilityBad"
 		x = 2
 		print("Yearly event card: Sustain Bad")
-	elif manager.get_society() >= 20:
+	elif manager.get_society() >= y:
 		category = "SocietyGood"
 		x = 3
 		print("Yearly event card: Society Good")
-	elif manager.get_sustainability() >= 20:
+	elif manager.get_sustainability() >= y:
 		category = "SustainabilityGood"
 		x = 4
 		print("Yearly event card: Sustain Good")
@@ -92,7 +93,7 @@ func handle_yearly_card_event(x):
 	var Jog = get_node("/root/Main/Players/Player3")
 	var Beat = get_node("/root/Main/Players/Player4")
 	if x == 1: # Soc bad
-		manager.update_score(-8, 0)
+		manager.update_score(-4, 0)
 		Surp.update_values(-2)
 		yield(self_anim_player, "animation_finished")
 		Buff.update_values(-2)
@@ -101,7 +102,7 @@ func handle_yearly_card_event(x):
 		yield(self_anim_player, "animation_finished")
 		Beat.update_values(-2)
 	if x == 2: # Sus bad
-		manager.update_score(0, -8)
+		manager.update_score(0, -4)
 		Surp.update_values(-2)
 		yield(self_anim_player, "animation_finished")
 		Buff.update_values(-2)
@@ -110,23 +111,23 @@ func handle_yearly_card_event(x):
 		yield(self_anim_player, "animation_finished")
 		Beat.update_values(-2)
 	if x == 3: # Soc good
-		manager.update_score(12, 0)
-		Surp.update_values(3)
+		manager.update_score(4, 0)
+		Surp.update_values(1)
 		yield(self_anim_player, "animation_finished")
-		Buff.update_values(3)
+		Buff.update_values(1)
 		yield(self_anim_player, "animation_finished")
-		Jog.update_values(3)
+		Jog.update_values(1)
 		yield(self_anim_player, "animation_finished")
-		Beat.update_values(3)
+		Beat.update_values(1)
 	if x == 4: # Sus good
-		manager.update_score(0, 12)
-		Surp.update_values(3)
+		manager.update_score(0, 4)
+		Surp.update_values(1)
 		yield(self_anim_player, "animation_finished")
-		Buff.update_values(3)
+		Buff.update_values(1)
 		yield(self_anim_player, "animation_finished")
-		Jog.update_values(3)
+		Jog.update_values(1)
 		yield(self_anim_player, "animation_finished")
-		Beat.update_values(3)
+		Beat.update_values(1)
 
 
 func _on_YearlyEventNext_pressed():

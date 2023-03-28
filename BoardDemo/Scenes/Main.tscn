@@ -205,6 +205,7 @@ script = ExtResource( 30 )
 player_number = "player1"
 player_name_upper = "Surp"
 player_name_lower = "surp"
+self_score = 30
 max_movement = 8
 idle = "SurpIdle"
 walk = "SurpWalk"
@@ -222,7 +223,7 @@ script = ExtResource( 30 )
 player_number = "player2"
 player_name_upper = "Buff"
 player_name_lower = "buff"
-self_score = 30
+self_score = 35
 max_movement = 8
 idle = "BuffIdle"
 walk = "BuffWalk"
@@ -253,7 +254,7 @@ script = ExtResource( 30 )
 player_number = "player3"
 player_name_upper = "Jog"
 player_name_lower = "jog"
-self_score = 20
+self_score = 32
 max_movement = 8
 idle = "JogIdle"
 walk = "JogWalk"
@@ -269,7 +270,7 @@ offset = Vector2( -700, 0 )
 billboard = 2
 frames = ExtResource( 28 )
 animation = "JogIdle"
-frame = 3
+frame = 4
 playing = true
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Players/Player3"]
@@ -284,7 +285,7 @@ script = ExtResource( 30 )
 player_number = "player4"
 player_name_upper = "Beat"
 player_name_lower = "beat"
-self_score = 25
+self_score = 34
 max_movement = 8
 idle = "BeatIdle"
 walk = "BeatWalk"
@@ -1270,7 +1271,6 @@ category = "Truth"
 [node name="Space21" parent="Spaces" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.9817, 0, 32.7323 )
 category = "Death"
-
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceA" to="Spaces" method="_on_ChoiceA_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceB" to="Spaces" method="_on_ChoiceB_pressed"]
 [connection signal="pressed" from="GUI/Choice Buttons/ChoiceC" to="Spaces" method="_on_ChoiceC_pressed"]

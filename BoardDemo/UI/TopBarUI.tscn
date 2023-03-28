@@ -384,7 +384,7 @@ extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=22]
+[sub_resource type="DynamicFont" id=19]
 size = 24
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
@@ -392,7 +392,7 @@ use_mipmaps = true
 use_filter = true
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=20]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("TextureRect:rect_scale")
@@ -439,28 +439,28 @@ tracks/3/keys = {
 "values": [ Vector2( 3411, 1005 ) ]
 }
 
-[sub_resource type="DynamicFont" id=24]
+[sub_resource type="DynamicFont" id=21]
 size = 40
 outline_size = 3
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=25]
+[sub_resource type="DynamicFont" id=22]
 size = 40
 outline_size = 3
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=26]
+[sub_resource type="DynamicFont" id=23]
 size = 36
 outline_size = 1
 extra_spacing_top = 3
 extra_spacing_space = 3
 font_data = ExtResource( 5 )
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=24]
 tracks/0/type = "bezier"
 tracks/0/path = NodePath(".:rect_scale:x")
 tracks/0/interp = 1
@@ -506,7 +506,7 @@ tracks/3/keys = {
 "values": [ true, false, false ]
 }
 
-[sub_resource type="Animation" id=28]
+[sub_resource type="Animation" id=25]
 length = 1.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("VBoxContainer/SelfBar_Surp:rect_position")
@@ -739,7 +739,7 @@ margin_bottom = 40.0
 rect_min_size = Vector2( 200, 40 )
 rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
-value = 15.0
+value = 30.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
 nine_patch_stretch = true
@@ -752,7 +752,7 @@ margin_right = 241.0
 margin_bottom = 44.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = " Surp: 15-40"
+text = " Surp: 30-40"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -807,7 +807,7 @@ margin_bottom = 92.0
 rect_min_size = Vector2( 200, 40 )
 rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
-value = 30.0
+value = 35.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
 nine_patch_stretch = true
@@ -820,7 +820,7 @@ margin_right = 232.0
 margin_bottom = 44.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = " Buff: 30-40"
+text = " Buff: 35-40"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -872,7 +872,7 @@ margin_bottom = 144.0
 rect_min_size = Vector2( 200, 40 )
 rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
-value = 20.0
+value = 32.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
 nine_patch_stretch = true
@@ -885,7 +885,7 @@ margin_right = 226.0
 margin_bottom = 44.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = " Jog: 20-40"
+text = " Jog: 32-40"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -937,7 +937,7 @@ margin_bottom = 196.0
 rect_min_size = Vector2( 200, 40 )
 rect_pivot_offset = Vector2( 300, 0 )
 max_value = 40.0
-value = 25.0
+value = 34.0
 texture_under = ExtResource( 2 )
 texture_progress = ExtResource( 1 )
 nine_patch_stretch = true
@@ -950,7 +950,7 @@ margin_right = 231.0
 margin_bottom = 44.0
 custom_fonts/normal_font = SubResource( 2 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
-text = "  Beat: 25-40"
+text = "  Beat: 34-40"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1025,7 +1025,6 @@ margin_left = 62.0
 margin_top = -51.0
 margin_right = 961.0
 margin_bottom = 46.0
-rect_scale = Vector2( 1, 1e-05 )
 rect_pivot_offset = Vector2( 0, 102 )
 texture = ExtResource( 4 )
 expand = true
@@ -1473,7 +1472,7 @@ __meta__ = {
 margin_top = 2.0
 margin_right = 137.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -1489,7 +1488,7 @@ margin_left = 149.0
 margin_top = 2.0
 margin_right = 300.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -1514,7 +1513,7 @@ __meta__ = {
 margin_top = 2.0
 margin_right = 137.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -1530,7 +1529,7 @@ margin_left = 149.0
 margin_top = 2.0
 margin_right = 300.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -1555,7 +1554,7 @@ __meta__ = {
 margin_top = 2.0
 margin_right = 137.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -1571,7 +1570,7 @@ margin_left = 149.0
 margin_top = 2.0
 margin_right = 300.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -1596,7 +1595,7 @@ __meta__ = {
 margin_top = 2.0
 margin_right = 137.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -1612,7 +1611,7 @@ margin_left = 149.0
 margin_top = 2.0
 margin_right = 300.0
 margin_bottom = 22.0
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -1628,7 +1627,7 @@ margin_left = 79.9905
 margin_top = 84.6808
 margin_right = 906.991
 margin_bottom = 104.681
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 19 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -1640,7 +1639,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Invite"]
-anims/inviteMenu = SubResource( 23 )
+anims/inviteMenu = SubResource( 20 )
 
 [node name="EventCard" type="Control" parent="."]
 visible = false
@@ -1720,7 +1719,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="PostChoicePopup/TextureRect/TextureButton"]
 margin_right = 233.0
 margin_bottom = 67.0
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 21 )
 custom_colors/font_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 text = "Next"
 align = 1
@@ -1731,8 +1730,8 @@ margin_left = -549.812
 margin_top = -190.125
 margin_right = 201.188
 margin_bottom = 20.875
-custom_fonts/bold_font = SubResource( 25 )
-custom_fonts/normal_font = SubResource( 26 )
+custom_fonts/bold_font = SubResource( 22 )
+custom_fonts/normal_font = SubResource( 23 )
 custom_colors/default_color = Color( 0.290196, 0.0862745, 0.32549, 1 )
 bbcode_enabled = true
 bbcode_text = "You have 25 out of 40 [b]Self[/b] points.  
@@ -1752,7 +1751,7 @@ scale = Vector2( 0.15, -0.15 )
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "SurpIdle"
-frame = 2
+frame = 1
 speed_scale = 0.7
 playing = true
 
@@ -1761,6 +1760,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "BuffIdle"
+frame = 5
 speed_scale = 0.7
 playing = true
 
@@ -1769,7 +1769,7 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "JogIdle"
-frame = 4
+frame = 5
 speed_scale = 0.7
 playing = true
 
@@ -1778,17 +1778,18 @@ visible = false
 position = Vector2( -940, 2930 )
 frames = ExtResource( 21 )
 animation = "BeatIdle"
+frame = 5
 speed_scale = 0.7
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PostChoicePopup"]
-anims/PopupPostChoice = SubResource( 27 )
+anims/PopupPostChoice = SubResource( 24 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/UIDrawCard = SubResource( 28 )
+anims/UIDrawCard = SubResource( 25 )
 
 [node name="PopupActionCardChoice" parent="." instance=ExtResource( 22 )]
-
+visible = false
 [connection signal="pressed" from="Invite/TextureButton" to="Invite" method="_on_invite_pressed"]
 [connection signal="pressed" from="Invite/TextureRect/TextureButton2" to="Invite" method="_on_ClosedInvite_pressed"]
 [connection signal="pressed" from="Invite/TextureRect/go_alone" to="Invite" method="_on_go_alone_pressed"]

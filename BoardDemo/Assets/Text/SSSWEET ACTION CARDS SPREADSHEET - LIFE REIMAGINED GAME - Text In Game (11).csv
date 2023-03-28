@@ -1,12 +1,12 @@
 id,en,es
-This is the ID tag which is called in the games code,"This the exact text that is in the game once the spread sheet has been downloaded from google and uploaded into the game engine. It is possible to use bold and italic fonts, center text, and include web links using bbcode.","If all the text in the game is called this way, it is extreamly easy to add in a new language option."
+This is the ID tag which is called in the games code,"This the exact text that is in the game once the spread sheet has been downloaded from google and uploaded into the game engine. It is possible to use bold and italic fonts, center text, and include web links using bbcode.","If all the text in the game is called this way, it is extremely easy to add in a new language option."
 ,,
 MENU_CREDITS,"Created by Be The Green and Earth Games Studio
 Funded by (...)
 
 Original inspiration:                              Lisa Z-C                                
 
-Engineering, Developement:                Andrew, Jimmy, Rikki Parent, Ben Sibelman, Edgar, Amanda
+Engineering, Development:                Andrew, Jimmy, Rikki Parent, Ben Sibelman, Edgar, Amanda
 
 Research and Editing:                          Dr. D. Frierson
 
@@ -18,8 +18,8 @@ Music and Sound:
 ",
 ,,
 ,,
-WELCOME_01,"[center]Four friends set off on a journey through the world, to build a better life for themselves, their communities, and those yet to come. They are faced with choices, striving for balance in their own health and their community's health, while recognizing the urgency of the climate crisis.[/center]",
-WELCOME_02,"[center]These four, Beat, Jog, Buff, and Surp, are working to build a more equitable society. With each choice they face, they can recover their own [b]Self[/b] energy, they can spend their energy to help community members who make up their [b]society[/b], or they can spend their energy building long-term [b]sustainability[/b].[/center]",
+WELCOME_01,"[center]Four friends set off on a journey, to build a just and sustainable world. They strive for balance in their own health and their community's needs, while recognizing the urgency of the climate crisis.[/center]",
+WELCOME_02,"[center]With each choice, they can recover their own [b]Self[/b] energy, or spend energy to help their [b]society[/b], or to build long-term [b]sustainability[/b].[/center]",
 WELCOME_03,"[center]Press spacebar at the beginning of each turn to spin the spinner.  Watch the avatar move the according number of spaces on the board.  When the player finishes moving, they will draw an [b]Action Card[/b].  Select one of the given choices, either [b]self[/b], [b]society[/b], or [b]sustainability[/b].[/center]",
 WELCOME_04,"[center]Choosing the [b]self[/b] choice will gain you 5 self points.  The [b]society[/b] choice will cost you 5 self points, and Society will recieve 5 points.  The [b]sustainability[/b] choice will cost you 5 self points, and Sustainability will gain 5 points.  Watch the world change based on your actions.[/center]",
 WELCOME_05,"[center]If you [b]invite[/b] someone to your square to collaborate with your decision, they will double the points to society or sustainability, but it will cost them 2 self points per square to move to you.[/center]",
@@ -28,22 +28,22 @@ WELCOME_06,[center]There are four characters to choose from. Select the numbers 
 ,,
 INTRO,[center]Welcome to the game of [b]'Life ReImagined'[/b]. You have 8 years to reimagine the world!  Each players turn is one season.,
 INTRO_SERP,"[center]Hello, my name is [b]Surp[/b]. I like to learn and draw.  My goal is to use art to better my community and myself.  The most important thing to me is being truthful.[/center]
-Self points:  15 out of 40 
+Self points:  30 out of 40 
 Super Power:   Arts, Science",
 INTRO_BUFF,"[center]I am [b]Buff[/b].  I like to be with my friends and have fun.  My goal is to be with my buds and help them.  The most important thing to me is family.[/center]
-Self points:   30 out of 40
+Self points:   35 out of 40
 Super Power:   Charisma, Leading",
 INTRO_JOG,"[center]Nice to meet you, I am [b]Jog[/b].  I like to study culture and to dance!  My goal is to preserve traditions and diversity.  The most important thing to me is understanding where we come from.[/center]
-Self points:   20 out of 40
+Self points:   32 out of 40
 Super Power:   History, Storytelling",
 INTRO_BEAT,"[center]What's up, the name is [b]Beat[/b].  I like to listen to and make music.  My goal is to connect people to their emotions.  The most important thing to me is using my voice for good.[/center]
-Self points:   25 out of 40
+Self points:   34 out of 40
 Super Power:   Music, Empathy",
 OUTRO,"[center]You are ready to play. Enjoy the game, and re-imagine your life for the better.[/center]",
 ,,
 ,,
 CHOICE_SOCIETY,"You have {var1} out of 40 [b]Self[/b] points.
-Nice, you made a choice for [b]society[/b], helping people around you.  Make sure to keep yourself charged.",
+Nice, you made a choice for [b]society[/b], helping people around you.",
 CHOICE_SELF,"You have {var1} out of 40 [b]Self[/b] points.
 Way to take care of your [b]self[/b].  You'll be ready when it's time to choose for society and sustainability.",
 CHOICE_SUSTAINABILITY,"You have {var1} out of 40 [b]Self[/b] points.
@@ -61,7 +61,7 @@ All people have the right to be who they are.[/center]
 ","2. Equity:                 Rainbow Flag
 "
 ACTION_CARD_03,"[center][b]Health:[/b]
-We must have our physical and mental [b]ealth[/b] in order to be our best self. Get a check-up![/center]
+We must have our physical and mental [b]health[/b] in order to be our best self.[/center]
 ","3. Health:                 Health Tent
 "
 ACTION_CARD_04,"[center][b]Education:[/b]
@@ -81,7 +81,7 @@ Joy, love, and strength in community.[/center]
 ","7. Community:         Meeting People sign
 "
 ACTION_CARD_08,"[center][b]Work:[/b]
-Work is how you contribute to society.[/center]
+Work is one way to contribute to society.[/center]
 ","8. Work:                   Laptop
 "
 ACTION_CARD_09,"[center][b]Energy:[/b]
@@ -104,29 +104,29 @@ ACTION_CARD_13,"[center][b]Recreation[/b]:
 The work you do only for yourself.[/center]
 ","13. Recreation:         Music note
 "
-ACTION_CARD_14,"[center]The diversity of [b]Environments[/b] on this planet is awe inspiring and incredibly delicate.[/center]
+ACTION_CARD_14,"[center][b]Environments[/b] on this planet are awe inspiring.[/center]
 ","14. Environment:      Fruit Tree
 "
 ACTION_CARD_15,"[center][/b]Decolonization:[/b]
 Our histories are intertwined across the globe, and injustices can be repaired.[/center]
 ","15. Decolonization:  Protest
 "
-ACTION_CARD_16,"[center]Reality or fiction, we are defined by the [b]stories[/b] we share with everyone everyday.[/center]
+ACTION_CARD_16,"[center]Reality or fiction, we defined our [b]stories[/b] each day.[/center]
 ","16. Storytelling:        Library
 "
 ACTION_CARD_17,"[center][b]Transport:[/b]
-Is what moves the world.[/center]
+It moves the world.[/center]
 ","17. Transport:           Bicycle
 "
 ACTION_CARD_18,"[center][b]Arts:[/b]
-Reflections of cultures around the world.[/center]
+Expressions of life.[/center]
 ","18. Arts:                    Paint Palette
 "
 ACTION_CARD_19,"[center][b]Resources:[/b]
 Sustainable resource use has zero waste.[/center]
 ","19. Resources:         Solar Panel
 "
-ACTION_CARD_20,"[center]The [b]Truth[/b] cannot protect itself. It needs truth speakers to defend it.[/center]
+ACTION_CARD_20,"[center]The [b]Truth[/b] cannot protect itself.[/center]
 ","20. Truth:                  Law Building
 "
 ACTION_CARD_21,"[center][b]Death[/b]:

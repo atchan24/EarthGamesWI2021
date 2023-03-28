@@ -27,7 +27,7 @@ var bar = null
 export var idle = ""
 export var walk = ""
 export var active = false
-var self_score = 25
+var self_score = 34
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
